@@ -1,588 +1,652 @@
-Taiga ID   ,Taiga Feature,Taiga State,Taiga Severity,Taiga subject
-13,Intra Ops: Build system enhancements,Fixed,Severity-Medium,Debug packages for packages from devenv is corrupted
-15,Basic L3,Fixed,Severity-Medium,CLI - Interfaces split condition is not being validated
-21,LLDP,Fixed,Severity-Medium,LLDP neighbor table and interface counters take long time to clear
-23,CLI Infra,Fixed,Severity-Medium,Alias configuration removed after login/logout
-26,BGP,Fixed,Severity-High,BGP Does not obey global ECMP enable/disable
-30,Mgmt Interface,Fixed,Severity-High,Mgmt If - IPv6 handle DAD
-33,basic L3,Open,Severity-Medium,Deleting ipv6 addresses on L3 interfaces doesnt remove Neigbors/direct connect hosts
-35,VLANS,Assigned,Severity-Medium,Vlan name is not updated on the show vlan output
-41,Physical Interfaces,Fixed,Severity-High,MTU configuration is not being applied to kernel interfaces
-43,CLI Infra,Fixed,Severity-Medium,Redundant CLI Command - exit and quit exist with same description and funcationality in all CLI Tree.
-44,Physical Interfaces,Fixed,Severity-Medium,User able to configure unsupported speed at interface level.
-47,REST,Fixed,Severity-High,REST API: Inconsistent behavior between RESTAPI and CLI for add/delete power supplies and temp_sensors.
-48,LLDP,Fixed,Severity-Medium,Misleading information to the user on lldp hold timer.
-56,Mgmt Interface,Fixed,Severity-High,DNS entry removed from resolv.conf
-58,Mgmt Interface,Fixed,Severity-High,IPv6 default gateway not added in mgmt interface
-59,AAA,Fixed,Severity-Medium,"Show startup config dosent display out when radius server is removed, but copy startup to running copies correct configuration"
-61,BGP,Fixed,Severity-High,is_peer_group in BGP_Neighbor object should not be changable
-62,Authentication,Fixed,Severity-Medium,not able to add user name or starts with numbers
-63,Mgmt Interface,Fixed,Severity-Medium,Route entry missing after startup configuration copied to running configuration
-65,link aggregation,Fixed,Severity-High,VSI only: Communication between LAG clients fails depending on order of LAG scenario configuration. Fails about 50% of the time
-66,link aggregation,Fixed,Severity-High,LACP lags are not being enabled when configured through CLI
-75,configuration persistence,Fixed,Severity-Medium,Implement CLI command to print startup config in json format
-77,rest,Fixed,Severity-High,Resource local configuration should not include subresources
-78,REST,Fixed,Severity-Medium,Better name and/or description for resource ids used in URIs
-82,VLAN,Fixed,Severity-Medium,Portd doesn't check for exsiting L2 Vlans for VLAN Ids and creates duplicate VLAN rows for same VLAN Ids
-84,Test Framework,Fixed,Severity-Medium,ft-framework slowness in VSI interaction
-85,REST,Fixed,Severity-High,SWAGGER UI data structures not matching to the implemented code and REST requests may fail
-86,rest,Fixed,Severity-Medium,"For REST configuration APIs , optional attributes are still required to PASS or API to be successful"
-88,aaa,Fixed,Severity-Medium,VSI Segmentation fault and failed to remove user on user remove cmd.
-92,Mgmt Interface,Fixed,Severity-Medium,Unable to remove IPv6 assigned IP from mgmt interface
-98,link aggregation,Fixed,Severity-Critical,LAG: LACP configuration is only being applied on OVS when there is at least 1 interface in LAG
-99,link aggregation,Fixed,Severity-Critical,LAG: LACP cannot be disabled on an LAG after setting it on
-100,link aggregation,Fixed,Severity-High,LAG: LACP interface status is not visible from VTYSH
-101,Test Framework,Fixed,Severity-Medium,Vswitch link filter not being adequately formed
-105,vlan,Assigned,Severity-Medium,No show options for interface vlan configuration
-106,link aggregation,Fixed,Severity-Critical,"Segmentation fault after typing ""show run"""
-107,Physical Interfaces,Open,Severity-High,Inconsistent behavior of administrative status of interfaces
-108,link aggregation,Fixed,Severity-High,"LACP: VTYSH assumption is wrong, default LACP rate is fast, not slow"
-109,link aggregation,Fixed,Severity-High,LAG - Static LAG not working after change interfaces from one LAG to another
-110,REST,Fixed,Severity-Medium,REST GET returns sting value instead of a boolean
-111,bgp,Open,Severity-Medium,BGP - Map keys not defined
-112,dhcp server,Fixed,Severity-Medium,DHCP - Map keys not defined
-113,link aggregation,Open,Severity-Medium,Port - Map keys not defined
-114,REST,Fixed,Severity-Medium,REST: POST method needs to return URI of newly created resource
-116,link aggregation,Fixed,Severity-Medium,LAG: Broadcast is partially dropped intermittenly
-117,BGP,Fixed,Severity-Medium,GET on BGP_Router missing bgp_neighbor in URI
-119,REST,Fixed,Severity-Medium,REST/Swagger - Dictionaries show keytype: valuetype instead of actual keys when they exist
-121,REST,Fixed,Severity-Medium,"[REST] Recursive GET - Internal Server Error when using ""selector"" parameter"
-123,link aggregation,Fixed,Severity-Medium,Dynamic LAG: LACP mode is not displayed on show running-config
-125,BGP,Fixed,Severity-High,BGP configuration of ASN over 3000000 fails
-127,REST,Fixed,Severity-High,REST API: POST method is failing when using default data structure returned by GET method.
-129,basic l3,Fixed,Severity-Medium,vtysh crashes when attempting to configure a new IPv6 route with port which is not L3.
-131,REST,Fixed,Severity-High,REST - GET of system/full-configuration fails if REST Authentication is enabled
-132,REST,Fixed,Severity-Medium,REST API: PUT method returns internal server error 500 for invalid data structure.
-136,link aggregation,Fixed,Severity-Medium,cli: seg fault in show running-config interface
-138,Log Rotate,Open,Severity-Medium,Broken links on the Log Rotate page
-140,VLAN,Fixed,Severity-Medium,Broken links on VLAN CLI
-141,Authentication,Open,Severity-Medium,Broken link on the Authentication CLI page
-142,BGP,Fixed,Severity-Medium,Broken links on the BGP CLI page
-143,L3,Assigned,Severity-Medium,"Broken link on the L3 Interfaces, Static Routes, ECMP page"
-145,Test Framework,Skip Fix,Severity-Medium,Broken link on the Writing Automated Feature Test Cases page
-146,CLI Infra,Fixed,Severity-High,Core dumped when you press ctrl + ?
-149,AAA,Fixed,Severity-High,XML schema does not contain definitions for all System's aaa column keys
-151,AAA,Fixed,Severity-Critical,Weak password encryption
-153,vlans,Fixed,Severity-Medium,cli:no vlan trunk allowed <vlan-id> command resulting in segmentation fault
-154,leds,Fixed,Severity-Medium,Led config is not saved properly from running to start-up config
-155,link aggregation,Fixed,Severity-Medium,"""no lag #"" in interface context does not re-create interface row in Port table"
-156,REST,Fixed,Severity-High,REST: Duplicated code across request handlers
-158,os-infra schema,Fixed,Severity-Medium,Few columns of category status in extended schema are populated under category configuration in swagger model schema
-159,rest,Fixed,Severity-Medium,Datatype mismatch between swagger model schema and REST schema (extended scheam): Swagger Bug
-161,L2,Fixed,Severity-Medium,"Show interfaces output not showing configured allowable MTU size which is in the range of <9192-9216>, since allowable MTU size is  (in bytes) in the range <576-9216>."
-162,LLDP,Fixed,Severity-Medium,LLDP - Ordering of show lldp commands is not in numerical order
-163,LLDP,Open,Severity-Medium,"LLDP : When LLDP conifguration is done at interface level , it resets the LLDP counter information for that interface"
-164,basic l3,Assigned,Severity-High,inter-vlan routing - couldn't ping no more than 84 clients in different vlans
-165,tftp server,Fixed,Severity-High,TFTP & DHCP: Enabling TFTP server with non-existent path makes DHCP server stop answering requests
-168,vlan,Fixed,Severity-High,VLAN Table corrupted when enable routing on interface added with vlan access.
-169,vlan,Fixed,Severity-Medium,Incorrect handling of 'no vlan trunk native <id>'
-170,vlan,Fixed,Severity-Medium,Invalid handling of 'no vlan <id>' in interface config (switch(config-if)#) context.
-172,vlan,Open,Severity-Medium,Incorrect handling of 'no vlan access <id>' and also the vlan status display is improper.
-174,dhcp server,Open,Severity-Medium,DHCP server cannot handle 1200 pools
-176,vlan,Fixed,Severity-Medium,show run does not display vlans in numerical order
-177,vlan,Fixed,Severity-High,when no routing is specified the port should be an L2 interface is not in the default vlan
-178,vlan,Fixed,Severity-Medium,"Interface info not updated while check internal vlan status by ""show vlan"""
-179,ping,Fixed,Severity-Medium,Local interface/IP ping response is slow
-180,basic l3,Open,Severity-Medium,Got ping response from admin shutdown interface
-181,vlan,Fixed,Severity-Medium,Need CLI to check interface vlan status
-182,platform,Fixed,Severity-Critical,"Segmentation fault (core dumped) on ""show running-config"" once rebooted followed by copy running config into startup."
-183,Mgmt interfaces,Open,Severity-Medium,Misleading auto-negotiation default setting
-184,vlan,Fixed,Severity-High,Both L3 interface sharing same internal vlan ID in a specific case
-185,vlan,Fixed,Severity-High,Not getting any warning message while running short of internal VLAN ID
-187,VLANs,Open,Severity-Medium,"Show start-up config says ""unknown command""/blank configurations  after adding 4094/1000 vlans"
-188,configuration persistence,Fixed,Severity-Medium,"Configurations getting erased post reboot from startup config , startup json strings has the configuration data structures"
-189,REST,Fixed,Severity-High,REST: If-Match Test failing randomly
-190,ping,Fixed,Severity-Medium,"Datagram-size range is not working after a particular value in ""ping"" command"
-191,ping,Fixed,Severity-Medium,Ping results 100% packet loss with ip-option
-196,Mgmt interfaces,Fixed,Severity-Medium,No form of CLI supported not required for certain interface setting parameters
-198,REST,Fixed,Severity-Medium,"REST: GET method on backward references such as ""Route"" is not working."
-199,link aggregation,Fixed,Severity-Critical,remove interface from LAG restarts switchd
-201,platform,Open,Severity-Medium,ops-config-yaml unit tests are failing
-203,traceroute,Fixed,Severity-Medium,timeout range for traceroute is not working after certain value
-204,link aggregation,Fixed,Severity-Critical,LACP not working after changes in modules outside ops-lacpd
-205,REST,Fixed,Severity-High,REST - GET and GET all in users resource is not consistent with other resources
-206,REST,Fixed,Severity-Critical,REST: Internal Server error when using If-Match with POST/GET
-207,rest,Fixed,Severity-High,REST: If-Match not supported with CORS
-209,SFTP server,Skip Fix,Severity-Medium,Need to have sftp server stats show command
-210,Ping,Fixed,Severity-Medium,Ping6: Failing to resolve IPv6 address shows error and datagram-size error
-215,CLI Infra,Fixed,Severity-Medium,"""show running-config"" is not displaying in sorted order."
-216,basic l3,Open,Severity-Medium,CLI allows two interfaces to have same IP address
-218,link aggregation,Fixed,Severity-High,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration."
-219,configuration persistence,Open,Severity-High,show startup-config does not show the complete startup-config.
-220,CLI Infra,Open,Severity-Medium,show running-config causes coredump
-221,ping,Fixed,Severity-Medium,"Continuous  ping with maximum datagram size shows ""no buffer space available"" after some time"
-223,Mgmt interfaces,Open,Severity-Medium,show inter brief is only showing ports 49 through 54-4
-225,CLI Infra,Fixed,Severity-Medium,"Unexpected output when you enter ""show con""  command"
-226,bgp,Fixed,Severity-Medium,clear ip bgp <help string> show Error messages
-227,bgp,Fixed,Severity-Medium,Observed vtysh core dump while check ip bgp summary
-228,Ping,Fixed,Severity-Medium,"Pattern given with ""data-fill"" parameter is not coming with ICMP packet"
-229,CLI Infra,Open,Severity-Medium,Need CLI command to copy config (running or startup) to/from external host
-231,bgp,Fixed,Severity-Medium,Segmentation fault when perform the command show ip bgp summary
-234,CLI Infra,Fixed,Severity-Medium,"""Show Session-timeout"" doesnt display any output when the session-timeout value is default"
-236,link aggregation,Fixed,Severity-High,Markdown update for show running-config
-239,BGP,Assigned,Severity-Medium,"show bgp <memory, rsclient, summary, view and views>  are not yet implemented"
-240,rest,Fixed,Severity-Medium,[REST] Using depth parameter in any operation other than GET should give a Bad Request
-241,basic l3,Open,Severity-Medium,Need single CLI command to show all IP addresses
-252,BGP,Fixed,Severity-Medium,"""show ip bgp ip bgp vpnv4"" + tab = Error: Help strings does not match for the identical tokens"
-253,BGP,Fixed,Severity-Medium,"""show ip bgp ip bgp vpnv4 rd"" + tab = ASN:nn_or_IP-address:nn  Error: Help strings does not match for the identical tokens"
-254,CLI Infra,Fixed,Severity-Critical,"""sh startup-config"" hangs and CPU at 100%"
-257,bgp,Fixed,Severity-Medium,BGP: A high amount of routes from disconnected peer remain in routing table
-279,ping,Fixed,Severity-Medium,Non-default interval parameter is not working as expected for Ping6
-280,Sftp server,Open,Severity-Medium,SFTP Server : No uniformity in config commands and naming conventions  with other features/servers.
-282,traceroute,Fixed,Severity-Medium,"minttl value 255 in traceroute displays error ""traceroute: setsockopt: Invalid argument"""
-285,traceroute,Fixed,Severity-Medium,[Trace Route] :  Incorrect IP address on Traceroute say 0.0.0.0 should throw error
-286,basic l3,Fixed,Severity-Medium,Static routing is not displaying in sorted order
-287,traceroute,Fixed,Severity-Medium,[Traceroute] - Traceroute to any non existing IP address in the same network should display as Host unreachable
-288,traceroute,Fixed,Severity-Medium,[Trace Route] - Display Meaningful Error message on Network unreachable condition
-289,vlan,Fixed,Severity-High,Inconsistent VLAN status behavior
-290,vlan,Fixed,Severity-Medium,VLAN ports not in sorted order while check VLAN status by show VLAN
-291,vlan,Fixed,Severity-Medium,VLAN field is empty in interface status while check by “show interface brief”
-292,link aggregation,Fixed,Severity-Medium,LAG: L2 config does not display under interface that is attached to LAG in show running-config output.
-293,traceroute,Assigned,Severity-High,Traceroute with ip-option loosesourceroute is not disiplaying any hop info
-296,rest,Assigned,Severity-Medium,REST - PUT operation is not reporting when it comes to change an immutable field
-298,CLI Infra,Fixed,Severity-High,LLDP core dump while configuring it after build update
-301,traceroute,Fixed,Severity-Medium,Optional parameters  should be displayed while executing the traceroute CLI
-302,link aggregation,Fixed,Severity-Medium,"LACP: Unable to remove lacp port-id, port-priority configured on interface to set default value."
-303,platform,Assigned,Severity-High,Duplicate DIAG entries are created on boot GRUB
-304,onie,Assigned,Severity-Medium,Interface not getting IP from DHCP in ONIE rescue mode
-305,link aggregation,Fixed,Severity-Medium,LAG: Transceiver option is not applicable for LAG interface .
-306,bgp,Fixed,Severity-Medium,Appropriate message required when user added another BGP AS number
-307,vlan,Fixed,Severity-Medium,VLAN field is empty while check LAG interface status by “show interface lag <ID> brief”
-311,configuration persistence,Fixed,Severity-High,"""copy running-config startup-config"" takes 1:30 minutes and CPU at 100%"
-313,configuration persistence,Fixed,Severity-High,Startup configuration erased when both data and mgmt interface has same IP & route for data plane
-314,traceroute,Fixed,Severity-High,Intermediate hops are not displaying in Traceroute CLI output
-315,bgp,Fixed,Severity-High,BGP adjacency not formed without router ID when user configure interface level IP's prior to bgp global configuration
-316,bgp,Fixed,Severity-Medium,"BGP: Deleting an already deleted network causes the latest added network to be deleted, this can be repeated over and over again"
-317,link aggregation,Fixed,Severity-Medium,"LAG: System-priority range option should be removed for  the CLI ""no lacp system-priority""."
-321,lldp,Open,Severity-Medium,LLDP - Port ID not removed when disable and consulting from neighbor info
-328,vlan,Fixed,Severity-Medium,VLAN document issue: VLAN display commands
-329,vlan,Fixed,Severity-Medium,CLI command not properly documented in VLAN CLI user guide
-330,vlan,Assigned,Severity-Medium,VLAN user guide document issue
-333,vlan,Fixed,Severity-Medium,Ports needs to be renamed as interfaces in all VLAN CLI configuration and output
-334,link aggregation,Fixed,Severity-Medium,"LAG: Core dumped for vtysh, ops-lldpd while configuring speed on lag interface(Aggregate-name)."
-335,link aggregation,Fixed,Severity-Medium,LAG : show lacp interface <aggregate name> is not returning any output.
-338,link aggregation,Fixed,Severity-Medium,LAG : LACP System-priority value is not reflected consistently
-344,lldp,Fixed,Severity-Medium,9 coredumps generated by lldpd in under 4 hours while LLDP was disabled.
-351,vlan,Assigned,Severity-Medium,Need a way to check interfaces VLAN mode
-352,link aggregation,Fixed,Severity-Medium,LAG : Passive LACP mode in both switches resets partner parameters to be 0
-354,vlan,Fixed,Severity-Critical,"Interface configured with ""vlan trunk native"" is dropping untagged traffic."
-355,link aggregation,Fixed,Severity-Medium,LAG : show running-config interface <LAG-Name>  behaves differently
-356,lldp,Assigned,Severity-Medium,Neighbor chassis-name doesn't get populated instantaneously in sh lldp neighbor output
-357,vlan,Fixed,Severity-High,VLAN trunk native is not working in a particular VLAN sequence of configuration
-359,mgmt interface,Assigned,Severity-Medium,"Mgmt Interface : When Mgmt IPV6 address is configured with last octet as 0, it is not displayed in show interface command"
-360,vlan,Fixed,Severity-High,User able to add internally allocated VLANs as allowed VLANs on trunk port
-363,link aggregation,Fixed,Severity-High,"LAG: Switching a LAG between specific interface is not synced and details are not populated in ""show lacp interfaces"" ."
-364,traceroute,Fixed,Severity-Medium,Descripency in  traceroute user_guide
-365,traceroute,Fixed,Severity-Medium,Descripency in traceroute cli_guide
-366,ping,Fixed,Severity-Medium,Descripency in ping user_guide
-367,vlan,Fixed,Severity-Medium,Internal VLAN allocated for split parent interface
-368,vlan,Open,Severity-Medium,Split child interface acting as L3 when there is no split on parent
-371,configuration persistence,Open,Severity-Critical,"copy startup-config running-config doesn´t work, unexpected output after load start up config into running config"
-374,BGP,Fixed,Severity-Critical,BGP route not seen in ip route table causing end to end network un-reachable
-376,link aggregation,Fixed,Severity-Medium,LAG : Lag configuration is removed when an interface attached to LAG is moved to L3 mode
-377,vlan,Fixed,Severity-High,"vtysh coredump in ""show run"""
-378,link aggregation,Fixed,Severity-Medium,LAG interface allocation issues on split interface
-379,link aggregation,Fixed,Severity-Medium,LAG Port and system priority are not used with aggregation keys
-380,link aggregation,Fixed,Severity-Medium,"LAG: once the maximum LAG interface count is already reached, is possible to create new ones"
-381,REST,Fixed,Severity-Medium,REST Error messages not formatted as json.
-384,link aggregation,Fixed,Severity-Medium,Internal VLAN should be released once LAG interface converted as L2
-386,vlan,Open,Severity-Medium,Wrong default VLAN display info on trunk port
-387,vlan,Open,Severity-Medium,Need a way to configure “vlan trunk” on trunk interface
-389,Basic l3,Fixed,Severity-High,Static route : active static routes are not displayed in show ip route command output
-391,link aggregation,Fixed,Severity-Medium,"LAG : With no partner, some LAG parameters are populated in partner column"
-392,Basic L3,Open,Severity-Medium,Duplication of IP address across interface vlans and L3 interfaces .
-394,bgp,Open,Severity-Critical,BGP: Routes no longer advertised.
-395,basic l3,Open,Severity-Medium,dhclient6@eth0.service failed to start
-396,rest,Fixed,Severity-Medium,Using mutable flag to check if table is immutable in declarative configuration
-397,bgp,Fixed,Severity-High,BGP MD5 password between neighbors is not working and session is being Established.
-398,bgp,Fixed,Severity-Critical,BGP: Routing table failing to be synced between DB and Kernel
-399,bgp,Fixed,Severity-Critical,BGP: Scale issue BGP is bouncing with 1000 routes
-402,lldp,Open,Severity-Medium,Need LLDP to be turn on by default
-405,basic l3,Open,Severity-Medium,"L3 Interfaces accepts invalid, multicast, reserved  ipv4/ipv6 addresses except mgmt interface."
-406,lldp,Open,Severity-Medium,Neighbor entries in sh lldp neighbor output  increment every time user change interface between L2 and L3
-407,lldp,Fixed,Severity-Medium,"LLDP: Invalid ipv4/ipv6 addresses can be configurable on ""lldp management-address <ipv4/ipv6 addresses>."
-408,vlan,Fixed,Severity-Medium,Show run does not display interface vlans in numerical order
-409,NTP,Fixed,Severity-Medium,"Error is displayed after checking the CLI help for NTP feature. ""Error: Help strings does not match for the identical tokens"""
-410,platform,Fixed,Severity-Critical,40Gb interface is auto negotiating to 1Gb.
-415,rest,Fixed,Severity-Medium,DC needs to return configuration columns from the sub-tree
-417,cli-infra,Fixed,Severity-Medium,'-Werror and -Wall need to be re-enabled on ops-cli/vtysh/Makefile.am
-418,Basic L3,Fixed,Severity-High,Static route: broadcast and multicast address are allowed to be configured as destination prefix.
-419,Basic L3,Fixed,Severity-Medium,Static route: Local ip should not be allowed to configure as next hop
-420,bgp,Fixed,Severity-Medium,Dynamic router ID not populated when forming BGP network
-421,link aggregation,Fixed,Severity-High,Open Switch: Huge Packet Loss between Hosts over Static Route
-422,bgp,Fixed,Severity-High,BGP learned routes doesn't clear at all dynamically when user disable interfaces containing network prefix
-427,cli-infra,Fixed,Severity-High,"vtysh core dumped for the basic ""diag-dump lldp basic"" command"
-429,ntp,Fixed,Severity-High,Python ntp and ops-switchd process spiking very high even without any traffic or any configuration
-430,vlan,Fixed,Severity-Medium,Default VLAN not assigned to L2 interface by default in a specific scenario
-433,lldp,Open,Severity-Medium,LLDP : Some default tlv fields ( related to port ) are not displayed in remote
-434,lldp,Fixed,Severity-High,Event logging basic feature not working for lldp module the only module supported
-435,mgmt interface,Open,Severity-High,ops-mgmt-intf: index out of range exception when no management interface exists
-437,platform,Fixed,Severity-High,Platform: Switch is crashing if you split a 40 G port and then try to access to an invalid interface
-438,platform,Fixed,Severity-Medium,Platform: switch allows you to access split interfaces that haven't been configured
-439,platform,Fixed,Severity-Medium,"Platform: Fake ""no split"" interface configuration"
-444,Mgmt interface,Open,Severity-Medium,Platform: Show commands to get interface speed are not synchronized
-447,vlan,Fixed,Severity-Medium,Deconfiguring some part of the internal vlan range resets the range to the default value
-448,basic l3,Open,Severity-Medium,Misleading ARP entries in the ARP table
-449,vlan,Open,Severity-Medium,VLAN auto creation support
-451,bgp,Fixed,Severity-High,Filtering BGP route doesn't take effect dynamically
-452,bgp,Fixed,Severity-Medium,Database transaction aborted message when user try to create route-map to router bgp configuration twice
-456,rest,Assigned,Severity-Medium,Documentation of POST /system/vrfs/{ppid}/bgp_routers/{pid}/bgp_neighbors is wrong
-460,rest,Fixed,Severity-Medium,lldp_enable missing from Swagger documentation
-466,Mgmt Interface,Fixed,Severity-Critical,Mgmt interface : Ipv4 static ip assignment to the interface is not working even though it shows in runcfg.
-469,diagnostics,Open,Severity-Medium,"interface is not in sorted order in ""diag-dump lldp basic"" output"
-473,bgp,Fixed,Severity-Medium,Tier1 CIT test doesn't include or  enable test case - test_bgp_ft_routemaps_with_hosts_ping.py every execution
-480,diagnostics,Fixed,Severity-Medium,CLI expand help support is missing for show tech features CLIs
-486,autoprovisioning,Fixed,Severity-High,ZTP: Inconsistent behavior in Auto-provisioning when script is changed.
-487,NTP,Fixed,Severity-High,NTP: Connection not established with NTP server using physical switch
-491,lldp,Open,Severity-High,LLDP daemon clears other feature's keys in System:status column
-493,vlans,Open,Severity-Medium,interface is getting tagged to all exiting vlans if interface vlan mode is changes to native untagged
-494,vlan,Fixed,Severity-Medium,Able to assign used internal vlan assigned to an L3 interface  on an L2 interface .
-495,mgmt interface,Fixed,Severity-Medium,Setting up Hostname fails
-496,tftp server,Fixed,Severity-Medium,tftp server path accepts invalid values
-497,lldp,Open,Severity-Medium,"LLDP : IPV6 LLDP management address with last octet as 0, 0 is not displayed in remote device info."
-498,lldp,Open,Severity-Medium,LLDP : Unconfiguring LLDP management address issue
-499,vlan,Fixed,Severity-Medium,Wrong port display on default vlan
-500,lldp,Fixed,Severity-High,"vtysh core dumped for ""show lldp neigh"" command"
-501,vlan,Fixed,Severity-Medium,Some of the configuration skipped while restore bulk configuration
-503,ntp,Fixed,Severity-Medium,NTP: Invalid ip-address shouldn't accept for ntp server config.
-504,lldp,Open,Severity-Medium,diag-dump output alignment issues
-505,lldp,Fixed,Severity-Medium,Event logging is not adding an event for LLDP neigbour removal
-506,Sub-interfaces,Open,Severity-Medium,L3(Subinterface) :: Subinterface help shows that  newly created interface is enabled by default while sh run does not reflect it.
-507,lldp,Fixed,Severity-Medium,diag-dump command hung for the command targeted to non responding daemon (LLDP)
-508,subinterfaces,Open,Severity-Medium,L3(Subinterface) :: Admin state in show interface <subint> shows admin up even when it is down .
-509,subinterfaces,Fixed,Severity-Medium,"L3(Subinterface) show interface <interface name> subinterface command , takes subinterface itself as input"
-511,LLDP,Open,Severity-Medium,"""show lldp neighbor-info"" is missing the SysName"
-515,basic L3,Fixed,Severity-Critical,Switch unable to ping loopback interface.
-516,Basic L3,Open,Severity-High,Unable  to configure IPv6 Link-Local and Global Unicast addresses
-518,ospf,Open,Severity-Medium,ospf adjacency  not formed
-519,lldp,Open,Severity-Medium,"LLDP : LLDP Neighbor entries field becomes 0, with a new neighbor entry"
-520,Sub-interfaces,Open,Severity-Medium,"Core dump for switchd , vlan ,zebra while trying to configure an internal vlan on subinterface(negative scenario)"
-521,basic l3,Open,Severity-Medium,L3 Subinterface : Duplication of IPv6 addresses across subinterfaces
-522,subinterfaces,Open,Severity-Medium,L3 Subinterface : Non existing vlan is assigned to subinterface
-523,lldp,Fixed,Severity-Medium,LLDP daemon core-dumped
-525,basic l3,Fixed,Severity-Medium,L3 Subinterface : Subinterface CLI shows parent interface down if you create a subinterface first and do a admin up on parent interfaces later
-526,NTP,Fixed,Severity-Medium,NTP: A validation is needed for maximum number of configurable NTP servers
-528,REST,Open,Severity-Medium,[REST] PATCH method fails when adding keys within empty optional columns
-529,REST,Fixed,Severity-Medium,[REST] Swagger: Error message printed at the restapi.json
-530,platform,Fixed,Severity-High,"The ""show interface"" RegEx are incorrect"
-532,Platform,Open,Severity-Medium,Pretty name & Show system version are different from actual build
-533,os-infra ,Open,Severity-Medium,"Events are getting cleared automatically from journal db and hence the output of ""show events"""
-534,lldp,Fixed,Severity-Medium,LLDP events issue : either missing neighbor delete event or duplicate add event
-537,ping,Fixed,Severity-Medium,Ping to VLAN IP address does not work
-539,bgp,Fixed,Severity-High,BGP max number of routes reaches 3039 and then neighbor disconnects
-540,CLI Infra,Fixed,Severity-High,test_vtysh_ct_system skipped in CIT Tier 1
-541,BGP,Fixed,Severity-High,test_bgp_ft_routemaps_with_hosts_ping skipped in Tier1 CIT
-542,CLI Infra,Fixed,Severity-High,test_vtysh_ct_cli_infra skipped in Tier1 CIT
-543,ping,Open,Severity-High,Issue with Ping FT-Script
-546,BGP,Fixed,Severity-High,BGP fast-external-failover command not working
-547,link aggregation,Fixed,Severity-Medium,"After several seconds of turning a LACP interface down, its status will stwich to Collecting"
-548,Loopback,Fixed,Severity-Medium,Loopback interfaces do not show as implicitly connected routes (connect routes ) in show ip route Defect ID 753
-549,ospf,Open,Severity-High,Tier1/2 CIT ospf adjacency test always show test result as pass even when the adjacency was not formed.
-551,link aggregation,Fixed,Severity-High,Eliminate options in Load Balancing enum
-552,authentication,Fixed,Severity-High,"Unable to change the password for the username ""admin"" and already existing configured user."
-553,lldp,Fixed,Severity-Medium,"[diag-dump] Error on ""diag-dump lldp basic"" in the ""admin"" mode"
-555,lldp,Fixed,Severity-High,"vtysh coredumped when executing ""diag-dump lldp basic"" for an corrupted yaml file"
-556,lldp,Open,Severity-Medium,LLDP : Re-Init timer information need to be displayed in show lldp config command output
-557,lldp,Open,Severity-Medium,LLDP neighbor-info
-560,Loopback,Fixed,Severity-Medium,No CLI ( show loopback interface brief) to check all the loopbacks configured
-562,loopback,Fixed,Severity-Medium,Loopback interface is not reachable through the management interface on openswitch
-563,rest,Fixed,Severity-Medium,[REST] Status and statistics columns are seen as invalid during sort and filter
-564,Rest,Open,Severity-Medium,[REST] GET with depth returns 200OK when use an invalid selector
-566,Rest,Fixed,Severity-Medium,[REST] PATCH stop working when add a very big string as an attribute
-567,configuration persistence,Skip Fix,Severity-Medium,Traceback generated after interrupting copy from running to startup
-568,Rest,Fixed,Severity-Medium,[REST] GET when the depth is big does not work
-569,subinterfaces,Fixed,Severity-Medium,l3 subinterface: vswitchd crash while configuring multiple subinterface
-570,aaa,Open,Severity-High,"Unable to remove existing local user account using ""user remove <user>"" from root user login."
-571,lldp,Fixed,Severity-Medium,"CIT Issue"": Skipping the LLDP test case due to the CLI changes made to fix the defect #403"
-572,os-infra,Open,Severity-Medium,Supportability feature needs a recovery mechansim if any of the yaml file is corrupted
-575,basic l3,Fixed,Severity-Medium,L3 ECMP: Nexthop not getting deleted from ASIC for ECMP routes
-576,platform,Fixed,Severity-Medium,Platform: Duplexity default is not been displayed as expected
-577,platform,Fixed,Severity-Medium,Platform: Duplexity mode from Half-duplex to Full-duplex change is not been reflected
-579,Loopback,Fixed,Severity-Medium,Loopback interface is able to reach an external host configured in the same subnet
-581,CLI Infra,Open,Severity-Medium,"Core dumped when you press ctrl + ""|"" keyboard layout in Spanish"
-583,ntp,Fixed,Severity-Medium,NTP: Long NTP server name displays information out of the table in command ‘show ntp associations’
-584,ntp-client,Fixed,Severity-Medium,NTP: Rx-pkts field in statistics starts to increase even if an NTP server is not connected
-585,Basic L3,Open,Severity-Medium,L3 ECMP: Nexthop is not removed from ASIC ecmp object when corresponding interface is shutdown
-587,platform,Open,Severity-Medium,Copy running-config start-config could be lost interfaces
-591,vlan,Fixed,Severity-Medium,Sorting issue on show vrf output
-592,diagnostics,Fixed,Severity-Medium,VTYSH core file while execute show tech CLI continuously
-594,dhcp server,Open,Severity-Medium,DHCP: Max number of ranges is not defined.
-596,cli-infra,Skip Fix,Severity-High,Core Dump on issuing VTYSH command. Cannot enter into the vtysh mode.
-598,ping,Fixed,Severity-Medium,Ping with ip-option include-timestamp is showing error
-599,CLI Infra,Open,Severity-Medium,Not able to login to openswitch with admin/admin credentials.
-600,lldp,Open,Severity-Medium,LLDP neighbor chassis ID not populated for Linux box connecting to switch
-601,Sub-interfaces,Fixed,Severity-Medium,"L3 Subinterface :: Segmentation fault(core dumped portd, vland) while trying to do sh interface <subinterface> brief for connected interfaces"
-602,Sub-interfaces,Open,Severity-Medium,L3 Subinterface:: Two subinterfaces with the same VLAN ID should be allowed to configure IP in same or different subnets
-604,ping,Open,Severity-High,The parse_ping_repetitions is  not parsing the output
-605,rest,Fixed,Severity-Medium,GET  /rest/v1/system/subsystems/base does not return interfaces(references)
-606,rest,Fixed,Severity-Medium,Interfaces in Subsystem gets deleted after write from DC
-607,rest,Assigned,Severity-Critical,ops-restd is shipping publicly accessable SSL private key
-608,rest,Fixed,Severity-Medium,Interfaces are shown as part of configuration as well as status fields in model schema of swagger for GET
-609,basic l3,Fixed,Severity-Medium,Zebra adding a next hop when interface is down
-610,basic l3,Fixed,Severity-Medium,Core file created by zebra daemon while convert interface from L3 to L2 and add allowed vlan on trunk interfaces
-611,lldp,Fixed,Severity-Medium,Multiple core file created by lldp daemon while adding allowed vlan on trunk interfaces
-612,basic l3,Open,Severity-Medium,Loopback interfaces do not show traffic statistics .
-613,loopback,Fixed,Severity-Medium,Loopback interfaces do not show up in sorted order in show run and show loopback interface CLI's.
-616,lldp,Fixed,Severity-Medium,Disabling LLDP test case
-618,Mgmt Interface,Open,Severity-Medium,portd needs to  push port configurations to interface when a kernel interface is detected
-619,subinterfaces,Fixed,Severity-Medium,subinterface: out of order show running-config
-622,vlans,Open,Severity-High,Test coverage for vlan not sufficient
-623,link aggregation,Fixed,Severity-High,LAG and LACP test cases should be renamed to test_* convention
-626,NTP,Fixed,Severity-High,test_ntpd_ft_auth_noauth_restart.py failing intermittently on CIT Tier1/2
-627,basic l3,Open,Severity-High,Shutdown of interface does not remove the connected route in sh ip- route
-629,vlan,Open,Severity-High,"test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan failing in CIT Tier 2 with error ""Failed to configure an ipv4 address"""
-630,ospf,Fixed,Severity-High,"test_ospfv2_ft_adjacency.Test_ospf_configuration.test_nbr_discovery causes Failure in CIT Tier 2 ""Adjacency not formed in SW1 with SW2"""
-631,Mgmt interface,Fixed,Severity-High,test_mgmt_intf_ft.py fails intermittently in CIT Tier 1
-633,vlans,Open,Severity-High,CIT Failure ops.tests.vlan.test_ft_vlan_removed_from_end_of_table.Test_vlan_state_removed_from_end_of_table.test_sendTraffic_after
-644,Link Aggregation,Assigned,Severity-High,"Output for ""show interface brief"" is not showing the LAG mode anymore"
-648,link aggregation,Fixed,Severity-High,LAG is not using the Port Priority to choose speed
-649,link aggregation,Fixed,Severity-Medium,"lacp_user_guide.md is showing incorrect ouput for ""show lacp interfaces"""
-650,Link Aggregation,Fixed,Severity-High,Sytem Priority and Port Priority are not changing the decision for LAG negotiation
-651,Link Aggregation,Fixed,Severity-High,Ping is not working when LAG is changed from two interfaces to just one interface
-652,VLAN,Open,Severity-High,test_ft_vlan_removed_from_end_of_table.py is failing intermittently in CIT Tier 1 and Tier 2
-659,L2 Physical Interfaces,Fixed,Severity-High,test_interfaces_ft_intf_stats.Test_template.test_statistics failure: ERROR: AssertionError: rx_bytes wrong
-660,Test Framework,Open,Severity-High,test_layer3_ft_ecmp_hash.Test_ft_ecmp_hash.test_configure_switches CIT Tier 2 Test Failure: ERROR: Failed to configure IP 10.0.0.4 on workstation1
-661,REST,Fixed,Severity-Medium,REST: Custom validators logic not invoked for PATCH
-662,REST,Fixed,Severity-Medium,test_rest_ft_interfacesid.py and test_rest_ft_system.py Failing for tier2 (regression)
-663,link aggregation,Open,Severity-High,Bonding driver errors
-664,link aggregation,Fixed,Severity-High,"""show running-config"" doesn't show IP LAG config"
-666,BGP,Fixed,Severity-Critical,CLI issues on 0.2.1
-668,boot process,Fixed,Severity-Critical,sysd: ops-sysd crash if BUILD_ID is missing or longer than 80 in /etc/os-release file
-669,OVS Infra,Open,Severity-High,OVSDB error logging
-671,BGP,Fixed,Severity-High,"ops.tests.bgp.test_bgp_ft_ipv6_prefixlist.Test_bgpd_ipv6.test_bgp_full failed to Config ""bgp router-id 9.0.0.2"" was not correctly configured!"
-673,BGP,Fixed,Severity-High,ops.tests.bgp.test_bgp_ft_routemap_ipv6_next_hop.Test_bgp_redistribute_configuration.test_configure Failing with Timeout > 300
-674,VRF,Assigned,Severity-Medium,enhance zebra CT script to handle VRF show routes
-675,Platform,Fixed,Severity-Medium,SFP+ module on some port is not recognized
-676,Configuration Persistence,Open,Severity-Medium,"""copy running-config startup-config"" not working"
-679,Sflow,Fixed,Severity-Medium,show sflow interface <no> shows Segmentation fault
-680,REST,Fixed,Severity-High,REST: Rest not working for NTP_Association and NTP_Key table
-681,DHCP Relay,Open,Severity-High,test_vtysh_ct_dhcp_relay.Test_dhcp_relay_configuration tests causing Failures in OPS Tier 2
-682,basic l3,Open,Severity-Critical,Unable to ping the host machine from the switch running ospf
-687,link aggregation,Fixed,Severity-Medium,zebra core files created on LAG setup
-688,link aggregation,Fixed,Severity-High,VTYSH memory corruption after enable routing on LAG interface
-695,link aggregation,Fixed,Severity-Medium,LAG interface stat shows negative value
-696,link aggregation,Fixed,Severity-High,IxANVL LACP 1.5 and 1.6 - DUT forwarding packets during Collecting or Distributing bit = FALSE
-697,link aggregation,Fixed,Severity-Medium,LAG group with Hash type l2-src-dst doesn't balance the traffic
-698,link aggregation,Fixed,Severity-Medium,IxANVL LACP 10.2 - LAG invidual interface selection is not established
-699,link aggregation,Fixed,Severity-Medium,IxANVL LACP 2.1 - DUT not switching to another member of LAG when an interface is disabled
-700,REST,Fixed,Severity-Medium,[REST] PATCH method is not supported in Full-Configuration
-702,Link Aggregation,Assigned,Severity-Medium,ops-intfd.tests.test_intfd_ct_admin_state.Test_portd_admin_state_update.test_port_interface_admin_state component test fail intermittent
-703,bgp,Fixed,Severity-Medium,ops.tests.bgp.test_bgp_ft_ip_prefixlist.Test_bgpd_routemap.test_bgp_full fails intermittent
-704,bgp,Fixed,Severity-Medium,ops.tests.bgp.test_bgp_ft_routemap.Test_bgpd_routemap.test_bgp_full fails intermittent
-705,AAA,Open,Severity-Medium,test_vtysh_ct_aaa.AutoProvisioning fails intermitten in aaa-utils repo
-706,lldp,Fixed,Severity-Medium,ops.tests.lldp.test_lldp_ft_enable_disable.Test_lldp_configuration.test_lldp_enable_disable fails intermitten in intfd repo
-707,lacp,Fixed,Severity-Medium,ops-lacpd.tests.test_vtysh_ct_lacp.Test_lacp_cli.test_lagContextCommands fails intermittent in lacp repo
-709,lacp,Fixed,Severity-Medium,ops-lacpd.tests.test_lacpd_ct_lag_config.Test_lacpd.test_lacpd_dynamic_lag_config fails intermittent
-710,bgp,Fixed,Severity-Medium,test_bgp_ft_peergroup.bgpTest fails intermittent between repos
-711,BGP,Fixed,Severity-Critical,"BGP fails to converge to ""Established"" and ""show bgp neighbor"" shows incomplete output."
-712,BGP,Open,Severity-High,OpenSwitch - BGP with multipath is taking too long to reconverge after failure
-713,BGP,Fixed,Severity-High,"Openswitch - BGP:  bgp routes in the leaf switches  are removed from the  routing table, when a spine device is turned off with multipath enabled."
-714,BGP,Open,Severity-High,BGP Hold Time is not sticking when changing via CLI command.
-715,BGP,Fixed,Severity-High,BGP: Adding 6 neighbors or more with 100 routes causes python and ovsdb-serv+ to use more than 1 CPU core
-716,BGP,Open,Severity-High,Openswitch - BGP: Leaf devices are not able to share a high amount of networks in a Clos topology with multipath feature enabled.
-717,BGP,Fixed,Severity-Medium,Unable to configured bgp neighbor with ASN 4294967295
-719,BGP,Fixed,Severity-High,"BGP: Command ""show ip bgp"" is not working properly"
-720,BGP,Fixed,Severity-Critical,Enabling -Wall and -Werror on ops-cli repo
-721,BGP,Fixed,Severity-Critical,Can’t establish BGP peering b/w two Halon with basic configuration. Also in “show running” don’t shows the BGP configuration's commands entered previously
-723,link aggregation,Open,Severity-High,Missing documentation for LAG interfaces on L3 user guide
-724,vlans,Fixed,Severity-High,All Vlan Interfaces going to default vlan after a specific vlan is deleted
-725,Versioning,Fixed,Severity-Medium,can't add ops-switchd-opennsl-plugin ops-switchd-container-plugin in same workspace
-726,L3,Open,Severity-Medium,IP ECMP disbale does not work
-729,link aggregation,Fixed,Severity-Medium,"Ops-intfd : show interface command is giving a ""% Command incomplete"""
-730,link aggregation,Open,Severity-Medium,LAG names when configuring through CLI should support to lagXX and not only lag XX
-731,link aggregation,Fixed,Severity-Medium,Unexpected behavior when LAG is to be removed from the device
-747,Link Aggregation,Open,Severity-High,LACP negotiation is not being completed and LAGs use fallback behavior when it is not configured
-748,loopback,Fixed,Severity-Medium,Loopback interfaces script (test_layer3_ft_loopback.py) fails intermittently on OPS branch due to script issue .
-750,OVSDB P&S,Fixed,Severity-Medium,OVSDB partial update of map columns doesn't support newly-inserted UUID values
-754,ECMP,Fixed,Severity-High,The resilient hashing feature of ECMP is not maintaining traffic flows over changes in the next-hops list.
-755,ECMP,Fixed,Severity-High,Load balancing though ECMP with BGP is losing packets.
-756,Traceroute,Fixed,Severity-Medium,test_ft_traceroute.py was removed from Tier2 due to platform issue
-757,L2 Physical Interfaces,Fixed,Severity-Medium,Interface Statistics do not increase on VSI even after sending traffic
-761,Basic L3,Fixed,Severity-Medium,re-assigning native VLAN to interface does not take effect.  Ingress traffic is assigned to original incorrect VLAN.
-764,Link Aggregation,Fixed,Severity-High,ops-lacpd Feature Test are all failing due to ping failures
-765,Link Aggregation,Open,Severity-High,LAG FT located in OPS need to be converted to Modular Framework to decrease the time to run
-766,Link Aggregation,Fixed,Severity-Critical,Secondary IP not available on L3 LAGs
-768,web UI,Open,Severity-Medium,test test_webui_ft_l2_lag_config is failing intermitten between repos
-769,ospf,Open,Severity-Medium,Test test_ospfv2_ft_adjacency is failing intermittent
-770,REST,Fixed,Severity-Medium,"REST: Swagger UI does not display ""Package_Info"" Table"
-773,ntp-client,Fixed,Severity-Medium,NTP: CLI doesn't let you to update an NTP server profile when the max. number of NTP servers are configured
-776,bgp,Open,Severity-High,Routes are not being re-advertised
-777,bgp,Open,Severity-High,OVSDB Failed when 10000 are being advertised
-778,bgp,Fixed,Severity-High,“show ip bgp” is not displaying “weight” correctly
-779,bgp,Open,Severity-Medium,"""sh ip BGP summary"" inconsistently shows status. One end shows “established” the other member shows “Active.”"
-787,lldp,Open,Severity-Medium,test_lldp_ft_neighbor_info test case is failing intermittent
-788,bootup,Fixed,Severity-Medium,Grub menu should show the version number installed on that partition
-789,Infrastructure,Open,Severity-Medium,gnu-glibc 2.13 has many buffer overflow security vulnerabilities
-790,Infrastructure,Open,Severity-Medium,python 2.7.2 Buffer overflow in the socket.recvfrom_into
-791,Infrastructure,Open,Severity-Medium,libpng 1.6.17 Buffer overflow in the png_set_PLTE function
-792,Sub-interfaces,Fixed,Severity-Critical,Routes are not getting configured for subinterfaces
-796,rest,Fixed,Severity-Medium,[REST] Login handler does not check for missing arguments
-798,VLANs,Open,Severity-High,Tier2 : Script test_ft_vlan_state_reason_transition.py failing because of script issue
-799,link aggregation,Fixed,Severity-Medium,IP address assigned to the wrong LAG when lag1 and lag10 exists.
-801,Static Routes,Fixed,Severity-Medium,sh rib output are not in sorted order and takes long time for a user to figure out the route existence
-805,link aggregation,Fixed,Severity-High,show interface doesnt show L3 lag IPs
-806,sflow,Fixed,Severity-High,container continually logging sflow error
-807,link aggregation,Fixed,Severity-High,L2 LAG with VLAN trunk is not working
-808,Link Aggregation,Fixed,Severity-Medium,LAG is not redirecting traffic if you remove the interface that is passing traffic
-811,BGP,Fixed,Severity-Critical,BGP routes not in sync with kernel.
-812,ntp-client,Assigned,Severity-Medium,"NTP: ""show ntp status"" shows stale uptime with erroneous ntp running status."
-813,Logging,Open,Severity-Medium,Incorrect help string for no command in config mode and config-if mode
-815,Mgmt Interface,Fixed,Severity-Medium,show running config displays interfaces in vlans twice
-818,Platform,Fixed,Severity-High,switchd plugin infra not finding plugins.yaml
-819,link aggregation,Fixed,Severity-High,test_lacpd_ct_aggregation_key fails intermitten
-820,link aggregation,Open,Severity-Medium,LAG: show ip interface lag shows no information
-821,link aggregation,Fixed,Severity-Medium,"""no shutdown"" on interface context does not enable interface when member of LAG."
-822,link aggregation,Fixed,Severity-Medium,"""sh lacp Interface"" reports LACP is ""InSync"" when Partner is no present."
-823,fand,Open,Severity-High,"ops-fand continually logging ""Direction is 0000000"""
-825,BGP,Fixed,Severity-High,test_bgp_ft_routemap_atomic_aggregate fails intermittently
-826,REST,Fixed,Severity-High,Physcial interface can be deleted via REST
-828,DHCP Server,Open,Severity-Medium,DHCP-Server: Show dhcp-server leases command is taking up to 30 minutes to display 1000 leases.
-830,CLI infra,Open,Severity-High,Unable to set vtysh prompt without secondary effects
-832,0,Open,Severity-Medium,Issue in Quagga Makefile.am
-833,VLANs,Fixed,Severity-Critical,Traffic on L2 interface are dropped on AS5712 and AS6712.
-834,rest,Fixed,Severity-Medium,[REST] Account resource should parse the Password Server's configuration file
-835,DHCP Server,Fixed,Severity-High,DHCP Server: show dhcp-server leases command is not showing IPV6 leases.
-836,Port Daemon,Open,Severity-Medium,tests/test_portd_ct_proxy_arp.py and tests/test_portd_ft_proxy_arp.py failing in CIT.
-837,bgp,Fixed,Severity-Medium,"""sh ip bgp summary"" shows garbage when neighbor is configured with wrong ip address."
-838,REST,Fixed,Severity-Medium,[REST] REST API doesn't support dynamic categories for the columns
-840,switchd,Open,Severity-High,switchd fails to initialize randomly
-842,VRF,Fixed,Severity-Medium,Verification of compiler warning in VRF module CLI files
-849,VLAN,Fixed,Severity-Medium,VLAN interface sorting issue on show running
-851,bgp,Open,Severity-High,HPEOPS: BGP Routes are taking too much time to being advertised
-853,BGP,Open,Severity-Medium,Verification of compiler warning in bgp module CLI files.
-854,0,Open,Severity-Medium,show system is not showing correct information for power supply
-855,Link Aggregation,Assigned,Severity-Medium,no ip address A.B.C.D/M in a LAG interface is not showing a error message when the ip is no present
-857,L2 Physical Interfaces,Fixed,Severity-Medium,"""show system"" on AS-6712 shows incorrect ""Number of MACs"""
-858,REST,Assigned,Severity-High,"Restd isn't returning proper data for CLI command ""show vlog config"" causing core dump"
-866,rest,Fixed,Severity-High,test_rest_ft_interfaces fails repetitively on AS6712
-867,rest,Fixed,Severity-Medium,Retrieving GET /rest/v1/system/full-configuration through REST results in 500 error
-868,bgp,Open,Severity-High,BGP Summary is reproting negative values for MsgRcvd and MsgSent.  State is (null)
-870,Sub-interfaces,Open,Severity-Medium,"(no) interface physical_interface.subinterface, does not indicate about the valid range of subinterface"
-871,loopback,Fixed,Severity-High,Loopback (L3) :: Validation of Ipv4 address is errorneous
-872,VLAN,Open,Severity-Medium,"Interface vlan should not accept special IP addresses (loopback ,subnet broadcast and all broadcast addresses)"
-873,Loopback,Open,Severity-Medium,Duplication of IpV6 on different loopback interfaces
-874,ECMP,Open,Severity-High,ECMP Feature Tests and Test plan
-876,ACL,Open,Severity-High,IPv4 ACLs Ingress on Ports
-877,Port Daemon,Open,Severity-Medium,"""interface X"" displays multiple times for different configuration sub-items in ""show running-config"" output"
-878,VLAN,Open,Severity-Medium,Misleading default VLAN running status
-882,MSTP,Open,Severity-Medium,MSTP - Traffic forwarding issues seen when using multiple instances
-883,MSTP,Open,Severity-Medium,MSTP - Does not work on LAG
-884,MSTP,Fixed,Severity-Medium,MSTP Unit Testing Defects found.
-885,MSTP,Open,Severity-High,MSTP Packet counters are not getting updated and daemon crash on adding a lport after spanning-tree is enabled.
-887,Loopback,Fixed,Severity-Medium,Loopback(L3) :: sh interface loopback brief is reflecting unnecessary inputs
-888,loopback,Fixed,Severity-Medium,Verification of compiler warning in loopback&subinterface  module CLI files.
-890,REST,Fixed,Severity-High,REST API: Default expiration for authentication token is one month - too long
-892,ntp-client,Fixed,Severity-High,NTP: Time is not persistent across reboots
-893,Physical Interfaces,Fixed,Severity-Medium,No interface stat info while check interface status for split parent interface
-895,basic l3,Open,Severity-High,test_portd_ct_functionality fails repetitively on AS6712
-896,bgp,Fixed,Severity-High,BGP is not advertising multiple routes through multiple paths
-897,bgp,Open,Severity-High,BGP is not advertising a route through multiple sub-interfaces
-898,bgp,Open,Severity-Medium,"bgp Feature shown in ""diag-dump list"" are yet to support the backend."
-899,bgp,Assigned,Severity-Critical,89 (and counting) core.ops-bgpd corefiles produced in a matter of minutes.
-900,Routing,Open,Severity-Critical,ECMP forces packets through slow path when adding new nexthop
-901,TFTP,Assigned,Severity-Medium,TFTP client is not able to copy large file ( > 32MB  ) to external tftp server
-902,OSPF,Fixed,Severity-High,Interface core dump while remove sub interface when interface is part of OSPF network
-903,Loopback,Fixed,Severity-High,L3(Loopback) :: Stress :: Only 250 loopback interfaces reachable via external host instead of 1024 loopback interfaces
-906,Sub-interfaces,Open,Severity-Medium,CLI Guide of Sub-interface needs update. Refer the details below for gap w.r.t CLI implementation.
-916,VLAN,Fixed,Severity-Medium,Internal VLAN allocation issue
-917,VLANs,Fixed,Severity-Critical,Internal vlan  range configuration is not captured in the running-configuration. Post copying running-config to startup config and rebooting switch leads to multiple core.
-918,0,Fixed,Severity-High,Appctl is not working for ops-snmpd
-919,0,Fixed,Severity-High,ops-snmpd coring while switch going for a reboot. Even manual stop of snmpd service is leading to a core.
-921,0,Fixed,Severity-High,no system description with argument is throwing unknown command error
-922,ECMP,Open,Severity-Medium,About 1.2% of the traffic is loss with ECMP because some subinterfaces are not going up
-923,vlan,Fixed,Severity-High,"Test cases: test_switchd_container_ct_changing_vlan_config.py, test_switchd_container_ct_vlan_access.py, test_switchd_container_ct_vlan_trunk.py fails in CIT"
-924,Loopback,Assigned,Severity-Medium,Incorrect error message when configuring loopback interface with different IP Address from same subnet.
-925,AAA,Fixed,Severity-High,AAA configuration are not reflected on running config properly.
-927,Sub-interfaces,Fixed,Severity-Medium,L3 (Subinetrface) :: Parent interface shows as admin  down in CLI when it is not
-929,0,Assigned,Severity-High,Performance issues for logs api
-931,sflow,Fixed,Severity-Medium,agent IP malformed
-932,0,Assigned,Severity-Medium,swagger is broken for logs after-cursor filter
-933,0,Open,Severity-High,Large log file causes major delays with REST calls
-935,0,Fixed,Severity-Medium,Sh running interface command output not in sorted order
-936,#N/A,#N/A,#N/A,#N/A
-938,SNMP,Fixed,Severity-High,SNMP query doesnot work from remote host
-939,VLAN,Fixed,Severity-High,Untagged traffic should be allowed when port configured as a trunk port
-941,0,Fixed,Severity-Medium,MSTP: Sorted show for VLANs and interfaces
-943,0,Fixed,Severity-Medium,Inconsistencies feature name across different supportability modules.
-944,basic l3,Open,Severity-Medium,test_layer3_ft_verify_sub_intf_l2vlan fails intermitten
-945,log rotation,Fixed,Severity-Medium,"No config validation for ""logrotate target"" command. Although CLI shows graceful pass but the changes not reflected in show running-config."
-946,Log Rotation,Open,Severity-High,"Log rotate functionality is not working as intended, seems to be broken."
-947,VLAN,Fixed,Severity-Medium,"Incorrect VLAN information displayed in ""show interface brief"""
-948,mirroring,Open,Severity-Critical,Container intermittent crash configuring mirror
-951,0,Open,Severity-Medium,Reboot or reload command is not available in OPS build
-952,switchd,Fixed,Severity-Critical,OPS-SWITCHD corefile generated while switch was in idle state.
-953,0,Open,Severity-Medium,"Dill: The help string for interface sub-command under no, shows ""Error: Help strings does not match for the identical tokens"""
-954,0,Open,Severity-Medium,DHCP distributes all leases after some seconds when it is only 1 Vlan configurated
-962,0,Fixed,Severity-Medium,Observed that domain name learned via DHCP server not removed after IP address manually added in the mgmt interface
-966,switchd,Fixed,Severity-Medium,test_switchd_container_ct_intervlan.py fails in CIT
-967,link aggregation,Open,Severity-High,LAG Bond Status new functionality
-969,mirror,Open,Severity-High,Port mirror activation causes switchd crash
-970,0,Open,Severity-Medium,DHCP/TFTP Supportability: Theres no information related to dhcp/tftp in show tech command
-971,SNMP,Fixed,Severity-Medium,RFC 1213 MIB SNMP statistics not working
-973,Sub-interfaces,Fixed,Severity-High,Subinterfaces (L3) :: Validation of Ipv4 address is errorneous
-975,MSTP,Open,Severity-Medium,MSTP ft library and parser missing
-977,basic L3,Fixed,Severity-Medium,"The help string for ipv6 sub-command under no, shows ""Error: Help strings does not match for the identical tokens"""
-981,0,Assigned,Severity-Medium,memory leak in QoS profile command
-982,0,Open,Severity-Medium,ASIC Table full error with more than 8k routes
-983,mirroring,Open,Severity-High,1 byte buffer overrun in container-plugin mirror_set
-984,COPP,Open,Severity-High,Memory leak in COPP container plugin
-985,0,Fixed,Severity-Medium,show tech does not include 'show interface queues'
-988,LACP,Open,Severity-Medium,Port pecking order needs to work to reflect forwarding states in port and interface table
-989,MSTP,Fixed,Severity-Medium,"MSTP: ""no instance"" command need to add VLANS to CIST, Priority value consistent in show commands"
-990,0,Open,Severity-Medium,"Validation missing in the ""show interface"" command."
-991,DHCP Client,Fixed,Severity-Medium,DHCP6 client service is failing to start post the fresh installation.
-992,ARP,Open,Severity-Medium,ops-arpmgd is crashing on ovsdb-server restart
-993,Autoprovisioning,Fixed,Severity-High,ZTP :  Minimally viable product with 2000 VLANs and 2000 VLAN Interfaces results in missing interfaces when large configuration is applied
-994,ARP,Open,Severity-Medium,Observed that ARP-Manager daemon restarted due to out of memory while system was handling around 7000 ARP with traffic for 30 hrs
-999,VLANs,Fixed,Severity-Medium,Add test case to verify L3 stats during intervlan routing
-1001,switchd,Open,Severity-Medium,Memory leak in plugins infrastructure
-1003,0,Fixed,Severity-Medium,systemd-journald: Failed to create new system journal: No space left on device
-1004,mirroring,Open,Severity-High,Mirroring: missed destroy of cloned smaps
-1005,Mirroring,Open,Severity-Medium,Mirroring: complete removal of RSPAN/VLAN mirroring code from PI layer
-1008,basic l3 ,Open,Severity-Medium,"Commit Supportability changes for L3 features (Basic, Loopback, SubIntf, LAG, ECMP, OSPF, Zebra) to rel/dill"
-1009,0,Fixed,Severity-Medium,test_lldp_ft_statistics.py fails randomly in CIT
-1013,VLANS,Assigned,Severity-Medium,Default vlan 1 assigned to interface VLAN in a specific removal case
-1016,basic l3,Open,Severity-Medium,L3 Routing: ops-zebra crashes due to NULL pointer dereference
-1019,rest,Open,Severity-Medium,REST Notifications for System table does not notify of updates
-1021,CoPP,Assigned,Severity-Medium,"show copp statistics missing for STP, IPv4 options and IPv6 options packets in vtysh"
-1025,OSPF,Open,Severity-Medium,Verification of compiler warning in OSPF module CLI files.
-1027,MSTP,Open,Severity-Medium,MSTP: on MSTI convergence is not happening as region is different.
-1028,Sub-interfaces,Open,Severity-Medium,L3 (Subinterface) ::: Subinterface  status shows null in show interface <physical interface> subinterface brief command
-1030,MSTP,Fixed,Severity-Medium,MSTP: port-priority and cost command for CIST missing
-1033,webui,Fixed,Severity-Medium,Web UI Interface Screen Cleanup
-1034,0,Fixed,Severity-Medium,Modularize zebra component and move zebra specific CLIs and test cases to ops-quagga/zebra repository
-1035,0,Open,Severity-Critical,Dynamically generated route entries are gone from Route table when there are multiple DC operations
-1036,0,Open,Severity-Medium,dhcp server show command alignment issue with multiple option values
-1037,sflow,Fixed,Severity-High,sFlow - When minimum sampling rate is set and traffic is send at 30% of line rate the feature service stop sending sampled packets
-1038,MAC Tables,Open,Severity-High,Array out of bound access in mac learn
-1040,LLDP,Open,Severity-Medium,AS6712 LLDP Test failure  - split interface specific issue
-1043,0,Fixed,Severity-Medium,sFlow - if_Status in CNTR packets is not changing
-1045,webui,Open,Severity-Medium,Web UI Issues with MS IE/Edge
-1046,webui,Open,Severity-Medium,Move Web UI code coverage from build file to check/gate jobs
-1047,0,Open,Severity-High,OSPF and BFD disabled in opennsl
-1048,0,Open,Severity-Medium,Static Route : Command 'show ip route' does not show active routes configured in the system
-1051,0,Open,Severity-High,"L3(Subinterface) :Reconfigure a few subinterfaces ,delete them and configure a new tag , router in the stick topology does not work in that case ."
-1052,0,Open,Severity-Medium,ops.tests.layer3.test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan Failing intermitten
-1054,0,Open,Severity-Critical,Netlink messages needs a retry mechanism to ensure messages getting processed
-1057, basic l3,Open,Severity-High,Routing not allowed to enable on split parent interface
-1058,0,Open,Severity-Medium,Switch slowness and high CPU utilization when arp manager handling around 10K ARP
-1059,MSTP,Open,Severity-Medium,MSTP: Show commands data updated.
-1060,0,Fixed,Severity-Medium,Skipping the test script test_ct_autoprovisionutils.py
-1061,rest,Open,Severity-High,REST POST of full-configuration accepts config from different platform
-1062,0,Open,Severity-High,Deleting an existing ACL entry causes the shell to crash and upon ctrl^c no more ACE entries could be added
-1063,0,Open,Severity-High,ACL entry with explicit deny all rule fails to filter packets if applied to more than one physical interface
-1064,0,Open,Severity-High,Application of an ACL without ACE entries to an interface results in vtysh hang
-1065,Rest,Fixed,Severity-Critical,Recent REST change breaks full-configuration POST (declarative config)
-1066,0,Assigned,Severity-Medium,CLI: bridge_normal configuration shouldn't be modifiable
-1068,bgp,Open,Severity-High,BGP multiple unique  networks fail to be assign as best
-1070,0,Open,Severity-High,Toggling a deny ACE in an ACL results in permit after bringing down and up the deny rule
-1071,bgp,Open,Severity-High,BGP networks are not being transmitted
-1074,0,Fixed,Severity-High,copy sftp allows a user to copy a file to any path in the rootfs
-1076,0,Open,Severity-High,Configuration is lost when copy run start is issued.
-1077,physical interfaces,Assigned,Severity-High,Interface daemon crashed after add/remove/add VLAN interface scenario in the BGP network
-1079,0,Open,Severity-Medium,L3(Subinterface) ::: Stress :: 49-50% traffic loss while passing bidirectional traffic for router on stick topology for 100% line rate
-1085,0,Open,Severity-High,ovsdb-idl.c:379: assertion !idl->txn failed in ovsdb_idl_run() Aborted (core dumped)
-1086,0,Open,Severity-Medium,SNMP CLI ISSUES
-1087,0,Assigned,Severity-Medium,"LLDP show lldp neighbor-info:  ""Neighbor Chassis-ID"" isn't matching ""Hardware: Ethernet, MAC Address"" of neighbor - VSI"
-1088,0,Assigned,Severity-High,[lldpcli] process is listed as defunct in ps -aux
-1097,webui,Open,Severity-Medium,"Auto-refresh on the Interface Page takes it to top, impacting end user experience."
+Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
+13,Intra Ops: Build system enhancements,Severity-Medium,Debug packages for packages from devenv is corrupted
+15,Basic L3,Severity-Medium,CLI - Interfaces split condition is not being validated
+19,Authentication,Severity-High,AAA: Radius authentication failed when Radius user not having local linux a/c
+21,LLDP,Severity-Medium,LLDP neighbor table and interface counters take long time to clear
+23,CLI Infra,Severity-Medium,Alias configuration removed after login/logout
+26,BGP,Severity-High,BGP Does not obey global ECMP enable/disable
+30,Mgmt Interface,Severity-High,Mgmt If - IPv6 handle DAD
+31,Authentication,Severity-Medium,AAA: Radius fallback to local does not happen when we have 6 or more
+32,Authentication,Severity-Medium,Switch hung for 120 sec on admin logout with radius-server config
+33,basic L3,Severity-Medium,Deleting ipv6 addresses on L3 interfaces doesnt remove Neigbors/direct connect hosts
+34,vlan,Severity-Medium,Vlan description accepts duplicates
+35,VLANS,Severity-Medium,Vlan name is not updated on the show vlan output
+41,Physical Interfaces,Severity-High,MTU configuration is not being applied to kernel interfaces
+43,CLI Infra,Severity-Medium,Redundant CLI Command - exit and quit exist with same description and funcationality in all CLI Tree.
+44,Physical Interfaces,Severity-Medium,User able to configure unsupported speed at interface level.
+46,REST,Severity-High,REST API: Inconsistent behavior between RESTAPI and CLI for Fan deletion.
+47,REST,Severity-High,REST API: Inconsistent behavior between RESTAPI and CLI for add/delete power supplies and temp_sensors.
+48,LLDP,Severity-Medium,Misleading information to the user on lldp hold timer.
+52,Platform,Severity-Medium,"Eth0 - Qualys reports TCP Sequence Number Based Denial of Service, CVE-2004-0230"
+56,Mgmt Interface,Severity-High,DNS entry removed from resolv.conf
+58,Mgmt Interface,Severity-High,IPv6 default gateway not added in mgmt interface
+59,AAA,Severity-Medium,"Show startup config dosent display out when radius server is removed, but copy startup to running copies correct configuration"
+61,BGP,Severity-High,is_peer_group in BGP_Neighbor object should not be changable
+62,Authentication,Severity-Medium,not able to add user name or starts with numbers
+63,Mgmt Interface,Severity-Medium,Route entry missing after startup configuration copied to running configuration
+65,link aggregation,Severity-High,VSI only: Communication between LAG clients fails depending on order of LAG scenario configuration. Fails about 50% of the time
+66,link aggregation,Severity-High,LACP lags are not being enabled when configured through CLI
+69,platform,Severity-Critical,Eth0 - Nessus reports remote SSH Device Defects
+70,platform,Severity-Critical,Eth0 - Nessus reports Weak SSH MAC algorithms enabled
+71,platform,Severity-Critical,"Eth0 - Nessus reports CBC ciphers enabled, CVE-2008-5161"
+74,rest,Severity-High,REST API: Configured value through PUT METHOD not reflecting in GET METHOD.
+75,configuration persistence,Severity-Medium,Implement CLI command to print startup config in json format
+77,rest,Severity-High,Resource local configuration should not include subresources
+78,REST,Severity-Medium,Better name and/or description for resource ids used in URIs
+82,VLAN,Severity-Medium,Portd doesn't check for exsiting L2 Vlans for VLAN Ids and creates duplicate VLAN rows for same VLAN Ids
+84,Test Framework,Severity-Medium,ft-framework slowness in VSI interaction
+85,REST,Severity-High,SWAGGER UI data structures not matching to the implemented code and REST requests may fail
+86,rest,Severity-Medium,"For REST configuration APIs , optional attributes are still required to PASS or API to be successful"
+87,Physical Interfaces,Severity-High,VSI - show interface counters are not increasing
+88,aaa,Severity-Medium,VSI Segmentation fault and failed to remove user on user remove cmd.
+92,Mgmt Interface,Severity-Medium,Unable to remove IPv6 assigned IP from mgmt interface
+98,link aggregation,Severity-Critical,LAG: LACP configuration is only being applied on OVS when there is at least 1 interface in LAG
+99,link aggregation,Severity-Critical,LAG: LACP cannot be disabled on an LAG after setting it on
+100,link aggregation,Severity-High,LAG: LACP interface status is not visible from VTYSH
+101,Test Framework,Severity-Medium,Vswitch link filter not being adequately formed
+105,vlan,Severity-Medium,No show options for interface vlan configuration
+106,link aggregation,Severity-Critical,"Segmentation fault after typing ""show run"""
+107,Physical Interfaces,Severity-High,Inconsistent behavior of administrative status of interfaces
+108,link aggregation,Severity-High,"LACP: VTYSH assumption is wrong, default LACP rate is fast, not slow"
+109,link aggregation,Severity-High,LAG - Static LAG not working after change interfaces from one LAG to another
+110,REST,Severity-Medium,REST GET returns sting value instead of a boolean
+111,bgp,Severity-Medium,BGP - Map keys not defined
+112,dhcp server,Severity-Medium,DHCP - Map keys not defined
+113,link aggregation,Severity-Medium,Port - Map keys not defined
+114,REST,Severity-Medium,REST: POST method needs to return URI of newly created resource
+116,link aggregation,Severity-Medium,LAG: Broadcast is partially dropped intermittenly
+117,BGP,Severity-Medium,GET on BGP_Router missing bgp_neighbor in URI
+119,REST,Severity-Medium,REST/Swagger - Dictionaries show keytype: valuetype instead of actual keys when they exist
+121,REST,Severity-Medium,"[REST] Recursive GET - Internal Server Error when using ""selector"" parameter"
+123,link aggregation,Severity-Medium,Dynamic LAG: LACP mode is not displayed on show running-config
+124,BGP,Severity-High,Startup configuration fails to load on reboot when BGP is configured
+125,BGP,Severity-High,BGP configuration of ASN over 3000000 fails
+127,REST,Severity-High,REST API: POST method is failing when using default data structure returned by GET method.
+129,basic l3,Severity-Medium,vtysh crashes when attempting to configure a new IPv6 route with port which is not L3.
+131,REST,Severity-High,REST - GET of system/full-configuration fails if REST Authentication is enabled
+132,REST,Severity-Medium,REST API: PUT method returns internal server error 500 for invalid data structure.
+136,link aggregation,Severity-Medium,cli: seg fault in show running-config interface
+138,Log Rotate,Severity-Medium,Broken links on the Log Rotate page
+140,VLAN,Severity-Medium,Broken links on VLAN CLI
+141,Authentication,Severity-Medium,Broken link on the Authentication CLI page
+142,BGP,Severity-Medium,Broken links on the BGP CLI page
+143,L3,Severity-Medium,"Broken link on the L3 Interfaces, Static Routes, ECMP page"
+145,Test Framework,Severity-Medium,Broken link on the Writing Automated Feature Test Cases page
+146,CLI Infra,Severity-High,Core dumped when you press ctrl + ?
+147,Mgmt Interface,Severity-Medium,DHCP client is not running docker switch instance
+149,AAA,Severity-High,XML schema does not contain definitions for all System's aaa column keys
+151,AAA,Severity-Critical,Weak password encryption
+153,vlans,Severity-Medium,cli:no vlan trunk allowed <vlan-id> command resulting in segmentation fault
+154,leds,Severity-Medium,Led config is not saved properly from running to start-up config
+155,link aggregation,Severity-Medium,"""no lag #"" in interface context does not re-create interface row in Port table"
+156,REST,Severity-High,REST: Duplicated code across request handlers
+158,os-infra schema,Severity-Medium,Few columns of category status in extended schema are populated under category configuration in swagger model schema
+159,rest,Severity-Medium,Datatype mismatch between swagger model schema and REST schema (extended scheam): Swagger Bug
+160,L2,Severity-Medium,Proper error message is not given for invalid mtu size configured on interface and its reflecting in show running.
+161,L2,Severity-Medium,"Show interfaces output not showing configured allowable MTU size which is in the range of <9192-9216>, since allowable MTU size is  (in bytes) in the range <576-9216>."
+162,LLDP,Severity-Medium,LLDP - Ordering of show lldp commands is not in numerical order
+163,LLDP,Severity-Medium,"LLDP : When LLDP conifguration is done at interface level , it resets the LLDP counter information for that interface"
+164,basic l3,Severity-High,inter-vlan routing - couldn't ping no more than 84 clients in different vlans
+165,tftp server,Severity-High,TFTP & DHCP: Enabling TFTP server with non-existent path makes DHCP server stop answering requests
+166,Infra CIT,Severity-Medium,"Errors in ""adding CI process for the component"""
+167,vlan,Severity-Medium,"For internal vlan's and otherwise , the error message displayed is not properly reflecting the vlan identifier permissible range ."
+168,vlan,Severity-High,VLAN Table corrupted when enable routing on interface added with vlan access.
+169,vlan,Severity-Medium,Incorrect handling of 'no vlan trunk native <id>'
+170,vlan,Severity-Medium,Invalid handling of 'no vlan <id>' in interface config (switch(config-if)#) context.
+172,vlan,Severity-Medium,Incorrect handling of 'no vlan access <id>' and also the vlan status display is improper.
+174,dhcp server,Severity-Medium,DHCP server cannot handle 1200 pools
+175,bgp,Severity-High,Startup config is not being loaded for a very large configuration file with BGP settings
+176,vlan,Severity-Medium,show run does not display vlans in numerical order
+177,vlan,Severity-High,when no routing is specified the port should be an L2 interface is not in the default vlan
+178,vlan,Severity-Medium,"Interface info not updated while check internal vlan status by ""show vlan"""
+179,ping,Severity-Medium,Local interface/IP ping response is slow
+180,basic l3,Severity-Medium,Got ping response from admin shutdown interface
+181,vlan,Severity-Medium,Need CLI to check interface vlan status
+182,platform,Severity-Critical,"Segmentation fault (core dumped) on ""show running-config"" once rebooted followed by copy running config into startup."
+183,Mgmt interfaces,Severity-Medium,Misleading auto-negotiation default setting
+184,vlan,Severity-High,Both L3 interface sharing same internal vlan ID in a specific case
+185,vlan,Severity-High,Not getting any warning message while running short of internal VLAN ID
+187,VLANs,Severity-Medium,"Show start-up config says ""unknown command""/blank configurations  after adding 4094/1000 vlans"
+188,configuration persistence,Severity-Medium,"Configurations getting erased post reboot from startup config , startup json strings has the configuration data structures"
+189,REST,Severity-High,REST: If-Match Test failing randomly
+190,ping,Severity-Medium,"Datagram-size range is not working after a particular value in ""ping"" command"
+191,ping,Severity-Medium,Ping results 100% packet loss with ip-option
+196,Mgmt interfaces,Severity-Medium,No form of CLI supported not required for certain interface setting parameters
+198,REST,Severity-Medium,"REST: GET method on backward references such as ""Route"" is not working."
+199,link aggregation,Severity-Critical,remove interface from LAG restarts switchd
+200,Mgmt Interface,Severity-Critical,vtysh fails to start in switchd-container
+201,platform,Severity-Medium,ops-config-yaml unit tests are failing
+203,traceroute,Severity-Medium,timeout range for traceroute is not working after certain value
+204,link aggregation,Severity-Critical,LACP not working after changes in modules outside ops-lacpd
+205,REST,Severity-High,REST - GET and GET all in users resource is not consistent with other resources
+206,REST,Severity-Critical,REST: Internal Server error when using If-Match with POST/GET
+207,rest,Severity-High,REST: If-Match not supported with CORS
+209,SFTP server,Severity-Medium,Need to have sftp server stats show command
+210,Ping,Severity-Medium,Ping6: Failing to resolve IPv6 address shows error and datagram-size error
+213,configuration persistence,Severity-Critical,Openswitch Configuration Daemon (cfgd.service) Failed to Start
+214,CLI infra,Severity-Critical,Port IP did not get pushed to the Kernel
+215,CLI Infra,Severity-Medium,"""show running-config"" is not displaying in sorted order."
+216,basic l3,Severity-Medium,CLI allows two interfaces to have same IP address
+218,link aggregation,Severity-High,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration."
+219,configuration persistence,Severity-High,show startup-config does not show the complete startup-config.
+220,CLI Infra,Severity-Medium,show running-config causes coredump
+221,ping,Severity-Medium,"Continuous  ping with maximum datagram size shows ""no buffer space available"" after some time"
+223,Mgmt interfaces,Severity-Medium,show inter brief is only showing ports 49 through 54-4
+225,CLI Infra,Severity-Medium,"Unexpected output when you enter ""show con""  command"
+226,bgp,Severity-Medium,clear ip bgp <help string> show Error messages
+227,bgp,Severity-Medium,Observed vtysh core dump while check ip bgp summary
+228,Ping,Severity-Medium,"Pattern given with ""data-fill"" parameter is not coming with ICMP packet"
+229,CLI Infra,Severity-Medium,Need CLI command to copy config (running or startup) to/from external host
+230,Physical Interfaces,Severity-High,Interface is (Administratively down) after a reboot
+231,bgp,Severity-Medium,Segmentation fault when perform the command show ip bgp summary
+234,CLI Infra,Severity-Medium,"""Show Session-timeout"" doesnt display any output when the session-timeout value is default"
+236,link aggregation,Severity-High,Markdown update for show running-config
+239,BGP,Severity-Medium,"show bgp <memory, rsclient, summary, view and views>  are not yet implemented"
+240,rest,Severity-Medium,[REST] Using depth parameter in any operation other than GET should give a Bad Request
+241,basic l3,Severity-Medium,Need single CLI command to show all IP addresses
+252,BGP,Severity-Medium,"""show ip bgp ip bgp vpnv4"" + tab = Error: Help strings does not match for the identical tokens"
+253,BGP,Severity-Medium,"""show ip bgp ip bgp vpnv4 rd"" + tab = ASN:nn_or_IP-address:nn  Error: Help strings does not match for the identical tokens"
+254,CLI Infra,Severity-Critical,"""sh startup-config"" hangs and CPU at 100%"
+257,bgp,Severity-Medium,BGP: A high amount of routes from disconnected peer remain in routing table
+258,rest,Severity-Medium,"REST/Swagger: User columns in Swagger UI does not have correct ""required""/""optional"" attribute"
+279,ping,Severity-Medium,Non-default interval parameter is not working as expected for Ping6
+280,Sftp server,Severity-Medium,SFTP Server : No uniformity in config commands and naming conventions  with other features/servers.
+282,traceroute,Severity-Medium,"minttl value 255 in traceroute displays error ""traceroute: setsockopt: Invalid argument"""
+285,traceroute,Severity-Medium,[Trace Route] :  Incorrect IP address on Traceroute say 0.0.0.0 should throw error
+286,basic l3,Severity-Medium,Static routing is not displaying in sorted order
+287,traceroute,Severity-Medium,[Traceroute] - Traceroute to any non existing IP address in the same network should display as Host unreachable
+288,traceroute,Severity-Medium,[Trace Route] - Display Meaningful Error message on Network unreachable condition
+289,vlan,Severity-High,Inconsistent VLAN status behavior
+290,vlan,Severity-Medium,VLAN ports not in sorted order while check VLAN status by show VLAN
+291,vlan,Severity-Medium,VLAN field is empty in interface status while check by “show interface brief”
+292,link aggregation,Severity-Medium,LAG: L2 config does not display under interface that is attached to LAG in show running-config output.
+293,traceroute,Severity-High,Traceroute with ip-option loosesourceroute is not disiplaying any hop info
+296,rest,Severity-Medium,REST - PUT operation is not reporting when it comes to change an immutable field
+298,CLI Infra,Severity-High,LLDP core dump while configuring it after build update
+300,Ping,Severity-High,Ping/Ping6 using the hostname is not working
+301,traceroute,Severity-Medium,Optional parameters  should be displayed while executing the traceroute CLI
+302,link aggregation,Severity-Medium,"LACP: Unable to remove lacp port-id, port-priority configured on interface to set default value."
+303,platform,Severity-High,Duplicate DIAG entries are created on boot GRUB
+304,onie,Severity-Medium,Interface not getting IP from DHCP in ONIE rescue mode
+305,link aggregation,Severity-Medium,LAG: Transceiver option is not applicable for LAG interface .
+306,bgp,Severity-Medium,Appropriate message required when user added another BGP AS number
+307,vlan,Severity-Medium,VLAN field is empty while check LAG interface status by “show interface lag <ID> brief”
+311,configuration persistence,Severity-High,"""copy running-config startup-config"" takes 1:30 minutes and CPU at 100%"
+313,configuration persistence,Severity-High,Startup configuration erased when both data and mgmt interface has same IP & route for data plane
+314,traceroute,Severity-High,Intermediate hops are not displaying in Traceroute CLI output
+315,bgp,Severity-High,BGP adjacency not formed without router ID when user configure interface level IP's prior to bgp global configuration
+316,bgp,Severity-Medium,"BGP: Deleting an already deleted network causes the latest added network to be deleted, this can be repeated over and over again"
+317,link aggregation,Severity-Medium,"LAG: System-priority range option should be removed for  the CLI ""no lacp system-priority""."
+321,lldp,Severity-Medium,LLDP - Port ID not removed when disable and consulting from neighbor info
+328,vlan,Severity-Medium,VLAN document issue: VLAN display commands
+329,vlan,Severity-Medium,CLI command not properly documented in VLAN CLI user guide
+330,vlan,Severity-Medium,VLAN user guide document issue
+333,vlan,Severity-Medium,Ports needs to be renamed as interfaces in all VLAN CLI configuration and output
+334,link aggregation,Severity-Medium,"LAG: Core dumped for vtysh, ops-lldpd while configuring speed on lag interface(Aggregate-name)."
+335,link aggregation,Severity-Medium,LAG : show lacp interface <aggregate name> is not returning any output.
+336,link aggregation,Severity-Medium,"LAG: Inconsistant parameter behaviour between ""interface lag2"" and ""interface lag 2"""
+338,link aggregation,Severity-Medium,LAG : LACP System-priority value is not reflected consistently
+344,lldp,Severity-Medium,9 coredumps generated by lldpd in under 4 hours while LLDP was disabled.
+349,link aggregation,Severity-Medium,LAG: ICMP traffic is getting delayed while disabling one of the interfaces in the LAG
+351,vlan,Severity-Medium,Need a way to check interfaces VLAN mode
+352,link aggregation,Severity-Medium,LAG : Passive LACP mode in both switches resets partner parameters to be 0
+354,vlan,Severity-Critical,"Interface configured with ""vlan trunk native"" is dropping untagged traffic."
+355,link aggregation,Severity-Medium,LAG : show running-config interface <LAG-Name>  behaves differently
+356,lldp,Severity-Medium,Neighbor chassis-name doesn't get populated instantaneously in sh lldp neighbor output
+357,vlan,Severity-High,VLAN trunk native is not working in a particular VLAN sequence of configuration
+358,link aggregation,Severity-Medium,LAG : Actor-Partner sync Issue.
+359,mgmt interface,Severity-Medium,"Mgmt Interface : When Mgmt IPV6 address is configured with last octet as 0, it is not displayed in show interface command"
+360,vlan,Severity-High,User able to add internally allocated VLANs as allowed VLANs on trunk port
+363,link aggregation,Severity-High,"LAG: Switching a LAG between specific interface is not synced and details are not populated in ""show lacp interfaces"" ."
+364,traceroute,Severity-Medium,Descripency in  traceroute user_guide
+365,traceroute,Severity-Medium,Descripency in traceroute cli_guide
+366,ping,Severity-Medium,Descripency in ping user_guide
+367,vlan,Severity-Medium,Internal VLAN allocated for split parent interface
+368,vlan,Severity-Medium,Split child interface acting as L3 when there is no split on parent
+371,configuration persistence,Severity-Critical,"copy startup-config running-config doesn´t work, unexpected output after load start up config into running config"
+374,BGP,Severity-Critical,BGP route not seen in ip route table causing end to end network un-reachable
+376,link aggregation,Severity-Medium,LAG : Lag configuration is removed when an interface attached to LAG is moved to L3 mode
+377,vlan,Severity-High,"vtysh coredump in ""show run"""
+378,link aggregation,Severity-Medium,LAG interface allocation issues on split interface
+379,link aggregation,Severity-Medium,LAG Port and system priority are not used with aggregation keys
+380,link aggregation,Severity-Medium,"LAG: once the maximum LAG interface count is already reached, is possible to create new ones"
+381,REST,Severity-Medium,REST Error messages not formatted as json.
+384,link aggregation,Severity-Medium,Internal VLAN should be released once LAG interface converted as L2
+385,Basic l3,Severity-Medium,static route : Show ip route should display only installed routes but not all configured routes.
+386,vlan,Severity-Medium,Wrong default VLAN display info on trunk port
+387,vlan,Severity-Medium,Need a way to configure “vlan trunk” on trunk interface
+389,Basic l3,Severity-High,Static route : active static routes are not displayed in show ip route command output
+390,ospf,Severity-Medium,OSPFD Daemon start failure in latest Image after boot.
+391,link aggregation,Severity-Medium,"LAG : With no partner, some LAG parameters are populated in partner column"
+392,Basic L3,Severity-Medium,Duplication of IP address across interface vlans and L3 interfaces .
+394,bgp,Severity-Critical,BGP: Routes no longer advertised.
+395,basic l3,Severity-Medium,dhclient6@eth0.service failed to start
+396,rest,Severity-Medium,Using mutable flag to check if table is immutable in declarative configuration
+397,bgp,Severity-High,BGP MD5 password between neighbors is not working and session is being Established.
+398,bgp,Severity-Critical,BGP: Routing table failing to be synced between DB and Kernel
+399,bgp,Severity-Critical,BGP: Scale issue BGP is bouncing with 1000 routes
+400,Basic L3,Severity-High,Static Route: Not allowing to configure different admin distance for routes with same destination prefix.
+402,lldp,Severity-Medium,Need LLDP to be turn on by default
+404,Basic l3,Severity-High,Description: Static routing behaves inconsistently when multiple static routes with same destination and different next hop/interface rules are configured.
+405,basic l3,Severity-Medium,"L3 Interfaces accepts invalid, multicast, reserved  ipv4/ipv6 addresses except mgmt interface."
+406,lldp,Severity-Medium,Neighbor entries in sh lldp neighbor output  increment every time user change interface between L2 and L3
+407,lldp,Severity-Medium,"LLDP: Invalid ipv4/ipv6 addresses can be configurable on ""lldp management-address <ipv4/ipv6 addresses>."
+408,vlan,Severity-Medium,Show run does not display interface vlans in numerical order
+409,NTP,Severity-Medium,"Error is displayed after checking the CLI help for NTP feature. ""Error: Help strings does not match for the identical tokens"""
+410,platform,Severity-Critical,40Gb interface is auto negotiating to 1Gb.
+415,rest,Severity-Medium,DC needs to return configuration columns from the sub-tree
+417,cli-infra,Severity-Medium,'-Werror and -Wall need to be re-enabled on ops-cli/vtysh/Makefile.am
+418,Basic L3,Severity-High,Static route: broadcast and multicast address are allowed to be configured as destination prefix.
+419,Basic L3,Severity-Medium,Static route: Local ip should not be allowed to configure as next hop
+420,bgp,Severity-Medium,Dynamic router ID not populated when forming BGP network
+421,link aggregation,Severity-High,Open Switch: Huge Packet Loss between Hosts over Static Route
+422,bgp,Severity-High,BGP learned routes doesn't clear at all dynamically when user disable interfaces containing network prefix
+427,cli-infra,Severity-High,"vtysh core dumped for the basic ""diag-dump lldp basic"" command"
+429,ntp,Severity-High,Python ntp and ops-switchd process spiking very high even without any traffic or any configuration
+430,vlan,Severity-Medium,Default VLAN not assigned to L2 interface by default in a specific scenario
+432,arp,Severity-High,ARP learning issue
+433,lldp,Severity-Medium,LLDP : Some default tlv fields ( related to port ) are not displayed in remote
+434,lldp,Severity-High,Event logging basic feature not working for lldp module the only module supported
+435,mgmt interface,Severity-High,ops-mgmt-intf: index out of range exception when no management interface exists
+437,platform,Severity-High,Platform: Switch is crashing if you split a 40 G port and then try to access to an invalid interface
+438,platform,Severity-Medium,Platform: switch allows you to access split interfaces that haven't been configured
+439,platform,Severity-Medium,"Platform: Fake ""no split"" interface configuration"
+444,Mgmt interface,Severity-Medium,Platform: Show commands to get interface speed are not synchronized
+447,vlan,Severity-Medium,Deconfiguring some part of the internal vlan range resets the range to the default value
+448,basic l3,Severity-Medium,Misleading ARP entries in the ARP table
+449,vlan,Severity-Medium,VLAN auto creation support
+451,bgp,Severity-High,Filtering BGP route doesn't take effect dynamically
+452,bgp,Severity-Medium,Database transaction aborted message when user try to create route-map to router bgp configuration twice
+456,rest,Severity-Medium,Documentation of POST /system/vrfs/{ppid}/bgp_routers/{pid}/bgp_neighbors is wrong
+457,CLI Infra,Severity-High,Ctrl + d results in core dumped
+458,configuration persistence,Severity-Critical,"""show startup config json"" is takes long to display (~3min)"
+460,rest,Severity-Medium,lldp_enable missing from Swagger documentation
+466,Mgmt Interface,Severity-Critical,Mgmt interface : Ipv4 static ip assignment to the interface is not working even though it shows in runcfg.
+468,configuration persistence,Severity-Critical,Couldnt create the OVSDB transaction
+469,diagnostics,Severity-Medium,"interface is not in sorted order in ""diag-dump lldp basic"" output"
+473,bgp,Severity-Medium,Tier1 CIT test doesn't include or  enable test case - test_bgp_ft_routemaps_with_hosts_ping.py every execution
+480,diagnostics,Severity-Medium,CLI expand help support is missing for show tech features CLIs
+486,autoprovisioning,Severity-High,ZTP: Inconsistent behavior in Auto-provisioning when script is changed.
+487,NTP,Severity-High,NTP: Connection not established with NTP server using physical switch
+491,lldp,Severity-High,LLDP daemon clears other feature's keys in System:status column
+493,vlans,Severity-Medium,interface is getting tagged to all exiting vlans if interface vlan mode is changes to native untagged
+494,vlan,Severity-Medium,Able to assign used internal vlan assigned to an L3 interface  on an L2 interface .
+495,mgmt interface,Severity-Medium,Setting up Hostname fails
+496,tftp server,Severity-Medium,tftp server path accepts invalid values
+497,lldp,Severity-Medium,"LLDP : IPV6 LLDP management address with last octet as 0, 0 is not displayed in remote device info."
+498,lldp,Severity-Medium,LLDP : Unconfiguring LLDP management address issue
+499,vlan,Severity-Medium,Wrong port display on default vlan
+500,lldp,Severity-High,"vtysh core dumped for ""show lldp neigh"" command"
+501,vlan,Severity-Medium,Some of the configuration skipped while restore bulk configuration
+503,ntp,Severity-Medium,NTP: Invalid ip-address shouldn't accept for ntp server config.
+504,lldp,Severity-Medium,diag-dump output alignment issues
+505,lldp,Severity-Medium,Event logging is not adding an event for LLDP neigbour removal
+506,Sub-interfaces,Severity-Medium,L3(Subinterface) :: Subinterface help shows that  newly created interface is enabled by default while sh run does not reflect it.
+507,lldp,Severity-Medium,diag-dump command hung for the command targeted to non responding daemon (LLDP)
+508,subinterfaces,Severity-Medium,L3(Subinterface) :: Admin state in show interface <subint> shows admin up even when it is down .
+509,subinterfaces,Severity-Medium,"L3(Subinterface) show interface <interface name> subinterface command , takes subinterface itself as input"
+511,LLDP,Severity-Medium,"""show lldp neighbor-info"" is missing the SysName"
+515,basic L3,Severity-Critical,Switch unable to ping loopback interface.
+516,Basic L3,Severity-High,Unable  to configure IPv6 Link-Local and Global Unicast addresses
+518,ospf,Severity-Medium,ospf adjacency  not formed
+519,lldp,Severity-Medium,"LLDP : LLDP Neighbor entries field becomes 0, with a new neighbor entry"
+520,Sub-interfaces,Severity-Medium,"Core dump for switchd , vlan ,zebra while trying to configure an internal vlan on subinterface(negative scenario)"
+521,basic l3,Severity-Medium,L3 Subinterface : Duplication of IPv6 addresses across subinterfaces
+522,subinterfaces,Severity-Medium,L3 Subinterface : Non existing vlan is assigned to subinterface
+523,lldp,Severity-Medium,LLDP daemon core-dumped
+525,basic l3,Severity-Medium,L3 Subinterface : Subinterface CLI shows parent interface down if you create a subinterface first and do a admin up on parent interfaces later
+526,NTP,Severity-Medium,NTP: A validation is needed for maximum number of configurable NTP servers
+528,REST,Severity-Medium,[REST] PATCH method fails when adding keys within empty optional columns
+529,REST,Severity-Medium,[REST] Swagger: Error message printed at the restapi.json
+530,platform,Severity-High,"The ""show interface"" RegEx are incorrect"
+531,cli-infra,Severity-Critical,[Coredump]: Coredump on executing alias command
+532,Platform,Severity-Medium,Pretty name & Show system version are different from actual build
+533,os-infra ,Severity-Medium,"Events are getting cleared automatically from journal db and hence the output of ""show events"""
+534,lldp,Severity-Medium,LLDP events issue : either missing neighbor delete event or duplicate add event
+537,ping,Severity-Medium,Ping to VLAN IP address does not work
+539,bgp,Severity-High,BGP max number of routes reaches 3039 and then neighbor disconnects
+540,CLI Infra,Severity-High,test_vtysh_ct_system skipped in CIT Tier 1
+541,BGP,Severity-High,test_bgp_ft_routemaps_with_hosts_ping skipped in Tier1 CIT
+542,CLI Infra,Severity-High,test_vtysh_ct_cli_infra skipped in Tier1 CIT
+543,ping,Severity-High,Issue with Ping FT-Script
+544,traceroute,Severity-Medium,AS5712 is not responding for traceroute ip-option loose source route
+546,BGP,Severity-High,BGP fast-external-failover command not working
+547,link aggregation,Severity-Medium,"After several seconds of turning a LACP interface down, its status will stwich to Collecting"
+548,Loopback,Severity-Medium,Loopback interfaces do not show as implicitly connected routes (connect routes ) in show ip route Defect ID 753
+549,ospf,Severity-High,Tier1/2 CIT ospf adjacency test always show test result as pass even when the adjacency was not formed.
+551,link aggregation,Severity-High,Eliminate options in Load Balancing enum
+552,authentication,Severity-High,"Unable to change the password for the username ""admin"" and already existing configured user."
+553,lldp,Severity-Medium,"[diag-dump] Error on ""diag-dump lldp basic"" in the ""admin"" mode"
+555,lldp,Severity-High,"vtysh coredumped when executing ""diag-dump lldp basic"" for an corrupted yaml file"
+556,lldp,Severity-Medium,LLDP : Re-Init timer information need to be displayed in show lldp config command output
+557,lldp,Severity-Medium,LLDP neighbor-info
+559,snmp,Severity-High,"Switch console got hung after running ""snmp walk command"" in the multiple SSH sessions"
+560,Loopback,Severity-Medium,No CLI ( show loopback interface brief) to check all the loopbacks configured
+562,loopback,Severity-Medium,Loopback interface is not reachable through the management interface on openswitch
+563,rest,Severity-Medium,[REST] Status and statistics columns are seen as invalid during sort and filter
+564,Rest,Severity-Medium,[REST] GET with depth returns 200OK when use an invalid selector
+566,Rest,Severity-Medium,[REST] PATCH stop working when add a very big string as an attribute
+567,configuration persistence,Severity-Medium,Traceback generated after interrupting copy from running to startup
+568,Rest,Severity-Medium,[REST] GET when the depth is big does not work
+569,subinterfaces,Severity-Medium,l3 subinterface: vswitchd crash while configuring multiple subinterface
+570,aaa,Severity-High,"Unable to remove existing local user account using ""user remove <user>"" from root user login."
+571,lldp,Severity-Medium,"CIT Issue"": Skipping the LLDP test case due to the CLI changes made to fix the defect #403"
+572,os-infra,Severity-Medium,Supportability feature needs a recovery mechansim if any of the yaml file is corrupted
+575,basic l3,Severity-Medium,L3 ECMP: Nexthop not getting deleted from ASIC for ECMP routes
+576,platform,Severity-Medium,Platform: Duplexity default is not been displayed as expected
+577,platform,Severity-Medium,Platform: Duplexity mode from Half-duplex to Full-duplex change is not been reflected
+578,link aggregation,Severity-Medium,LAG: LACP state machine does not match actual behavior after migrating port on one side from 1 LAG to another
+579,Loopback,Severity-Medium,Loopback interface is able to reach an external host configured in the same subnet
+581,CLI Infra,Severity-Medium,"Core dumped when you press ctrl + ""|"" keyboard layout in Spanish"
+583,ntp,Severity-Medium,NTP: Long NTP server name displays information out of the table in command ‘show ntp associations’
+584,ntp-client,Severity-Medium,NTP: Rx-pkts field in statistics starts to increase even if an NTP server is not connected
+585,Basic L3,Severity-Medium,L3 ECMP: Nexthop is not removed from ASIC ecmp object when corresponding interface is shutdown
+587,platform,Severity-Medium,Copy running-config start-config could be lost interfaces
+591,vlan,Severity-Medium,Sorting issue on show vrf output
+592,diagnostics,Severity-Medium,VTYSH core file while execute show tech CLI continuously
+594,dhcp server,Severity-Medium,DHCP: Max number of ranges is not defined.
+596,cli-infra,Severity-High,Core Dump on issuing VTYSH command. Cannot enter into the vtysh mode.
+598,ping,Severity-Medium,Ping with ip-option include-timestamp is showing error
+599,CLI Infra,Severity-Medium,Not able to login to openswitch with admin/admin credentials.
+600,lldp,Severity-Medium,LLDP neighbor chassis ID not populated for Linux box connecting to switch
+601,Sub-interfaces,Severity-Medium,"L3 Subinterface :: Segmentation fault(core dumped portd, vland) while trying to do sh interface <subinterface> brief for connected interfaces"
+602,Sub-interfaces,Severity-Medium,L3 Subinterface:: Two subinterfaces with the same VLAN ID should be allowed to configure IP in same or different subnets
+604,ping,Severity-High,The parse_ping_repetitions is  not parsing the output
+605,rest,Severity-Medium,GET  /rest/v1/system/subsystems/base does not return interfaces(references)
+606,rest,Severity-Medium,Interfaces in Subsystem gets deleted after write from DC
+607,rest,Severity-Critical,ops-restd is shipping publicly accessable SSL private key
+608,rest,Severity-Medium,Interfaces are shown as part of configuration as well as status fields in model schema of swagger for GET
+609,basic l3,Severity-Medium,Zebra adding a next hop when interface is down
+610,basic l3,Severity-Medium,Core file created by zebra daemon while convert interface from L3 to L2 and add allowed vlan on trunk interfaces
+611,lldp,Severity-Medium,Multiple core file created by lldp daemon while adding allowed vlan on trunk interfaces
+612,basic l3,Severity-Medium,Loopback interfaces do not show traffic statistics .
+613,loopback,Severity-Medium,Loopback interfaces do not show up in sorted order in show run and show loopback interface CLI's.
+615,infra,Severity-High,Website does not produce 404
+616,lldp,Severity-Medium,Disabling LLDP test case
+618,Mgmt Interface,Severity-Medium,portd needs to  push port configurations to interface when a kernel interface is detected
+619,subinterfaces,Severity-Medium,subinterface: out of order show running-config
+622,vlans,Severity-High,Test coverage for vlan not sufficient
+623,link aggregation,Severity-High,LAG and LACP test cases should be renamed to test_* convention
+626,NTP,Severity-High,test_ntpd_ft_auth_noauth_restart.py failing intermittently on CIT Tier1/2
+627,basic l3,Severity-High,Shutdown of interface does not remove the connected route in sh ip- route
+628,Mgmt interfaces,Severity-High,test_interfaces_ft_intf_autoneg.py producing Core Dump at CIT Tier2
+629,vlan,Severity-High,"test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan failing in CIT Tier 2 with error ""Failed to configure an ipv4 address"""
+630,ospf,Severity-High,"test_ospfv2_ft_adjacency.Test_ospf_configuration.test_nbr_discovery causes Failure in CIT Tier 2 ""Adjacency not formed in SW1 with SW2"""
+631,Mgmt interface,Severity-High,test_mgmt_intf_ft.py fails intermittently in CIT Tier 1
+633,vlans,Severity-High,CIT Failure ops.tests.vlan.test_ft_vlan_removed_from_end_of_table.Test_vlan_state_removed_from_end_of_table.test_sendTraffic_after
+644,Link Aggregation,Severity-High,"Output for ""show interface brief"" is not showing the LAG mode anymore"
+648,link aggregation,Severity-High,LAG is not using the Port Priority to choose speed
+649,link aggregation,Severity-Medium,"lacp_user_guide.md is showing incorrect ouput for ""show lacp interfaces"""
+650,Link Aggregation,Severity-High,Sytem Priority and Port Priority are not changing the decision for LAG negotiation
+651,Link Aggregation,Severity-High,Ping is not working when LAG is changed from two interfaces to just one interface
+652,VLAN,Severity-High,test_ft_vlan_removed_from_end_of_table.py is failing intermittently in CIT Tier 1 and Tier 2
+659,L2 Physical Interfaces,Severity-High,test_interfaces_ft_intf_stats.Test_template.test_statistics failure: ERROR: AssertionError: rx_bytes wrong
+660,Test Framework,Severity-High,test_layer3_ft_ecmp_hash.Test_ft_ecmp_hash.test_configure_switches CIT Tier 2 Test Failure: ERROR: Failed to configure IP 10.0.0.4 on workstation1
+661,REST,Severity-Medium,REST: Custom validators logic not invoked for PATCH
+662,REST,Severity-Medium,test_rest_ft_interfacesid.py and test_rest_ft_system.py Failing for tier2 (regression)
+663,link aggregation,Severity-High,Bonding driver errors
+664,link aggregation,Severity-High,"""show running-config"" doesn't show IP LAG config"
+666,BGP,Severity-Critical,CLI issues on 0.2.1
+668,boot process,Severity-Critical,sysd: ops-sysd crash if BUILD_ID is missing or longer than 80 in /etc/os-release file
+669,OVS Infra,Severity-High,OVSDB error logging
+670,BGP,Severity-High,test_bgp_ft_routemap_ipv6_next_hop.Test_bgp_redistribute_configuration.test_configure: Failure to configure 'match ipv6 next-hop'
+671,BGP,Severity-High,"ops.tests.bgp.test_bgp_ft_ipv6_prefixlist.Test_bgpd_ipv6.test_bgp_full failed to Config ""bgp router-id 9.0.0.2"" was not correctly configured!"
+673,BGP,Severity-High,ops.tests.bgp.test_bgp_ft_routemap_ipv6_next_hop.Test_bgp_redistribute_configuration.test_configure Failing with Timeout > 300
+674,VRF,Severity-Medium,enhance zebra CT script to handle VRF show routes
+675,Platform,Severity-Medium,SFP+ module on some port is not recognized
+676,Configuration Persistence,Severity-Medium,"""copy running-config startup-config"" not working"
+678,Infrastructure Build System,Severity-Medium,Openswitch: Unsupported and outdated CMake version
+679,Sflow,Severity-Medium,show sflow interface <no> shows Segmentation fault
+680,REST,Severity-High,REST: Rest not working for NTP_Association and NTP_Key table
+681,DHCP Relay,Severity-High,test_vtysh_ct_dhcp_relay.Test_dhcp_relay_configuration tests causing Failures in OPS Tier 2
+682,basic l3,Severity-Critical,Unable to ping the host machine from the switch running ospf
+687,link aggregation,Severity-Medium,zebra core files created on LAG setup
+688,link aggregation,Severity-High,VTYSH memory corruption after enable routing on LAG interface
+695,link aggregation,Severity-Medium,LAG interface stat shows negative value
+696,link aggregation,Severity-High,IxANVL LACP 1.5 and 1.6 - DUT forwarding packets during Collecting or Distributing bit = FALSE
+697,link aggregation,Severity-Medium,LAG group with Hash type l2-src-dst doesn't balance the traffic
+698,link aggregation,Severity-Medium,IxANVL LACP 10.2 - LAG invidual interface selection is not established
+699,link aggregation,Severity-Medium,IxANVL LACP 2.1 - DUT not switching to another member of LAG when an interface is disabled
+700,REST,Severity-Medium,[REST] PATCH method is not supported in Full-Configuration
+702,Link Aggregation,Severity-Medium,ops-intfd.tests.test_intfd_ct_admin_state.Test_portd_admin_state_update.test_port_interface_admin_state component test fail intermittent
+703,bgp,Severity-Medium,ops.tests.bgp.test_bgp_ft_ip_prefixlist.Test_bgpd_routemap.test_bgp_full fails intermittent
+704,bgp,Severity-Medium,ops.tests.bgp.test_bgp_ft_routemap.Test_bgpd_routemap.test_bgp_full fails intermittent
+705,AAA,Severity-Medium,test_vtysh_ct_aaa.AutoProvisioning fails intermitten in aaa-utils repo
+706,lldp,Severity-Medium,ops.tests.lldp.test_lldp_ft_enable_disable.Test_lldp_configuration.test_lldp_enable_disable fails intermitten in intfd repo
+707,lacp,Severity-Medium,ops-lacpd.tests.test_vtysh_ct_lacp.Test_lacp_cli.test_lagContextCommands fails intermittent in lacp repo
+709,lacp,Severity-Medium,ops-lacpd.tests.test_lacpd_ct_lag_config.Test_lacpd.test_lacpd_dynamic_lag_config fails intermittent
+710,bgp,Severity-Medium,test_bgp_ft_peergroup.bgpTest fails intermittent between repos
+711,BGP,Severity-Critical,"BGP fails to converge to ""Established"" and ""show bgp neighbor"" shows incomplete output."
+712,BGP,Severity-High,OpenSwitch - BGP with multipath is taking too long to reconverge after failure
+713,BGP,Severity-High,"Openswitch - BGP:  bgp routes in the leaf switches  are removed from the  routing table, when a spine device is turned off with multipath enabled."
+714,BGP,Severity-High,BGP Hold Time is not sticking when changing via CLI command.
+715,BGP,Severity-High,BGP: Adding 6 neighbors or more with 100 routes causes python and ovsdb-serv+ to use more than 1 CPU core
+716,BGP,Severity-High,Openswitch - BGP: Leaf devices are not able to share a high amount of networks in a Clos topology with multipath feature enabled.
+717,BGP,Severity-Medium,Unable to configured bgp neighbor with ASN 4294967295
+719,BGP,Severity-High,"BGP: Command ""show ip bgp"" is not working properly"
+720,BGP,Severity-Critical,Enabling -Wall and -Werror on ops-cli repo
+721,BGP,Severity-Critical,Can’t establish BGP peering b/w two Halon with basic configuration. Also in “show running” don’t shows the BGP configuration's commands entered previously
+723,link aggregation,Severity-High,Missing documentation for LAG interfaces on L3 user guide
+724,vlans,Severity-High,All Vlan Interfaces going to default vlan after a specific vlan is deleted
+725,Versioning,Severity-Medium,can't add ops-switchd-opennsl-plugin ops-switchd-container-plugin in same workspace
+726,L3,Severity-Medium,IP ECMP disbale does not work
+729,link aggregation,Severity-Medium,"Ops-intfd : show interface command is giving a ""% Command incomplete"""
+730,link aggregation,Severity-Medium,LAG names when configuring through CLI should support to lagXX and not only lag XX
+731,link aggregation,Severity-Medium,Unexpected behavior when LAG is to be removed from the device
+743,REST,Severity-Medium,REST: Adjust the limit of limit filter
+745,Basic L3,Severity-High,L3 Static Route : Switch core dumped when issuing show running-config command while configuring 15K Static Routes
+746,aaa,Severity-Medium,ops-aaa-utils creates invalid PAM configuration
+747,Link Aggregation,Severity-High,LACP negotiation is not being completed and LAGs use fallback behavior when it is not configured
+748,loopback,Severity-Medium,Loopback interfaces script (test_layer3_ft_loopback.py) fails intermittently on OPS branch due to script issue .
+750,OVSDB P&S,Severity-Medium,OVSDB partial update of map columns doesn't support newly-inserted UUID values
+753,REST,Severity-Medium,404 Error returned for any REST calls to BGP router or VRF information
+754,ECMP,Severity-High,The resilient hashing feature of ECMP is not maintaining traffic flows over changes in the next-hops list.
+755,ECMP,Severity-High,Load balancing though ECMP with BGP is losing packets.
+756,Traceroute,Severity-Medium,test_ft_traceroute.py was removed from Tier2 due to platform issue
+757,L2 Physical Interfaces,Severity-Medium,Interface Statistics do not increase on VSI even after sending traffic
+761,Basic L3,Severity-Medium,re-assigning native VLAN to interface does not take effect.  Ingress traffic is assigned to original incorrect VLAN.
+764,Link Aggregation,Severity-High,ops-lacpd Feature Test are all failing due to ping failures
+765,Link Aggregation,Severity-High,LAG FT located in OPS need to be converted to Modular Framework to decrease the time to run
+766,Link Aggregation,Severity-Critical,Secondary IP not available on L3 LAGs
+768,web UI,Severity-Medium,test test_webui_ft_l2_lag_config is failing intermitten between repos
+769,ospf,Severity-Medium,Test test_ospfv2_ft_adjacency is failing intermittent
+770,REST,Severity-Medium,"REST: Swagger UI does not display ""Package_Info"" Table"
+773,ntp-client,Severity-Medium,NTP: CLI doesn't let you to update an NTP server profile when the max. number of NTP servers are configured
+775,bgp,Severity-High,Connection with 2nd BGP peer isnt getting established
+776,bgp,Severity-High,Routes are not being re-advertised
+777,bgp,Severity-High,OVSDB Failed when 10000 are being advertised
+778,bgp,Severity-High,“show ip bgp” is not displaying “weight” correctly
+779,bgp,Severity-Medium,"""sh ip BGP summary"" inconsistently shows status. One end shows “established” the other member shows “Active.”"
+787,lldp,Severity-Medium,test_lldp_ft_neighbor_info test case is failing intermittent
+788,bootup,Severity-Medium,Grub menu should show the version number installed on that partition
+789,Infrastructure,Severity-Medium,gnu-glibc 2.13 has many buffer overflow security vulnerabilities
+790,Infrastructure,Severity-Medium,python 2.7.2 Buffer overflow in the socket.recvfrom_into
+791,Infrastructure,Severity-Medium,libpng 1.6.17 Buffer overflow in the png_set_PLTE function
+792,Sub-interfaces,Severity-Critical,Routes are not getting configured for subinterfaces
+793,Sub-Interfaces,Severity-High,L3 Subinterface :: Admin state of subinterface is not displayed properly
+796,rest,Severity-Medium,[REST] Login handler does not check for missing arguments
+798,VLANs,Severity-High,Tier2 : Script test_ft_vlan_state_reason_transition.py failing because of script issue
+799,link aggregation,Severity-Medium,IP address assigned to the wrong LAG when lag1 and lag10 exists.
+801,Static Routes,Severity-Medium,sh rib output are not in sorted order and takes long time for a user to figure out the route existence
+802,Link Aggregation,Severity-High,L3 LAG is losing almost 100% traffic
+805,link aggregation,Severity-High,show interface doesnt show L3 lag IPs
+806,sflow,Severity-High,container continually logging sflow error
+807,link aggregation,Severity-High,L2 LAG with VLAN trunk is not working
+808,Link Aggregation,Severity-Medium,LAG is not redirecting traffic if you remove the interface that is passing traffic
+811,BGP,Severity-Critical,BGP routes not in sync with kernel.
+812,ntp-client,Severity-Medium,"NTP: ""show ntp status"" shows stale uptime with erroneous ntp running status."
+813,Logging,Severity-Medium,Incorrect help string for no command in config mode and config-if mode
+815,Mgmt Interface,Severity-Medium,show running config displays interfaces in vlans twice
+818,Platform,Severity-High,switchd plugin infra not finding plugins.yaml
+819,link aggregation,Severity-High,test_lacpd_ct_aggregation_key fails intermitten
+820,link aggregation,Severity-Medium,LAG: show ip interface lag shows no information
+821,link aggregation,Severity-Medium,"""no shutdown"" on interface context does not enable interface when member of LAG."
+822,link aggregation,Severity-Medium,"""sh lacp Interface"" reports LACP is ""InSync"" when Partner is no present."
+823,fand,Severity-High,"ops-fand continually logging ""Direction is 0000000"""
+825,BGP,Severity-High,test_bgp_ft_routemap_atomic_aggregate fails intermittently
+826,REST,Severity-High,Physcial interface can be deleted via REST
+828,DHCP Server,Severity-Medium,DHCP-Server: Show dhcp-server leases command is taking up to 30 minutes to display 1000 leases.
+830,CLI infra,Severity-High,Unable to set vtysh prompt without secondary effects
+832,0,Severity-Medium,Issue in Quagga Makefile.am
+833,VLANs,Severity-Critical,Traffic on L2 interface are dropped on AS5712 and AS6712.
+834,rest,Severity-Medium,[REST] Account resource should parse the Password Server's configuration file
+835,DHCP Server,Severity-High,DHCP Server: show dhcp-server leases command is not showing IPV6 leases.
+836,Port Daemon,Severity-Medium,tests/test_portd_ct_proxy_arp.py and tests/test_portd_ft_proxy_arp.py failing in CIT.
+837,bgp,Severity-Medium,"""sh ip bgp summary"" shows garbage when neighbor is configured with wrong ip address."
+838,REST,Severity-Medium,[REST] REST API doesn't support dynamic categories for the columns
+840,switchd,Severity-High,switchd fails to initialize randomly
+842,VRF,Severity-Medium,Verification of compiler warning in VRF module CLI files
+844,0,Severity-Medium,OPS-Supportability: Additional argument validations for Diagnostic Dump APIs
+845,0,Severity-Medium,dhcp_leases schema upgrade doesn't reflect on the database
+849,VLAN,Severity-Medium,VLAN interface sorting issue on show running
+851,bgp,Severity-High,HPEOPS: BGP Routes are taking too much time to being advertised
+852,BGP,Severity-Medium,"Proper help string should be provided for ""bgp config-type"" command."
+853,BGP,Severity-Medium,Verification of compiler warning in bgp module CLI files.
+854,0,Severity-Medium,show system is not showing correct information for power supply
+855,Link Aggregation,Severity-Medium,no ip address A.B.C.D/M in a LAG interface is not showing a error message when the ip is no present
+857,L2 Physical Interfaces,Severity-Medium,"""show system"" on AS-6712 shows incorrect ""Number of MACs"""
+858,REST,Severity-High,"Restd isn't returning proper data for CLI command ""show vlog config"" causing core dump"
+866,rest,Severity-High,test_rest_ft_interfaces fails repetitively on AS6712
+867,rest,Severity-Medium,Retrieving GET /rest/v1/system/full-configuration through REST results in 500 error
+868,bgp,Severity-High,BGP Summary is reproting negative values for MsgRcvd and MsgSent.  State is (null)
+870,Sub-interfaces,Severity-Medium,"(no) interface physical_interface.subinterface, does not indicate about the valid range of subinterface"
+871,loopback,Severity-High,Loopback (L3) :: Validation of Ipv4 address is errorneous
+872,VLAN,Severity-Medium,"Interface vlan should not accept special IP addresses (loopback ,subnet broadcast and all broadcast addresses)"
+873,Loopback,Severity-Medium,Duplication of IpV6 on different loopback interfaces
+874,ECMP,Severity-High,ECMP Feature Tests and Test plan
+876,ACL,Severity-High,IPv4 ACLs Ingress on Ports
+877,Port Daemon,Severity-Medium,"""interface X"" displays multiple times for different configuration sub-items in ""show running-config"" output"
+878,VLAN,Severity-Medium,Misleading default VLAN running status
+882,MSTP,Severity-Medium,MSTP - Traffic forwarding issues seen when using multiple instances
+883,MSTP,Severity-Medium,MSTP - Does not work on LAG
+884,MSTP,Severity-Medium,MSTP Unit Testing Defects found.
+885,MSTP,Severity-High,MSTP Packet counters are not getting updated and daemon crash on adding a lport after spanning-tree is enabled.
+887,Loopback,Severity-Medium,Loopback(L3) :: sh interface loopback brief is reflecting unnecessary inputs
+888,loopback,Severity-Medium,Verification of compiler warning in loopback&subinterface  module CLI files.
+890,REST,Severity-High,REST API: Default expiration for authentication token is one month - too long
+892,ntp-client,Severity-High,NTP: Time is not persistent across reboots
+893,Physical Interfaces,Severity-Medium,No interface stat info while check interface status for split parent interface
+895,basic l3,Severity-High,test_portd_ct_functionality fails repetitively on AS6712
+896,bgp,Severity-High,BGP is not advertising multiple routes through multiple paths
+897,bgp,Severity-High,BGP is not advertising a route through multiple sub-interfaces
+898,bgp,Severity-Medium,"bgp Feature shown in ""diag-dump list"" are yet to support the backend."
+899,bgp,Severity-Critical,89 (and counting) core.ops-bgpd corefiles produced in a matter of minutes.
+900,Routing,Severity-Critical,ECMP forces packets through slow path when adding new nexthop
+901,TFTP,Severity-Medium,TFTP client is not able to copy large file ( > 32MB  ) to external tftp server
+902,OSPF,Severity-High,Interface core dump while remove sub interface when interface is part of OSPF network
+903,Loopback,Severity-High,L3(Loopback) :: Stress :: Only 250 loopback interfaces reachable via external host instead of 1024 loopback interfaces
+906,Sub-interfaces,Severity-Medium,CLI Guide of Sub-interface needs update. Refer the details below for gap w.r.t CLI implementation.
+912,sflow,Severity-High,Added sflow modularization code to rel/dill
+916,VLAN,Severity-Medium,Internal VLAN allocation issue
+917,VLANs,Severity-Critical,Internal vlan  range configuration is not captured in the running-configuration. Post copying running-config to startup config and rebooting switch leads to multiple core.
+918,0,Severity-High,Appctl is not working for ops-snmpd
+919,0,Severity-High,ops-snmpd coring while switch going for a reboot. Even manual stop of snmpd service is leading to a core.
+921,0,Severity-High,no system description with argument is throwing unknown command error
+922,ECMP,Severity-Medium,About 1.2% of the traffic is loss with ECMP because some subinterfaces are not going up
+923,vlan,Severity-High,"Test cases: test_switchd_container_ct_changing_vlan_config.py, test_switchd_container_ct_vlan_access.py, test_switchd_container_ct_vlan_trunk.py fails in CIT"
+924,Loopback,Severity-Medium,Incorrect error message when configuring loopback interface with different IP Address from same subnet.
+925,AAA,Severity-High,AAA configuration are not reflected on running config properly.
+927,Sub-interfaces,Severity-Medium,L3 (Subinetrface) :: Parent interface shows as admin  down in CLI when it is not
+929,0,Severity-High,Performance issues for logs api
+931,sflow,Severity-Medium,agent IP malformed
+932,0,Severity-Medium,swagger is broken for logs after-cursor filter
+933,0,Severity-High,Large log file causes major delays with REST calls
+935,0,Severity-Medium,Sh running interface command output not in sorted order
+936,#N/A,#N/A,#N/A
+938,SNMP,Severity-High,SNMP query doesnot work from remote host
+939,VLAN,Severity-High,Untagged traffic should be allowed when port configured as a trunk port
+940,0,Severity-Medium,"""sh running"" does not display vlans in alphabetical order.  (Again)"
+941,0,Severity-Medium,MSTP: Sorted show for VLANs and interfaces
+943,0,Severity-Medium,Inconsistencies feature name across different supportability modules.
+944,basic l3,Severity-Medium,test_layer3_ft_verify_sub_intf_l2vlan fails intermitten
+945,log rotation,Severity-Medium,"No config validation for ""logrotate target"" command. Although CLI shows graceful pass but the changes not reflected in show running-config."
+946,Log Rotation,Severity-High,"Log rotate functionality is not working as intended, seems to be broken."
+947,VLAN,Severity-Medium,"Incorrect VLAN information displayed in ""show interface brief"""
+948,mirroring,Severity-Critical,Container intermittent crash configuring mirror
+951,0,Severity-Medium,Reboot or reload command is not available in OPS build
+952,switchd,Severity-Critical,OPS-SWITCHD corefile generated while switch was in idle state.
+953,0,Severity-Medium,"Dill: The help string for interface sub-command under no, shows ""Error: Help strings does not match for the identical tokens"""
+954,0,Severity-Medium,DHCP distributes all leases after some seconds when it is only 1 Vlan configurated
+962,0,Severity-Medium,Observed that domain name learned via DHCP server not removed after IP address manually added in the mgmt interface
+966,switchd,Severity-Medium,test_switchd_container_ct_intervlan.py fails in CIT
+967,link aggregation,Severity-High,LAG Bond Status new functionality
+969,mirror,Severity-High,Port mirror activation causes switchd crash
+970,0,Severity-Medium,DHCP/TFTP Supportability: Theres no information related to dhcp/tftp in show tech command
+971,SNMP,Severity-Medium,RFC 1213 MIB SNMP statistics not working
+973,Sub-interfaces,Severity-High,Subinterfaces (L3) :: Validation of Ipv4 address is errorneous
+975,MSTP,Severity-Medium,MSTP ft library and parser missing
+977,basic L3,Severity-Medium,"The help string for ipv6 sub-command under no, shows ""Error: Help strings does not match for the identical tokens"""
+981,0,Severity-Medium,memory leak in QoS profile command
+982,0,Severity-Medium,ASIC Table full error with more than 8k routes
+983,mirroring,Severity-High,1 byte buffer overrun in container-plugin mirror_set
+984,COPP,Severity-High,Memory leak in COPP container plugin
+985,0,Severity-Medium,show tech does not include 'show interface queues'
+988,LACP,Severity-Medium,Port pecking order needs to work to reflect forwarding states in port and interface table
+989,MSTP,Severity-Medium,"MSTP: ""no instance"" command need to add VLANS to CIST, Priority value consistent in show commands"
+990,0,Severity-Medium,"Validation missing in the ""show interface"" command."
+991,DHCP Client,Severity-Medium,DHCP6 client service is failing to start post the fresh installation.
+992,ARP,Severity-Medium,ops-arpmgd is crashing on ovsdb-server restart
+993,Autoprovisioning,Severity-High,ZTP :  Minimally viable product with 2000 VLANs and 2000 VLAN Interfaces results in missing interfaces when large configuration is applied
+994,ARP,Severity-Medium,Observed that ARP-Manager daemon restarted due to out of memory while system was handling around 7000 ARP with traffic for 30 hrs
+999,VLANs,Severity-Medium,Add test case to verify L3 stats during intervlan routing
+1001,switchd,Severity-Medium,Memory leak in plugins infrastructure
+1002,boot,Severity-Medium,Memory leak in ops-hw-config YAML file processing
+1003,0,Severity-Medium,systemd-journald: Failed to create new system journal: No space left on device
+1004,mirroring,Severity-High,Mirroring: missed destroy of cloned smaps
+1005,Mirroring,Severity-Medium,Mirroring: complete removal of RSPAN/VLAN mirroring code from PI layer
+1008,basic l3 ,Severity-Medium,"Commit Supportability changes for L3 features (Basic, Loopback, SubIntf, LAG, ECMP, OSPF, Zebra) to rel/dill"
+1009,0,Severity-Medium,test_lldp_ft_statistics.py fails randomly in CIT
+1013,VLANS,Severity-Medium,Default vlan 1 assigned to interface VLAN in a specific removal case
+1016,basic l3,Severity-Medium,L3 Routing: ops-zebra crashes due to NULL pointer dereference
+1017,MSTP,Severity-Medium,MSTP: show running-config order need to change
+1019,rest,Severity-Medium,REST Notifications for System table does not notify of updates
+1021,CoPP,Severity-Medium,"show copp statistics missing for STP, IPv4 options and IPv6 options packets in vtysh"
+1025,OSPF,Severity-Medium,Verification of compiler warning in OSPF module CLI files.
+1027,MSTP,Severity-Medium,MSTP: on MSTI convergence is not happening as region is different.
+1028,Sub-interfaces,Severity-Medium,L3 (Subinterface) ::: Subinterface  status shows null in show interface <physical interface> subinterface brief command
+1030,MSTP,Severity-Medium,MSTP: port-priority and cost command for CIST missing
+1031,0,Severity-Medium,DHCP server user guide should mention which options are supported
+1033,webui,Severity-Medium,Web UI Interface Screen Cleanup
+1034,0,Severity-Medium,Modularize zebra component and move zebra specific CLIs and test cases to ops-quagga/zebra repository
+1035,0,Severity-Critical,Dynamically generated route entries are gone from Route table when there are multiple DC operations
+1036,0,Severity-Medium,dhcp server show command alignment issue with multiple option values
+1037,sflow,Severity-High,sFlow - When minimum sampling rate is set and traffic is send at 30% of line rate the feature service stop sending sampled packets
+1038,MAC Tables,Severity-High,Array out of bound access in mac learn
+1040,LLDP,Severity-Medium,AS6712 LLDP Test failure  - split interface specific issue
+1043,0,Severity-Medium,sFlow - if_Status in CNTR packets is not changing
+1045,webui,Severity-Medium,Web UI Issues with MS IE/Edge
+1046,webui,Severity-Medium,Move Web UI code coverage from build file to check/gate jobs
+1047,0,Severity-High,OSPF and BFD disabled in opennsl
+1048,0,Severity-Medium,Static Route : Command 'show ip route' does not show active routes configured in the system
+1051,0,Severity-High,"L3(Subinterface) :Reconfigure a few subinterfaces ,delete them and configure a new tag , router in the stick topology does not work in that case ."
+1052,0,Severity-Medium,ops.tests.layer3.test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan Failing intermitten
+1054,0,Severity-Critical,Netlink messages needs a retry mechanism to ensure messages getting processed
+1057, basic l3,Severity-High,Routing not allowed to enable on split parent interface
+1058,0,Severity-Medium,Switch slowness and high CPU utilization when arp manager handling around 10K ARP
+1059,MSTP,Severity-Medium,MSTP: Show commands data updated.
+1060,0,Severity-Medium,Skipping the test script test_ct_autoprovisionutils.py
+1061,rest,Severity-High,REST POST of full-configuration accepts config from different platform
+1062,0,Severity-High,Deleting an existing ACL entry causes the shell to crash and upon ctrl^c no more ACE entries could be added
+1063,0,Severity-High,ACL entry with explicit deny all rule fails to filter packets if applied to more than one physical interface
+1064,0,Severity-High,Application of an ACL without ACE entries to an interface results in vtysh hang
+1065,Rest,Severity-Critical,Recent REST change breaks full-configuration POST (declarative config)
+1066,0,Severity-Medium,CLI: bridge_normal configuration shouldn't be modifiable
+1068,bgp,Severity-High,BGP multiple unique  networks fail to be assign as best
+1069,bgp,Severity-High,ops-bgpd.service failed AND 64 BGPD coredumps generated within a few minutes
+1070,0,Severity-High,Toggling a deny ACE in an ACL results in permit after bringing down and up the deny rule
+1071,bgp,Severity-High,BGP networks are not being transmitted
+1074,0,Severity-High,copy sftp allows a user to copy a file to any path in the rootfs
+1076,0,Severity-High,Configuration is lost when copy run start is issued.
+1077,physical interfaces,Severity-High,Interface daemon crashed after add/remove/add VLAN interface scenario in the BGP network
+1079,0,Severity-Medium,L3(Subinterface) ::: Stress :: 49-50% traffic loss while passing bidirectional traffic for router on stick topology for 100% line rate
+1085,0,Severity-High,ovsdb-idl.c:379: assertion !idl->txn failed in ovsdb_idl_run() Aborted (core dumped)
+1086,0,Severity-Medium,SNMP CLI ISSUES
+1087,0,Severity-Medium,"LLDP show lldp neighbor-info:  ""Neighbor Chassis-ID"" isn't matching ""Hardware: Ethernet, MAC Address"" of neighbor - VSI"
+1088,0,Severity-High,[lldpcli] process is listed as defunct in ps -aux
+1097,webui,Severity-Medium,"Auto-refresh on the Interface Page takes it to top, impacting end user experience."
+1101,0,Severity-Medium,show tech has missing interface commands
+1103,"l3, supportability",Severity-Medium,Diag-dump support for portd.
+1104,MSTP,Severity-Medium,"MSTP: Unable to do ""routing"" on interface which is part of Spanning tree  entry"
+1105,0,Severity-Medium,portd test script failure in zuul due to supportability change
+1106,0,Severity-High,LLDP - Error while Invoking lldpd_ovsdb_nbrs_change_all
+1107,0,Severity-High,POST of large configuration via /rest/v1/system/full-configuration causes ops-stpd to crash
