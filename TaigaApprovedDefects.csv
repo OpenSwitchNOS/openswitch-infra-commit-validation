@@ -72,7 +72,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 162,LLDP,Severity-Medium,LLDP - Ordering of show lldp commands is not in numerical order
 163,LLDP,Severity-Medium,"LLDP : When LLDP conifguration is done at interface level , it resets the LLDP counter information for that interface"
 164,basic l3,Severity-High,inter-vlan routing - couldn't ping no more than 84 clients in different vlans
-166,Infra CIT,Severity-Medium,"Errors in ""adding CI process for the component"""
 168,vlan,Severity-High,VLAN Table corrupted when enable routing on interface added with vlan access.
 169,vlan,Severity-Medium,Incorrect handling of 'no vlan trunk native <id>'
 170,vlan,Severity-Medium,Invalid handling of 'no vlan <id>' in interface config (switch(config-if)#) context.
@@ -319,7 +318,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 611,lldp,Severity-Medium,Multiple core file created by lldp daemon while adding allowed vlan on trunk interfaces
 612,basic l3,Severity-Medium,Loopback interfaces do not show traffic statistics .
 613,loopback,Severity-Medium,Loopback interfaces do not show up in sorted order in show run and show loopback interface CLI's.
-615,infra,Severity-High,Website does not produce 404
 616,lldp,Severity-Medium,Disabling LLDP test case
 618,basic l3,Severity-Medium,portd needs to  push port configurations to interface when a kernel interface is detected
 619,subinterfaces,Severity-Medium,subinterface: out of order show running-config
@@ -328,6 +326,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 626,NTP,Severity-High,test_ntpd_ft_auth_noauth_restart.py failing intermittently on CIT Tier1/2
 627,basic l3,Severity-High,Shutdown of interface does not remove the connected route in sh ip- route
 629,vlan,Severity-High,"test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan failing in CIT Tier 2 with error ""Failed to configure an ipv4 address"""
+630,ospf,Severity-High,"test_ospfv2_ft_adjacency.Test_ospf_configuration.test_nbr_discovery causes Failure in CIT Tier 2 ""Adjacency not formed in SW1 with SW2"""
 631,Mgmt interface,Severity-High,test_mgmt_intf_ft.py fails intermittently in CIT Tier 1
 633,vlans,Severity-High,CIT Failure ops.tests.vlan.test_ft_vlan_removed_from_end_of_table.Test_vlan_state_removed_from_end_of_table.test_sendTraffic_after
 644,Link Aggregation,Severity-High,"Output for ""show interface brief"" is not showing the LAG mode anymore"
@@ -350,10 +349,8 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 674,VRF,Severity-Medium,enhance zebra CT script to handle VRF show routes
 675,Platform,Severity-Medium,SFP+ module on some port is not recognized
 676,Configuration Persistence,Severity-Medium,"""copy running-config startup-config"" not working"
-678,Infrastructure Build System,Severity-Medium,Openswitch: Unsupported and outdated CMake version
 679,Sflow,Severity-Medium,show sflow interface <no> shows Segmentation fault
 680,REST,Severity-High,REST: Rest not working for NTP_Association and NTP_Key table
-682,basic l3,Severity-Critical,Unable to ping the host machine from the switch running ospf
 687,link aggregation,Severity-Medium,zebra core files created on LAG setup
 688,link aggregation,Severity-High,VTYSH memory corruption after enable routing on LAG interface
 695,link aggregation,Severity-Medium,LAG interface stat shows negative value
@@ -478,6 +475,8 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 898,bgp,Severity-Medium,"bgp Feature shown in ""diag-dump list"" are yet to support the backend."
 899,bgp,Severity-Critical,89 (and counting) core.ops-bgpd corefiles produced in a matter of minutes.
 900,Routing,Severity-Critical,ECMP forces packets through slow path when adding new nexthop
+901,TFTP,Severity-Medium,TFTP client is not able to copy large file ( > 32MB  ) to external tftp server
+902,OSPF,Severity-High,Interface core dump while remove sub interface when interface is part of OSPF network
 903,Loopback,Severity-High,L3(Loopback) :: Stress :: Only 250 loopback interfaces reachable via external host instead of 1024 loopback interfaces
 906,Sub-interfaces,Severity-Medium,CLI Guide of Sub-interface needs update. Refer the details below for gap w.r.t CLI implementation.
 912,sflow,Severity-High,Added sflow modularization code to rel/dill
@@ -509,15 +508,18 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 952,switchd,Severity-Critical,OPS-SWITCHD corefile generated while switch was in idle state.
 953,0,Severity-Medium,"Dill: The help string for interface sub-command under no, shows ""Error: Help strings does not match for the identical tokens"""
 954,0,Severity-Medium,DHCP distributes all leases after some seconds when it is only 1 Vlan configurated
+956,MSTP,Severity-Medium,MSTP : Priority and System ID needs to be extracted from Root MAC and display properly
 962,0,Severity-Medium,Observed that domain name learned via DHCP server not removed after IP address manually added in the mgmt interface
 966,switchd,Severity-Medium,test_switchd_container_ct_intervlan.py fails in CIT
 967,link aggregation,Severity-High,LAG Bond Status new functionality
 969,mirror,Severity-High,Port mirror activation causes switchd crash
 970,0,Severity-Medium,DHCP/TFTP Supportability: Theres no information related to dhcp/tftp in show tech command
 971,SNMP,Severity-Medium,RFC 1213 MIB SNMP statistics not working
+972,Supportability,Severity-Medium,Inconsistency vlog messages for daemon
 973,Sub-interfaces,Severity-High,Subinterfaces (L3) :: Validation of Ipv4 address is errorneous
 975,MSTP,Severity-Medium,MSTP ft library and parser missing
 977,basic L3,Severity-Medium,"The help string for ipv6 sub-command under no, shows ""Error: Help strings does not match for the identical tokens"""
+979,MSTP,Severity-Medium,"MSTP: mst instance data not correctly encoded in BPDU, results in malformed packet"
 981,0,Severity-Medium,memory leak in QoS profile command
 982,0,Severity-Medium,ASIC Table full error with more than 8k routes
 983,mirroring,Severity-High,1 byte buffer overrun in container-plugin mirror_set
@@ -530,6 +532,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 992,ARP,Severity-Medium,ops-arpmgd is crashing on ovsdb-server restart
 993,Autoprovisioning,Severity-High,ZTP :  Minimally viable product with 2000 VLANs and 2000 VLAN Interfaces results in missing interfaces when large configuration is applied
 994,ARP,Severity-Medium,Observed that ARP-Manager daemon restarted due to out of memory while system was handling around 7000 ARP with traffic for 30 hrs
+995,MSTP,Severity-Medium,Disable/ enable Spanning-tree Crash and Dynamic Reconfigure malfunctioning
 999,VLANs,Severity-Medium,Add test case to verify L3 stats during intervlan routing
 1001,switchd,Severity-Medium,Memory leak in plugins infrastructure
 1003,0,Severity-Medium,systemd-journald: Failed to create new system journal: No space left on device
@@ -542,6 +545,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1017,MSTP,Severity-Medium,MSTP: show running-config order need to change
 1019,rest,Severity-Medium,REST Notifications for System table does not notify of updates
 1021,CoPP,Severity-Medium,"show copp statistics missing for STP, IPv4 options and IPv6 options packets in vtysh"
+1026,MSTP,Severity-Medium,MSTP: Per interface mac address support for multi instance
 1027,MSTP,Severity-Medium,MSTP: on MSTI convergence is not happening as region is different.
 1028,Sub-interfaces,Severity-Medium,L3 (Subinterface) ::: Subinterface  status shows null in show interface <physical interface> subinterface brief command
 1030,MSTP,Severity-Medium,MSTP: port-priority and cost command for CIST missing
@@ -556,7 +560,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1043,0,Severity-Medium,sFlow - if_Status in CNTR packets is not changing
 1045,webui,Severity-Medium,Web UI Issues with MS IE/Edge
 1046,webui,Severity-Medium,Move Web UI code coverage from build file to check/gate jobs
-1047,0,Severity-High,OSPF and BFD disabled in opennsl
 1048,0,Severity-Medium,Static Route : Command 'show ip route' does not show active routes configured in the system
 1051,0,Severity-High,"L3(Subinterface) :Reconfigure a few subinterfaces ,delete them and configure a new tag , router in the stick topology does not work in that case ."
 1052,0,Severity-Medium,ops.tests.layer3.test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan Failing intermitten
@@ -583,6 +586,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1086,0,Severity-Medium,SNMP CLI ISSUES
 1087,0,Severity-Medium,"LLDP show lldp neighbor-info:  ""Neighbor Chassis-ID"" isn't matching ""Hardware: Ethernet, MAC Address"" of neighbor - VSI"
 1088,0,Severity-High,[lldpcli] process is listed as defunct in ps -aux
+1089,0,Severity-High,"MSTP : Crash observed while assigning VLANS to MST's from IST, resulting in wrong VLAN to instance mapping and invalid/corrupted spanning-tree digest creation"
 1097,webui,Severity-Medium,"Auto-refresh on the Interface Page takes it to top, impacting end user experience."
 1098,0,Severity-Medium,Quick Start Guide (http://www.openswitch.net/documents/dev/quick-start-physical) has a number of issues
 1101,0,Severity-Medium,show tech has missing interface commands
@@ -593,3 +597,10 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1107,0,Severity-High,POST of large configuration via /rest/v1/system/full-configuration causes ops-stpd to crash
 1109,0,Severity-High,Skipping the test_layer3_ft_sub_intf_l3test.py test because of repeated failures
 1112,OVSDB P&S,Severity-High,Memory leak on ovsdb_idl_txn_write_partial_map() and ovsdb_idl_txn_delete_partial_map()
+1113,REST,Severity-Medium,[REST] Dynamic Categories is not validating when follows column is not present
+1116,Configuration Persistence,Severity-Critical,Configuration Persistence: copy running-config to startup incorrectly persists dynamic VLANs to configuration
+1119,0,Severity-High,Enabling  '-Wall -Werror' flag for ops-cli repo
+1121,0,Severity-Medium,Need to include summary ARP count on “show arp” output CLI
+1122,0,Severity-Medium,Device is not learning more than 8K ARP
+1123,0,Severity-Medium,System daemon restarted while system is handling around 7000 ARP
+1125,0,Severity-Medium,ARP manager/feature documentation update is needed and also proxyARP CLI config enhancement required from the SW
