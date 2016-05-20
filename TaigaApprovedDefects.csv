@@ -252,6 +252,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 511,LLDP,Severity-Medium,"""show lldp neighbor-info"" is missing the SysName"
 515,basic L3,Severity-Critical,Switch unable to ping loopback interface.
 516,Basic L3,Severity-High,Unable  to configure IPv6 Link-Local and Global Unicast addresses
+518,ospf,Severity-Medium,ospf adjacency  not formed
 519,lldp,Severity-Medium,"LLDP : LLDP Neighbor entries field becomes 0, with a new neighbor entry"
 520,Sub-interfaces,Severity-Medium,"Core dump for switchd , vlan ,zebra while trying to configure an internal vlan on subinterface(negative scenario)"
 521,basic l3,Severity-Medium,L3 Subinterface : Duplication of IPv6 addresses across subinterfaces
@@ -274,6 +275,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 546,BGP,Severity-High,BGP fast-external-failover command not working
 547,link aggregation,Severity-Medium,"After several seconds of turning a LACP interface down, its status will stwich to Collecting"
 548,Loopback,Severity-Medium,Loopback interfaces do not show as implicitly connected routes (connect routes ) in show ip route Defect ID 753
+549,ospf,Severity-High,Tier1/2 CIT ospf adjacency test always show test result as pass even when the adjacency was not formed.
 551,link aggregation,Severity-High,Eliminate options in Load Balancing enum
 552,authentication,Severity-High,"Unable to change the password for the username ""admin"" and already existing configured user."
 553,lldp,Severity-Medium,"[diag-dump] Error on ""diag-dump lldp basic"" in the ""admin"" mode"
@@ -328,6 +330,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 626,NTP,Severity-High,test_ntpd_ft_auth_noauth_restart.py failing intermittently on CIT Tier1/2
 627,basic l3,Severity-High,Shutdown of interface does not remove the connected route in sh ip- route
 629,vlan,Severity-High,"test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan failing in CIT Tier 2 with error ""Failed to configure an ipv4 address"""
+630,ospf,Severity-High,"test_ospfv2_ft_adjacency.Test_ospf_configuration.test_nbr_discovery causes Failure in CIT Tier 2 ""Adjacency not formed in SW1 with SW2"""
 631,Mgmt interface,Severity-High,test_mgmt_intf_ft.py fails intermittently in CIT Tier 1
 633,vlans,Severity-High,CIT Failure ops.tests.vlan.test_ft_vlan_removed_from_end_of_table.Test_vlan_state_removed_from_end_of_table.test_sendTraffic_after
 644,Link Aggregation,Severity-High,"Output for ""show interface brief"" is not showing the LAG mode anymore"
@@ -400,6 +403,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 765,Link Aggregation,Severity-High,LAG FT located in OPS need to be converted to Modular Framework to decrease the time to run
 766,Link Aggregation,Severity-Critical,Secondary IP not available on L3 LAGs
 768,web UI,Severity-Medium,test test_webui_ft_l2_lag_config is failing intermitten between repos
+769,ospf,Severity-Medium,Test test_ospfv2_ft_adjacency is failing intermittent
 770,REST,Severity-Medium,"REST: Swagger UI does not display ""Package_Info"" Table"
 773,ntp-client,Severity-Medium,NTP: CLI doesn't let you to update an NTP server profile when the max. number of NTP servers are configured
 776,bgp,Severity-High,Routes are not being re-advertised
@@ -479,6 +483,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 899,bgp,Severity-Critical,89 (and counting) core.ops-bgpd corefiles produced in a matter of minutes.
 900,Routing,Severity-Critical,ECMP forces packets through slow path when adding new nexthop
 901,TFTP,Severity-Medium,TFTP client is not able to copy large file ( > 32MB  ) to external tftp server
+902,OSPF,Severity-High,Interface core dump while remove sub interface when interface is part of OSPF network
 903,Loopback,Severity-High,L3(Loopback) :: Stress :: Only 250 loopback interfaces reachable via external host instead of 1024 loopback interfaces
 906,Sub-interfaces,Severity-Medium,CLI Guide of Sub-interface needs update. Refer the details below for gap w.r.t CLI implementation.
 908,0,Severity-Medium,DELETE on default rows should not be allowed
@@ -551,6 +556,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1019,rest,Severity-Medium,REST Notifications for System table does not notify of updates
 1021,CoPP,Severity-Medium,"show copp statistics missing for STP, IPv4 options and IPv6 options packets in vtysh"
 1023,DHCP Server,Severity-Medium,DHCP-TFTP: Do not crash if there is nothing to kill anymore
+1025,OSPF,Severity-Medium,Verification of compiler warning in OSPF module CLI files.
 1026,MSTP,Severity-Medium,MSTP: Per interface mac address support for multi instance
 1027,MSTP,Severity-Medium,MSTP: on MSTI convergence is not happening as region is different.
 1028,Sub-interfaces,Severity-Medium,L3 (Subinterface) ::: Subinterface  status shows null in show interface <physical interface> subinterface brief command
@@ -568,6 +574,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1046,webui,Severity-Medium,Move Web UI code coverage from build file to check/gate jobs
 1047,0,Severity-High,OSPF and BFD disabled in opennsl
 1048,0,Severity-Medium,Static Route : Command 'show ip route' does not show active routes configured in the system
+1049,vlan,Severity-High,ops-vland coredump when applying config via REST
 1051,0,Severity-High,"L3(Subinterface) :Reconfigure a few subinterfaces ,delete them and configure a new tag , router in the stick topology does not work in that case ."
 1052,0,Severity-Medium,ops.tests.layer3.test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan Failing intermitten
 1054,0,Severity-Critical,Netlink messages needs a retry mechanism to ensure messages getting processed
@@ -584,11 +591,10 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1068,bgp,Severity-High,BGP multiple unique  networks fail to be assign as best
 1070,0,Severity-High,Toggling a deny ACE in an ACL results in permit after bringing down and up the deny rule
 1071,bgp,Severity-High,BGP networks are not being transmitted
-1072,0,Severity-High,Memory leak detected by valgrind in ovsrec_port_update_aclv4_in_status_setkey() function
+1072,0,Severity-High,[OVSDB P&S] Memory leak detected by valgrind in ovsrec_port_update_aclv4_in_status_setkey() function
 1074,0,Severity-High,copy sftp allows a user to copy a file to any path in the rootfs
 1076,0,Severity-High,Configuration is lost when copy run start is issued.
 1077,physical interfaces,Severity-High,Interface daemon crashed after add/remove/add VLAN interface scenario in the BGP network
-1079,0,Severity-Medium,L3(Subinterface) ::: Stress :: 49-50% traffic loss while passing bidirectional traffic for router on stick topology for 100% line rate
 1082,0,Severity-Medium,Limit remote and ref-id to 15 and name to 39 char in show ntp associations
 1083,0,Severity-Medium,Update NTP user guide for NTPv6 support
 1085,0,Severity-High,ovsdb-idl.c:379: assertion !idl->txn failed in ovsdb_idl_run() Aborted (core dumped)
@@ -598,31 +604,41 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1089,0,Severity-High,"MSTP : Crash observed while assigning VLANS to MST's from IST, resulting in wrong VLAN to instance mapping and invalid/corrupted spanning-tree digest creation"
 1097,webui,Severity-Medium,"Auto-refresh on the Interface Page takes it to top, impacting end user experience."
 1098,0,Severity-Medium,Quick Start Guide (http://www.openswitch.net/documents/dev/quick-start-physical) has a number of issues
+1099,0,Severity-High,Merge notifications feature to rel/dill
 1101,0,Severity-Medium,show tech has missing interface commands
 1103,"l3, supportability",Severity-Medium,Diag-dump support for portd.
 1104,MSTP,Severity-Medium,"MSTP: Unable to do ""routing"" on interface which is part of Spanning tree  entry"
-1105,0,Severity-Medium,portd test script failure in zuul due to supportability change
+1105,Loopback,Severity-Medium,portd test script failure in zuul due to supportability change
 1106,0,Severity-High,LLDP - Error while Invoking lldpd_ovsdb_nbrs_change_all
 1107,0,Severity-High,POST of large configuration via /rest/v1/system/full-configuration causes ops-stpd to crash
-1109,0,Severity-High,Skipping the test_layer3_ft_sub_intf_l3test.py test because of repeated failures
+1109,Sub-interfaces,Severity-High,Skipping the test_layer3_ft_sub_intf_l3test.py test because of repeated failures
 1112,OVSDB P&S,Severity-High,Memory leak on ovsdb_idl_txn_write_partial_map() and ovsdb_idl_txn_delete_partial_map()
 1113,REST,Severity-Medium,[REST] Dynamic Categories is not validating when follows column is not present
 1115,0,Severity-High,Conversion of an ACL applied Layer 3 port to Layer 2 port causes the applied ACL to get deleted from the port and also unable to add any more ACEs or apply existing ACL to any other ports
 1116,Configuration Persistence,Severity-Critical,Configuration Persistence: copy running-config to startup incorrectly persists dynamic VLANs to configuration
-1119,0,Severity-High,Enabling  '-Wall -Werror' flag for ops-cli repo
+1119,CLI infra,Severity-High,Enabling  '-Wall -Werror' flag for ops-cli repo
 1121,0,Severity-Medium,Need to include summary ARP count on “show arp” output CLI
 1122,0,Severity-Medium,Device is not learning more than 8K ARP
-1123,0,Severity-Medium,System daemon restarted while system is handling around 7000 ARP
+1144,port daemon,Severity-High,test_portd_ct_functionality-portd_functionality_tc3- Missing Internal VLAN range of interface 4 in DB
 1125,0,Severity-Medium,ARP manager/feature documentation update is needed and also proxyARP CLI config enhancement required from the SW
-1126,0,Severity-Medium,"""ICMPv6: ndisc: ndisc_alloc_skb failed to allocate an skb, err=-11"" error dislayed on console constantly with lost connectivity"
+1126,ARP,Severity-Medium,"""ICMPv6: ndisc: ndisc_alloc_skb failed to allocate an skb, err=-11"" error dislayed on console constantly with lost connectivity"
 1129,interface,Severity-Critical,"Segmentation fault (core dumped) when running ""show interface brief"""
 1130,0,Severity-Medium,vlans appear when saving config
 1131,0,Severity-Medium,check for malloc failures when creating qos profiles & maps
 1133,0,Severity-Medium,Basic L3: adding restart-ability to ops-zebra
 1134,REST,Severity-Medium,"[REST] Column Retrieval tests are disabled on dill release, need to be fixed and enable again."
-1136,0,Severity-Medium,Traffic switching to L2 VLANs from subinterface.
+1136,Sub-interfaces,Severity-Medium,Traffic switching to L2 VLANs from subinterface.
 1137,0,Severity-High,Comment ACEs act like permit ACEs
+1138,0,Severity-Medium,CLI allows MTU to be configured beyond what the asic and kernel driver is able to handle- allows for 16360 driver handles 9216
 1139,0,Severity-Medium,Web UI: Need to sort logs on the client  from new to old as server returns them from old to new
 1140,0,Severity-Medium,Reported memory leak in acl_log.c from seq_wait calls
 1143,0,Severity-High,test_portd_ct_functionality - tc6 - Missing IPv6 addresses after 'no shutdown'
 1144,port daemon,Severity-High,test_portd_ct_functionality-portd_functionality_tc3- Missing Internal VLAN range of interface 4 in DB
+1146,0,Severity-High,Event logging and diagnostics support for DHCP-TFTP server
+1147,0,Severity-Medium,Custom validator for DHCP server mandatory commands
+1148,REST,Severity-Medium,[REST] Sort by other types different to string broken
+1149,0,Severity-Medium,[OVSDB P&S] Empty maps and partial map
+1151,0,Severity-Medium,Lldp test case fails because don't consider to use split interface
+1152,0,Severity-Medium,layer 3 test case fails because don't consider to use split interfaces
+1153,0,Severity-Medium,Add knet info in diags
+1155,0,Severity-High,WebInspect Reports Cookie Security: Cookie Not Sent Over SSL on 1 or more pages
