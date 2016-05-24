@@ -630,6 +630,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1064,0,Severity-High,Application of an ACL without ACE entries to an interface results in vtysh hang
 1065,Rest,Severity-Critical,Recent REST change breaks full-configuration POST (declarative config)
 1066,0,Severity-Medium,CLI: bridge_normal configuration shouldn't be modifiable
+1067,0,Severity-Medium,Fixing Python FT scripts failing due to relative path module import
 1068,bgp,Severity-High,BGP multiple unique  networks fail to be assign as best
 1069,bgp,Severity-High,ops-bgpd.service failed AND 64 BGPD coredumps generated within a few minutes
 1070,0,Severity-High,Toggling a deny ACE in an ACL results in permit after bringing down and up the deny rule
@@ -647,6 +648,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1087,0,Severity-Medium,"LLDP show lldp neighbor-info:  ""Neighbor Chassis-ID"" isn't matching ""Hardware: Ethernet, MAC Address"" of neighbor - VSI"
 1088,0,Severity-High,[lldpcli] process is listed as defunct in ps -aux
 1089,0,Severity-High,"MSTP : Crash observed while assigning VLANS to MST's from IST, resulting in wrong VLAN to instance mapping and invalid/corrupted spanning-tree digest creation"
+1096,0,Severity-Medium,Code corrections to pass Fortify Static Analysis
 1097,webui,Severity-Medium,"Auto-refresh on the Interface Page takes it to top, impacting end user experience."
 1098,0,Severity-Medium,Quick Start Guide (http://www.openswitch.net/documents/dev/quick-start-physical) has a number of issues
 1099,0,Severity-High,Merge notifications feature to rel/dill
@@ -656,6 +658,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1105,Loopback,Severity-Medium,portd test script failure in zuul due to supportability change
 1106,0,Severity-High,LLDP - Error while Invoking lldpd_ovsdb_nbrs_change_all
 1107,0,Severity-High,POST of large configuration via /rest/v1/system/full-configuration causes ops-stpd to crash
+1108,0,Severity-High,VTYSH: AttributeError: 'unicode' object has no attribute '__getattr__' when attempting to
 1109,Sub-interfaces,Severity-High,Skipping the test_layer3_ft_sub_intf_l3test.py test because of repeated failures
 1112,OVSDB P&S,Severity-High,[OVSDB P&S] Memory leak on ovsdb_idl_txn_write_partial_map() and ovsdb_idl_txn_delete_partial_map()
 1113,REST,Severity-Medium,[REST] Dynamic Categories is not validating when follows column is not present
@@ -704,7 +707,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1170,BGP,Severity-Critical,"Zebra is not selecting all the routes in Route table when large number of routes ( in this case, 1000) are added to the Route table."
 1171,BGP,Severity-High,clear bgp command isnt resetting existing bgp session
 1172,BGP,Severity-Medium,Help string doesn't matches for the some CLI's.
-1173, 
+1173,0,Severity-High,QoS information is not displayed in LAG interfaces statistics
 1174,0,Severity-Medium,test_layer3_ft_fastpath_connected fails in hardware
 1175,0,Severity-Medium,VLAN columns type change to UUID
 1176,0,Severity-Critical,Fortify critical Defect : Buffer Overflow: Off-by-One
@@ -714,6 +717,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1180,0,Severity-High,[Moduler Framework test case]test_portd_ct_functionality - tc6 - Missing IPv6 addresses after 'no shutdown'
 1181,0,Severity-Medium,random gate job failures for ops-arpmgrd
 1182,0,Severity-Medium,Add the URIs for REST login and account APIs under proper version control
+1183,0,Severity-High,LAG test cases are failing in CIT Tier 1
 1184,0,Severity-High,Add logs for debugging CIT failures in legacy test frameworks
 1185,test-framework,Severity-High,Need mechanism in test-framework to display docker daemon logs
 1186,"rest, webui",Severity-Medium,Set SRCREV as AUTOREV for ops-restd/ops-webui repos for rel/dill branch
@@ -723,3 +727,14 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1194,0,Severity-Medium,ops-lldpd crash on split interface
 1195,0,Severity-Medium,MACs are not learnt on LAG interfaces
 1196,rest,Severity-High,Default VLAN can be deleted via REST
+1198,dhcp server,Severity-Medium,DHCP server unable to set lease time of 1 minute
+1200,0,Severity-High,Fix test_ft_lacp_statistics.py instability
+1201,0,Severity-High,Not possible to remove a secondary IPv4
+1202,0,Severity-High,Removing primary IPv4 before removing secondaries
+1203,0,Severity-High,Fix test_ft_static_lag_l2_l3_change.py
+1204,0,Severity-High,Fix test_lacp_ft_heartbeat_average_rate.py
+1205,0,Severity-High,Fix test_ft_lacp_l3_ping.py instability
+1206,0,Severity-High,Fix test_ft_static_lag_interface_l2_l3_change.py instability
+1208,0,Severity-Medium,Missing feature for physical interfaces is missing in diagnostic dump
+1209,0,Severity-High,"Help string for ""apply"" keyword is shown as ERROR"
+1210,0,Severity-Medium,Change ports.yaml to enable split support on all interfaces
