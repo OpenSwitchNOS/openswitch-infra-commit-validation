@@ -533,6 +533,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1033,webui,Severity-Medium,Web UI Interface Screen Cleanup
 1037,sflow,Severity-High,sFlow - When minimum sampling rate is set and traffic is send at 30% of line rate the feature service stop sending sampled packets
 1038,MAC Tables,Severity-High,Array out of bound access in mac learn
+1039, Core Dump
 1040,LLDP,Severity-Medium,AS6712 LLDP Test failure  - split interface specific issue
 1045,webui,Severity-Medium,Web UI Issues with MS IE/Edge
 1046,webui,Severity-Medium,Move Web UI code coverage from build file to check/gate jobs
