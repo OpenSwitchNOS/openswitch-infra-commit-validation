@@ -704,6 +704,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1170,BGP,Severity-Critical,"Zebra is not selecting all the routes in Route table when large number of routes ( in this case, 1000) are added to the Route table."
 1171,BGP,Severity-High,clear bgp command isnt resetting existing bgp session
 1172,BGP,Severity-Medium,Help string doesn't matches for the some CLI's.
+1173, 
 1174,0,Severity-Medium,test_layer3_ft_fastpath_connected fails in hardware
 1175,0,Severity-Medium,VLAN columns type change to UUID
 1176,0,Severity-Critical,Fortify critical Defect : Buffer Overflow: Off-by-One
