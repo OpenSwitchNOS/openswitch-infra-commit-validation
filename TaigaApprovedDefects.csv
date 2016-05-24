@@ -641,7 +641,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1106,0,Severity-High,LLDP - Error while Invoking lldpd_ovsdb_nbrs_change_all
 1107,0,Severity-High,POST of large configuration via /rest/v1/system/full-configuration causes ops-stpd to crash
 1109,Sub-interfaces,Severity-High,Skipping the test_layer3_ft_sub_intf_l3test.py test because of repeated failures
-1112,OVSDB P&S,Severity-High,Memory leak on ovsdb_idl_txn_write_partial_map() and ovsdb_idl_txn_delete_partial_map()
+1112,OVSDB P&S,Severity-High,[OVSDB P&S] Memory leak on ovsdb_idl_txn_write_partial_map() and ovsdb_idl_txn_delete_partial_map()
 1113,REST,Severity-Medium,[REST] Dynamic Categories is not validating when follows column is not present
 1115,0,Severity-High,Conversion of an ACL applied Layer 3 port to Layer 2 port causes the applied ACL to get deleted from the port and also unable to add any more ACEs or apply existing ACL to any other ports
 1116,Configuration Persistence,Severity-Critical,Configuration Persistence: copy running-config to startup incorrectly persists dynamic VLANs to configuration
