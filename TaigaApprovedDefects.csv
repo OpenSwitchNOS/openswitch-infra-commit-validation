@@ -58,7 +58,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 141,Authentication,Severity-Medium,Broken link on the Authentication CLI page
 142,BGP,Severity-Medium,Broken links on the BGP CLI page
 143,L3,Severity-Medium,"Broken link on the L3 Interfaces, Static Routes, ECMP page"
-145,Test Framework,Severity-Medium,Broken link on the Writing Automated Feature Test Cases page
 146,CLI Infra,Severity-High,Core dumped when you press ctrl + ?
 149,AAA,Severity-High,XML schema does not contain definitions for all System's aaa column keys
 151,AAA,Severity-Critical,Weak password encryption
@@ -102,7 +101,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 205,REST,Severity-High,REST - GET and GET all in users resource is not consistent with other resources
 206,REST,Severity-Critical,REST: Internal Server error when using If-Match with POST/GET
 207,rest,Severity-High,REST: If-Match not supported with CORS
-209,SFTP server,Severity-Medium,Need to have sftp server stats show command
 210,Ping,Severity-Medium,Ping6: Failing to resolve IPv6 address shows error and datagram-size error
 215,CLI Infra,Severity-Medium,"""show running-config"" is not displaying in sorted order."
 216,basic l3,Severity-Medium,CLI allows two interfaces to have same IP address
@@ -284,7 +282,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 563,rest,Severity-Medium,[REST] Status and statistics columns are seen as invalid during sort and filter
 564,Rest,Severity-Medium,[REST] GET with depth returns 200OK when use an invalid selector
 566,Rest,Severity-Medium,[REST] PATCH stop working when add a very big string as an attribute
-567,configuration persistence,Severity-Medium,Traceback generated after interrupting copy from running to startup
 568,Rest,Severity-Medium,[REST] GET when the depth is big does not work
 569,subinterfaces,Severity-Medium,l3 subinterface: vswitchd crash while configuring multiple subinterface
 570,aaa,Severity-High,"Unable to remove existing local user account using ""user remove <user>"" from root user login."
@@ -302,7 +299,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 591,vlan,Severity-Medium,Sorting issue on show vrf output
 592,diagnostics,Severity-Medium,VTYSH core file while execute show tech CLI continuously
 594,dhcp server,Severity-Medium,DHCP: Max number of ranges is not defined.
-596,cli-infra,Severity-High,Core Dump on issuing VTYSH command. Cannot enter into the vtysh mode.
 598,ping,Severity-Medium,Ping with ip-option include-timestamp is showing error
 599,CLI Infra,Severity-Medium,Not able to login to openswitch with admin/admin credentials.
 600,lldp,Severity-Medium,LLDP neighbor chassis ID not populated for Linux box connecting to switch
@@ -544,7 +540,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1002,boot,Severity-Medium,Memory leak in ops-hw-config YAML file processing
 1003,0,Severity-Medium,systemd-journald: Failed to create new system journal: No space left on device
 1004,mirroring,Severity-High,Mirroring: missed destroy of cloned smaps
-1005,Mirroring,Severity-Medium,Mirroring: complete removal of RSPAN/VLAN mirroring code from PI layer
 1008,basic l3 ,Severity-Medium,"Commit Supportability changes for L3 features (Basic, Loopback, SubIntf, LAG, ECMP, OSPF, Zebra) to rel/dill"
 1009,0,Severity-Medium,test_lldp_ft_statistics.py fails randomly in CIT
 1013,VLANS,Severity-Medium,Default vlan 1 assigned to interface VLAN in a specific removal case
@@ -587,7 +582,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1068,bgp,Severity-High,BGP multiple unique  networks fail to be assign as best
 1070,0,Severity-High,Toggling a deny ACE in an ACL results in permit after bringing down and up the deny rule
 1071,bgp,Severity-High,BGP networks are not being transmitted
-1072,0,Severity-High,[OVSDB P&S] Memory leak detected by valgrind in ovsrec_port_update_aclv4_in_status_setkey() function
 1074,0,Severity-High,copy sftp allows a user to copy a file to any path in the rootfs
 1075,0,Severity-Medium,lldp show tech formatting issues - LLDP vtysh show commands using \n instead of VTY_NEWLINE
 1076,0,Severity-High,Configuration is lost when copy run start is issued.
@@ -599,7 +593,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1087,0,Severity-Medium,"LLDP show lldp neighbor-info:  ""Neighbor Chassis-ID"" isn't matching ""Hardware: Ethernet, MAC Address"" of neighbor - VSI"
 1088,0,Severity-High,[lldpcli] process is listed as defunct in ps -aux
 1089,0,Severity-High,"MSTP : Crash observed while assigning VLANS to MST's from IST, resulting in wrong VLAN to instance mapping and invalid/corrupted spanning-tree digest creation"
-1096, 0, 
+1096,0,Severity-Medium,Code corrections to pass Fortify Static Analysis
 1097,webui,Severity-Medium,"Auto-refresh on the Interface Page takes it to top, impacting end user experience."
 1098,0,Severity-Medium,Quick Start Guide (http://www.openswitch.net/documents/dev/quick-start-physical) has a number of issues
 1099,0,Severity-High,Merge notifications feature to rel/dill
@@ -626,6 +620,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1129,interface,Severity-Critical,"Segmentation fault (core dumped) when running ""show interface brief"""
 1130,0,Severity-Medium,vlans appear when saving config
 1131,0,Severity-Medium,check for malloc failures when creating qos profiles & maps
+1132,0,Severity-High,Static analysis issues - fixed (Fortify Cleanup)
 1133,0,Severity-Medium,Basic L3: adding restart-ability to ops-zebra
 1134,REST,Severity-Medium,"[REST] Column Retrieval tests are disabled on dill release, need to be fixed and enable again."
 1136,Sub-interfaces,Severity-Medium,Traffic switching to L2 VLANs from subinterface.
@@ -669,7 +664,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1181,0,Severity-Medium,random gate job failures for ops-arpmgrd
 1182,0,Severity-Medium,Add the URIs for REST login and account APIs under proper version control
 1183,0,Severity-High,LAG test cases are failing in CIT Tier 1
-1184,0,Severity-High,Add logs for debugging CIT failures in legacy test frameworks
+1184,Legacy test framework,Severity-High,Add logs for debugging CIT failures in legacy test frameworks
 1185,test-framework,Severity-High,Need mechanism in test-framework to display docker daemon logs
 1186,"rest, webui",Severity-Medium,Set SRCREV as AUTOREV for ops-restd/ops-webui repos for rel/dill branch
 1187,basic l3,Severity-Medium,Change the VRF reference in Route and Neighbor table to strong
@@ -690,4 +685,3 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1210,0,Severity-Medium,Change ports.yaml to enable split support on all interfaces
 1211,0,Severity-High,Legacy Framework Host Ping method needs adjusted timeout
 1212,platform,Severity-Medium,Diagnostics support for QoS
-1219, link aggregation, severity-Critical, double declaration of check_acl_configuratoin in ops-lacpd
