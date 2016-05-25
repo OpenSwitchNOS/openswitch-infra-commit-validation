@@ -599,6 +599,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1087,0,Severity-Medium,"LLDP show lldp neighbor-info:  ""Neighbor Chassis-ID"" isn't matching ""Hardware: Ethernet, MAC Address"" of neighbor - VSI"
 1088,0,Severity-High,[lldpcli] process is listed as defunct in ps -aux
 1089,0,Severity-High,"MSTP : Crash observed while assigning VLANS to MST's from IST, resulting in wrong VLAN to instance mapping and invalid/corrupted spanning-tree digest creation"
+1096, 0, 
 1097,webui,Severity-Medium,"Auto-refresh on the Interface Page takes it to top, impacting end user experience."
 1098,0,Severity-Medium,Quick Start Guide (http://www.openswitch.net/documents/dev/quick-start-physical) has a number of issues
 1099,0,Severity-High,Merge notifications feature to rel/dill
@@ -689,3 +690,4 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1210,0,Severity-Medium,Change ports.yaml to enable split support on all interfaces
 1211,0,Severity-High,Legacy Framework Host Ping method needs adjusted timeout
 1212,platform,Severity-Medium,Diagnostics support for QoS
+1219, link aggregation, severity-Critical, double declaration of check_acl_configuratoin in ops-lacpd
