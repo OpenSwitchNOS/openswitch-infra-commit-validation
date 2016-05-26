@@ -58,6 +58,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 141,Authentication,Severity-Medium,Broken link on the Authentication CLI page
 142,BGP,Severity-Medium,Broken links on the BGP CLI page
 143,L3,Severity-Medium,"Broken link on the L3 Interfaces, Static Routes, ECMP page"
+145,Test Framework,Severity-Medium,Broken link on the Writing Automated Feature Test Cases page
 146,CLI Infra,Severity-High,Core dumped when you press ctrl + ?
 149,AAA,Severity-High,XML schema does not contain definitions for all System's aaa column keys
 151,AAA,Severity-Critical,Weak password encryption
@@ -101,6 +102,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 205,REST,Severity-High,REST - GET and GET all in users resource is not consistent with other resources
 206,REST,Severity-Critical,REST: Internal Server error when using If-Match with POST/GET
 207,rest,Severity-High,REST: If-Match not supported with CORS
+209,SFTP server,Severity-Medium,Need to have sftp server stats show command
 210,Ping,Severity-Medium,Ping6: Failing to resolve IPv6 address shows error and datagram-size error
 215,CLI Infra,Severity-Medium,"""show running-config"" is not displaying in sorted order."
 216,basic l3,Severity-Medium,CLI allows two interfaces to have same IP address
@@ -282,6 +284,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 563,rest,Severity-Medium,[REST] Status and statistics columns are seen as invalid during sort and filter
 564,Rest,Severity-Medium,[REST] GET with depth returns 200OK when use an invalid selector
 566,Rest,Severity-Medium,[REST] PATCH stop working when add a very big string as an attribute
+567,configuration persistence,Severity-Medium,Traceback generated after interrupting copy from running to startup
 568,Rest,Severity-Medium,[REST] GET when the depth is big does not work
 569,subinterfaces,Severity-Medium,l3 subinterface: vswitchd crash while configuring multiple subinterface
 570,aaa,Severity-High,"Unable to remove existing local user account using ""user remove <user>"" from root user login."
@@ -299,6 +302,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 591,vlan,Severity-Medium,Sorting issue on show vrf output
 592,diagnostics,Severity-Medium,VTYSH core file while execute show tech CLI continuously
 594,dhcp server,Severity-Medium,DHCP: Max number of ranges is not defined.
+596,cli-infra,Severity-High,Core Dump on issuing VTYSH command. Cannot enter into the vtysh mode.
 598,ping,Severity-Medium,Ping with ip-option include-timestamp is showing error
 599,CLI Infra,Severity-Medium,Not able to login to openswitch with admin/admin credentials.
 600,lldp,Severity-Medium,LLDP neighbor chassis ID not populated for Linux box connecting to switch
@@ -540,6 +544,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1002,boot,Severity-Medium,Memory leak in ops-hw-config YAML file processing
 1003,0,Severity-Medium,systemd-journald: Failed to create new system journal: No space left on device
 1004,mirroring,Severity-High,Mirroring: missed destroy of cloned smaps
+1005,Mirroring,Severity-Medium,Mirroring: complete removal of RSPAN/VLAN mirroring code from PI layer
 1008,basic l3 ,Severity-Medium,"Commit Supportability changes for L3 features (Basic, Loopback, SubIntf, LAG, ECMP, OSPF, Zebra) to rel/dill"
 1009,0,Severity-Medium,test_lldp_ft_statistics.py fails randomly in CIT
 1013,VLANS,Severity-Medium,Default vlan 1 assigned to interface VLAN in a specific removal case
@@ -644,7 +649,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1159,0,Severity-Medium,BGP tests are failing intermittently in Tier 1
 1160,acl,Severity-High,ACL entries do not persist across reboot
 1161,lldp,Severity-High,test_lldp_ft_enable_disable.py fails intermittently in CIT Tier 1
-1162,0,Severity-High,FT scripts (intervlan routing and loopback) does not handle split interface
 1164,0,Severity-Medium,"Unable to configure the same host IPaddress Trap receiver for different versions V1,V2 and V3"
 1166,0,Severity-Medium,qos - code cleanup in YAML processing
 1167,0,Severity-High,Classifier daemon misses OVSDB notifications when large configuration is pasted on CLI
@@ -685,3 +689,23 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1210,0,Severity-Medium,Change ports.yaml to enable split support on all interfaces
 1211,0,Severity-High,Legacy Framework Host Ping method needs adjusted timeout
 1212,platform,Severity-Medium,Diagnostics support for QoS
+1213,MSTP,Severity-Medium,"When MSTP is configured across multiple regions, Master Port is being disaplyed as Designated Port."
+1214,0,Severity-Medium,Flush MAC required for MSTP
+1215,L3,Severity-Medium,interface vlan name shoud be starting with a non zero value
+1216,0,Severity-Medium,Portd: Static analysis fixes (both critical & high)
+1217,0,Severity-Medium,Help string doesn't matches for the spanning-tree CLI
+1218,0,Severity-High,Mirroring: port mirroring not working in tx direction with new bcm cdp 3.1.0.12
+1219,0,Severity-Critical,Double declaration of check_acl_configuration in ops-lacpd
+1220,0,Severity-Medium,unknown unicast packets are pushed to CPU via default queue for unclassified packets instead of unknown unicast CPU queue.
+1222,lldp,Severity-High,Startup configuration erased after reload switch when startup configuration has VLAN related configuration
+1223,0,Severity-Medium,Add component test with new modular framework to ops-ntpd in rel/dill
+1225,sflow,Severity-Medium,Internal VLANs show up at the sFlow collector
+1226,ops-pmd,Severity-High,Move test case initialization to avoid CIT error in ops-pmd
+1227,0,Severity-High,Up and running interface VLAN not retained in the kernel level after reload switch
+1228,MSTP,Severity-Medium,MSTP: Root port is shown as ASCII value when Multiple Instances are configured
+1229,0,Severity-Medium,"LLDP - During OVSDB update failure, multiple retries without verifying the error state."
+1230,0,Severity-Medium,VRF deletion with an ip configured interface attached is failing.
+1232,0,Severity-Medium,ops-vland [OPS-VLAND] coredump while comfiguring ~480 vlans and interface vlans with ip and ipv6 addresses
+1233,0,Severity-High,MAC address learning list mismatch between ASIC and DB/CLI
+1234,0,Severity-High,OPS: Show startup config takes around 40 seconds with a simple config and CPU goes to 100%
+1235,0,Severity-Medium, Two different lldp daemon logging message on vlog where as lldpd is actually not detected as daemon by vlog config.
