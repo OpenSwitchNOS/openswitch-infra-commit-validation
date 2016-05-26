@@ -58,7 +58,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 141,Authentication,Severity-Medium,Broken link on the Authentication CLI page
 142,BGP,Severity-Medium,Broken links on the BGP CLI page
 143,L3,Severity-Medium,"Broken link on the L3 Interfaces, Static Routes, ECMP page"
-145,Test Framework,Severity-Medium,Broken link on the Writing Automated Feature Test Cases page
 146,CLI Infra,Severity-High,Core dumped when you press ctrl + ?
 149,AAA,Severity-High,XML schema does not contain definitions for all System's aaa column keys
 151,AAA,Severity-Critical,Weak password encryption
@@ -102,7 +101,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 205,REST,Severity-High,REST - GET and GET all in users resource is not consistent with other resources
 206,REST,Severity-Critical,REST: Internal Server error when using If-Match with POST/GET
 207,rest,Severity-High,REST: If-Match not supported with CORS
-209,SFTP server,Severity-Medium,Need to have sftp server stats show command
 210,Ping,Severity-Medium,Ping6: Failing to resolve IPv6 address shows error and datagram-size error
 215,CLI Infra,Severity-Medium,"""show running-config"" is not displaying in sorted order."
 216,basic l3,Severity-Medium,CLI allows two interfaces to have same IP address
@@ -264,6 +262,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 532,Platform,Severity-Medium,Pretty name & Show system version are different from actual build
 533,os-infra ,Severity-Medium,"Events are getting cleared automatically from journal db and hence the output of ""show events"""
 534,lldp,Severity-Medium,LLDP events issue : either missing neighbor delete event or duplicate add event
+535,os-infra,Severity-Medium,journalctl -f floods
 537,ping,Severity-Medium,Ping to VLAN IP address does not work
 539,bgp,Severity-High,BGP max number of routes reaches 3039 and then neighbor disconnects
 540,CLI Infra,Severity-High,test_vtysh_ct_system skipped in CIT Tier 1
@@ -284,7 +283,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 563,rest,Severity-Medium,[REST] Status and statistics columns are seen as invalid during sort and filter
 564,Rest,Severity-Medium,[REST] GET with depth returns 200OK when use an invalid selector
 566,Rest,Severity-Medium,[REST] PATCH stop working when add a very big string as an attribute
-567,configuration persistence,Severity-Medium,Traceback generated after interrupting copy from running to startup
 568,Rest,Severity-Medium,[REST] GET when the depth is big does not work
 569,subinterfaces,Severity-Medium,l3 subinterface: vswitchd crash while configuring multiple subinterface
 570,aaa,Severity-High,"Unable to remove existing local user account using ""user remove <user>"" from root user login."
@@ -302,7 +300,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 591,vlan,Severity-Medium,Sorting issue on show vrf output
 592,diagnostics,Severity-Medium,VTYSH core file while execute show tech CLI continuously
 594,dhcp server,Severity-Medium,DHCP: Max number of ranges is not defined.
-596,cli-infra,Severity-High,Core Dump on issuing VTYSH command. Cannot enter into the vtysh mode.
 598,ping,Severity-Medium,Ping with ip-option include-timestamp is showing error
 599,CLI Infra,Severity-Medium,Not able to login to openswitch with admin/admin credentials.
 600,lldp,Severity-Medium,LLDP neighbor chassis ID not populated for Linux box connecting to switch
@@ -544,7 +541,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1002,boot,Severity-Medium,Memory leak in ops-hw-config YAML file processing
 1003,0,Severity-Medium,systemd-journald: Failed to create new system journal: No space left on device
 1004,mirroring,Severity-High,Mirroring: missed destroy of cloned smaps
-1005,Mirroring,Severity-Medium,Mirroring: complete removal of RSPAN/VLAN mirroring code from PI layer
 1008,basic l3 ,Severity-Medium,"Commit Supportability changes for L3 features (Basic, Loopback, SubIntf, LAG, ECMP, OSPF, Zebra) to rel/dill"
 1009,0,Severity-Medium,test_lldp_ft_statistics.py fails randomly in CIT
 1013,VLANS,Severity-Medium,Default vlan 1 assigned to interface VLAN in a specific removal case
@@ -612,6 +608,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1109,Sub-interfaces,Severity-High,Skipping the test_layer3_ft_sub_intf_l3test.py test because of repeated failures
 1112,OVSDB P&S,Severity-High,[OVSDB P&S] Memory leak on ovsdb_idl_txn_write_partial_map() and ovsdb_idl_txn_delete_partial_map()
 1113,REST,Severity-Medium,[REST] Dynamic Categories is not validating when follows column is not present
+1114,0,Severity-Medium,NTP: No validation error for NTP Server configuration through hostname.
 1115,0,Severity-High,Conversion of an ACL applied Layer 3 port to Layer 2 port causes the applied ACL to get deleted from the port and also unable to add any more ACEs or apply existing ACL to any other ports
 1116,Configuration Persistence,Severity-Critical,Configuration Persistence: copy running-config to startup incorrectly persists dynamic VLANs to configuration
 1119,CLI infra,Severity-High,Enabling  '-Wall -Werror' flag for ops-cli repo
@@ -655,7 +652,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1168,BGP,Severity-High,BGP not routing using ipv6
 1169,BGP,Severity-Critical,"zebra core dumps constantly being generated ""python|14001|LOG_CRIT|ops-zebra crashed due to Aborted"""
 1170,BGP,Severity-Critical,"Zebra is not selecting all the routes in Route table when large number of routes ( in this case, 1000) are added to the Route table."
-1171,BGP,Severity-High,clear bgp command isnt resetting existing bgp session
 1172,BGP,Severity-Medium,Help string doesn't matches for the some CLI's.
 1173,0,Severity-High,QoS information is not displayed in LAG interfaces statistics
 1174,0,Severity-Medium,test_layer3_ft_fastpath_connected fails in hardware
@@ -699,6 +695,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1220,0,Severity-Medium,unknown unicast packets are pushed to CPU via default queue for unclassified packets instead of unknown unicast CPU queue.
 1222,lldp,Severity-High,Startup configuration erased after reload switch when startup configuration has VLAN related configuration
 1223,0,Severity-Medium,Add component test with new modular framework to ops-ntpd in rel/dill
+1224,ntp_client,Severity-Medium,Auto restart for ntpd and restd
 1225,sflow,Severity-Medium,Internal VLANs show up at the sFlow collector
 1226,ops-pmd,Severity-High,Move test case initialization to avoid CIT error in ops-pmd
 1227,0,Severity-High,Up and running interface VLAN not retained in the kernel level after reload switch
@@ -708,4 +705,5 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1232,0,Severity-Medium,ops-vland [OPS-VLAND] coredump while comfiguring ~480 vlans and interface vlans with ip and ipv6 addresses
 1233,0,Severity-High,MAC address learning list mismatch between ASIC and DB/CLI
 1234,0,Severity-High,OPS: Show startup config takes around 40 seconds with a simple config and CPU goes to 100%
-1235,0,Severity-Medium, Two different lldp daemon logging message on vlog where as lldpd is actually not detected as daemon by vlog config.
+1235,0,Severity-Medium,Two different lldp daemon logging message on vlog where as lldpd is actually not detected as daemon by vlog config.
+1237,0,Severity-High,Subinterface creation will fail if dot1q tag and interface are added in same transaction
