@@ -326,7 +326,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 623,link aggregation,Severity-High,LAG and LACP test cases should be renamed to test_* convention
 626,NTP,Severity-High,test_ntpd_ft_auth_noauth_restart.py failing intermittently on CIT Tier1/2
 627,basic l3,Severity-High,Shutdown of interface does not remove the connected route in sh ip- route
-629,vlan,Severity-High,"test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan failing in CIT Tier 2 with error ""Failed to configure an ipv4 address"""
 631,Mgmt interface,Severity-High,test_mgmt_intf_ft.py fails intermittently in CIT Tier 1
 633,vlans,Severity-High,CIT Failure ops.tests.vlan.test_ft_vlan_removed_from_end_of_table.Test_vlan_state_removed_from_end_of_table.test_sendTraffic_after
 644,Link Aggregation,Severity-High,"Output for ""show interface brief"" is not showing the LAG mode anymore"
@@ -336,7 +335,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 651,Link Aggregation,Severity-High,Ping is not working when LAG is changed from two interfaces to just one interface
 652,VLAN,Severity-High,test_ft_vlan_removed_from_end_of_table.py is failing intermittently in CIT Tier 1 and Tier 2
 659,L2 Physical Interfaces,Severity-High,test_interfaces_ft_intf_stats.Test_template.test_statistics failure: ERROR: AssertionError: rx_bytes wrong
-660,Test Framework,Severity-High,test_layer3_ft_ecmp_hash.Test_ft_ecmp_hash.test_configure_switches CIT Tier 2 Test Failure: ERROR: Failed to configure IP 10.0.0.4 on workstation1
 661,REST,Severity-Medium,REST: Custom validators logic not invoked for PATCH
 662,REST,Severity-Medium,test_rest_ft_interfacesid.py and test_rest_ft_system.py Failing for tier2 (regression)
 663,link aggregation,Severity-High,Bonding driver errors
@@ -708,6 +706,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1228,MSTP,Severity-Medium,MSTP: Root port is shown as ASCII value when Multiple Instances are configured
 1229,0,Severity-Medium,"LLDP - During OVSDB update failure, multiple retries without verifying the error state."
 1230,0,Severity-Medium,VRF deletion with an ip configured interface attached is failing.
+1231,0,Severity-High,BUFMON: Push BST enable configuration to hardware only after plugin is attached.
 1232,0,Severity-Medium,ops-vland [OPS-VLAND] coredump while comfiguring ~480 vlans and interface vlans with ip and ipv6 addresses
 1233,0,Severity-High,MAC address learning list mismatch between ASIC and DB/CLI
 1234,0,Severity-High,OPS: Show startup config takes around 40 seconds with a simple config and CPU goes to 100%
@@ -717,3 +716,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1240,0,Severity-High,ops-supportability CT test case for ucast route is removed
 1241,0,Severity-Medium,Test interfaces fail due hardcode interfaces
 1242,MSTP,Severity-Medium,STP crash after configuring 4 MSTP instances and enabling MSTP
+1246,0,Severity-Medium,ops-classifierd test_mirror.py has topology definition issue
+1250,0,Severity-Medium,SNMP Infra CT issues
+1251,0,Severity-High,Interfaces mac_addr on different switches of the same test are equal
