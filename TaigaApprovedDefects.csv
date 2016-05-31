@@ -572,6 +572,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1051,0,Severity-High,"L3(Subinterface) :Reconfigure a few subinterfaces ,delete them and configure a new tag , router in the stick topology does not work in that case ."
 1052,0,Severity-Medium,ops.tests.layer3.test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan Failing intermitten
 1054,0,Severity-Critical,Netlink messages needs a retry mechanism to ensure messages getting processed
+1055,0,Severity-Medium,Traceroute6: timeout value '1' throws an error in traceroute6
 1057, basic l3,Severity-High,Routing not allowed to enable on split parent interface
 1058,0,Severity-Medium,Switch slowness and high CPU utilization when arp manager handling around 10K ARP
 1059,MSTP,Severity-Medium,MSTP: Show commands data updated.
@@ -639,7 +640,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1146,0,Severity-High,Event logging and diagnostics support for DHCP-TFTP server
 1147,0,Severity-Medium,Custom validator for DHCP server mandatory commands
 1148,REST,Severity-Medium,[REST] Sort by other types different to string broken
-1149,0,Severity-Medium,[OVSDB P&S] Empty maps and partial map
 1151,0,Severity-Medium,Lldp test case fails because don't consider to use split interface
 1152,0,Severity-Medium,layer 3 test case fails because don't consider to use split interfaces
 1153,0,Severity-Medium,Add knet info in diags
@@ -676,6 +676,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1193,CLI-infra,Severity-Medium,CLI-Infra changes for non IDL related command.
 1194,0,Severity-Medium,ops-lldpd crash on split interface
 1195,0,Severity-Medium,MACs are not learnt on LAG interfaces
+1197,0,Severity-Medium,Documentation for mac learning
 1198,dhcp server,Severity-Medium,DHCP server unable to set lease time of 1 minute
 1200,0,Severity-High,Fix test_ft_lacp_statistics.py instability
 1201,0,Severity-High,Not possible to remove a secondary IPv4
@@ -719,4 +720,11 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1246,0,Severity-Medium,ops-classifierd test_mirror.py has topology definition issue
 1250,0,Severity-Medium,SNMP Infra CT issues
 1251,0,Severity-High,Interfaces mac_addr on different switches of the same test are equal
-1252,0,Severity-Medium, Documentation for supportabiltiy infra missing from...
+1252,0,Severity-Medium,"Documentation for supportability infra missing from userguide , CLI document and feature test plan, REST support for loopback and subinterface features"
+1253,0,Severity-Medium,Fix Port priority For MSTI configured
+1254,L2-Vlan,Severity-Medium,show vlan interface <internal_vlan_id> is not showing the interfaces linked to it.
+1255,0,Severity-High,LAG FT Cases -  Case are not using port labels
+1256,0,Severity-Medium,Use safe string and print APIs in ACL code
+1258,0,Severity-Medium,Increase the max ports value
+1259,0,Severity-Medium,Basic L3: ops-zebra doesn't batch route updates to OVSDB
+1260,0,Severity-Medium,i2c access issue for as7712 & adding diags partition size
