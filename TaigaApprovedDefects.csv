@@ -719,3 +719,4 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1246,0,Severity-Medium,ops-classifierd test_mirror.py has topology definition issue
 1250,0,Severity-Medium,SNMP Infra CT issues
 1251,0,Severity-High,Interfaces mac_addr on different switches of the same test are equal
+1252,0,Severity-Medium, Documentation for supportabiltiy infra missing from...
