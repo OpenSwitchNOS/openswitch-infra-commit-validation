@@ -731,3 +731,4 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1259,0,Medium,Basic L3: ops-zebra doesn't batch route updates to OVSDB
 1260,0,Medium,i2c access issue for as7712 & adding diags partition size
 1261,dhcp-server,Medium,Cleanup not happening properly for dhcp-server FT script
+1275,BCM OpenNSL,High,L3 FP stats test case fails due to hardcode interfaces
