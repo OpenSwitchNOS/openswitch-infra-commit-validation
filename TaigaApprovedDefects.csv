@@ -747,6 +747,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1275,0,High,Portd crash after create a lag
 1276,0,High,clear access-list hitcounts does not clear the hit counts
 1278,0,Medium,Add appropriate asserts since the test was passing even when pings fail
+1280,0,Medium,Need ot update "show version" info
 1281,0,Medium,"Mirroring: on dest iface removal, shutdown reported when when inactive/no dest"
 1282,vlan,High,SW throwing errors for CLI VLAN configurations
 1283,0,Critical,Switchd crash after execute diag-dump CLIs while device handling around 6K ARP
