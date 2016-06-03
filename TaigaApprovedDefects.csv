@@ -473,6 +473,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 896,BGP,High,BGP is not advertising multiple routes through multiple paths
 897,BGP,High,BGP is not advertising a route through multiple sub-interfaces
 898,BGP,Medium,"bgp Feature shown in ""diag-dump list"" are yet to support the backend."
+898,BGP,Medium,"bgp Feature shown in ""diag-dump list"" are yet to support the backend."
 899,BGP,Critical,89 (and counting) core.ops-bgpd corefiles produced in a matter of minutes.
 900,Routing,Critical,ECMP forces packets through slow path when adding new nexthop
 901,Linux,Medium,TFTP client is not able to copy large file ( > 32MB  ) to external tftp server
@@ -746,3 +747,11 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga subject
 1275,0,High,Portd crash after create a lag
 1276,0,High,clear access-list hitcounts does not clear the hit counts
 1278,0,Medium,Add appropriate asserts since the test was passing even when pings fail
+1281,0,Medium,"Mirroring: on dest iface removal, shutdown reported when when inactive/no dest"
+1282,vlan,High,SW throwing errors for CLI VLAN configurations
+1283,0,Critical,Switchd crash after execute diag-dump CLIs while device handling around 6K ARP
+1284,0,Medium,skip test_lldp_ft_wait_hold script to fix gate job failures
+1285,0,Medium,Toronto: show running-config interface or  show running-config interface <sub-interface id> does not display the configuration details for sub-interface.
+1286,0,Medium,"Toronto: show tech for ztp, aaa and vlan."
+1287,0,Critical,Siwtchd crash while create LAG and BGP network configuration
+1288,0,High,ops.tests.aaa.test_aaa_ft_authentication fails intermittently.
