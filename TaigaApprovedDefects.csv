@@ -795,3 +795,4 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1296,0,Medium,Interface CLI doc is not aligned with current implementation on set/unset of interface description.
 1298,0,Medium,Event logging is not adequate for MSTP
 1299,0,Serious,Palamida Scan 2: opennsl 1.0.2a vulnerabilities
+1310,0,Medium,Michael
