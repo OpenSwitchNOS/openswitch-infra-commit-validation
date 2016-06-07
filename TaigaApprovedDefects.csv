@@ -85,7 +85,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 177,vlan,High,when no routing is specified the port should be an L2 interface is not in the default vlan
 178,vlan,Medium,"Interface info not updated while check internal vlan status by ""show vlan"""
 179,Ping,Medium,Local interface/IP ping response is slow
-180,basic l3,Medium,Got ping response from admin shutdown interface
 181,vlan,Medium,Need CLI to check interface vlan status
 182,platform,Critical,"Segmentation fault (core dumped) on ""show running-config"" once rebooted followed by copy running config into startup."
 183,Mgmt interfaces,Medium,Misleading auto-negotiation default setting
@@ -277,6 +276,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 554,CLI-infra,Medium,Alias command is not working.
 555,lldp,High,"vtysh coredumped when executing ""diag-dump lldp basic"" for an corrupted yaml file"
 557,lldp,Medium,LLDP neighbor-info
+558,basic l3,Medium,Point-to-Point IP address configuration makes remote unreachable
 560,Loopback,Medium,No CLI ( show loopback interface brief) to check all the loopbacks configured
 562,Loopback,Medium,Loopback interface is not reachable through the management interface on openswitch
 563,rest,Medium,[REST] Status and statistics columns are seen as invalid during sort and filter
@@ -437,6 +437,8 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 838,rest,Medium,[REST] REST API doesn't support dynamic categories for the columns
 840,switchd,High,switchd fails to initialize randomly
 842,VRF,Medium,Verification of compiler warning in VRF module CLI files
+843,0,Critical,Packet drops on interfaces
+843,0,Critical,Packet drops on interfaces
 844,0,Medium,OPS-Supportability: Additional argument validations for Diagnostic Dump APIs
 845,0,Medium,dhcp_leases schema upgrade doesn't reflect on the database
 849,vlan,Medium,VLAN interface sorting issue on show running
@@ -465,6 +467,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 888,Loopback,Medium,Verification of compiler warning in loopback&subinterface  module CLI files.
 889,rest,Critical,REST API: Need /logout to invalidate the authentication token aka cookie
 890,rest,High,REST API: Default expiration for authentication token is one month - too long
+891,BGP,High,BGP discovered routes are not get populated
 892,ntp-client,High,NTP: Time is not persistent across reboots
 893,physical interfaces,Medium,No interface stat info while check interface status for split parent interface
 895,basic l3,High,test_portd_ct_functionality fails repetitively on AS6712
@@ -477,6 +480,8 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 901,Linux,Medium,TFTP client is not able to copy large file ( > 32MB  ) to external tftp server
 903,Loopback,High,L3(Loopback) :: Stress :: Only 250 loopback interfaces reachable via external host instead of 1024 loopback interfaces
 906,Sub-interfaces,Medium,CLI Guide of Sub-interface needs update. Refer the details below for gap w.r.t CLI implementation.
+907,rest,Medium,Fix subinterface schema to have max 1 vlan:parent-uuid key:value pair
+907,rest,Medium,Fix subinterface schema to have max 1 vlan:parent-uuid key:value pair
 908,0,Medium,DELETE on default rows should not be allowed
 909,password server,Medium,ops-passwd-srv: address issues found during static analysis
 912,sflow,High,Added sflow modularization code to rel/dill
@@ -611,12 +616,14 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1107,0,High,POST of large configuration via /rest/v1/system/full-configuration causes ops-stpd to crash
 1108,0,High,VTYSH: AttributeError: 'unicode' object has no attribute '__getattr__' when attempting to
 1109,Sub-interfaces,High,Skipping the test_layer3_ft_sub_intf_l3test.py test because of repeated failures
+1111,0,Critical,BGP adds Route_Map entries without 'name'
 1112,OVSDB P&S,High,[OVSDB P&S] Memory leak on ovsdb_idl_txn_write_partial_map() and ovsdb_idl_txn_delete_partial_map()
 1112,OVSDB P&S,High,[OVSDB P&S] Memory leak on ovsdb_idl_txn_write_partial_map() and ovsdb_idl_txn_delete_partial_map()
 1113,rest,Medium,[REST] Dynamic Categories is not validating when follows column is not present
 1114,0,Medium,NTP: No validation error for NTP Server configuration through hostname.
 1115,0,High,Conversion of an ACL applied Layer 3 port to Layer 2 port causes the applied ACL to get deleted from the port and also unable to add any more ACEs or apply existing ACL to any other ports
 1116,Configuration Persistence,Critical,Configuration Persistence: copy running-config to startup incorrectly persists dynamic VLANs to configuration
+1118,rest,Medium,Notifications - Add second IDL for monitoring DB changes
 1119,CLI infra,High,Enabling  '-Wall -Werror' flag for ops-cli repo
 1123,0,Medium,System daemon restarted while system is handling around 7000 ARP
 1124,0,Medium,"show interfaces returns unexpected data, when IPV6 and static route is configured"
@@ -671,6 +678,9 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1185,test-framework,High,Need mechanism in test-framework to display docker daemon logs
 1186,"rest, webui",Medium,Set SRCREV as AUTOREV for ops-restd/ops-webui repos for rel/dill branch
 1187,basic l3,Medium,Change the VRF reference in Route and Neighbor table to strong
+1188,dhcp server,Medium,DHCPSrv_Range: POST operation returns 404 response code
+1188,dhcp server,Medium,DHCPSrv_Range: POST operation returns 404 response code
+1188,dhcp server,Medium,DHCPSrv_Range: POST operation returns 404 response code
 1193,CLI-infra,Medium,CLI-Infra changes for non IDL related command.
 1194,0,Medium,ops-lldpd crash on split interface
 1195,0,Medium,MACs are not learnt on LAG interfaces
@@ -711,10 +721,14 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1234,0,High,OPS: Show startup config takes around 40 seconds with a simple config and CPU goes to 100%
 1235,0,Medium,Two different lldp daemon logging message on vlog where as lldpd is actually not detected as daemon by vlog config.
 1237,0,High,Subinterface creation will fail if dot1q tag and interface are added in same transaction
+1238,0,Medium,Config with 1000 VLANs cause switchd qos errors on 6712
 1239,0,Medium,L3 fp stats test case fails due hardcode interfaces
 1240,0,High,ops-supportability CT test case for ucast route is removed
 1241,0,Medium,Test interfaces fail due hardcode interfaces
 1242,MSTP,Medium,STP crash after configuring 4 MSTP instances and enabling MSTP
+1243,0,Medium,ops-ipapps: Static analysis fixes (both critical & high)
+1244,0,Medium,Integrating additional changes of ops-broadview from master to rel/dill
+1244,0,Medium,Integrating additional changes of ops-broadview from master to rel/dill
 1246,0,Medium,ops-classifierd test_mirror.py has topology definition issue
 1249,0,Medium,"Inconsistent heading and content for the command ""show interface brief"""
 1250,0,Medium,SNMP Infra CT issues
@@ -742,3 +756,42 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1275,0,High,Portd crash after create a lag
 1276,0,High,clear access-list hitcounts does not clear the hit counts
 1278,0,Medium,Add appropriate asserts since the test was passing even when pings fail
+1280,0,Medium,"Need to update ""show version"" information in CLI guide"
+1281,0,Medium,"Mirroring: on dest iface removal, shutdown reported when inactive/no dest"
+1282,vlan,High,SW throwing errors for CLI VLAN configurations
+1283,0,Critical,Switchd crash after execute diag-dump CLIs while device handling around 6K ARP
+1284,0,Medium,skip test_lldp_ft_wait_hold script to fix gate job failures
+1285,0,Medium,show running-config interface or  show running-config interface <sub-interface id> does not display the configuration details for sub-interface.
+1286,0,Medium,"show tech for ztp, aaa and vlan."
+1287,0,Critical,Siwtchd crash while create LAG and BGP network configuration
+1288,0,High,ops.tests.aaa.test_aaa_ft_authentication fails intermittently.
+1289,mirror,Medium,mirror create may crash genericx86-64 ops-switchd
+1289,mirror,Medium,mirror create may crash genericx86-64 ops-switchd
+1290,0,Medium,ops-lacpd in container build continually logging error message
+1292,0,Medium,Fix to make all split ports work on as7712
+1293,0,Medium,Test case test_ft_bootup.py  fails to run because hardcode interfaces
+1295,0,Medium,Switchd/ Cur_hw intermitteny failures
+1296,0,Medium,Interface CLI doc is not aligned with current implementation on set/unset of interface description.
+1298,0,Medium,Event logging is not adequate for MSTP
+1299,0,High,Palamida Scan 2: openssl 1.0.2a vulnerabilities
+1300,0,High,REST login feature test needs to be updated for new URIs
+1301,0,Critical,REST logout needs to have feature test added
+1302,0,Medium,SSL cert should be generated during system bootup
+1302,0,Medium,SSL cert should be generated during system bootup
+1304,0,Medium,Zebra diagnostics
+1304,0,Medium,Zebra diagnostics
+1305,0,High,Control plane policing documents not in release branch
+1307,0,Medium,TFTP server Tier-2 FT script
+1308,0,Medium,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd
+1310,0,Medium,Remove IPsec Schema
+1312,0,Critical,REST GET with depth=1 not returning data
+1313,0,High,Ansible: Invalid L2 and L3 configuration on port
+1314,0,Medium,Randomly port state change takes beyond 2 * hello_time
+1315,0,Medium,MAC table flush/age out not happening properly in DB level
+1316,0,Medium,"DESCRIPTION:  when instance priority is configured as 15, state machine doesnt seem to be working properly. The port role and state shows as Disabled and Forwarding.  When First L2 port is being created after enabling spanning-tree, State machine seems to be malfunctioning. Steps to Reproduce:   Actual Results:   Expected Results:   Environment:  Operating System:"
+1317,0,High,Eliminate length limit on version_id string
+1317,0,High,Eliminate length limit on version_id string
+1318,0,Medium,open-brace character { is rendered as {'{'} in Markdown code blocks on website
+1319,0,High,Ansible: show commands do not match after an invalid configuration
+1321,0,Medium,HPEOPS Transceiver IOP: Dropped Frame percent around 70% with the DAC JH235A
+1322,rest,High,test_ops-restd_ft_account.py fails intermittently in CIT
