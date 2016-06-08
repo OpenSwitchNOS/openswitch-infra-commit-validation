@@ -3,9 +3,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 15,basic l3,Medium,CLI - Interfaces split condition is not being validated
 21,lldp,Medium,LLDP neighbor table and interface counters take long time to clear
 23,CLI infra,Medium,Alias configuration removed after login/logout
-24,CLI infra,Medium,Validation not done properly for IPv4 type token
 26,BGP,High,BGP Does not obey global ECMP enable/disable
-27,Mgmt Interface,Medium,Name server IP address not updated in a specific scenario on MGMT interface
 30,Mgmt Interface,High,Mgmt If - IPv6 handle DAD
 33,basic l3,Medium,Deleting ipv6 addresses on L3 interfaces doesnt remove Neigbors/direct connect hosts
 35,VLANs,Medium,Vlan name is not updated on the show vlan output
@@ -25,14 +23,12 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 75,Configuration Persistence,Medium,Implement CLI command to print startup config in json format
 77,rest,High,Resource local configuration should not include subresources
 78,rest,Medium,Better name and/or description for resource ids used in URIs
-79,rest,Medium,Resource URI should have a proper description in REST API rendering
 82,vlan,Medium,Portd doesn't check for exsiting L2 Vlans for VLAN Ids and creates duplicate VLAN rows for same VLAN Ids
 84,Test Framework,Medium,ft-framework slowness in VSI interaction
 85,rest,High,SWAGGER UI data structures not matching to the implemented code and REST requests may fail
 86,rest,Medium,"For REST configuration APIs , optional attributes are still required to PASS or API to be successful"
 88,AAA,Medium,VSI Segmentation fault and failed to remove user on user remove cmd.
 92,Mgmt Interface,Medium,Unable to remove IPv6 assigned IP from mgmt interface
-97,Mgmt Interface,Medium,Need appropriate error message while remove IP address from mgmt interface
 98,link aggregation,Critical,LAG: LACP configuration is only being applied on OVS when there is at least 1 interface in LAG
 99,link aggregation,Critical,LAG: LACP cannot be disabled on an LAG after setting it on
 100,link aggregation,High,LAG: LACP interface status is not visible from VTYSH
@@ -95,7 +91,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 189,rest,High,REST: If-Match Test failing randomly
 190,Ping,Medium,"Datagram-size range is not working after a particular value in ""ping"" command"
 191,Ping,Medium,Ping results 100% packet loss with ip-option
-195,link aggregation,Medium,LACP Static analysis findings on functions and declarations
 196,Mgmt interfaces,Medium,No form of CLI supported not required for certain interface setting parameters
 198,rest,Medium,"REST: GET method on backward references such as ""Route"" is not working."
 199,link aggregation,Critical,remove interface from LAG restarts switchd
@@ -107,7 +102,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 207,rest,High,REST: If-Match not supported with CORS
 209,Sftp server,Medium,Need to have sftp server stats show command
 210,Ping,Medium,Ping6: Failing to resolve IPv6 address shows error and datagram-size error
-212,Traceroute,Medium,Proper error message should be displayed when traceroute from admin user
 215,CLI infra,Medium,"""show running-config"" is not displaying in sorted order."
 216,basic l3,Medium,CLI allows two interfaces to have same IP address
 218,link aggregation,High,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration."
@@ -251,7 +245,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 521,basic l3,Medium,L3 Subinterface : Duplication of IPv6 addresses across subinterfaces
 522,subinterfaces,Medium,L3 Subinterface : Non existing vlan is assigned to subinterface
 523,lldp,Medium,LLDP daemon core-dumped
-524,subinterfaces,Medium,L3 Subinterface :Transceiver information is irrelevant for subinterfaces and should be removed from the menu
 525,basic l3,Medium,L3 Subinterface : Subinterface CLI shows parent interface down if you create a subinterface first and do a admin up on parent interfaces later
 526,ntp,Medium,NTP: A validation is needed for maximum number of configurable NTP servers
 528,rest,Medium,[REST] PATCH method fails when adding keys within empty optional columns
@@ -273,7 +266,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 551,link aggregation,High,Eliminate options in Load Balancing enum
 552,authentication,High,"Unable to change the password for the username ""admin"" and already existing configured user."
 553,lldp,Medium,"[diag-dump] Error on ""diag-dump lldp basic"" in the ""admin"" mode"
-554,CLI-infra,Medium,Alias command is not working.
 555,lldp,High,"vtysh coredumped when executing ""diag-dump lldp basic"" for an corrupted yaml file"
 557,lldp,Medium,LLDP neighbor-info
 558,basic l3,Medium,Point-to-Point IP address configuration makes remote unreachable
@@ -281,6 +273,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 562,Loopback,Medium,Loopback interface is not reachable through the management interface on openswitch
 563,rest,Medium,[REST] Status and statistics columns are seen as invalid during sort and filter
 564,rest,Medium,[REST] GET with depth returns 200OK when use an invalid selector
+565,basic l3,Medium,L3 Loopback : IPv6 address is not removed from kernel when loopback ipv6 address is modified or loopback interface is deleted
 566,rest,Medium,[REST] PATCH stop working when add a very big string as an attribute
 567,Configuration Persistence,Medium,Traceback generated after interrupting copy from running to startup
 568,rest,Medium,[REST] GET when the depth is big does not work
@@ -295,12 +288,11 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 583,ntp,Medium,NTP: Long NTP server name displays information out of the table in command ‘show ntp associations’
 584,ntp-client,Medium,NTP: Rx-pkts field in statistics starts to increase even if an NTP server is not connected
 585,basic l3,Medium,L3 ECMP: Nexthop is not removed from ASIC ecmp object when corresponding interface is shutdown
+586,basic l3,Medium,L3 Loopback: Loopback IP's are not added as connected routes in kernel and DB
 587,platform,Medium,Copy running-config start-config could be lost interfaces
-589,basic l3,Medium,Static Route: User/reference guide does not mention about the max. configurable static routes and max. configurable routes for same destination.
 591,vlan,Medium,Sorting issue on show vrf output
 592,Diagnostics,Medium,VTYSH core file while execute show tech CLI continuously
 594,dhcp server,Medium,DHCP: Max number of ranges is not defined.
-595,AAA,High,"CIT Issue:  Tests fail with timeout in switvh bringup : self.cmd(SWNS_EXEC + ""/sbin/ip tuntap add dev "" + str(i) + "" mode tap"")"
 596,CLI-infra,High,Core Dump on issuing VTYSH command. Cannot enter into the vtysh mode.
 598,Ping,Medium,Ping with ip-option include-timestamp is showing error
 599,CLI infra,Medium,Not able to login to openswitch with admin/admin credentials.
@@ -317,7 +309,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 611,lldp,Medium,Multiple core file created by lldp daemon while adding allowed vlan on trunk interfaces
 612,basic l3,Medium,Loopback interfaces do not show traffic statistics .
 613,Loopback,Medium,Loopback interfaces do not show up in sorted order in show run and show loopback interface CLI's.
-614,os-infra,Medium,Remove the libtool .la file from the build package.
 615,infra,High,Website does not produce 404
 616,lldp,Medium,Disabling LLDP test case
 618,basic l3,Medium,portd needs to  push port configurations to interface when a kernel interface is detected
@@ -329,9 +320,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 627,basic l3,High,Shutdown of interface does not remove the connected route in sh ip- route
 631,Mgmt Interface,High,test_mgmt_intf_ft.py fails intermittently in CIT Tier 1
 633,VLANs,High,CIT Failure ops.tests.vlan.test_ft_vlan_removed_from_end_of_table.Test_vlan_state_removed_from_end_of_table.test_sendTraffic_after
-634,platfor/boot up,Medium,"when call yaml_find_device(), no good protection if return null device"
 644,link aggregation,High,"Output for ""show interface brief"" is not showing the LAG mode anymore"
-646,link aggregation,Medium,"Repeted column in LACP CLI ""show lacp interfaces"" command"
 648,link aggregation,High,LAG is not using the Port Priority to choose speed
 649,link aggregation,Medium,"lacp_user_guide.md is showing incorrect ouput for ""show lacp interfaces"""
 650,link aggregation,High,Sytem Priority and Port Priority are not changing the decision for LAG negotiation
@@ -419,6 +408,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 811,BGP,Critical,BGP routes not in sync with kernel.
 812,ntp-client,Medium,"NTP: ""show ntp status"" shows stale uptime with erroneous ntp running status."
 813,Logging,Medium,Incorrect help string for no command in config mode and config-if mode
+814,0,Critical,STP crashes when port is deleted from openvswitch
 815,Mgmt Interface,Medium,show running config displays interfaces in vlans twice
 818,platform,High,switchd plugin infra not finding plugins.yaml
 819,link aggregation,High,test_lacpd_ct_aggregation_key fails intermitten
@@ -437,8 +427,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 838,rest,Medium,[REST] REST API doesn't support dynamic categories for the columns
 840,switchd,High,switchd fails to initialize randomly
 842,VRF,Medium,Verification of compiler warning in VRF module CLI files
-843,0,Critical,Packet drops on interfaces
-843,0,Critical,Packet drops on interfaces
 844,0,Medium,OPS-Supportability: Additional argument validations for Diagnostic Dump APIs
 845,0,Medium,dhcp_leases schema upgrade doesn't reflect on the database
 849,vlan,Medium,VLAN interface sorting issue on show running
@@ -480,8 +468,8 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 901,Linux,Medium,TFTP client is not able to copy large file ( > 32MB  ) to external tftp server
 903,Loopback,High,L3(Loopback) :: Stress :: Only 250 loopback interfaces reachable via external host instead of 1024 loopback interfaces
 906,Sub-interfaces,Medium,CLI Guide of Sub-interface needs update. Refer the details below for gap w.r.t CLI implementation.
-907,rest,Medium,Fix subinterface schema to have max 1 vlan:parent-uuid key:value pair
-907,rest,Medium,Fix subinterface schema to have max 1 vlan:parent-uuid key:value pair
+907,"basic l3, subinterface",Medium,Fix subinterface schema to have max 1 vlan:parent-uuid key:value pair
+907,"basic l3, subinterface",Medium,Fix subinterface schema to have max 1 vlan:parent-uuid key:value pair
 908,0,Medium,DELETE on default rows should not be allowed
 909,password server,Medium,ops-passwd-srv: address issues found during static analysis
 912,sflow,High,Added sflow modularization code to rel/dill
@@ -490,6 +478,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 917,VLANs,Critical,Internal vlan  range configuration is not captured in the running-configuration. Post copying running-config to startup config and rebooting switch leads to multiple core.
 918,0,High,Appctl is not working for ops-snmpd
 919,0,High,ops-snmpd coring while switch going for a reboot. Even manual stop of snmpd service is leading to a core.
+920,SNMP,High,MIB details are missing for some of the MIB object when doing snmp walk
 921,0,High,no system description with argument is throwing unknown command error
 922,ECMP,Medium,About 1.2% of the traffic is loss with ECMP because some subinterfaces are not going up
 923,vlan,High,"Test cases: test_switchd_container_ct_changing_vlan_config.py, test_switchd_container_ct_vlan_access.py, test_switchd_container_ct_vlan_trunk.py fails in CIT"
@@ -549,7 +538,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1005,Mirroring,Medium,Mirroring: complete removal of RSPAN/VLAN mirroring code from PI layer
 1008,basic l3,Medium,"Commit Supportability changes for L3 features (Basic, Loopback, SubIntf, LAG, ECMP, OSPF, Zebra) to rel/dill"
 1009,0,Medium,test_lldp_ft_statistics.py fails randomly in CIT
-1012,0,Medium,Enable custom validator in DC
+1011,vlan,High,test_ft_vlan_removed_from_end_of_table fails intermitten
 1013,VLANs,Medium,Default vlan 1 assigned to interface VLAN in a specific removal case
 1014,0,Medium,Test script migration to modular framework
 1016,basic l3,Medium,L3 Routing: ops-zebra crashes due to NULL pointer dereference
@@ -607,7 +596,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1097,webui,Medium,"Auto-refresh on the Interface Page takes it to top, impacting end user experience."
 1098,0,Medium,Quick Start Guide (http://www.openswitch.net/documents/dev/quick-start-physical) has a number of issues
 1099,0,High,Merge notifications feature to rel/dill
-1100,webui,Medium,Fortify fixes for Web UI
 1101,0,Medium,show tech has missing interface commands
 1103,"l3, supportability",Medium,Diag-dump support for portd.
 1104,MSTP,Medium,"MSTP: Unable to do ""routing"" on interface which is part of Spanning tree  entry"
@@ -626,7 +614,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1118,rest,Medium,Notifications - Add second IDL for monitoring DB changes
 1119,CLI infra,High,Enabling  '-Wall -Werror' flag for ops-cli repo
 1123,0,Medium,System daemon restarted while system is handling around 7000 ARP
-1124,0,Medium,"show interfaces returns unexpected data, when IPV6 and static route is configured"
 1126,ARP,Medium,"""ICMPv6: ndisc: ndisc_alloc_skb failed to allocate an skb, err=-11"" error dislayed on console constantly with lost connectivity"
 1127,0,Medium,Pinging to a broadcast address throws an error
 1128,L3-subinterfac,Medium,L3(Subinterface) :: Removing non-existing encapsulation tag removes the existing tag from subinterface
@@ -653,7 +640,6 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1153,0,Medium,Add knet info in diags
 1154,0,Medium,Mirroring: fix mirror cli token string mismatch
 1155,0,High,WebInspect Reports Cookie Security: Cookie Not Sent Over SSL on 1 or more pages
-1157,0,High,Ansible ops_main.yml take so long to run on physical devices
 1158,0,Medium,DHCP Server: dhcp_lease.db file is not clean after a switch reboot
 1159,0,Medium,BGP tests are failing intermittently in Tier 1
 1160,acl,High,ACL entries do not persist across reboot
@@ -726,7 +712,7 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1240,0,High,ops-supportability CT test case for ucast route is removed
 1241,0,Medium,Test interfaces fail due hardcode interfaces
 1242,MSTP,Medium,STP crash after configuring 4 MSTP instances and enabling MSTP
-1243,0,Medium,ops-ipapps: Static analysis fixes (both critical & high)
+1243,0,Medium,ops-ipapps: Static analysis fixes for PING
 1244,0,Medium,Integrating additional changes of ops-broadview from master to rel/dill
 1244,0,Medium,Integrating additional changes of ops-broadview from master to rel/dill
 1246,0,Medium,ops-classifierd test_mirror.py has topology definition issue
@@ -755,6 +741,8 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1273,0,Medium,"CIT blocker: test_ct_autoprovisionutils.py is not running, this test is being skipped"
 1275,0,High,Portd crash after create a lag
 1276,0,High,clear access-list hitcounts does not clear the hit counts
+1277,acl,High,ACL logging does not work with split interfaces
+1277,acl,High,ACL logging does not work with split interfaces
 1278,0,Medium,Add appropriate asserts since the test was passing even when pings fail
 1280,0,Medium,"Need to update ""show version"" information in CLI guide"
 1281,0,Medium,"Mirroring: on dest iface removal, shutdown reported when inactive/no dest"
@@ -776,15 +764,18 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1299,0,High,Palamida Scan 2: openssl 1.0.2a vulnerabilities
 1300,0,High,REST login feature test needs to be updated for new URIs
 1301,0,Critical,REST logout needs to have feature test added
-1302,0,Medium,SSL cert should be generated during system bootup
-1302,0,Medium,SSL cert should be generated during system bootup
+1302,rest,Medium,SSL cert should be generated during system bootup
+1302,rest,Medium,SSL cert should be generated during system bootup
 1304,0,Medium,Zebra diagnostics
 1304,0,Medium,Zebra diagnostics
 1305,0,High,Control plane policing documents not in release branch
+1306,0,Medium,memory leak in i2c code in ops-hw-config
 1307,0,Medium,TFTP server Tier-2 FT script
 1308,0,Medium,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd
 1310,0,Medium,Remove IPsec Schema
 1312,0,Critical,REST GET with depth=1 not returning data
+1312,0,Critical,REST GET with depth=1 not returning data
+1313,0,High,Ansible: Invalid L2 and L3 configuration on port
 1313,0,High,Ansible: Invalid L2 and L3 configuration on port
 1314,0,Medium,Randomly port state change takes beyond 2 * hello_time
 1315,0,Medium,MAC table flush/age out not happening properly in DB level
@@ -793,5 +784,19 @@ Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
 1317,0,High,Eliminate length limit on version_id string
 1318,0,Medium,open-brace character { is rendered as {'{'} in Markdown code blocks on website
 1319,0,High,Ansible: show commands do not match after an invalid configuration
+1319,0,High,Ansible: show commands do not match after an invalid configuration
 1321,0,Medium,HPEOPS Transceiver IOP: Dropped Frame percent around 70% with the DAC JH235A
 1322,rest,High,test_ops-restd_ft_account.py fails intermittently in CIT
+1323,BGP,Medium,"""Clear bgp * soft in/out"" command resets the neighbor sessions but the BGP, RIB and the routing tables do not get updated"
+1324,BGP,Medium,"After several iteractions, switch isnt getting network allowed in route map entry"
+1325,BGP,High,Toggling of L3 ports results in network unreachable for routes that should have converged to a different router with eBGP
+1326,BGP,High,OPS: bgp timers are not taking effect when those values are changed
+1327,BGP,Medium,OPS: bgpd coredump is generated (I'm using a special build with bgp performance fixes)
+1328,0,High,Incorrect update of the BGP table
+1329,BGP,High,BGP routes are not added to the IPv4 routing table
+1330,BGP,High,BGP peers flap if the bgp timers are set too aggressively for keepalive and holdtime
+1331,BGP,High,"Segmentation fault (core dumped) after issuing ""show ip bgp"" command"
+1333,0,Medium,Adding snmptrap test cases
+1335,0,Medium,ops-ipapps: Static analysis fixes for TRACEROUTE
+1336,0,Medium,ops-ipapps: Static analysis fixes for DHCP-Relay
+1338,MSTP,Medium,MSTP: DESCRIPTION: HOP count shows 0 or 20 instead of showing the actual remaining hops to reach the downlink bridges
