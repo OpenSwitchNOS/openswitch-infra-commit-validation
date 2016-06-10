@@ -1,0 +1,809 @@
+Taiga ID   ,Taiga Feature,Taiga Severity,Taiga Summary
+13,Intra Ops: Build system enhancements,Medium,Debug packages for packages from devenv is corrupted
+15,basic l3,Medium,CLI - Interfaces split condition is not being validated
+21,lldp,Medium,LLDP neighbor table and interface counters take long time to clear
+23,CLI infra,Medium,Alias configuration removed after login/logout
+26,BGP,High,BGP Does not obey global ECMP enable/disable
+30,Mgmt Interface,High,Mgmt If - IPv6 handle DAD
+33,basic l3,Medium,Deleting ipv6 addresses on L3 interfaces doesnt remove Neigbors/direct connect hosts
+35,VLANs,Medium,Vlan name is not updated on the show vlan output
+41,Physical Interfaces,High,MTU configuration is not being applied to kernel interfaces
+43,CLI infra,Medium,Redundant CLI Command - exit and quit exist with same description and funcationality in all CLI Tree.
+44,Physical Interfaces,Medium,User able to configure unsupported speed at interface level.
+47,rest,High,REST API: Inconsistent behavior between RESTAPI and CLI for add/delete power supplies and temp_sensors.
+48,lldp,Medium,Misleading information to the user on lldp hold timer.
+56,Mgmt Interface,High,DNS entry removed from resolv.conf
+58,Mgmt Interface,High,IPv6 default gateway not added in mgmt interface
+59,AAA,Medium,"Show startup config dosent display out when radius server is removed, but copy startup to running copies correct configuration"
+61,BGP,High,is_peer_group in BGP_Neighbor object should not be changable
+62,authentication,Medium,not able to add user name or starts with numbers
+63,Mgmt Interface,Medium,Route entry missing after startup configuration copied to running configuration
+65,Link Aggregation,High,VSI only: Communication between LAG clients fails depending on order of LAG scenario configuration. Fails about 50% of the time
+66,Link Aggregation,High,LACP lags are not being enabled when configured through CLI
+75,configuration persistence,Medium,Implement CLI command to print startup config in json format
+77,rest,High,Resource local configuration should not include subresources
+78,rest,Medium,Better name and/or description for resource ids used in URIs
+82,vlan,Medium,Portd doesn't check for exsiting L2 Vlans for VLAN Ids and creates duplicate VLAN rows for same VLAN Ids
+84,Test Framework,Medium,ft-framework slowness in VSI interaction
+85,rest,High,SWAGGER UI data structures not matching to the implemented code and REST requests may fail
+86,rest,Medium,"For REST configuration APIs , optional attributes are still required to PASS or API to be successful"
+88,AAA,Medium,VSI Segmentation fault and failed to remove user on user remove cmd.
+92,Mgmt Interface,Medium,Unable to remove IPv6 assigned IP from mgmt interface
+98,Link Aggregation,Critical,LAG: LACP configuration is only being applied on OVS when there is at least 1 interface in LAG
+99,Link Aggregation,Critical,LAG: LACP cannot be disabled on an LAG after setting it on
+100,Link Aggregation,High,LAG: LACP interface status is not visible from VTYSH
+101,Test Framework,Medium,Vswitch link filter not being adequately formed
+105,vlan,Medium,No show options for interface vlan configuration
+106,Link Aggregation,Critical,"Segmentation fault after typing ""show run"""
+107,Physical Interfaces,High,Inconsistent behavior of administrative status of interfaces
+108,Link Aggregation,High,"LACP: VTYSH assumption is wrong, default LACP rate is fast, not slow"
+109,Link Aggregation,High,LAG - Static LAG not working after change interfaces from one LAG to another
+110,rest,Medium,REST GET returns sting value instead of a boolean
+111,BGP,Medium,BGP - Map keys not defined
+112,dhcp server,Medium,DHCP - Map keys not defined
+113,Link Aggregation,Medium,Port - Map keys not defined
+114,rest,Medium,REST: POST method needs to return URI of newly created resource
+116,Link Aggregation,Medium,LAG: Broadcast is partially dropped intermittenly
+117,BGP,Medium,GET on BGP_Router missing bgp_neighbor in URI
+119,rest,Medium,REST/Swagger - Dictionaries show keytype: valuetype instead of actual keys when they exist
+121,rest,Medium,"[REST] Recursive GET - Internal Server Error when using ""selector"" parameter"
+123,Link Aggregation,Medium,Dynamic LAG: LACP mode is not displayed on show running-config
+125,BGP,High,BGP configuration of ASN over 3000000 fails
+127,rest,High,REST API: POST method is failing when using default data structure returned by GET method.
+129,basic l3,Medium,vtysh crashes when attempting to configure a new IPv6 route with port which is not L3.
+131,rest,High,REST - GET of system/full-configuration fails if REST Authentication is enabled
+132,rest,Medium,REST API: PUT method returns internal server error 500 for invalid data structure.
+136,Link Aggregation,Medium,cli: seg fault in show running-config interface
+140,vlan,Medium,Broken links on VLAN CLI
+141,authentication,Medium,Broken link on the Authentication CLI page
+142,BGP,Medium,Broken links on the BGP CLI page
+143,L3,Medium,"Broken link on the L3 Interfaces, Static Routes, ECMP page"
+145,Test Framework,Medium,Broken link on the Writing Automated Feature Test Cases page
+146,CLI infra,High,Core dumped when you press ctrl + ?
+149,AAA,High,XML schema does not contain definitions for all System's aaa column keys
+151,AAA,Critical,Weak password encryption
+153,VLANs,Medium,cli:no vlan trunk allowed <vlan-id> command resulting in segmentation fault
+154,leds,Medium,Led config is not saved properly from running to start-up config
+155,Link Aggregation,Medium,"""no lag #"" in interface context does not re-create interface row in Port table"
+156,rest,High,REST: Duplicated code across request handlers
+158,os-infra schema,Medium,Few columns of category status in extended schema are populated under category configuration in swagger model schema
+159,rest,Medium,Datatype mismatch between swagger model schema and REST schema (extended scheam): Swagger Bug
+161,L2,Medium,"Show interfaces output not showing configured allowable MTU size which is in the range of <9192-9216>, since allowable MTU size is  (in bytes) in the range <576-9216>."
+162,lldp,Medium,LLDP - Ordering of show lldp commands is not in numerical order
+164,basic l3,High,inter-vlan routing - couldn't ping no more than 84 clients in different vlans
+166,Infra CIT,Medium,"Errors in ""adding CI process for the component"""
+168,vlan,High,VLAN Table corrupted when enable routing on interface added with vlan access.
+169,vlan,Medium,Incorrect handling of 'no vlan trunk native <id>'
+170,vlan,Medium,Invalid handling of 'no vlan <id>' in interface config (switch(config-if)#) context.
+172,vlan,Medium,Incorrect handling of 'no vlan access <id>' and also the vlan status display is improper.
+174,dhcp server,Medium,DHCP server cannot handle 1200 pools
+176,vlan,Medium,show run does not display vlans in numerical order
+177,vlan,High,when no routing is specified the port should be an L2 interface is not in the default vlan
+178,vlan,Medium,"Interface info not updated while check internal vlan status by ""show vlan"""
+179,ping,Medium,Local interface/IP ping response is slow
+180,basic l3,Medium,Got ping response from admin shutdown interface
+181,vlan,Medium,Need CLI to check interface vlan status
+182,platform,Critical,"Segmentation fault (core dumped) on ""show running-config"" once rebooted followed by copy running config into startup."
+183,Mgmt interfaces,Medium,Misleading auto-negotiation default setting
+184,vlan,High,Both L3 interface sharing same internal vlan ID in a specific case
+185,vlan,High,Not getting any warning message while running short of internal VLAN ID
+187,VLANs,Medium,"Show start-up config says ""unknown command""/blank configurations  after adding 4094/1000 vlans"
+188,configuration persistence,Medium,"Configurations getting erased post reboot from startup config , startup json strings has the configuration data structures"
+189,rest,High,REST: If-Match Test failing randomly
+190,ping,Medium,"Datagram-size range is not working after a particular value in ""ping"" command"
+191,ping,Medium,Ping results 100% packet loss with ip-option
+196,Mgmt interfaces,Medium,No form of CLI supported not required for certain interface setting parameters
+198,rest,Medium,"REST: GET method on backward references such as ""Route"" is not working."
+199,Link Aggregation,Critical,remove interface from LAG restarts switchd
+201,platform,Medium,ops-config-yaml unit tests are failing
+203,Traceroute,Medium,timeout range for traceroute is not working after certain value
+204,Link Aggregation,Critical,LACP not working after changes in modules outside ops-lacpd
+205,rest,High,REST - GET and GET all in users resource is not consistent with other resources
+206,rest,Critical,REST: Internal Server error when using If-Match with POST/GET
+207,rest,High,REST: If-Match not supported with CORS
+209,Sftp server,Medium,Need to have sftp server stats show command
+210,ping,Medium,Ping6: Failing to resolve IPv6 address shows error and datagram-size error
+215,CLI infra,Medium,"""show running-config"" is not displaying in sorted order."
+216,basic l3,Medium,CLI allows two interfaces to have same IP address
+217,basic l3,Critical,arps failing to be synced between DB and Kernel
+218,Link Aggregation,High,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration."
+219,configuration persistence,High,show startup-config does not show the complete startup-config.
+220,CLI infra,Medium,show running-config causes coredump
+221,ping,Medium,"Continuous  ping with maximum datagram size shows ""no buffer space available"" after some time"
+223,Mgmt interfaces,Medium,show inter brief is only showing ports 49 through 54-4
+225,CLI infra,Medium,"Unexpected output when you enter ""show con""  command"
+226,BGP,Medium,clear ip bgp <help string> show Error messages
+227,BGP,Medium,Observed vtysh core dump while check ip bgp summary
+228,ping,Medium,"Pattern given with ""data-fill"" parameter is not coming with ICMP packet"
+231,BGP,Medium,Segmentation fault when perform the command show ip bgp summary
+234,CLI infra,Medium,"""Show Session-timeout"" doesnt display any output when the session-timeout value is default"
+236,Link Aggregation,High,Markdown update for show running-config
+239,BGP,Medium,"show bgp <memory, rsclient, summary, view and views>  are not yet implemented"
+240,rest,Medium,[REST] Using depth parameter in any operation other than GET should give a Bad Request
+252,BGP,Medium,"""show ip bgp ip bgp vpnv4"" + tab = Error: Help strings does not match for the identical tokens"
+253,BGP,Medium,"""show ip bgp ip bgp vpnv4 rd"" + tab = ASN:nn_or_IP-address:nn  Error: Help strings does not match for the identical tokens"
+254,CLI infra,Critical,"""sh startup-config"" hangs and CPU at 100%"
+257,BGP,Medium,BGP: A high amount of routes from disconnected peer remain in routing table
+279,ping,Medium,Non-default interval parameter is not working as expected for Ping6
+280,Sftp server,Medium,SFTP Server : No uniformity in config commands and naming conventions  with other features/servers.
+282,Traceroute,Medium,"minttl value 255 in traceroute displays error ""traceroute: setsockopt: Invalid argument"""
+285,Traceroute,Medium,[Trace Route] :  Incorrect IP address on Traceroute say 0.0.0.0 should throw error
+286,basic l3,Medium,Static routing is not displaying in sorted order
+287,Traceroute,Medium,[Traceroute] - Traceroute to any non existing IP address in the same network should display as Host unreachable
+288,Traceroute,Medium,[Trace Route] - Display Meaningful Error message on Network unreachable condition
+289,vlan,High,Inconsistent VLAN status behavior
+290,vlan,Medium,VLAN ports not in sorted order while check VLAN status by show VLAN
+291,vlan,Medium,VLAN field is empty in interface status while check by “show interface brief”
+292,Link Aggregation,Medium,LAG: L2 config does not display under interface that is attached to LAG in show running-config output.
+293,Traceroute,High,Traceroute with ip-option loosesourceroute is not disiplaying any hop info
+296,rest,Medium,REST - PUT operation is not reporting when it comes to change an immutable field
+298,CLI infra,High,LLDP core dump while configuring it after build update
+301,Traceroute,Medium,Optional parameters  should be displayed while executing the traceroute CLI
+302,Link Aggregation,Medium,"LACP: Unable to remove lacp port-id, port-priority configured on interface to set default value."
+303,platform,High,Duplicate DIAG entries are created on boot GRUB
+304,onie,Medium,Interface not getting IP from DHCP in ONIE rescue mode
+305,Link Aggregation,Medium,LAG: Transceiver option is not applicable for LAG interface .
+306,BGP,Medium,Appropriate message required when user added another BGP AS number
+307,vlan,Medium,VLAN field is empty while check LAG interface status by “show interface lag <ID> brief”
+311,configuration persistence,High,"""copy running-config startup-config"" takes 1:30 minutes and CPU at 100%"
+313,configuration persistence,High,Startup configuration erased when both data and mgmt interface has same IP & route for data plane
+314,Traceroute,High,Intermediate hops are not displaying in Traceroute CLI output
+315,BGP,High,BGP adjacency not formed without router ID when user configure interface level IP's prior to bgp global configuration
+316,BGP,Medium,"BGP: Deleting an already deleted network causes the latest added network to be deleted, this can be repeated over and over again"
+317,Link Aggregation,Medium,"LAG: System-priority range option should be removed for  the CLI ""no lacp system-priority""."
+321,lldp,Medium,LLDP - Port ID not removed when disable and consulting from neighbor info
+328,vlan,Medium,VLAN document issue: VLAN display commands
+329,vlan,Medium,CLI command not properly documented in VLAN CLI user guide
+330,vlan,Medium,VLAN user guide document issue
+333,vlan,Medium,Ports needs to be renamed as interfaces in all VLAN CLI configuration and output
+334,Link Aggregation,Medium,"LAG: Core dumped for vtysh, ops-lldpd while configuring speed on lag interface(Aggregate-name)."
+335,Link Aggregation,Medium,LAG : show lacp interface <aggregate name> is not returning any output.
+338,Link Aggregation,Medium,LAG : LACP System-priority value is not reflected consistently
+343,vlan,Critical,Trunk-configured interface is not responding to arp requests on native VLAN.
+344,lldp,Medium,9 coredumps generated by lldpd in under 4 hours while LLDP was disabled.
+352,Link Aggregation,Medium,LAG : Passive LACP mode in both switches resets partner parameters to be 0
+354,vlan,Critical,"Interface configured with ""vlan trunk native"" is dropping untagged traffic."
+355,Link Aggregation,Medium,LAG : show running-config interface <LAG-Name>  behaves differently
+356,lldp,Medium,Neighbor chassis-name doesn't get populated instantaneously in sh lldp neighbor output
+357,vlan,High,VLAN trunk native is not working in a particular VLAN sequence of configuration
+360,vlan,High,User able to add internally allocated VLANs as allowed VLANs on trunk port
+363,Link Aggregation,High,"LAG: Switching a LAG between specific interface is not synced and details are not populated in ""show lacp interfaces"" ."
+364,Traceroute,Medium,Descripency in  traceroute user_guide
+365,Traceroute,Medium,Descripency in traceroute cli_guide
+366,ping,Medium,Descripency in ping user_guide
+367,vlan,Medium,Internal VLAN allocated for split parent interface
+368,vlan,Medium,Split child interface acting as L3 when there is no split on parent
+371,configuration persistence,Critical,"copy startup-config running-config doesn´t work, unexpected output after load start up config into running config"
+374,BGP,Critical,BGP route not seen in ip route table causing end to end network un-reachable
+376,Link Aggregation,Medium,LAG : Lag configuration is removed when an interface attached to LAG is moved to L3 mode
+377,vlan,High,"vtysh coredump in ""show run"""
+378,Link Aggregation,Medium,LAG interface allocation issues on split interface
+379,Link Aggregation,Medium,LAG Port and system priority are not used with aggregation keys
+380,Link Aggregation,Medium,"LAG: once the maximum LAG interface count is already reached, is possible to create new ones"
+381,rest,Medium,REST Error messages not formatted as json.
+384,Link Aggregation,Medium,Internal VLAN should be released once LAG interface converted as L2
+386,vlan,Medium,Wrong default VLAN display info on trunk port
+389,basic l3,High,Static route : active static routes are not displayed in show ip route command output
+391,Link Aggregation,Medium,"LAG : With no partner, some LAG parameters are populated in partner column"
+392,basic l3,Medium,Duplication of IP address across interface vlans and L3 interfaces .
+394,BGP,Critical,BGP: Routes no longer advertised.
+395,basic l3,Medium,dhclient6@eth0.service failed to start
+396,rest,Medium,Using mutable flag to check if table is immutable in declarative configuration
+397,BGP,High,BGP MD5 password between neighbors is not working and session is being Established.
+398,BGP,Critical,BGP: Routing table failing to be synced between DB and Kernel
+399,BGP,Critical,BGP: Scale issue BGP is bouncing with 1000 routes
+405,basic l3,Medium,"L3 Interfaces accepts invalid, multicast, reserved  ipv4/ipv6 addresses except mgmt interface."
+407,lldp,Medium,"LLDP: Invalid ipv4/ipv6 addresses can be configurable on ""lldp management-address <ipv4/ipv6 addresses>."
+408,vlan,Medium,Show run does not display interface vlans in numerical order
+409,ntp,Medium,"Error is displayed after checking the CLI help for NTP feature. ""Error: Help strings does not match for the identical tokens"""
+410,platform,Critical,40Gb interface is auto negotiating to 1Gb.
+415,rest,Medium,DC needs to return configuration columns from the sub-tree
+417,CLI-infra,Medium,'-Werror and -Wall need to be re-enabled on ops-cli/vtysh/Makefile.am
+418,basic l3,High,Static route: broadcast and multicast address are allowed to be configured as destination prefix.
+419,basic l3,Medium,Static route: Local ip should not be allowed to configure as next hop
+420,BGP,Medium,Dynamic router ID not populated when forming BGP network
+421,Link Aggregation,High,Open Switch: Huge Packet Loss between Hosts over Static Route
+422,BGP,High,BGP learned routes doesn't clear at all dynamically when user disable interfaces containing network prefix
+427,CLI-infra,High,"vtysh core dumped for the basic ""diag-dump lldp basic"" command"
+429,ntp,High,Python ntp and ops-switchd process spiking very high even without any traffic or any configuration
+430,vlan,Medium,Default VLAN not assigned to L2 interface by default in a specific scenario
+434,lldp,High,Event logging basic feature not working for lldp module the only module supported
+435,Mgmt Interface,High,ops-mgmt-intf: index out of range exception when no management interface exists
+437,platform,High,Platform: Switch is crashing if you split a 40 G port and then try to access to an invalid interface
+438,platform,Medium,Platform: switch allows you to access split interfaces that haven't been configured
+439,platform,Medium,"Platform: Fake ""no split"" interface configuration"
+444,Mgmt Interface,Medium,Platform: Show commands to get interface speed are not synchronized
+447,vlan,Medium,Deconfiguring some part of the internal vlan range resets the range to the default value
+448,basic l3,Medium,Misleading ARP entries in the ARP table
+451,BGP,High,Filtering BGP route doesn't take effect dynamically
+452,BGP,Medium,Database transaction aborted message when user try to create route-map to router bgp configuration twice
+456,rest,Medium,Documentation of POST /system/vrfs/{ppid}/bgp_routers/{pid}/bgp_neighbors is wrong
+460,rest,Medium,lldp_enable missing from Swagger documentation
+466,Mgmt Interface,Critical,Mgmt interface : Ipv4 static ip assignment to the interface is not working even though it shows in runcfg.
+469,Diagnostics,Medium,"interface is not in sorted order in ""diag-dump lldp basic"" output"
+473,BGP,Medium,Tier1 CIT test doesn't include or  enable test case - test_bgp_ft_routemaps_with_hosts_ping.py every execution
+480,Diagnostics,Medium,CLI expand help support is missing for show tech features CLIs
+486,Autoprovisioning,High,ZTP: Inconsistent behavior in Auto-provisioning when script is changed.
+487,ntp,High,NTP: Connection not established with NTP server using physical switch
+491,lldp,High,LLDP daemon clears other feature's keys in System:status column
+493,VLANs,Medium,interface is getting tagged to all exiting vlans if interface vlan mode is changes to native untagged
+494,vlan,Medium,Able to assign used internal vlan assigned to an L3 interface  on an L2 interface .
+495,Mgmt Interface,Medium,Setting up Hostname fails
+497,lldp,Medium,"LLDP : IPV6 LLDP management address with last octet as 0, 0 is not displayed in remote device info."
+498,lldp,Medium,LLDP : Unconfiguring LLDP management address issue
+499,vlan,Medium,Wrong port display on default vlan
+500,lldp,High,"vtysh core dumped for ""show lldp neigh"" command"
+501,vlan,Medium,Some of the configuration skipped while restore bulk configuration
+503,ntp,Medium,NTP: Invalid ip-address shouldn't accept for ntp server config.
+504,lldp,Medium,diag-dump output alignment issues
+505,lldp,Medium,Event logging is not adding an event for LLDP neigbour removal
+506,Sub-interfaces,Medium,L3(Subinterface) :: Subinterface help shows that  newly created interface is enabled by default while sh run does not reflect it.
+507,lldp,Medium,diag-dump command hung for the command targeted to non responding daemon (LLDP)
+508,subinterfaces,Medium,L3(Subinterface) :: Admin state in show interface <subint> shows admin up even when it is down .
+509,subinterfaces,Medium,"L3(Subinterface) show interface <interface name> subinterface command , takes subinterface itself as input"
+515,basic l3,Critical,Switch unable to ping loopback interface.
+517,lldp,Medium,LLDP : In LLDP User guide TLV information is misguiding the end user.
+519,lldp,Medium,"LLDP : LLDP Neighbor entries field becomes 0, with a new neighbor entry"
+520,Sub-interfaces,Medium,"Core dump for switchd , vlan ,zebra while trying to configure an internal vlan on subinterface(negative scenario)"
+521,basic l3,Medium,L3 Subinterface : Duplication of IPv6 addresses across subinterfaces
+522,subinterfaces,Medium,L3 Subinterface : Non existing vlan is assigned to subinterface
+523,lldp,Medium,LLDP daemon core-dumped
+525,basic l3,Medium,L3 Subinterface : Subinterface CLI shows parent interface down if you create a subinterface first and do a admin up on parent interfaces later
+526,ntp,Medium,NTP: A validation is needed for maximum number of configurable NTP servers
+528,rest,Medium,[REST] PATCH method fails when adding keys within empty optional columns
+529,rest,Medium,[REST] Swagger: Error message printed at the restapi.json
+530,platform,High,"The ""show interface"" RegEx are incorrect"
+532,platform,Medium,Pretty name & Show system version are different from actual build
+533,os-infra,Medium,"Events are getting cleared automatically from journal db and hence the output of ""show events"""
+534,lldp,Medium,LLDP events issue : either missing neighbor delete event or duplicate add event
+535,os-infra,Medium,journalctl -f floods
+537,ping,Medium,Ping to VLAN IP address does not work
+539,BGP,High,BGP max number of routes reaches 3039 and then neighbor disconnects
+540,CLI infra,High,test_vtysh_ct_system skipped in CIT Tier 1
+541,BGP,High,test_bgp_ft_routemaps_with_hosts_ping skipped in Tier1 CIT
+542,CLI infra,High,test_vtysh_ct_cli_infra skipped in Tier1 CIT
+543,ping,High,Issue with Ping FT-Script
+546,BGP,High,BGP fast-external-failover command not working
+547,Link Aggregation,Medium,"After several seconds of turning a LACP interface down, its status will stwich to Collecting"
+548,Loopback,Medium,Loopback interfaces do not show as implicitly connected routes (connect routes ) in show ip route Defect ID 753
+551,Link Aggregation,High,Eliminate options in Load Balancing enum
+552,authentication,High,"Unable to change the password for the username ""admin"" and already existing configured user."
+553,lldp,Medium,"[diag-dump] Error on ""diag-dump lldp basic"" in the ""admin"" mode"
+555,lldp,High,"vtysh coredumped when executing ""diag-dump lldp basic"" for an corrupted yaml file"
+557,lldp,Medium,LLDP neighbor-info
+558,basic l3,Medium,Point-to-Point IP address configuration makes remote unreachable
+560,Loopback,Medium,No CLI ( show loopback interface brief) to check all the loopbacks configured
+562,Loopback,Medium,Loopback interface is not reachable through the management interface on openswitch
+563,rest,Medium,[REST] Status and statistics columns are seen as invalid during sort and filter
+564,rest,Medium,[REST] GET with depth returns 200OK when use an invalid selector
+565,basic l3,Medium,L3 Loopback : IPv6 address is not removed from kernel when loopback ipv6 address is modified or loopback interface is deleted
+566,rest,Medium,[REST] PATCH stop working when add a very big string as an attribute
+567,configuration persistence,Medium,Traceback generated after interrupting copy from running to startup
+568,rest,Medium,[REST] GET when the depth is big does not work
+569,subinterfaces,Medium,l3 subinterface: vswitchd crash while configuring multiple subinterface
+570,AAA,High,"Unable to remove existing local user account using ""user remove <user>"" from root user login."
+571,lldp,Medium,"CIT Issue"": Skipping the LLDP test case due to the CLI changes made to fix the defect #403"
+572,os-infra,Medium,Supportability feature needs a recovery mechansim if any of the yaml file is corrupted
+575,basic l3,Medium,L3 ECMP: Nexthop not getting deleted from ASIC for ECMP routes
+576,platform,Medium,Platform: Duplexity default is not been displayed as expected
+577,platform,Medium,Platform: Duplexity mode from Half-duplex to Full-duplex change is not been reflected
+579,Loopback,Medium,Loopback interface is able to reach an external host configured in the same subnet
+583,ntp,Medium,NTP: Long NTP server name displays information out of the table in command ‘show ntp associations’
+584,ntp-client,Medium,NTP: Rx-pkts field in statistics starts to increase even if an NTP server is not connected
+585,basic l3,Medium,L3 ECMP: Nexthop is not removed from ASIC ecmp object when corresponding interface is shutdown
+586,basic l3,Medium,L3 Loopback: Loopback IP's are not added as connected routes in kernel and DB
+587,platform,Medium,Copy running-config start-config could be lost interfaces
+591,vlan,Medium,Sorting issue on show vrf output
+592,Diagnostics,Medium,VTYSH core file while execute show tech CLI continuously
+594,dhcp server,Medium,DHCP: Max number of ranges is not defined.
+596,CLI-infra,High,Core Dump on issuing VTYSH command. Cannot enter into the vtysh mode.
+598,ping,Medium,Ping with ip-option include-timestamp is showing error
+599,CLI infra,Medium,Not able to login to openswitch with admin/admin credentials.
+600,lldp,Medium,LLDP neighbor chassis ID not populated for Linux box connecting to switch
+601,Sub-interfaces,Medium,"L3 Subinterface :: Segmentation fault(core dumped portd, vland) while trying to do sh interface <subinterface> brief for connected interfaces"
+602,Sub-interfaces,Medium,L3 Subinterface:: Two subinterfaces with the same VLAN ID should be allowed to configure IP in same or different subnets
+604,ping,High,The parse_ping_repetitions is  not parsing the output
+605,rest,Medium,GET  /rest/v1/system/subsystems/base does not return interfaces(references)
+606,rest,Medium,Interfaces in Subsystem gets deleted after write from DC
+607,rest,Critical,ops-restd is shipping publicly accessable SSL private key
+608,rest,Medium,Interfaces are shown as part of configuration as well as status fields in model schema of swagger for GET
+609,basic l3,Medium,Zebra adding a next hop when interface is down
+610,basic l3,Medium,Core file created by zebra daemon while convert interface from L3 to L2 and add allowed vlan on trunk interfaces
+611,lldp,Medium,Multiple core file created by lldp daemon while adding allowed vlan on trunk interfaces
+612,basic l3,Medium,Loopback interfaces do not show traffic statistics .
+613,Loopback,Medium,Loopback interfaces do not show up in sorted order in show run and show loopback interface CLI's.
+615,infra,High,Website does not produce 404
+616,lldp,Medium,Disabling LLDP test case
+618,basic l3,Medium,portd needs to  push port configurations to interface when a kernel interface is detected
+619,subinterfaces,Medium,subinterface: out of order show running-config
+622,VLANs,High,Test coverage for vlan not sufficient
+623,Link Aggregation,High,LAG and LACP test cases should be renamed to test_* convention
+626,ntp,High,test_ntpd_ft_auth_noauth_restart.py failing intermittently on CIT Tier1/2
+627,basic l3,High,Shutdown of interface does not remove the connected route in sh ip- route
+631,Mgmt Interface,High,test_mgmt_intf_ft.py fails intermittently in CIT Tier 1
+633,VLANs,High,CIT Failure ops.tests.vlan.test_ft_vlan_removed_from_end_of_table.Test_vlan_state_removed_from_end_of_table.test_sendTraffic_after
+644,Link Aggregation,High,"Output for ""show interface brief"" is not showing the LAG mode anymore"
+648,Link Aggregation,High,LAG is not using the Port Priority to choose speed
+649,Link Aggregation,Medium,"lacp_user_guide.md is showing incorrect ouput for ""show lacp interfaces"""
+650,Link Aggregation,High,Sytem Priority and Port Priority are not changing the decision for LAG negotiation
+651,Link Aggregation,High,Ping is not working when LAG is changed from two interfaces to just one interface
+652,vlan,High,test_ft_vlan_removed_from_end_of_table.py is failing intermittently in CIT Tier 1 and Tier 2
+659,L2 Physical Interfaces,High,test_interfaces_ft_intf_stats.Test_template.test_statistics failure: ERROR: AssertionError: rx_bytes wrong
+661,rest,Medium,REST: Custom validators logic not invoked for PATCH
+662,rest,Medium,test_rest_ft_interfacesid.py and test_rest_ft_system.py Failing for tier2 (regression)
+663,Link Aggregation,High,Bonding driver errors
+664,Link Aggregation,High,"""show running-config"" doesn't show IP LAG config"
+666,BGP,Critical,CLI issues on 0.2.1
+668,boot process,Critical,sysd: ops-sysd crash if BUILD_ID is missing or longer than 80 in /etc/os-release file
+669,OVS Infra,High,OVSDB error logging
+671,BGP,High,"ops.tests.bgp.test_bgp_ft_ipv6_prefixlist.Test_bgpd_ipv6.test_bgp_full failed to Config ""bgp router-id 9.0.0.2"" was not correctly configured!"
+673,BGP,High,ops.tests.bgp.test_bgp_ft_routemap_ipv6_next_hop.Test_bgp_redistribute_configuration.test_configure Failing with Timeout > 300
+675,platform,Medium,SFP+ module on some port is not recognized
+676,configuration persistence,Medium,"""copy running-config startup-config"" not working"
+678,Infrastructure Build System,Medium,Openswitch: Unsupported and outdated CMake version
+679,sflow,Medium,show sflow interface <no> shows Segmentation fault
+680,rest,High,REST: Rest not working for NTP_Association and NTP_Key table
+687,Link Aggregation,Medium,zebra core files created on LAG setup
+688,Link Aggregation,High,VTYSH memory corruption after enable routing on LAG interface
+695,Link Aggregation,Medium,LAG interface stat shows negative value
+696,Link Aggregation,High,IxANVL LACP 1.5 and 1.6 - DUT forwarding packets during Collecting or Distributing bit = FALSE
+697,Link Aggregation,Medium,LAG group with Hash type l2-src-dst doesn't balance the traffic
+698,Link Aggregation,Medium,IxANVL LACP 10.2 - LAG invidual interface selection is not established
+699,Link Aggregation,Medium,IxANVL LACP 2.1 - DUT not switching to another member of LAG when an interface is disabled
+700,rest,Medium,[REST] PATCH method is not supported in Full-Configuration
+702,Link Aggregation,Medium,ops-intfd.tests.test_intfd_ct_admin_state.Test_portd_admin_state_update.test_port_interface_admin_state component test fail intermittent
+703,BGP,Medium,ops.tests.bgp.test_bgp_ft_ip_prefixlist.Test_bgpd_routemap.test_bgp_full fails intermittent
+704,BGP,Medium,ops.tests.bgp.test_bgp_ft_routemap.Test_bgpd_routemap.test_bgp_full fails intermittent
+705,AAA,Medium,test_vtysh_ct_aaa.AutoProvisioning fails intermitten in aaa-utils repo
+706,lldp,Medium,ops.tests.lldp.test_lldp_ft_enable_disable.Test_lldp_configuration.test_lldp_enable_disable fails intermitten in intfd repo
+707,LACP,Medium,ops-lacpd.tests.test_vtysh_ct_lacp.Test_lacp_cli.test_lagContextCommands fails intermittent in lacp repo
+709,LACP,Medium,ops-lacpd.tests.test_lacpd_ct_lag_config.Test_lacpd.test_lacpd_dynamic_lag_config fails intermittent
+710,BGP,Medium,test_bgp_ft_peergroup.bgpTest fails intermittent between repos
+711,BGP,Critical,"BGP fails to converge to ""Established"" and ""show bgp neighbor"" shows incomplete output."
+712,BGP,High,OpenSwitch - BGP with multipath is taking too long to reconverge after failure
+713,BGP,High,"Openswitch - BGP:  bgp routes in the leaf switches  are removed from the  routing table, when a spine device is turned off with multipath enabled."
+714,BGP,High,BGP Hold Time is not sticking when changing via CLI command.
+715,BGP,High,BGP: Adding 6 neighbors or more with 100 routes causes python and ovsdb-serv+ to use more than 1 CPU core
+716,BGP,High,Openswitch - BGP: Leaf devices are not able to share a high amount of networks in a Clos topology with multipath feature enabled.
+717,BGP,Medium,Unable to configured bgp neighbor with ASN 4294967295
+719,BGP,High,"BGP: Command ""show ip bgp"" is not working properly"
+720,BGP,Critical,Enabling -Wall and -Werror on ops-cli repo
+721,BGP,Critical,Can’t establish BGP peering b/w two Halon with basic configuration. Also in “show running” don’t shows the BGP configuration's commands entered previously
+723,Link Aggregation,High,Missing documentation for LAG interfaces on L3 user guide
+724,VLANs,High,All Vlan Interfaces going to default vlan after a specific vlan is deleted
+725,Versioning,Medium,can't add ops-switchd-opennsl-plugin ops-switchd-container-plugin in same workspace
+726,L3,Medium,IP ECMP disbale does not work
+729,Link Aggregation,Medium,"Ops-intfd : show interface command is giving a ""% Command incomplete"""
+730,Link Aggregation,Medium,LAG names when configuring through CLI should support to lagXX and not only lag XX
+731,Link Aggregation,Medium,Unexpected behavior when LAG is to be removed from the device
+743,rest,Medium,REST: Adjust the limit of limit filter
+747,Link Aggregation,High,LACP negotiation is not being completed and LAGs use fallback behavior when it is not configured
+748,Loopback,Medium,Loopback interfaces script (test_layer3_ft_loopback.py) fails intermittently on OPS branch due to script issue .
+750,OVSDB P&S,Medium,OVSDB partial update of map columns doesn't support newly-inserted UUID values
+754,ECMP,High,The resilient hashing feature of ECMP is not maintaining traffic flows over changes in the next-hops list.
+755,ECMP,High,Load balancing though ECMP with BGP is losing packets.
+756,Traceroute,Medium,test_ft_traceroute.py was removed from Tier2 due to platform issue
+757,L2 Physical Interfaces,Medium,Interface Statistics do not increase on VSI even after sending traffic
+761,basic l3,Medium,re-assigning native VLAN to interface does not take effect.  Ingress traffic is assigned to original incorrect VLAN.
+764,Link Aggregation,High,ops-lacpd Feature Test are all failing due to ping failures
+766,Link Aggregation,Critical,Secondary IP not available on L3 LAGs
+768,web ui,Medium,test test_webui_ft_l2_lag_config is failing intermitten between repos
+770,rest,Medium,"REST: Swagger UI does not display ""Package_Info"" Table"
+773,ntp-client,Medium,NTP: CLI doesn't let you to update an NTP server profile when the max. number of NTP servers are configured
+776,BGP,High,Routes are not being re-advertised
+777,BGP,High,OVSDB Failed when 10000 are being advertised
+778,BGP,High,“show ip bgp” is not displaying “weight” correctly
+779,BGP,Medium,"""sh ip BGP summary"" inconsistently shows status. One end shows “established” the other member shows “Active.”"
+787,lldp,Medium,test_lldp_ft_neighbor_info test case is failing intermittent
+788,bootup,Medium,Grub menu should show the version number installed on that partition
+789,Infrastructure,Medium,gnu-glibc 2.13 has many buffer overflow security vulnerabilities
+790,Infrastructure,Medium,python 2.7.2 Buffer overflow in the socket.recvfrom_into
+791,Infrastructure,Medium,libpng 1.6.17 Buffer overflow in the png_set_PLTE function
+792,Sub-interfaces,Critical,Routes are not getting configured for subinterfaces
+796,rest,Medium,[REST] Login handler does not check for missing arguments
+798,VLANs,High,Tier2 : Script test_ft_vlan_state_reason_transition.py failing because of script issue
+799,Link Aggregation,Medium,IP address assigned to the wrong LAG when lag1 and lag10 exists.
+805,Link Aggregation,High,show interface doesnt show L3 lag IPs
+806,sflow,High,container continually logging sflow error
+807,Link Aggregation,High,L2 LAG with VLAN trunk is not working
+808,Link Aggregation,Medium,LAG is not redirecting traffic if you remove the interface that is passing traffic
+811,BGP,Critical,BGP routes not in sync with kernel.
+812,ntp-client,Medium,"NTP: ""show ntp status"" shows stale uptime with erroneous ntp running status."
+813,Logging,Medium,Incorrect help string for no command in config mode and config-if mode
+814,0,Critical,STP crashes when port is deleted from openvswitch
+815,Mgmt Interface,Medium,show running config displays interfaces in vlans twice
+818,platform,High,switchd plugin infra not finding plugins.yaml
+819,Link Aggregation,High,test_lacpd_ct_aggregation_key fails intermitten
+820,Link Aggregation,Medium,LAG: show ip interface lag shows no information
+821,Link Aggregation,Medium,"""no shutdown"" on interface context does not enable interface when member of LAG."
+822,Link Aggregation,Medium,"""sh lacp Interface"" reports LACP is ""InSync"" when Partner is no present."
+823,fand,High,"ops-fand continually logging ""Direction is 0000000"""
+825,BGP,High,test_bgp_ft_routemap_atomic_aggregate fails intermittently
+826,rest,High,Physcial interface can be deleted via REST
+828,dhcp server,Medium,DHCP-Server: Show dhcp-server leases command is taking up to 30 minutes to display 1000 leases.
+832,L3\Static Routes,Medium,Issue in Quagga Makefile.am
+833,VLANs,Critical,Traffic on L2 interface are dropped on AS5712 and AS6712.
+834,rest,Medium,[REST] Account resource should parse the Password Server's configuration file
+835,dhcp server,High,DHCP Server: show dhcp-server leases command is not showing IPV6 leases.
+837,BGP,Medium,"""sh ip bgp summary"" shows garbage when neighbor is configured with wrong ip address."
+838,rest,Medium,[REST] REST API doesn't support dynamic categories for the columns
+840,switchd,High,switchd fails to initialize randomly
+842,VRF,Medium,Verification of compiler warning in VRF module CLI files
+844,0,Medium,OPS-Supportability: Additional argument validations for Diagnostic Dump APIs
+845,0,Medium,dhcp_leases schema upgrade doesn't reflect on the database
+849,vlan,Medium,VLAN interface sorting issue on show running
+851,BGP,High,HPEOPS: BGP Routes are taking too much time to being advertised
+853,BGP,Medium,Verification of compiler warning in bgp module CLI files.
+854,platform,Medium,show system is not showing correct information for power supply
+855,Link Aggregation,Medium,no ip address A.B.C.D/M in a LAG interface is not showing a error message when the ip is no present
+857,L2 Physical Interfaces,Medium,"""show system"" on AS-6712 shows incorrect ""Number of MACs"""
+858,rest,High,"Restd isn't returning proper data for CLI command ""show vlog config"" causing core dump"
+866,rest,High,test_rest_ft_interfaces fails repetitively on AS6712
+867,rest,Medium,Retrieving GET /rest/v1/system/full-configuration through REST results in 500 error
+868,BGP,High,BGP Summary is reproting negative values for MsgRcvd and MsgSent.  State is (null)
+870,Sub-interfaces,Medium,"(no) interface physical_interface.subinterface, does not indicate about the valid range of subinterface"
+871,Loopback,High,Loopback (L3) :: Validation of Ipv4 address is errorneous
+872,vlan,Medium,"Interface vlan should not accept special IP addresses (loopback ,subnet broadcast and all broadcast addresses)"
+873,Loopback,Medium,Duplication of IpV6 on different loopback interfaces
+874,ECMP,High,ECMP Feature Tests and Test plan
+876,acl,High,IPv4 ACLs Ingress on Ports
+877,Port Daemon,Medium,"""interface X"" displays multiple times for different configuration sub-items in ""show running-config"" output"
+878,vlan,Medium,Misleading default VLAN running status
+882,MSTP,Medium,MSTP - Traffic forwarding issues seen when using multiple instances
+883,MSTP,Medium,MSTP - Does not work on LAG
+884,MSTP,Medium,MSTP Unit Testing Defects found.
+885,MSTP,High,MSTP Packet counters are not getting updated and daemon crash on adding a lport after spanning-tree is enabled.
+887,Loopback,Medium,Loopback(L3) :: sh interface loopback brief is reflecting unnecessary inputs
+888,Loopback,Medium,Verification of compiler warning in loopback&subinterface  module CLI files.
+889,rest,Critical,REST API: Need /logout to invalidate the authentication token aka cookie
+890,rest,High,REST API: Default expiration for authentication token is one month - too long
+891,BGP,High,BGP discovered routes are not get populated
+892,ntp-client,High,NTP: Time is not persistent across reboots
+893,Physical Interfaces,Medium,No interface stat info while check interface status for split parent interface
+894,0,High,Schema documentation generation is broken
+895,basic l3,High,test_portd_ct_functionality fails repetitively on AS6712
+896,BGP,High,BGP is not advertising multiple routes through multiple paths
+897,BGP,High,BGP is not advertising a route through multiple sub-interfaces
+898,BGP,Medium,"bgp Feature shown in ""diag-dump list"" are yet to support the backend."
+899,BGP,Critical,89 (and counting) core.ops-bgpd corefiles produced in a matter of minutes.
+900,Routing,Critical,ECMP forces packets through slow path when adding new nexthop
+901,Linux,Medium,TFTP client is not able to copy large file ( > 32MB  ) to external tftp server
+903,Loopback,High,L3(Loopback) :: Stress :: Only 250 loopback interfaces reachable via external host instead of 1024 loopback interfaces
+906,Sub-interfaces,Medium,CLI Guide of Sub-interface needs update. Refer the details below for gap w.r.t CLI implementation.
+907,"basic l3, subinterface",Medium,Fix subinterface schema to have max 1 vlan:parent-uuid key:value pair
+908,0,Medium,DELETE on default rows should not be allowed
+909,password server,Medium,ops-passwd-srv: address issues found during static analysis
+912,sflow,High,Added sflow modularization code to rel/dill
+913,password server,Medium,Merge the password server component test and doc into dill branch
+916,vlan,Medium,Internal VLAN allocation issue
+917,VLANs,Critical,Internal vlan  range configuration is not captured in the running-configuration. Post copying running-config to startup config and rebooting switch leads to multiple core.
+918,0,High,Appctl is not working for ops-snmpd
+919,0,High,ops-snmpd coring while switch going for a reboot. Even manual stop of snmpd service is leading to a core.
+920,SNMP,High,MIB details are missing for some of the MIB object when doing snmp walk
+921,0,High,no system description with argument is throwing unknown command error
+922,ECMP,Medium,About 1.2% of the traffic is loss with ECMP because some subinterfaces are not going up
+923,vlan,High,"Test cases: test_switchd_container_ct_changing_vlan_config.py, test_switchd_container_ct_vlan_access.py, test_switchd_container_ct_vlan_trunk.py fails in CIT"
+924,Loopback,Medium,Incorrect error message when configuring loopback interface with different IP Address from same subnet.
+925,AAA,High,AAA configuration are not reflected on running config properly.
+927,Sub-interfaces,Medium,L3 (Subinetrface) :: Parent interface shows as admin  down in CLI when it is not
+928,0,High,Merge the ops-broadview into dill branch
+929,0,High,Performance issues for logs api
+931,sflow,Medium,agent IP malformed
+932,0,Medium,swagger is broken for logs after-cursor filter
+933,0,High,Large log file causes major delays with REST calls
+935,0,Medium,Sh running interface command output not in sorted order
+938,SNMP,High,SNMP query doesnot work from remote host
+939,vlan,High,Untagged traffic should be allowed when port configured as a trunk port
+941,0,Medium,MSTP: Sorted show for VLANs and interfaces
+943,0,Medium,Inconsistencies feature name across different supportability modules.
+944,basic l3,Medium,test_layer3_ft_verify_sub_intf_l2vlan fails intermitten
+945,Log Rotation,Medium,"No config validation for ""logrotate target"" command. Although CLI shows graceful pass but the changes not reflected in show running-config."
+946,Log Rotation,High,"Log rotate functionality is not working as intended, seems to be broken."
+947,vlan,Medium,"Incorrect VLAN information displayed in ""show interface brief"""
+948,Mirroring,Critical,Container intermittent crash configuring mirror
+951,platform,Medium,Reboot or reload command is not available in OPS build
+952,switchd,Critical,OPS-SWITCHD corefile generated while switch was in idle state.
+953,Physical Interfaces,Medium,"Dill: The help string for interface sub-command under no, shows ""Error: Help strings does not match for the identical tokens"""
+954,dhcp server,Medium,DHCP distributes all leases after some seconds when it is only 1 Vlan configurated
+956,MSTP,Medium,MSTP : Priority and System ID needs to be extracted from Root MAC and display properly
+957,MAC Tables,Medium,ovs-vsctl commands to support l2 mac CT
+962,0,Medium,Observed that domain name learned via DHCP server not removed after IP address manually added in the mgmt interface
+966,switchd,Medium,test_switchd_container_ct_intervlan.py fails in CIT
+967,Link Aggregation,High,LAG Bond Status new functionality
+969,mirror,High,Port mirror activation causes switchd crash
+970,0,Medium,DHCP/TFTP Supportability: Theres no information related to dhcp/tftp in show tech command
+971,SNMP,Medium,RFC 1213 MIB SNMP statistics not working
+972,Supportability,Medium,Inconsistency vlog messages for daemon
+973,Sub-interfaces,High,Subinterfaces (L3) :: Validation of Ipv4 address is errorneous
+975,MSTP,Medium,MSTP ft library and parser missing
+977,basic l3,Medium,"The help string for ipv6 sub-command under no, shows ""Error: Help strings does not match for the identical tokens"""
+979,MSTP,Medium,"MSTP: mst instance data not correctly encoded in BPDU, results in malformed packet"
+981,0,Medium,memory leak in QoS profile command
+982,L3,Medium,ASIC Table full error with more than 8k routes
+983,Mirroring,High,1 byte buffer overrun in container-plugin mirror_set
+984,CoPP,High,Memory leak in COPP container plugin
+985,0,Medium,show tech does not include 'show interface queues'
+988,LACP,Medium,Port pecking order needs to work to reflect forwarding states in port and interface table
+989,MSTP,Medium,"MSTP: ""no instance"" command need to add VLANS to CIST, Priority value consistent in show commands"
+990,0,Medium,"Validation missing in the ""show interface"" command."
+991,DHCP Client,Medium,DHCP6 client service is failing to start post the fresh installation.
+992,ARP,Medium,ops-arpmgd is crashing on ovsdb-server restart
+993,Autoprovisioning,High,ZTP :  Minimally viable product with 2000 VLANs and 2000 VLAN Interfaces results in missing interfaces when large configuration is applied
+994,ARP,Medium,Observed that ARP-Manager daemon restarted due to out of memory while system was handling around 7000 ARP with traffic for 30 hrs
+995,MSTP,Medium,Disable/ enable Spanning-tree Crash and Dynamic Reconfigure malfunctioning
+999,VLANs,Medium,Add test case to verify L3 stats during intervlan routing
+1001,switchd,Medium,Memory leak in plugins infrastructure
+1002,boot,Medium,Memory leak in ops-hw-config YAML file processing
+1003,0,Medium,systemd-journald: Failed to create new system journal: No space left on device
+1004,Mirroring,High,Mirroring: missed destroy of cloned smaps
+1005,Mirroring,Medium,Mirroring: complete removal of RSPAN/VLAN mirroring code from PI layer
+1007,L2,High,crash in ops-switch-opennsl-plugin
+1008,basic l3,Medium,"Commit Supportability changes for L3 features (Basic, Loopback, SubIntf, LAG, ECMP, OSPF, Zebra) to rel/dill"
+1009,0,Medium,test_lldp_ft_statistics.py fails randomly in CIT
+1011,vlan,High,test_ft_vlan_removed_from_end_of_table fails intermitten
+1013,VLANs,Medium,Default vlan 1 assigned to interface VLAN in a specific removal case
+1014,SNMP Infra,Medium,Test script migration to modular framework
+1016,basic l3,Medium,L3 Routing: ops-zebra crashes due to NULL pointer dereference
+1017,MSTP,Medium,MSTP: show running-config order need to change
+1019,rest,Medium,REST Notifications for System table does not notify of updates
+1021,CoPP,Medium,"show copp statistics missing for STP, IPv4 options and IPv6 options packets in vtysh"
+1023,dhcp server,Medium,DHCP-TFTP: Do not crash if there is nothing to kill anymore
+1026,MSTP,Medium,MSTP: Per interface mac address support for multi instance
+1027,MSTP,Medium,MSTP: on MSTI convergence is not happening as region is different.
+1028,Sub-interfaces,Medium,L3 (Subinterface) ::: Subinterface  status shows null in show interface <physical interface> subinterface brief command
+1030,MSTP,Medium,MSTP: port-priority and cost command for CIST missing
+1031,0,Medium,DHCP server user guide should mention which options are supported
+1032,rest,High,Logs since_until script failing for most of the reviews
+1033,webui,Medium,Web UI Interface Screen Cleanup
+1034,0,Medium,Modularize zebra component and move zebra specific CLIs and test cases to ops-quagga/zebra repository
+1035,configuration persistence,Critical,Dynamically generated route entries are gone from Route table when there are multiple DC operations
+1036,dhcp server,Medium,dhcp server show command alignment issue with multiple option values
+1037,sflow,High,sFlow - When minimum sampling rate is set and traffic is send at 30% of line rate the feature service stop sending sampled packets
+1038,MAC Tables,High,Array out of bound access in mac learn
+1040,lldp,Medium,AS6712 LLDP Test failure  - split interface specific issue
+1042,sflow,Medium,sFlow CLI sampling min-max limitation
+1043,0,Medium,sFlow - if_Status in CNTR packets is not changing
+1045,webui,Medium,Web UI Issues with MS IE/Edge
+1046,webui,Medium,Move Web UI code coverage from build file to check/gate jobs
+1049,vlan,High,ops-vland coredump when applying config via REST
+1051,0,High,"L3(Subinterface) :Reconfigure a few subinterfaces ,delete them and configure a new tag , router in the stick topology does not work in that case ."
+1052,Intervlan Routing,Medium,ops.tests.layer3.test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan Failing intermitten
+1054,0,Critical,Netlink messages needs a retry mechanism to ensure messages getting processed
+1055,0,Medium,Traceroute6: timeout value '1' throws an error in traceroute6
+1057, basic l3,High,Routing not allowed to enable on split parent interface
+1058,ARP,Medium,Switch slowness and high CPU utilization when arp manager handling around 10K ARP
+1059,MSTP,Medium,MSTP: Show commands data updated.
+1060,0,Medium,Skipping the test script test_ct_autoprovisionutils.py
+1061,rest,High,REST POST of full-configuration accepts config from different platform
+1062,0,High,Deleting an existing ACL entry causes the shell to crash and upon ctrl^c no more ACE entries could be added
+1063,0,High,ACL entry with explicit deny all rule fails to filter packets if applied to more than one physical interface
+1064,0,High,Application of an ACL without ACE entries to an interface results in vtysh hang
+1065,rest,Critical,Recent REST change breaks full-configuration POST (declarative config)
+1066,0,Medium,CLI: bridge_normal configuration shouldn't be modifiable
+1067,platform,Medium,Fixing Python FT scripts failing due to relative path module import
+1068,BGP,High,BGP multiple unique  networks fail to be assign as best
+1070,0,High,Toggling a deny ACE in an ACL results in permit after bringing down and up the deny rule
+1071,BGP,High,BGP networks are not being transmitted
+1074,0,High,copy sftp allows a user to copy a file to any path in the rootfs
+1075,0,Medium,lldp show tech formatting issues - LLDP vtysh show commands using \n instead of VTY_NEWLINE
+1076,acl,High,Configuration is lost when copy run start is issued.
+1082,NTP Client,Medium,Limit remote and ref-id to 15 and name to 39 char in show ntp associations
+1083,NTP Client,Medium,Update NTP user guide for NTPv6 support
+1085,0,High,ovsdb-idl.c:379: assertion !idl->txn failed in ovsdb_idl_run() Aborted (core dumped)
+1086,0,Medium,SNMP CLI ISSUES
+1087,0,Medium,"LLDP show lldp neighbor-info:  ""Neighbor Chassis-ID"" isn't matching ""Hardware: Ethernet, MAC Address"" of neighbor - VSI"
+1088,0,High,[lldpcli] process is listed as defunct in ps -aux
+1089,0,High,"MSTP : Crash observed while assigning VLANS to MST's from IST, resulting in wrong VLAN to instance mapping and invalid/corrupted spanning-tree digest creation"
+1090,VRF,Medium,IP address and MTU was not getting updated when interface is moved
+1096,0,Medium,Code corrections to pass Fortify Static Analysis
+1097,webui,Medium,"Auto-refresh on the Interface Page takes it to top, impacting end user experience."
+1098,0,Medium,Quick Start Guide (http://www.openswitch.net/documents/dev/quick-start-physical) has a number of issues
+1099,0,High,Merge notifications feature to rel/dill
+1101,Physical Interfaces,Medium,show tech has missing interface commands
+1103,"l3, supportability",Medium,Diag-dump support for portd.
+1104,MSTP,Medium,"MSTP: Unable to do ""routing"" on interface which is part of Spanning tree  entry"
+1105,Loopback,Medium,portd test script failure in zuul due to supportability change
+1106,0,High,LLDP - Error while Invoking lldpd_ovsdb_nbrs_change_all
+1107,MSTP,High,POST of large configuration via /rest/v1/system/full-configuration causes ops-stpd to crash
+1108,BGP,High,VTYSH: AttributeError: 'unicode' object has no attribute '__getattr__' when attempting to
+1109,Sub-interfaces,High,Skipping the test_layer3_ft_sub_intf_l3test.py test because of repeated failures
+1111,BGP,Critical,BGP adds Route_Map entries without 'name'
+1112,OVSDB P&S,High,[OVSDB P&S] Memory leak on ovsdb_idl_txn_write_partial_map() and ovsdb_idl_txn_delete_partial_map()
+1113,rest,Medium,[REST] Dynamic Categories is not validating when follows column is not present
+1114,0,Medium,NTP: No validation error for NTP Server configuration through hostname.
+1115,0,High,Conversion of an ACL applied Layer 3 port to Layer 2 port causes the applied ACL to get deleted from the port and also unable to add any more ACEs or apply existing ACL to any other ports
+1116,configuration persistence,Critical,Configuration Persistence: copy running-config to startup incorrectly persists dynamic VLANs to configuration
+1118,rest,Medium,Notifications - Add second IDL for monitoring DB changes
+1119,CLI infra,High,Enabling  '-Wall -Werror' flag for ops-cli repo
+1121,ARP,Medium,Need to include summary ARP count on “show arp” output CLI
+1122,ARP,Medium,Device is not learning more than 8K ARP
+1123,ARP,Medium,System daemon restarted while system is handling around 7000 ARP
+1126,ARP,Medium,"""ICMPv6: ndisc: ndisc_alloc_skb failed to allocate an skb, err=-11"" error dislayed on console constantly with lost connectivity"
+1127,0,Medium,Pinging to a broadcast address throws an error
+1128,L3-subinterfac,Medium,L3(Subinterface) :: Removing non-existing encapsulation tag removes the existing tag from subinterface
+1129,interface,Critical,"Segmentation fault (core dumped) when running ""show interface brief"""
+1130,VLANs,Medium,vlans appear when saving config
+1131,0,Medium,check for malloc failures when creating qos profiles & maps
+1132,0,High,Static analysis issues - fixed (Fortify Cleanup)
+1133,0,Medium,Basic L3: adding restart-ability to ops-zebra
+1134,rest,Medium,"[REST] Column Retrieval tests are disabled on dill release, need to be fixed and enable again."
+1136,Sub-interfaces,Medium,Traffic switching to L2 VLANs from subinterface.
+1137,0,High,Comment ACEs act like permit ACEs
+1138,0,Medium,CLI allows MTU to be configured beyond what the asic and kernel driver is able to handle- allows for 16360 driver handles 9216
+1139,web ui,Medium,Web UI: Need to sort logs on the client  from new to old as server returns them from old to new
+1140,0,Medium,Reported memory leak in acl_log.c from seq_wait calls
+1143,0,High,test_portd_ct_functionality - tc6 - Missing IPv6 addresses after 'no shutdown'
+1144,Port Daemon,High,test_portd_ct_functionality-portd_functionality_tc3- Missing Internal VLAN range of interface 4 in DB
+1145,0,Medium,MSTP: Root mac not getting updated on root switch
+1146,dhcp server,High,Event logging and diagnostics support for DHCP-TFTP server
+1147,0,Medium,Custom validator for DHCP server mandatory commands
+1148,rest,Medium,[REST] Sort by other types different to string broken
+1149,OVS Infra,Medium,[OVSDB P&S] Empty maps and partial map
+1151,lldp,Medium,Lldp test case fails because don't consider to use split interface
+1152,0,Medium,layer 3 test case fails because don't consider to use split interfaces
+1153,0,Medium,Add knet info in diags
+1154,Mirroring,Medium,Mirroring: fix mirror cli token string mismatch
+1155,0,High,WebInspect Reports Cookie Security: Cookie Not Sent Over SSL on 1 or more pages
+1158,0,Medium,DHCP Server: dhcp_lease.db file is not clean after a switch reboot
+1159,BGP,Medium,BGP tests are failing intermittently in Tier 1
+1160,acl,High,ACL entries do not persist across reboot
+1161,lldp,High,test_lldp_ft_enable_disable.py fails intermittently in CIT Tier 1
+1164,SNMP Infra,Medium,"Unable to configure the same host IPaddress Trap receiver for different versions V1,V2 and V3"
+1165,VLANs,Medium,"vlan trunk allowed configuration - vlan-mode is showing ""trunk""."
+1166,0,Medium,qos - code cleanup in YAML processing
+1167,0,High,Classifier daemon misses OVSDB notifications when large configuration is pasted on CLI
+1168,BGP,High,BGP not routing using ipv6
+1169,BGP,Critical,"zebra core dumps constantly being generated ""python|14001|LOG_CRIT|ops-zebra crashed due to Aborted"""
+1170,BGP,Critical,"Zebra is not selecting all the routes in Route table when large number of routes ( in this case, 1000) are added to the Route table."
+1172,BGP,Medium,Help string doesn't matches for the some CLI's.
+1173,0,High,QoS information is not displayed in LAG interfaces statistics
+1174,L3,Medium,test_layer3_ft_fastpath_connected fails in hardware
+1175,VLANs,Medium,VLAN columns type change to UUID
+1178, basic l3,High,ops-portd crash on split interface
+1179,CLI infra,Medium,"Fix for broken help strings for ""ip.. "" CLI"
+1180,0,High,[Moduler Framework test case]test_portd_ct_functionality - tc6 - Missing IPv6 addresses after 'no shutdown'
+1181,ARP,Medium,random gate job failures for ops-arpmgrd
+1183,Link Aggregation,High,LAG test cases are failing in CIT Tier 1
+1184,Legacy test framework,High,Add logs for debugging CIT failures in legacy test frameworks
+1185,test-framework,High,Need mechanism in test-framework to display docker daemon logs
+1186,"rest, webui",Medium,Set SRCREV as AUTOREV for ops-restd/ops-webui repos for rel/dill branch
+1187,basic l3,Medium,Change the VRF reference in Route and Neighbor table to strong
+1188,dhcp server,Medium,DHCPSrv_Range: POST operation returns 404 response code
+1193,CLI-infra,Medium,CLI-Infra changes for non IDL related command.
+1194,0,Medium,ops-lldpd crash on split interface
+1195,MAC Tables,Medium,MACs are not learnt on LAG interfaces
+1197,MAC Tables,Medium,Documentation for mac learning
+1198,dhcp server,Medium,DHCP server unable to set lease time of 1 minute
+1200,Link Aggregation,High,Fix test_ft_lacp_statistics.py instability
+1201,Link Aggregation,High,Not possible to remove a secondary IPv4
+1202,Link Aggregation,High,Removing primary IPv4 before removing secondaries
+1203,Link Aggregation,High,Fix test_ft_static_lag_l2_l3_change.py
+1204,Link Aggregation,High,Fix test_lacp_ft_heartbeat_average_rate.py
+1205,Link Aggregation,High,Fix test_ft_lacp_l3_ping.py instability
+1206,Link Aggregation,High,Fix test_ft_static_lag_interface_l2_l3_change.py instability
+1208,Physical Interfaces,Medium,Missing feature for physical interfaces is missing in diagnostic dump
+1209,QoS,High,"Help string for ""apply"" keyword is shown as ERROR"
+1210,0,Medium,Change ports.yaml to enable split support on all interfaces
+1211,0,High,Legacy Framework Host Ping method needs adjusted timeout
+1212,platform,Medium,Diagnostics support for QoS
+1213,MSTP,Medium,"When MSTP is configured across multiple regions, Master Port is being disaplyed as Designated Port."
+1214,MAC Tables,Medium,Flush MAC required for MSTP
+1215,L3,Medium,interface vlan name shoud be starting with a non zero value
+1216,Port Daemon,Medium,Portd: Static analysis fixes (both critical & high)
+1217,MSTP,Medium,Help string doesn't matches for the spanning-tree CLI
+1218,Mirroring,High,Mirroring: port mirroring not working in tx direction with new bcm cdp 3.1.0.12
+1219,Link Aggregation,Critical,Double declaration of check_acl_configuration in ops-lacpd
+1220,CoPP,Medium,unknown unicast packets are pushed to CPU via default queue for unclassified packets instead of unknown unicast CPU queue.
+1222,lldp,High,Startup configuration erased after reload switch when startup configuration has VLAN related configuration
+1223,NTP Client,Medium,Add component test with new modular framework to ops-ntpd in rel/dill
+1224,ntp_client,Medium,Auto restart for ntpd and restd
+1225,sflow,Medium,Internal VLANs show up at the sFlow collector
+1226,ops-pmd,High,Move test case initialization to avoid CIT error in ops-pmd
+1227,0,High,Up and running interface VLAN not retained in the kernel level after reload switch
+1228,MSTP,Medium,MSTP: Root port is shown as ASCII value when Multiple Instances are configured
+1229,0,Medium,"LLDP - During OVSDB update failure, multiple retries without verifying the error state."
+1230,Physical Interfaces,Medium,VRF deletion with an ip configured interface attached is failing.
+1231,,High,BUFMON: Push BST enable configuration to hardware only after plugin is attached.
+1232,0,Medium,ops-vland [OPS-VLAND] coredump while comfiguring ~480 vlans and interface vlans with ip and ipv6 addresses
+1233,Physical Interfaces,High,MAC address learning list mismatch between ASIC and DB/CLI
+1234,configuration persistence,High,OPS: Show startup config takes around 40 seconds with a simple config and CPU goes to 100%
+1235,Logging,Medium,Two different lldp daemon logging message on vlog where as lldpd is actually not detected as daemon by vlog config.
+1237,Sub-interfaces,High,Subinterface creation will fail if dot1q tag and interface are added in same transaction
+1238,QoS,Medium,Config with 1000 VLANs cause switchd qos errors on 6712
+1239,BCM OpenNSL,Medium,L3 fp stats test case fails due hardcode interfaces
+1240,Loopback,High,ops-supportability CT test case for ucast route is removed
+1241,Physical Interfaces,Medium,Test interfaces fail due hardcode interfaces
+1242,MSTP,Medium,STP crash after configuring 4 MSTP instances and enabling MSTP
+1243,ping,Medium,ops-ipapps: Static analysis fixes for PING
+1244,Broadview,Medium,Integrating additional changes of ops-broadview from master to rel/dill
+1245,0,High,Crash in ops-switchd neighbor_create()
+1246,0,Medium,ops-classifierd test_mirror.py has topology definition issue
+1247,0,Medium,Management interface eth0 port does NOT show link UP
+1249,0,Medium,"Inconsistent heading and content for the command ""show interface brief"""
+1250,SNMP Infra,Medium,SNMP Infra CT issues
+1251,Modular Framework,High,Interfaces mac_addr on different switches of the same test are equal
+1252,Sub-interfaces,Medium,"Documentation for supportability infra missing from userguide , CLI document and feature test plan, REST support for loopback and subinterface features"
+1253,MSTP,Medium,Fix Port priority For MSTI configured
+1254,L2-Vlan,Medium,show vlan interface <internal_vlan_id> is not showing the interfaces linked to it.
+1255,Link Aggregation,High,LAG FT Cases -  Case are not using port labels
+1256,acl,Medium,Use safe string and print APIs in ACL code
+1257,0,Medium,Add ACL CT and FT tests to CIT
+1258,platform,Medium,Increase the max ports value
+1259,0,Medium,Basic L3: ops-zebra doesn't batch route updates to OVSDB
+1260,platform,Medium,i2c access issue for as7712 & adding diags partition size
+1261,dhcp-server,Medium,Cleanup not happening properly for dhcp-server FT script
+1263,MAC Tables,Medium,Feature test mac learning
+1264,BCM OpenNSL,Medium,Test case test_switchd_opennsl_ct_shutdown_intf fails to run in hardware
+1266,rest,Critical,Python taking up over 50% of CPU cycles on idle switch
+1267,ECMP,Medium,Need to re use the ecmp objects based on the nexthops configured while creating or updating an ecmp route
+1268,platform,Medium,Change bootup FT script to use host machines for ping test
+1269,web ui,Medium,Add logout functionality to Web UI
+1270,VLANs,Critical,Interface VLAN created for non-existent VLAN
+1271,0,Medium,LLDP related setting should not be allowed on split parent when interface on split condition
+1272,vlan,Medium,'vlan trunk native 1' is showing as part of show running-config command output when configuring 'vlan trunk native tag' in port.
+1273,Autoprovisioning,Medium,"CIT blocker: test_ct_autoprovisionutils.py is not running, this test is being skipped"
+1275,Link Aggregation,High,Portd crash after create a lag
+1276,acl,High,clear access-list hitcounts does not clear the hit counts
+1277,acl,High,ACL logging does not work with split interfaces
+1278,L3,Medium,Add appropriate asserts since the test was passing even when pings fail
+1279,dhcp server,Medium,Custom validator for DHCP server optional commands
+1280,0,Medium,"Need to update ""show version"" information in CLI guide"
+1281,Mirroring,Medium,"Mirroring: on dest iface removal, shutdown reported when inactive/no dest"
+1282,vlan,High,SW throwing errors for CLI VLAN configurations
+1283,L3 Interfaces,Critical,Switchd crash after execute diag-dump CLIs while device handling around 6K ARP
+1284,lldp,Medium,skip test_lldp_ft_wait_hold script to fix gate job failures
+1285,0,Medium,show running-config interface or  show running-config interface <sub-interface id> does not display the configuration details for sub-interface.
+1286,VLANs,Medium,"show tech for ztp, aaa and vlan."
+1287,VLANs,Critical,Siwtchd crash while create LAG and BGP network configuration
+1288,authentication,High,ops.tests.aaa.test_aaa_ft_authentication fails intermittently.
+1289,mirror,Medium,mirror create may crash genericx86-64 ops-switchd
+1290,Link Aggregation,Medium,ops-lacpd in container build continually logging error message
+1291,Mirroring,Medium,Mirroring: 'do show mirror session x' from within mirror session prints double err
+1292,BCM OpenNSL,Medium,Fix to make all split ports work on as7712
+1293,boot,Medium,Test case test_ft_bootup.py  fails to run because hardcode interfaces
+1295,platform,Medium,Switchd/ Cur_hw intermitteny failures
+1296,Physical Interfaces,Medium,Interface CLI doc is not aligned with current implementation on set/unset of interface description.
+1298,MSTP,Medium,Event logging is not adequate for MSTP
+1299,BCM OpenNSL,High,Palamida Scan 2: openssl 1.0.2a vulnerabilities
+1300,rest,High,REST login feature test needs to be updated for new URIs
+1301,rest,Critical,REST logout needs to have feature test added
+1302,rest,Medium,SSL cert should be generated during system bootup
+1304,Supportability,Medium,Zebra diagnostics
+1305,CoPP,High,Control plane policing documents not in release branch
+1306,platform,Medium,memory leak in i2c code in ops-hw-config
+1308,L3,Medium,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd
+1309,0,Medium,Fix static analysis warnings
+1310,L3,Medium,Remove IPsec Schema
+1312,rest,Critical,REST GET with depth=1 not returning data
+1313,vlan,High,Ansible: Invalid L2 and L3 configuration on port
+1314,MSTP,Medium,Randomly port state change takes beyond 2 * hello_time
+1315,MAC Tables,Medium,MAC table flush/age out not happening properly in DB level
+1316,MSTP,Medium,"DESCRIPTION:  when instance priority is configured as 15, state machine doesnt seem to be working properly. The port role and state shows as Disabled and Forwarding.  When First L2 port is being created after enabling spanning-tree, State machine seems to be malfunctioning. Steps to Reproduce:   Actual Results:   Expected Results:   Environment:  Operating System:"
+1317,Versioning,High,Eliminate length limit on version_id string
+1318,0,Medium,open-brace character { is rendered as {'{'} in Markdown code blocks on website
+1319,vlan,High,Ansible: show commands do not match after an invalid configuration
+1321,0,Medium,HPEOPS Transceiver IOP: Dropped Frame percent around 70% with the DAC JH235A
+1322,rest,High,test_ops-restd_ft_account.py fails intermittently in CIT
+1323,BGP,Medium,"""Clear bgp * soft in/out"" command resets the neighbor sessions but the BGP, RIB and the routing tables do not get updated"
+1324,BGP,Medium,"After several iteractions, switch isnt getting network allowed in route map entry"
+1325,BGP,High,Toggling of L3 ports results in network unreachable for routes that should have converged to a different router with eBGP
+1326,BGP,High,OPS: bgp timers are not taking effect when those values are changed
+1327,BGP,Medium,OPS: bgpd coredump is generated (I'm using a special build with bgp performance fixes)
+1328,BGP,High,Incorrect update of the BGP table
+1329,BGP,High,BGP routes are not added to the IPv4 routing table
+1330,BGP,High,BGP peers flap if the bgp timers are set too aggressively for keepalive and holdtime
+1331,BGP,High,"Segmentation fault (core dumped) after issuing ""show ip bgp"" command"
+1332,0,High,Enabling modular framework tests in rel/dill branch
+1333,SNMP Infra,Medium,Adding snmptrap test cases
+1334,0,High,Supportability : Need version and firmware image comments in startup and running configuration files
+1335,Traceroute,Medium,ops-ipapps: Static analysis fixes for TRACEROUTE
+1338,MSTP,Medium,MSTP: DESCRIPTION: HOP count shows 0 or 20 instead of showing the actual remaining hops to reach the downlink bridges
+1358,rest,Medium,"Rest - API ops-restapi,json file is not updated well Problems with ACCOUNT endpoint"
+1360,rest,Critical,REST using GET depth=1 has major performance issues
+1361,0,High,Logrotate target functionality is broken.
+1362,0,Medium,Need CLI to check number of MAC entries in the switch
+1367,0,Medium,Remove unsupported VLAN ACL CLI commands from dill release
+1368,0,Medium,ops-portd in container build taking 100% cpu
+1370,0,High,OPS: ops-snmpd coredump generated while a snmpwalk script ran for the weekend
+1371,0,Medium,documentation update on ops-snmpd
+1373,0,Medium,Need FT test case for audit log
