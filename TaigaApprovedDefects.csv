@@ -1,3 +1,4 @@
+Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 13,Intra Ops: Build system enhancements,Debug packages for packages from devenv is corrupted,Medium
 15,basic l3,CLI - Interfaces split condition is not being validated,Medium
 21,lldp,LLDP neighbor table and interface counters take long time to clear,Medium
@@ -271,6 +272,7 @@
 557,lldp,LLDP neighbor-info,Medium
 558,basic l3,Point-to-Point IP address configuration makes remote unreachable,Medium
 560,Loopback,No CLI ( show loopback interface brief) to check all the loopbacks configured,Medium
+561,VLANs,Untagged Packets are Passing through the Interface which is Tagged with VLAN 1,Medium
 562,Loopback,Loopback interface is not reachable through the management interface on openswitch,Medium
 563,rest,[REST] Status and statistics columns are seen as invalid during sort and filter,Medium
 564,rest,[REST] GET with depth returns 200OK when use an invalid selector,Medium
@@ -530,7 +532,6 @@
 995,MSTP,Disable/ enable Spanning-tree Crash and Dynamic Reconfigure malfunctioning,Medium
 999,VLANs,Add test case to verify L3 stats during intervlan routing,Medium
 1001,switchd,Memory leak in plugins infrastructure,Medium
-1002,boot,Memory leak in ops-hw-config YAML file processing,Medium
 1003,0,systemd-journald: Failed to create new system journal: No space left on device,Medium
 1004,Mirroring,Mirroring: missed destroy of cloned smaps,High
 1005,Mirroring,Mirroring: complete removal of RSPAN/VLAN mirroring code from PI layer,Medium
@@ -559,6 +560,7 @@
 1037,sflow,sFlow - When minimum sampling rate is set and traffic is send at 30% of line rate the feature service stop sending sampled packets,High
 1038,MAC Tables,Array out of bound access in mac learn,High
 1040,lldp,AS6712 LLDP Test failure  - split interface specific issue,Medium
+1041,Physical Interfaces,system should not pass data frame size to 1528bytes,Medium
 1042,sflow,sFlow CLI sampling min-max limitation,Medium
 1043,0,sFlow - if_Status in CNTR packets is not changing,Medium
 1045,webui,Web UI Issues with MS IE/Edge,Medium
@@ -593,6 +595,7 @@
 1088,0,[lldpcli] process is listed as defunct in ps -aux,High
 1089,0,"MSTP : Crash observed while assigning VLANS to MST's from IST, resulting in wrong VLAN to instance mapping and invalid/corrupted spanning-tree digest creation",High
 1090,VRF,IP address and MTU was not getting updated when interface is moved,Medium
+1095,Link Aggregation,interface lag<id> command discrepancy,Medium
 1096,0,Code corrections to pass Fortify Static Analysis,Medium
 1097,webui,"Auto-refresh on the Interface Page takes it to top, impacting end user experience.",Medium
 1098,0,Quick Start Guide (http://www.openswitch.net/documents/dev/quick-start-physical) has a number of issues,Medium
@@ -605,6 +608,7 @@
 1107,MSTP,POST of large configuration via /rest/v1/system/full-configuration causes ops-stpd to crash,High
 1108,BGP,VTYSH: AttributeError: 'unicode' object has no attribute '__getattr__' when attempting to,High
 1109,Sub-interfaces,Skipping the test_layer3_ft_sub_intf_l3test.py test because of repeated failures,High
+1110,0,Basic L3: Add interface address change test cases to ops-zebra restart-ability test script,Medium
 1111,BGP,BGP adds Route_Map entries without 'name',Critical
 1112,OVSDB P&S,[OVSDB P&S] Memory leak on ovsdb_idl_txn_write_partial_map() and ovsdb_idl_txn_delete_partial_map(),High
 1113,rest,[REST] Dynamic Categories is not validating when follows column is not present,Medium
@@ -762,12 +766,11 @@
 1298,MSTP,Event logging is not adequate for MSTP,Medium
 1299,BCM OpenNSL,Palamida Scan 2: openssl 1.0.2a vulnerabilities,High
 1300,rest,REST login feature test needs to be updated for new URIs,High
-1301,rest,REST logout needs to have feature test added,Critical
+1301,rest,REST logout does not invalidate the session on the server side,High
 1302,rest,SSL cert should be generated during system bootup,Medium
 1304,Supportability,Zebra diagnostics,Medium
 1305,CoPP,Control plane policing documents not in release branch,High
 1306,platform,memory leak in i2c code in ops-hw-config,Medium
-1308,L3,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd,Medium
 1309,0,Fix static analysis warnings,Medium
 1310,L3,Remove IPsec Schema,Medium
 1312,rest,REST GET with depth=1 not returning data,Critical
@@ -806,3 +809,5 @@
 1371,0,documentation update on ops-snmpd,Medium
 1373,0,Need FT test case for audit log,Medium
 1374,0,Modify/Replace ACL with large number of ACEs (~500) doesn't behave correctly.,High
+1376,0,Mirroring: remove cli ability to remove source mirroring in just one direction,Medium
+1377,Mirroring,Mirroring: disallow source or destination interface of any type other than 'system',Medium
