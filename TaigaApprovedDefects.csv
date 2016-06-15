@@ -848,3 +848,4 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1389,Interfaces,Output from show interface not match with database info,Medium
 1394,ntp-client,Add NTP FT for OSTL with new modular framework,Medium
 1397,rest,Update logs REST API documentation,Medium
+1383,broadview,broadview,Medium
