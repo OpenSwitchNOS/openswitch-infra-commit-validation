@@ -760,8 +760,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1296,Physical Interfaces,Interface CLI doc is not aligned with current implementation on set/unset of interface description.,Medium
 1298,MSTP,Event logging is not adequate for MSTP,Medium
 1299,BCM OpenNSL,Palamida Scan 2: openssl 1.0.2a vulnerabilities,High
-1300,rest,REST login feature test needs to be updated for new URIs,High
-1301,rest,REST logout does not invalidate the session on the server side,High
 1304,Supportability,Zebra diagnostics,Medium
 1305,CoPP,Control plane policing documents not in release branch,High
 1306,Platform,memory leak in i2c code in ops-hw-config,Medium
@@ -777,7 +775,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1319,vlan,Ansible: show commands do not match after an invalid configuration,High
 1320,Mirroring,Mirroring: switchd crash when dest is a lag,High
 1321,0,HPEOPS Transceiver IOP: Dropped Frame percent around 70% with the DAC JH235A,Medium
-1322,rest,test_ops-restd_ft_account.py fails intermittently in CIT,High
 1323,BGP,"""Clear bgp * soft in/out"" command resets the neighbor sessions but the BGP, RIB and the routing tables do not get updated",Medium
 1324,BGP,"After several iteractions, switch isnt getting network allowed in route map entry",Medium
 1325,BGP,Toggling of L3 ports results in network unreachable for routes that should have converged to a different router with eBGP,High
@@ -806,18 +803,24 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1375,BGP,L3 packet loss using multiple secondary IPs,High
 1376,Mirroring,Mirroring: remove cli ability to remove source mirroring in just one direction,Medium
 1377,Mirroring,Mirroring: disallow source or destination interface of any type other than 'system',Medium
+1378,0,sflow: ipv6 support,Medium
 1380,CLI-infra,Zuul build is failing at 'ops-cli.test_passwd_srv_ft_update_passwd.test_change_user_password',High
 1382,Logging,Need VLOG messages for autoprovision script.,Medium
 1384,Mgmt Interface,Mgmt-intf cli document changes for Toronto release.,High
 1387,ntp_client,Custom validator for NTP server IP validation,Medium
 1389,Interfaces,Output from show interface not match with database info,Medium
 1394,ntp-client,Add NTP FT for OSTL with new modular framework,Medium
-1398,0,mirror cli does not disallow non-system interfaces,Medium
+1395,0,Adding support for ER modules in ops-pmd,Medium
 1400,0,Not all networks defined on BGP config are listed on show ip bgp output,High
 1402,0,implementing diagnostic dump for vlan,High
 1403,VRF,IPV6 Forwarding was not enabled per VRF namespace,Medium
+1404,0,Failed mirror creation is re-attempted continuously by switchd,High
+1405,0,Implement weak_gc reference type in ovsdb,Medium
 1383,Broadview,Broadview Documentation,Medium
 1308,L3\L3 Interfaces,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd,Medium
 1093,L3\L3 Interfaces,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd,Medium
 875,L3\ECMP,Load balancing though ECMP with IPv6 is not working,High
 900,L3\ECMP,Load balancing though ECMP with IPv6 is not working,High
+1236,AS7512,Propagate latest xpliant changes to rel/dill,
+1366,AS7512,Update access to CPLDs registers,Medium
+1410,ACL,show access-list output not consistent for all options,Medium
