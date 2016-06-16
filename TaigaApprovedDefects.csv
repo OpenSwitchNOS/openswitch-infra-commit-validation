@@ -847,3 +847,4 @@ Taiga ID   ,Taiga Feature,Taiga Summary,
 1236,AS7512,Propagate latest xpliant changes to rel/dill,
 1366,AS7512,Update access to CPLDs registers,Medium
 1410,ACL,show access-list output not consistent for all options,Medium
+1177,
