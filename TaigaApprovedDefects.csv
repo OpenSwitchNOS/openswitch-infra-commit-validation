@@ -3,7 +3,9 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 15,basic l3,CLI - Interfaces split condition is not being validated,Medium
 21,LLDP,LLDP neighbor table and interface counters take long time to clear,Medium
 23,CLI infra,Alias configuration removed after login/logout,Medium
+24,CLI infra,Validation not done properly for IPv4 type token,Medium
 26,BGP,BGP Does not obey global ECMP enable/disable,High
+27,Mgmt Interface,Name server IP address not updated in a specific scenario on MGMT interface,Medium
 30,Mgmt Interface,Mgmt If - IPv6 handle DAD,High
 33,basic l3,Deleting ipv6 addresses on L3 interfaces doesnt remove Neigbors/direct connect hosts,Medium
 35,VLANs,Vlan name is not updated on the show vlan output,Medium
@@ -23,16 +25,14 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 75,configuration persistence,Implement CLI command to print startup config in json format,Medium
 77,rest,Resource local configuration should not include subresources,High
 78,rest,Better name and/or description for resource ids used in URIs,Medium
+79,rest,Resource URI should have a proper description in REST API rendering,Medium
 82,vlan,Portd doesn't check for exsiting L2 Vlans for VLAN Ids and creates duplicate VLAN rows for same VLAN Ids,Medium
 84,Test Framework,ft-framework slowness in VSI interaction,Medium
 85,rest,SWAGGER UI data structures not matching to the implemented code and REST requests may fail,High
 86,rest,"For REST configuration APIs , optional attributes are still required to PASS or API to be successful",Medium
 88,AAA,VSI Segmentation fault and failed to remove user on user remove cmd.,Medium
-89,Infra tools support,Error while corkscrew is built,Medium
-90,infra website,Documentation: Add missing packages for Debian setup,Medium
-91,buildsystem,ZeroMQ cpp bindings fail to build,High
 92,Mgmt Interface,Unable to remove IPv6 assigned IP from mgmt interface,Medium
-96,Infra tools support,make system uses light colors,Medium
+97,Mgmt Interface,Need appropriate error message while remove IP address from mgmt interface,Medium
 98,Link Aggregation,LAG: LACP configuration is only being applied on OVS when there is at least 1 interface in LAG,Critical
 99,Link Aggregation,LAG: LACP cannot be disabled on an LAG after setting it on,Critical
 100,Link Aggregation,LAG: LACP interface status is not visible from VTYSH,High
@@ -49,29 +49,22 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 114,rest,REST: POST method needs to return URI of newly created resource,Medium
 116,Link Aggregation,LAG: Broadcast is partially dropped intermittenly,Medium
 117,BGP,GET on BGP_Router missing bgp_neighbor in URI,Medium
-118,Platform,Documentation of known open switch issues,High
 119,rest,REST/Swagger - Dictionaries show keytype: valuetype instead of actual keys when they exist,Medium
 121,rest,"[REST] Recursive GET - Internal Server Error when using ""selector"" parameter",Medium
-122,onie,onie-installer is failing when DHCP server is absent or hostname is not onie,High
 123,Link Aggregation,Dynamic LAG: LACP mode is not displayed on show running-config,Medium
 125,BGP,BGP configuration of ASN over 3000000 fails,High
 127,rest,REST API: POST method is failing when using default data structure returned by GET method.,High
 129,basic l3,vtysh crashes when attempting to configure a new IPv6 route with port which is not L3.,Medium
 131,rest,REST - GET of system/full-configuration fails if REST Authentication is enabled,High
 132,rest,REST API: PUT method returns internal server error 500 for invalid data structure.,Medium
-135,Platform,BCM application init failed,High
 136,Link Aggregation,cli: seg fault in show running-config interface,Medium
-139,infra website,Broken link on the System page,Medium
 140,vlan,Broken links on VLAN CLI,Medium
 141,authentication,Broken link on the Authentication CLI page,Medium
 142,BGP,Broken links on the BGP CLI page,Medium
 143,L3,"Broken link on the L3 Interfaces, Static Routes, ECMP page",Medium
-144,infra,Broken links on the OpenSwitch Architecture page,Medium
 146,CLI infra,Core dumped when you press ctrl + ?,High
-148,Infra Build,"genericx86-64-networking.bb says its license is ""Proprietary""",High
 149,AAA,XML schema does not contain definitions for all System's aaa column keys,High
 151,AAA,Weak password encryption,Critical
-152,Mgmt Interface,"""hostname"" command resulting in Segmentation fault",Medium
 153,VLANs,cli:no vlan trunk allowed <vlan-id> command resulting in segmentation fault,Medium
 154,leds,Led config is not saved properly from running to start-up config,Medium
 155,Link Aggregation,"""no lag #"" in interface context does not re-create interface row in Port table",Medium
@@ -80,6 +73,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 159,rest,Datatype mismatch between swagger model schema and REST schema (extended scheam): Swagger Bug,Medium
 161,L2,"Show interfaces output not showing configured allowable MTU size which is in the range of <9192-9216>, since allowable MTU size is  (in bytes) in the range <576-9216>.",Medium
 162,LLDP,LLDP - Ordering of show lldp commands is not in numerical order,Medium
+163,LLDP,"LLDP : When LLDP conifguration is done at interface level , it resets the LLDP counter information for that interface",Medium
 164,basic l3,inter-vlan routing - couldn't ping no more than 84 clients in different vlans,High
 166,Infra CIT,"Errors in ""adding CI process for the component""",Medium
 168,vlan,VLAN Table corrupted when enable routing on interface added with vlan access.,High
@@ -91,6 +85,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 177,vlan,when no routing is specified the port should be an L2 interface is not in the default vlan,High
 178,vlan,"Interface info not updated while check internal vlan status by ""show vlan""",Medium
 179,ping,Local interface/IP ping response is slow,Medium
+180,basic l3,Got ping response from admin shutdown interface,Medium
 181,vlan,Need CLI to check interface vlan status,Medium
 182,Platform,"Segmentation fault (core dumped) on ""show running-config"" once rebooted followed by copy running config into startup.",Critical
 183,Mgmt interfaces,Misleading auto-negotiation default setting,Medium
@@ -101,6 +96,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 189,rest,REST: If-Match Test failing randomly,High
 190,ping,"Datagram-size range is not working after a particular value in ""ping"" command",Medium
 191,ping,Ping results 100% packet loss with ip-option,Medium
+195,Link Aggregation,LACP Static analysis findings on functions and declarations,Medium
 196,Mgmt interfaces,No form of CLI supported not required for certain interface setting parameters,Medium
 198,rest,"REST: GET method on backward references such as ""Route"" is not working.",Medium
 199,Link Aggregation,remove interface from LAG restarts switchd,Critical
@@ -111,6 +107,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 206,rest,REST: Internal Server error when using If-Match with POST/GET,Critical
 207,rest,REST: If-Match not supported with CORS,High
 210,ping,Ping6: Failing to resolve IPv6 address shows error and datagram-size error,Medium
+212,Traceroute,Proper error message should be displayed when traceroute from admin user,Medium
 215,CLI infra,"""show running-config"" is not displaying in sorted order.",Medium
 216,basic l3,CLI allows two interfaces to have same IP address,Medium
 217,basic l3,arps failing to be synced between DB and Kernel,Critical
@@ -123,11 +120,13 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 226,BGP,clear ip bgp <help string> show Error messages,Medium
 227,BGP,Observed vtysh core dump while check ip bgp summary,Medium
 228,ping,"Pattern given with ""data-fill"" parameter is not coming with ICMP packet",Medium
+229,CLI infra,Need CLI command to copy config (running or startup) to/from external host,Medium
 231,BGP,Segmentation fault when perform the command show ip bgp summary,Medium
 234,CLI infra,"""Show Session-timeout"" doesnt display any output when the session-timeout value is default",Medium
 236,Link Aggregation,Markdown update for show running-config,High
 239,BGP,"show bgp <memory, rsclient, summary, view and views>  are not yet implemented",Medium
 240,rest,[REST] Using depth parameter in any operation other than GET should give a Bad Request,Medium
+241,basic l3,Need single CLI command to show all IP addresses,Medium
 252,BGP,"""show ip bgp ip bgp vpnv4"" + tab = Error: Help strings does not match for the identical tokens",Medium
 253,BGP,"""show ip bgp ip bgp vpnv4 rd"" + tab = ASN:nn_or_IP-address:nn  Error: Help strings does not match for the identical tokens",Medium
 254,CLI infra,"""sh startup-config"" hangs and CPU at 100%",Critical
@@ -146,7 +145,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 293,Traceroute,Traceroute with ip-option loosesourceroute is not disiplaying any hop info,High
 296,rest,REST - PUT operation is not reporting when it comes to change an immutable field,Medium
 298,CLI infra,LLDP core dump while configuring it after build update,High
-299,Link Aggregation,"LAG aggregation key is on the Cilantro OPS  release, but not supported",High
 301,Traceroute,Optional parameters  should be displayed while executing the traceroute CLI,Medium
 302,Link Aggregation,"LACP: Unable to remove lacp port-id, port-priority configured on interface to set default value.",Medium
 303,Platform,Duplicate DIAG entries are created on boot GRUB,High
@@ -160,7 +158,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 315,BGP,BGP adjacency not formed without router ID when user configure interface level IP's prior to bgp global configuration,High
 316,BGP,"BGP: Deleting an already deleted network causes the latest added network to be deleted, this can be repeated over and over again",Medium
 317,Link Aggregation,"LAG: System-priority range option should be removed for  the CLI ""no lacp system-priority"".",Medium
-320,Platform,Lit up interface LED's do not correspond to physical ports.,High
 321,LLDP,LLDP - Port ID not removed when disable and consulting from neighbor info,Medium
 328,vlan,VLAN document issue: VLAN display commands,Medium
 329,vlan,CLI command not properly documented in VLAN CLI user guide,Medium
@@ -171,13 +168,13 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 338,Link Aggregation,LAG : LACP System-priority value is not reflected consistently,Medium
 343,vlan,Trunk-configured interface is not responding to arp requests on native VLAN.,Critical
 344,LLDP,9 coredumps generated by lldpd in under 4 hours while LLDP was disabled.,Medium
-345,leds,Led from port 36 is on all the time,Medium
-347,leds,Led does not correspond to the port where the cable is connected,High
+351,vlan,Need a way to check interfaces VLAN mode,Medium
 352,Link Aggregation,LAG : Passive LACP mode in both switches resets partner parameters to be 0,Medium
 354,vlan,"Interface configured with ""vlan trunk native"" is dropping untagged traffic.",Critical
 355,Link Aggregation,LAG : show running-config interface <LAG-Name>  behaves differently,Medium
 356,LLDP,Neighbor chassis-name doesn't get populated instantaneously in sh lldp neighbor output,Medium
 357,vlan,VLAN trunk native is not working in a particular VLAN sequence of configuration,High
+359,Mgmt Interface,"Mgmt Interface : When Mgmt IPV6 address is configured with last octet as 0, it is not displayed in show interface command",Medium
 360,vlan,User able to add internally allocated VLANs as allowed VLANs on trunk port,High
 363,Link Aggregation,"LAG: Switching a LAG between specific interface is not synced and details are not populated in ""show lacp interfaces"" .",High
 364,Traceroute,Descripency in  traceroute user_guide,Medium
@@ -195,6 +192,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 381,rest,REST Error messages not formatted as json.,Medium
 384,Link Aggregation,Internal VLAN should be released once LAG interface converted as L2,Medium
 386,vlan,Wrong default VLAN display info on trunk port,Medium
+387,vlan,Need a way to configure “vlan trunk” on trunk interface,Medium
 389,basic l3,Static route : active static routes are not displayed in show ip route command output,High
 391,Link Aggregation,"LAG : With no partner, some LAG parameters are populated in partner column",Medium
 394,BGP,BGP: Routes no longer advertised.,Critical
@@ -203,6 +201,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 397,BGP,BGP MD5 password between neighbors is not working and session is being Established.,High
 398,BGP,BGP: Routing table failing to be synced between DB and Kernel,Critical
 399,BGP,BGP: Scale issue BGP is bouncing with 1000 routes,Critical
+402,LLDP,Need LLDP to be turn on by default,Medium
 405,basic l3,"L3 Interfaces accepts invalid, multicast, reserved  ipv4/ipv6 addresses except mgmt interface.",Medium
 407,LLDP,"LLDP: Invalid ipv4/ipv6 addresses can be configurable on ""lldp management-address <ipv4/ipv6 addresses>.",Medium
 408,vlan,Show run does not display interface vlans in numerical order,Medium
@@ -218,19 +217,19 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 427,CLI-infra,"vtysh core dumped for the basic ""diag-dump lldp basic"" command",High
 429,ntp,Python ntp and ops-switchd process spiking very high even without any traffic or any configuration,High
 430,vlan,Default VLAN not assigned to L2 interface by default in a specific scenario,Medium
+433,LLDP,LLDP : Some default tlv fields ( related to port ) are not displayed in remote,Medium
 434,LLDP,Event logging basic feature not working for lldp module the only module supported,High
 435,Mgmt Interface,ops-mgmt-intf: index out of range exception when no management interface exists,High
 437,Platform,Platform: Switch is crashing if you split a 40 G port and then try to access to an invalid interface,High
 438,Platform,Platform: switch allows you to access split interfaces that haven't been configured,Medium
 439,Platform,"Platform: Fake ""no split"" interface configuration",Medium
 444,Mgmt Interface,Platform: Show commands to get interface speed are not synchronized,Medium
-446,LED,Leds are not corresponding with ports on 5172-54X-O-AC-F,Medium
 447,vlan,Deconfiguring some part of the internal vlan range resets the range to the default value,Medium
 448,basic l3,Misleading ARP entries in the ARP table,Medium
+449,vlan,VLAN auto creation support,Medium
 451,BGP,Filtering BGP route doesn't take effect dynamically,High
 452,BGP,Database transaction aborted message when user try to create route-map to router bgp configuration twice,Medium
 456,rest,Documentation of POST /system/vrfs/{ppid}/bgp_routers/{pid}/bgp_neighbors is wrong,Medium
-459,buffer monitor,bufmond default configuration values are not schema compliant,High
 460,rest,lldp_enable missing from Swagger documentation,Medium
 461,vlan,Interface is untagged on VLAN 1 when command switch(config-if)# vlan x is issued,Medium
 466,Mgmt Interface,Mgmt interface : Ipv4 static ip assignment to the interface is not working even though it shows in runcfg.,Critical
@@ -255,12 +254,15 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 507,LLDP,diag-dump command hung for the command targeted to non responding daemon (LLDP),Medium
 508,subinterfaces,L3(Subinterface) :: Admin state in show interface <subint> shows admin up even when it is down .,Medium
 509,subinterfaces,"L3(Subinterface) show interface <interface name> subinterface command , takes subinterface itself as input",Medium
+511,LLDP,"""show lldp neighbor-info"" is missing the SysName",Medium
 515,basic l3,Switch unable to ping loopback interface.,Critical
+516,basic l3,Unable  to configure IPv6 Link-Local and Global Unicast addresses,High
 517,LLDP,LLDP : In LLDP User guide TLV information is misguiding the end user.,Medium
 519,LLDP,"LLDP : LLDP Neighbor entries field becomes 0, with a new neighbor entry",Medium
 520,Sub-interfaces,"Core dump for switchd , vlan ,zebra while trying to configure an internal vlan on subinterface(negative scenario)",Medium
 522,subinterfaces,L3 Subinterface : Non existing vlan is assigned to subinterface,Medium
 523,LLDP,LLDP daemon core-dumped,Medium
+524,subinterfaces,L3 Subinterface :Transceiver information is irrelevant for subinterfaces and should be removed from the menu,Medium
 525,basic l3,L3 Subinterface : Subinterface CLI shows parent interface down if you create a subinterface first and do a admin up on parent interfaces later,Medium
 526,ntp,NTP: A validation is needed for maximum number of configurable NTP servers,Medium
 528,rest,[REST] PATCH method fails when adding keys within empty optional columns,Medium
@@ -270,9 +272,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 533,os-infra,"Events are getting cleared automatically from journal db and hence the output of ""show events""",Medium
 534,LLDP,LLDP events issue : either missing neighbor delete event or duplicate add event,Medium
 535,os-infra,journalctl -f floods,Medium
-536,Mgmt Interface,DHCP client does not auto trigger for Management interface,High
 537,ping,Ping to VLAN IP address does not work,Medium
-538,Link Aggregation,CLI command output not displayed in correct order,High
 539,BGP,BGP max number of routes reaches 3039 and then neighbor disconnects,High
 540,CLI infra,test_vtysh_ct_system skipped in CIT Tier 1,High
 541,BGP,test_bgp_ft_routemaps_with_hosts_ping skipped in Tier1 CIT,High
@@ -284,7 +284,9 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 551,Link Aggregation,Eliminate options in Load Balancing enum,High
 552,authentication,"Unable to change the password for the username ""admin"" and already existing configured user.",High
 553,LLDP,"[diag-dump] Error on ""diag-dump lldp basic"" in the ""admin"" mode",Medium
+554,CLI-infra,Alias command is not working.,Medium
 555,LLDP,"vtysh coredumped when executing ""diag-dump lldp basic"" for an corrupted yaml file",High
+556,LLDP,LLDP : Re-Init timer information need to be displayed in show lldp config command output,Medium
 557,LLDP,LLDP neighbor-info,Medium
 558,basic l3,Point-to-Point IP address configuration makes remote unreachable,Medium
 560,Loopback,No CLI ( show loopback interface brief) to check all the loopbacks configured,Medium
@@ -298,26 +300,27 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 569,subinterfaces,l3 subinterface: vswitchd crash while configuring multiple subinterface,Medium
 570,AAA,"Unable to remove existing local user account using ""user remove <user>"" from root user login.",High
 571,LLDP,"CIT Issue"": Skipping the LLDP test case due to the CLI changes made to fix the defect #403",Medium
+572,os-infra,Supportability feature needs a recovery mechansim if any of the yaml file is corrupted,Medium
 575,basic l3,L3 ECMP: Nexthop not getting deleted from ASIC for ECMP routes,Medium
 576,Platform,Platform: Duplexity default is not been displayed as expected,Medium
 577,Platform,Platform: Duplexity mode from Half-duplex to Full-duplex change is not been reflected,Medium
 579,Loopback,Loopback interface is able to reach an external host configured in the same subnet,Medium
+581,CLI infra,"Core dumped when you press ctrl + ""|"" keyboard layout in Spanish",Medium
 583,ntp,NTP: Long NTP server name displays information out of the table in command ‘show ntp associations’,Medium
 584,ntp-client,NTP: Rx-pkts field in statistics starts to increase even if an NTP server is not connected,Medium
 585,basic l3,L3 ECMP: Nexthop is not removed from ASIC ecmp object when corresponding interface is shutdown,Medium
 586,basic l3,L3 Loopback: Loopback IP's are not added as connected routes in kernel and DB,Medium
 587,Platform,Copy running-config start-config could be lost interfaces,Medium
+589,basic l3,Static Route: User/reference guide does not mention about the max. configurable static routes and max. configurable routes for same destination.,Medium
 591,vlan,Sorting issue on show vrf output,Medium
 592,Diagnostics,VTYSH core file while execute show tech CLI continuously,Medium
-593,subinterfaces,vtysh crash while creating subinterface,Medium
 594,dhcp server,DHCP: Max number of ranges is not defined.,Medium
-597,configuration persistence,"bug in portd_add_del_vrf code, disables routing permanently on vrf deletion",Medium
+595,AAA,"CIT Issue:  Tests fail with timeout in switvh bringup : self.cmd(SWNS_EXEC + ""/sbin/ip tuntap add dev "" + str(i) + "" mode tap"")",High
 598,ping,Ping with ip-option include-timestamp is showing error,Medium
 599,CLI infra,Not able to login to openswitch with admin/admin credentials.,Medium
 600,LLDP,LLDP neighbor chassis ID not populated for Linux box connecting to switch,Medium
 601,Sub-interfaces,"L3 Subinterface :: Segmentation fault(core dumped portd, vland) while trying to do sh interface <subinterface> brief for connected interfaces",Medium
 602,Sub-interfaces,L3 Subinterface:: Two subinterfaces with the same VLAN ID should be allowed to configure IP in same or different subnets,Medium
-603,Link Aggregation,REST LAG: Can not configure an active LAG using REST APIs,High
 604,ping,The parse_ping_repetitions is  not parsing the output,High
 605,rest,GET  /rest/v1/system/subsystems/base does not return interfaces(references),Medium
 606,rest,Interfaces in Subsystem gets deleted after write from DC,Medium
@@ -328,19 +331,20 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 611,LLDP,Multiple core file created by lldp daemon while adding allowed vlan on trunk interfaces,Medium
 612,basic l3,Loopback interfaces do not show traffic statistics .,Medium
 613,Loopback,Loopback interfaces do not show up in sorted order in show run and show loopback interface CLI's.,Medium
+614,os-infra,Remove the libtool .la file from the build package.,Medium
 615,infra,Website does not produce 404,High
 616,LLDP,Disabling LLDP test case,Medium
 618,basic l3,portd needs to  push port configurations to interface when a kernel interface is detected,Medium
 619,subinterfaces,subinterface: out of order show running-config,Medium
 622,VLANs,Test coverage for vlan not sufficient,High
 623,Link Aggregation,LAG and LACP test cases should be renamed to test_* convention,High
-624,infra,gitweb links broken in Gerrit,Medium
 626,ntp,test_ntpd_ft_auth_noauth_restart.py failing intermittently on CIT Tier1/2,High
 627,basic l3,Shutdown of interface does not remove the connected route in sh ip- route,High
 631,Mgmt Interface,test_mgmt_intf_ft.py fails intermittently in CIT Tier 1,High
-632,infra,My account is not listed if I try to filter by creator,Medium
 633,VLANs,CIT Failure ops.tests.vlan.test_ft_vlan_removed_from_end_of_table.Test_vlan_state_removed_from_end_of_table.test_sendTraffic_after,High
+634,platfor/boot up,"when call yaml_find_device(), no good protection if return null device",Medium
 644,Link Aggregation,"Output for ""show interface brief"" is not showing the LAG mode anymore",High
+646,Link Aggregation,"Repeted column in LACP CLI ""show lacp interfaces"" command",Medium
 648,Link Aggregation,LAG is not using the Port Priority to choose speed,High
 649,Link Aggregation,"lacp_user_guide.md is showing incorrect ouput for ""show lacp interfaces""",Medium
 650,Link Aggregation,Sytem Priority and Port Priority are not changing the decision for LAG negotiation,High
@@ -387,26 +391,24 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 719,BGP,"BGP: Command ""show ip bgp"" is not working properly",High
 720,BGP,Enabling -Wall and -Werror on ops-cli repo,Critical
 721,BGP,Can’t establish BGP peering b/w two Halon with basic configuration. Also in “show running” don’t shows the BGP configuration's commands entered previously,Critical
-722,0,netdev_bcmsdk_link_state_callback() : no good protection,Medium
 723,Link Aggregation,Missing documentation for LAG interfaces on L3 user guide,High
 724,VLANs,All Vlan Interfaces going to default vlan after a specific vlan is deleted,High
 725,Versioning,can't add ops-switchd-opennsl-plugin ops-switchd-container-plugin in same workspace,Medium
+726,L3,IP ECMP disbale does not work,Medium
 727,Platform,front panel led mismatch,Medium
+728,Platform,some front panel leds are always turned on,Medium
 729,Link Aggregation,"Ops-intfd : show interface command is giving a ""% Command incomplete""",Medium
+730,Link Aggregation,LAG names when configuring through CLI should support to lagXX and not only lag XX,Medium
 731,Link Aggregation,Unexpected behavior when LAG is to be removed from the device,Medium
-733,0,i2c access code is duplicated in all daemons that access i2c,Medium
 743,rest,REST: Adjust the limit of limit filter,Medium
 747,Link Aggregation,LACP negotiation is not being completed and LAGs use fallback behavior when it is not configured,High
 748,Loopback,Loopback interfaces script (test_layer3_ft_loopback.py) fails intermittently on OPS branch due to script issue .,Medium
-749,0,sysd not starting properly on fresh boots on as5712 platform,Medium
 750,OVSDB P&S,OVSDB partial update of map columns doesn't support newly-inserted UUID values,Medium
 754,ECMP,The resilient hashing feature of ECMP is not maintaining traffic flows over changes in the next-hops list.,High
 755,ECMP,Load balancing though ECMP with BGP is losing packets.,High
 756,Traceroute,test_ft_traceroute.py was removed from Tier2 due to platform issue,Medium
 757,L2 Physical Interfaces,Interface Statistics do not increase on VSI even after sending traffic,Medium
-760,0,segmentation fault occurred when a l3 route is being deleted,Medium
 761,basic l3,re-assigning native VLAN to interface does not take effect.  Ingress traffic is assigned to original incorrect VLAN.,Medium
-763,bootup,Openswitch build on 5712 & 6712 fails to load,Critical
 764,Link Aggregation,ops-lacpd Feature Test are all failing due to ping failures,High
 766,Link Aggregation,Secondary IP not available on L3 LAGs,Critical
 768,web ui,test test_webui_ft_l2_lag_config is failing intermitten between repos,Medium
@@ -425,7 +427,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 796,rest,[REST] Login handler does not check for missing arguments,Medium
 798,VLANs,Tier2 : Script test_ft_vlan_state_reason_transition.py failing because of script issue,High
 799,Link Aggregation,IP address assigned to the wrong LAG when lag1 and lag10 exists.,Medium
-803,0,Crash in ops-sysd,Medium
+801,Static Routes,sh rib output are not in sorted order and takes long time for a user to figure out the route existence,Medium
 805,Link Aggregation,show interface doesnt show L3 lag IPs,High
 806,sflow,container continually logging sflow error,High
 807,Link Aggregation,L2 LAG with VLAN trunk is not working,High
@@ -441,35 +443,29 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 821,Link Aggregation,"""no shutdown"" on interface context does not enable interface when member of LAG.",Medium
 822,Link Aggregation,"""sh lacp Interface"" reports LACP is ""InSync"" when Partner is no present.",Medium
 823,fand,"ops-fand continually logging ""Direction is 0000000""",High
-824,0,copy running-config startup-config does NOT work after reboot,High
 825,BGP,test_bgp_ft_routemap_atomic_aggregate fails intermittently,High
 826,rest,Physcial interface can be deleted via REST,High
 827,os-infra,Event logging should display python daemon name,Medium
 828,dhcp server,DHCP-Server: Show dhcp-server leases command is taking up to 30 minutes to display 1000 leases.,Medium
-829,0,Memory corruption when ports are attached to a named VRF,Medium
-831,DC,DC: ops.utils.index_to_row() seems always assumes the key is string,Medium
+830,CLI infra,Unable to set vtysh prompt without secondary effects,High
+832,L3\Static Routes,Issue in Quagga Makefile.am,Medium
 833,VLANs,Traffic on L2 interface are dropped on AS5712 and AS6712.,Critical
 834,rest,[REST] Account resource should parse the Password Server's configuration file,Medium
 835,dhcp server,DHCP Server: show dhcp-server leases command is not showing IPV6 leases.,High
 837,BGP,"""sh ip bgp summary"" shows garbage when neighbor is configured with wrong ip address.",Medium
 838,rest,[REST] REST API doesn't support dynamic categories for the columns,Medium
-839,BGP,"Proper help string should be provided for ""bgp config-type"" command.",Medium
 840,switchd,switchd fails to initialize randomly,High
-841,dhcp server,"""show dhcp-server"" displays MAC Addresses in different formats for static bindings",Medium
 842,VRF,Verification of compiler warning in VRF module CLI files,Medium
+843,Physical Interfaces,Packet drops on interfaces,Critical
 844,0,OPS-Supportability: Additional argument validations for Diagnostic Dump APIs,Medium
 845,0,dhcp_leases schema upgrade doesn't reflect on the database,Medium
-848,Broadview,Broadview - all counters are enabled on boot,High
 849,vlan,VLAN interface sorting issue on show running,Medium
-850,password server,reboot process is taking longer than expected,High
 851,BGP,HPEOPS: BGP Routes are taking too much time to being advertised,High
 853,BGP,Verification of compiler warning in bgp module CLI files.,Medium
 854,Platform,show system is not showing correct information for power supply,Medium
 855,Link Aggregation,no ip address A.B.C.D/M in a LAG interface is not showing a error message when the ip is no present,Medium
 857,L2 Physical Interfaces,"""show system"" on AS-6712 shows incorrect ""Number of MACs""",Medium
 858,rest,"Restd isn't returning proper data for CLI command ""show vlog config"" causing core dump",High
-859,0,Null pointer dereference in show_vlog_vty.c:239,High
-860,web ui,webui recipe compilation fails,High
 865,buildsystem,shadow-native build uses build machine's libaudit and libaudit-dev.,Medium
 866,rest,test_rest_ft_interfaces fails repetitively on AS6712,High
 867,rest,Retrieving GET /rest/v1/system/full-configuration through REST results in 500 error,Medium
@@ -481,11 +477,11 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 876,acl,IPv4 ACLs Ingress on Ports,High
 877,Port Daemon,"""interface X"" displays multiple times for different configuration sub-items in ""show running-config"" output",Medium
 878,vlan,Misleading default VLAN running status,Medium
+880,Supportability,Incorrect help String for show vlog,Medium
 882,MSTP,MSTP - Traffic forwarding issues seen when using multiple instances,Medium
 883,MSTP,MSTP - Does not work on LAG,Medium
 884,MSTP,MSTP Unit Testing Defects found.,Medium
 885,MSTP,MSTP Packet counters are not getting updated and daemon crash on adding a lport after spanning-tree is enabled.,High
-886,LLDP,LLDP is not working when system interfacs are part of LAG with trunk allowed VLAN,High
 887,Loopback,Loopback(L3) :: sh interface loopback brief is reflecting unnecessary inputs,Medium
 888,Loopback,Verification of compiler warning in loopback&subinterface  module CLI files.,Medium
 889,rest,REST API: Need /logout to invalidate the authentication token aka cookie,Critical
@@ -502,17 +498,13 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 900,Routing,ECMP forces packets through slow path when adding new nexthop,Critical
 901,Linux,TFTP client is not able to copy large file ( > 32MB  ) to external tftp server,Medium
 903,Loopback,L3(Loopback) :: Stress :: Only 250 loopback interfaces reachable via external host instead of 1024 loopback interfaces,High
-905,BCM mirroring PD code,double commit local mirroring PD code to rel/dill,Medium
+904,test infra,CIT failures for P4 Image,High
 906,Sub-interfaces,CLI Guide of Sub-interface needs update. Refer the details below for gap w.r.t CLI implementation.,Medium
 907,"basic l3, subinterface",Fix subinterface schema to have max 1 vlan:parent-uuid key:value pair,Medium
 908,0,DELETE on default rows should not be allowed,Medium
 909,password server,ops-passwd-srv: address issues found during static analysis,Medium
-910,MAC Learning,Mac learning: mac move is not showing expected changes in OVSDB,Medium
-911,0,All commits to ops-supportability are failing due to an error with show-tech_test.py test,Critical
 912,sflow,Added sflow modularization code to rel/dill,High
 913,password server,Merge the password server component test and doc into dill branch,Medium
-914,CoPP,COPP Feature Tests required on Dill branch,Medium
-915,0,Generating VTEP IDL header error while building,High
 916,vlan,Internal VLAN allocation issue,Medium
 917,VLANs,Internal vlan  range configuration is not captured in the running-configuration. Post copying running-config to startup config and rebooting switch leads to multiple core.,Critical
 918,0,Appctl is not working for ops-snmpd,High
@@ -533,7 +525,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 938,SNMP,SNMP query doesnot work from remote host,High
 939,vlan,Untagged traffic should be allowed when port configured as a trunk port,High
 941,0,MSTP: Sorted show for VLANs and interfaces,Medium
-942,0,VLAN core file created while create LAG and add Interfaces,Medium
 943,0,Inconsistencies feature name across different supportability modules.,Medium
 944,basic l3,test_layer3_ft_verify_sub_intf_l2vlan fails intermitten,Medium
 945,Log Rotation,"No config validation for ""logrotate target"" command. Although CLI shows graceful pass but the changes not reflected in show running-config.",Medium
@@ -546,22 +537,15 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 954,dhcp server,DHCP distributes all leases after some seconds when it is only 1 Vlan configurated,Medium
 956,MSTP,MSTP : Priority and System ID needs to be extracted from Root MAC and display properly,Medium
 957,MAC Tables,ovs-vsctl commands to support l2 mac CT,Medium
-958,0,Invalid/broadcast/multicast address can be configured as logging server ip,Medium
-959,Supportability,Syslog feature not sending syslog messages to logging server configured with ipv6 address,Medium
 962,0,Observed that domain name learned via DHCP server not removed after IP address manually added in the mgmt interface,Medium
-964,MSTP,MSTP: diag-dump support not there,Medium
-965,MSTP,MSTP Config - revision is in correct in Packet,Medium
 966,switchd,test_switchd_container_ct_intervlan.py fails in CIT,Medium
 967,Link Aggregation,LAG Bond Status new functionality,High
-968,0,Interface related setting should not be allowed on split parent when interface on split condition,Medium
 969,mirror,Port mirror activation causes switchd crash,High
 970,0,DHCP/TFTP Supportability: Theres no information related to dhcp/tftp in show tech command,Medium
 971,SNMP,RFC 1213 MIB SNMP statistics not working,Medium
 972,Supportability,Inconsistency vlog messages for daemon,Medium
 973,Sub-interfaces,Subinterfaces (L3) :: Validation of Ipv4 address is errorneous,High
-974,ops-stpd,MSTP ops-stpd compilation error on release build,Medium
 975,MSTP,MSTP ft library and parser missing,Medium
-976,LLDP,diag-dump command (for file option) doesn't erroring out if the disk is full,Medium
 977,basic l3,"The help string for ipv6 sub-command under no, shows ""Error: Help strings does not match for the identical tokens""",Medium
 979,MSTP,"MSTP: mst instance data not correctly encoded in BPDU, results in malformed packet",Medium
 981,0,memory leak in QoS profile command,Medium
@@ -569,7 +553,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 983,Mirroring,1 byte buffer overrun in container-plugin mirror_set,High
 984,CoPP,Memory leak in COPP container plugin,High
 985,0,show tech does not include 'show interface queues',Medium
-986,dhcp server,DHCP Server: dhcp_lease.db file is not clean after a switch reboot,Medium
 988,LACP,Port pecking order needs to work to reflect forwarding states in port and interface table,Medium
 989,MSTP,"MSTP: ""no instance"" command need to add VLANS to CIST, Priority value consistent in show commands",Medium
 990,0,"Validation missing in the ""show interface"" command.",Medium
@@ -587,20 +570,15 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1007,L2,crash in ops-switch-opennsl-plugin,High
 1008,basic l3,"Commit Supportability changes for L3 features (Basic, Loopback, SubIntf, LAG, ECMP, OSPF, Zebra) to rel/dill",Medium
 1009,0,test_lldp_ft_statistics.py fails randomly in CIT,Medium
-1010,Physical Interfaces,Documentation update to phy_interface_test.md,Medium
 1011,vlan,test_ft_vlan_removed_from_end_of_table fails intermitten,High
 1012,Configuration Plane,Enable custom validator in DC,Medium
 1013,VLANs,Default vlan 1 assigned to interface VLAN in a specific removal case,Medium
 1014,SNMP Infra,Test script migration to modular framework,Medium
-1015,0,Appropriate VLOGs missing in ops-snmpd,Medium
 1016,basic l3,L3 Routing: ops-zebra crashes due to NULL pointer dereference,Medium
 1017,MSTP,MSTP: show running-config order need to change,Medium
-1018,Mirroring,Mirror feature test needs to be pulled to Dill branch,Medium
 1019,rest,REST Notifications for System table does not notify of updates,Medium
 1021,CoPP,"show copp statistics missing for STP, IPv4 options and IPv6 options packets in vtysh",Medium
-1022,SNMP,SNMP configs missing in show tech,Medium
 1023,dhcp server,DHCP-TFTP: Do not crash if there is nothing to kill anymore,Medium
-1024,0,missing CT test case document in ops-snmpd,Medium
 1026,MSTP,MSTP: Per interface mac address support for multi instance,Medium
 1027,MSTP,MSTP: on MSTI convergence is not happening as region is different.,Medium
 1028,Sub-interfaces,L3 (Subinterface) ::: Subinterface  status shows null in show interface <physical interface> subinterface brief command,Medium
@@ -617,15 +595,14 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1041,Physical Interfaces,system should not pass data frame size to 1528bytes,Medium
 1042,sflow,sFlow CLI sampling min-max limitation,Medium
 1043,0,sFlow - if_Status in CNTR packets is not changing,Medium
-1044,password server,CIT integration for the password server,High
 1045,webui,Web UI Issues with MS IE/Edge,Medium
 1046,webui,Move Web UI code coverage from build file to check/gate jobs,Medium
 1049,vlan,ops-vland coredump when applying config via REST,High
+1050,rest,"REST - Login, Account do not work in swagger UI",High
 1051,0,"L3(Subinterface) :Reconfigure a few subinterfaces ,delete them and configure a new tag , router in the stick topology does not work in that case .",High
 1052,Intervlan Routing,ops.tests.layer3.test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan Failing intermitten,Medium
 1054,0,Netlink messages needs a retry mechanism to ensure messages getting processed,Critical
 1055,0,Traceroute6: timeout value '1' throws an error in traceroute6,Medium
-1056,0,Proper error message should be displayed when Traceroute with the greater minttl  than the maxttl.,Medium
 1057, basic l3,Routing not allowed to enable on split parent interface,High
 1058,ARP,Switch slowness and high CPU utilization when arp manager handling around 10K ARP,Medium
 1059,MSTP,MSTP: Show commands data updated.,Medium
@@ -640,11 +617,9 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1068,BGP,BGP multiple unique  networks fail to be assign as best,High
 1070,0,Toggling a deny ACE in an ACL results in permit after bringing down and up the deny rule,High
 1071,BGP,BGP networks are not being transmitted,High
-1073,Link Aggregation,Commit Diag-dump for LAG to rel/dill,Medium
 1074,0,copy sftp allows a user to copy a file to any path in the rootfs,High
 1075,0,lldp show tech formatting issues - LLDP vtysh show commands using \n instead of VTY_NEWLINE,Medium
 1076,acl,Configuration is lost when copy run start is issued.,High
-1080,VLANs,internal vlans should be persistent upon reboot,Critical
 1082,NTP Client,Limit remote and ref-id to 15 and name to 39 char in show ntp associations,Medium
 1083,NTP Client,Update NTP user guide for NTPv6 support,Medium
 1085,0,ovsdb-idl.c:379: assertion !idl->txn failed in ovsdb_idl_run() Aborted (core dumped),High
@@ -653,14 +628,13 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1088,0,[lldpcli] process is listed as defunct in ps -aux,High
 1089,0,"MSTP : Crash observed while assigning VLANS to MST's from IST, resulting in wrong VLAN to instance mapping and invalid/corrupted spanning-tree digest creation",High
 1090,VRF,IP address and MTU was not getting updated when interface is moved,Medium
-1091,basic l3,OPS Does not send ICMP Unreachables,Medium
-1092,configuration,Same interface context shown twice in show running config,Medium
-1093,basic l3,Shut down interfaces are not removed from Routing Table,Medium
+1094,basic l3,two physical interfaces taking same ip address,High
 1095,Link Aggregation,interface lag<id> command discrepancy,Medium
 1096,0,Code corrections to pass Fortify Static Analysis,Medium
 1097,webui,"Auto-refresh on the Interface Page takes it to top, impacting end user experience.",Medium
 1098,0,Quick Start Guide (http://www.openswitch.net/documents/dev/quick-start-physical) has a number of issues,Medium
 1099,0,Merge notifications feature to rel/dill,High
+1100,webui,Fortify fixes for Web UI,Medium
 1101,Physical Interfaces,show tech has missing interface commands,Medium
 1103,"l3, supportability",Diag-dump support for portd.,Medium
 1104,MSTP,"MSTP: Unable to do ""routing"" on interface which is part of Spanning tree  entry",Medium
@@ -669,16 +643,20 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1107,MSTP,POST of large configuration via /rest/v1/system/full-configuration causes ops-stpd to crash,High
 1108,BGP,VTYSH: AttributeError: 'unicode' object has no attribute '__getattr__' when attempting to,High
 1109,Sub-interfaces,Skipping the test_layer3_ft_sub_intf_l3test.py test because of repeated failures,High
+1110,0,Basic L3: Add interface address change test cases to ops-zebra restart-ability test script,Medium
 1111,BGP,BGP adds Route_Map entries without 'name',Critical
 1112,OVSDB P&S,[OVSDB P&S] Memory leak on ovsdb_idl_txn_write_partial_map() and ovsdb_idl_txn_delete_partial_map(),High
 1113,rest,[REST] Dynamic Categories is not validating when follows column is not present,Medium
 1114,0,NTP: No validation error for NTP Server configuration through hostname.,Medium
 1115,0,Conversion of an ACL applied Layer 3 port to Layer 2 port causes the applied ACL to get deleted from the port and also unable to add any more ACEs or apply existing ACL to any other ports,High
 1116,configuration persistence,Configuration Persistence: copy running-config to startup incorrectly persists dynamic VLANs to configuration,Critical
-1117,0,ops-sysd to look for fru information if fru.yaml is not in the manifest,Medium
 1118,rest,Notifications - Add second IDL for monitoring DB changes,Medium
 1119,CLI infra,Enabling  '-Wall -Werror' flag for ops-cli repo,High
+1121,ARP,Need to include summary ARP count on “show arp” output CLI,Medium
+1122,ARP,Device is not learning more than 8K ARP,Medium
 1123,ARP,System daemon restarted while system is handling around 7000 ARP,Medium
+1124,ARP,"show interfaces returns unexpected data, when IPV6 and static route is configured",Medium
+1125,ARP,ARP manager/feature documentation update is needed and also proxyARP CLI config enhancement required from the SW,Medium
 1126,ARP,"""ICMPv6: ndisc: ndisc_alloc_skb failed to allocate an skb, err=-11"" error dislayed on console constantly with lost connectivity",Medium
 1127,0,Pinging to a broadcast address throws an error,Medium
 1128,L3-subinterfac,L3(Subinterface) :: Removing non-existing encapsulation tag removes the existing tag from subinterface,Medium
@@ -701,12 +679,12 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1147,0,Custom validator for DHCP server mandatory commands,Medium
 1148,rest,[REST] Sort by other types different to string broken,Medium
 1149,OVS Infra,[OVSDB P&S] Empty maps and partial map,Medium
-1150,0,Zebra stops processing Route (and other OVSDB tables),Medium
 1151,LLDP,Lldp test case fails because don't consider to use split interface,Medium
 1152,L3,layer 3 test case fails because don't consider to use split interfaces,Medium
 1153,0,Add knet info in diags,Medium
 1154,Mirroring,Mirroring: fix mirror cli token string mismatch,Medium
 1155,0,WebInspect Reports Cookie Security: Cookie Not Sent Over SSL on 1 or more pages,High
+1157,0,Ansible ops_main.yml take so long to run on physical devices,High
 1158,0,DHCP Server: dhcp_lease.db file is not clean after a switch reboot,Medium
 1159,BGP,BGP tests are failing intermittently in Tier 1,Medium
 1160,acl,ACL entries do not persist across reboot,High
@@ -722,6 +700,8 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1173,0,QoS information is not displayed in LAG interfaces statistics,High
 1174,L3,test_layer3_ft_fastpath_connected fails in hardware,Medium
 1175,VLANs,VLAN columns type change to UUID,Medium
+1176,VLANs,Fortify critical Defect : Buffer Overflow: Off-by-One,Critical
+1177,0,"Fortify High Defect : Buffer overflow, Null derefecrence and Memory Leak",High
 1178, basic l3,ops-portd crash on split interface,High
 1179,CLI infra,"Fix for broken help strings for ""ip.. "" CLI",Medium
 1180,0,[Moduler Framework test case]test_portd_ct_functionality - tc6 - Missing IPv6 addresses after 'no shutdown',High
@@ -732,7 +712,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1186,"rest, webui",Set SRCREV as AUTOREV for ops-restd/ops-webui repos for rel/dill branch,Medium
 1187,basic l3,Change the VRF reference in Route and Neighbor table to strong,Medium
 1188,dhcp server,DHCPSrv_Range: POST operation returns 404 response code,Medium
-1192,0,FEC on/off is not user configurable,High
 1193,CLI-infra,CLI-Infra changes for non IDL related command.,Medium
 1194,0,ops-lldpd crash on split interface,Medium
 1195,MAC Tables,MACs are not learnt on LAG interfaces,Medium
@@ -758,7 +737,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1218,Mirroring,Mirroring: port mirroring not working in tx direction with new bcm cdp 3.1.0.12,High
 1219,Link Aggregation,Double declaration of check_acl_configuration in ops-lacpd,Critical
 1220,CoPP,unknown unicast packets are pushed to CPU via default queue for unclassified packets instead of unknown unicast CPU queue.,Medium
-1221,0,OPS appliance does not load successfully,Critical
 1222,LLDP,Startup configuration erased after reload switch when startup configuration has VLAN related configuration,High
 1223,NTP Client,Add component test with new modular framework to ops-ntpd in rel/dill,Medium
 1224,ntp_client,Auto restart for ntpd and restd,Medium
@@ -784,7 +762,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1245,L3 Interfaces,Crash in ops-switchd neighbor_create(),High
 1246,0,ops-classifierd test_mirror.py has topology definition issue,Medium
 1247,0,Management interface eth0 port does NOT show link UP,Medium
-1248,0,MAC learning not working for lag interface,Medium
 1249,0,"Inconsistent heading and content for the command ""show interface brief""",Medium
 1250,SNMP Infra,SNMP Infra CT issues,Medium
 1251,Modular Framework,Interfaces mac_addr on different switches of the same test are equal,High
@@ -798,16 +775,15 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1259,basic l3,Basic L3: ops-zebra doesn't batch route updates to OVSDB,Medium
 1260,Platform,i2c access issue for as7712 & adding diags partition size,Medium
 1261,dhcp-server,Cleanup not happening properly for dhcp-server FT script,Medium
-1262,0,Can't build midori with bitbake,Medium
 1263,MAC Tables,Feature test mac learning,Medium
 1264,BCM OpenNSL,Test case test_switchd_opennsl_ct_shutdown_intf fails to run in hardware,Medium
-1265,Broadview,Broadview openapps errors,High
 1266,rest,Python taking up over 50% of CPU cycles on idle switch,Critical
 1267,ECMP,Need to re use the ecmp objects based on the nexthops configured while creating or updating an ecmp route,Medium
 1268,Platform,Change bootup FT script to use host machines for ping test,Medium
 1269,web ui,Add logout functionality to Web UI,Medium
 1270,VLANs,Interface VLAN created for non-existent VLAN,Critical
 1271,LLDP,LLDP related setting should not be allowed on split parent when interface on split condition,Medium
+1272,vlan,'vlan trunk native 1' is showing as part of show running-config command output when configuring 'vlan trunk native tag' in port.,Medium
 1273,Autoprovisioning,"CIT blocker: test_ct_autoprovisionutils.py is not running, this test is being skipped",Medium
 1275,Link Aggregation,Portd crash after create a lag,High
 1276,acl,clear access-list hitcounts does not clear the hit counts,High
@@ -828,16 +804,17 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1291,Mirroring,Mirroring: 'do show mirror session x' from within mirror session prints double err,Medium
 1292,BCM OpenNSL,Fix to make all split ports work on as7712,Medium
 1293,boot,Test case test_ft_bootup.py  fails to run because hardcode interfaces,Medium
+1294,rest,REST - OVSDB Connection Test Cases Gap,Medium
 1295,Platform,Switchd/ Cur_hw intermitteny failures,Medium
 1296,Physical Interfaces,Interface CLI doc is not aligned with current implementation on set/unset of interface description.,Medium
-1297,0,"ICMPv6: ndisc: ndisc_alloc_skb failed to allocate an skb, err=-11"" error dislayed on console constantly with lost connectivity",High
 1298,MSTP,Event logging is not adequate for MSTP,Medium
 1299,BCM OpenNSL,Palamida Scan 2: openssl 1.0.2a vulnerabilities,High
-1303,0,spantree still sees root when no link to root exists,Medium
+1300,rest,REST login feature test needs to be updated for new URIs,High
+1301,rest,REST logout does not invalidate the session on the server side,High
+1302,rest,SSL cert should be generated during system bootup,Medium
 1304,Supportability,Zebra diagnostics,Medium
 1305,CoPP,Control plane policing documents not in release branch,High
-1306,Platform,memory leak in i2c code in ops-hw-config,Medium
-1308,L3,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd,Medium
+1306,Platform,Fix static analysis issues in platform modules,Medium
 1309,L3,Fix static analysis warnings,Medium
 1310,L3,Remove IPsec Schema,Medium
 1312,rest,REST GET with depth=1 not returning data,Critical
@@ -850,6 +827,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1319,vlan,Ansible: show commands do not match after an invalid configuration,High
 1320,Mirroring,Mirroring: switchd crash when dest is a lag,High
 1321,0,HPEOPS Transceiver IOP: Dropped Frame percent around 70% with the DAC JH235A,Medium
+1322,rest,test_ops-restd_ft_account.py fails intermittently in CIT,High
 1323,BGP,"""Clear bgp * soft in/out"" command resets the neighbor sessions but the BGP, RIB and the routing tables do not get updated",Medium
 1324,BGP,"After several iteractions, switch isnt getting network allowed in route map entry",Medium
 1325,BGP,Toggling of L3 ports results in network unreachable for routes that should have converged to a different router with eBGP,High
@@ -865,29 +843,10 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1335,Traceroute,ops-ipapps: Static analysis fixes for TRACEROUTE,Medium
 1337,,Docker:  show int brief Segmentation fault (core dumped),Medium
 1338,MSTP,MSTP: DESCRIPTION: HOP count shows 0 or 20 instead of showing the actual remaining hops to reach the downlink bridges,Medium
-1339,LLDP,lldp interface does not show neighbor info,Medium
-1340,0,Directly connected VLAN interface unreachable on native appliance,Medium
-1342,VLANs,Internal VLANs not assigned when creating interface on appliance,Medium
-1343,LACP,"lacp does not transmit lacpdu's, does not record partner info",High
-1344,ping,Unable to ping mgmt interface or devices connected to the mgmt interface.,Medium
-1345,0,Radius: shared secret in plain text (not obfuscated) within config,Medium
-1346,0,Request separators between feature sets within config,Medium
-1348,Link Aggregation,Operations on lag interface can lead to core dump,Medium
-1349,0,Radius: authentication fails if user isn't locally defined.,High
-1350,0,spantree transmits multicast out alternate/blocked port,High
-1351,0,spantree stops processing pdus after lag int is created/removed,High
-1354,0,spantree only processes on eth1/first interface,High
-1355,0,"no mac's exist in native appliance, traffic not switched between f/p ports",High
-1357,SNMP Infra,SNMPv3: user creation limit of 10,Medium
 1358,rest,"Rest - API ops-restapi,json file is not updated well Problems with ACCOUNT endpoint",Medium
-1359,0,Switchd fails after several reboots,High
 1360,rest,REST using GET depth=1 has major performance issues,Critical
 1361,Log Rotation,Logrotate target functionality is broken.,High
 1362,MAC Tables,Need CLI to check number of MAC entries in the switch,Medium
-1363,0,ops-intfd CLI crash,Medium
-1364,0,native appliance system not ready upon perform any actions,High
-1365,0,Incorrect openswitch docs regarding adding users,Medium
-1366,0,i2c access for AS7512,Medium
 1367,VLANs,Remove unsupported VLAN ACL CLI commands from dill release,Medium
 1368,Port Daemon,ops-portd in container build taking 100% cpu,Medium
 1369,Platform,Skipping powerd CT test as it needs refactoring,Medium
@@ -900,23 +859,15 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1377,Mirroring,Mirroring: disallow source or destination interface of any type other than 'system',Medium
 1378,sflow,sflow: ipv6 support,Medium
 1380,CLI-infra,Zuul build is failing at 'ops-cli.test_passwd_srv_ft_update_passwd.test_change_user_password',High
-1381,0,"Kernel panic - not syncing: VFS: Unable to mount root	fs on unknown-block(0, 0)",Medium
 1382,Logging,Need VLOG messages for autoprovision script.,Medium
-1383,Broadview,BroadView documentation update,Medium
 1384,Mgmt Interface,Mgmt-intf cli document changes for Toronto release.,High
-1385,0,Ansible: Update document/tutorial with port template,Medium
-1386,0,segfault upon 'show debugging ospfv2',Medium
 1387,ntp_client,Custom validator for NTP server IP validation,Medium
-1388,0,segfault upon access created alias,Medium
+1388,CLI infra,segfault upon access created alias,Medium
 1389,Interfaces,Output from show interface not match with database info,Medium
-1390,acl,Unable to create ACL The maximum allowed number of ACLs has been reached,High
-1392,0,native appliance does not generate core files,Medium
-1393,BGP,BGP redistribute connected from bgp context is not getting added to running configuration,High
 1394,ntp-client,Add NTP FT for OSTL with new modular framework,Medium
 1395,Physical Interfaces,Adding support for ER & MRL modules in ops-pmd/ops-intfd,Medium
-1399,0,Refresh ARP (Neighbor) entries which are Next Hops for Routes,Medium
+1397,rest,Update logs REST API documentation,Medium
 1400,BGP,Not all networks defined on BGP config are listed on show ip bgp output,High
-1401,vlan,Removal of multiple vlans on a trunk port by a single cli,Medium
 1402,VLANs,implementing diagnostic dump for vlan,High
 1403,VRF,IPV6 Forwarding was not enabled per VRF namespace,Medium
 1404,Mirroring,Failed mirror creation is re-attempted continuously by switchd,High
@@ -926,10 +877,16 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1408,0,Remove 'ip ecmp disable' CLI as ECMP enable/disable feature is not currently supported,High
 1409,0,Feature testcase failure for the password server,Medium
 1410,acl,show access-list output not consistent for all options,Medium
-1412,0,Adding MSTP Design Document MD,Medium
-1413,0,Update diag-dump doc,High
+1411,BGP,"BGP ""neighbor x.x.x.x shutdown"" command tears down the BGP session but is not shown in the running-config and startup-config",Medium
 1414,0,ovsdb should not be restartable in rel/dill the unit file should be changed to reboot the switch when ovsdb crashes,Critical
 1415,0,Switchd systemd unit file needs to be updated to reboot the switch not restart switchd -  Switchd in rel/dill on broadcom platforms is not hitless,Critical
+1416,0,logging with permit action is unsupported,High
+1417,sflow,Removing CLI restrictions in sFlow,Medium
+1418,sflow,Sampled sFlow packets are not copied to CPU,High
+1421,ops-intfd,Fortify issues in ops-intfd,Medium
+1423,0,MSTP: fortify high and critical issues,Medium
+1427,0,Event Logs for vlan not availlable,Medium
+1429,Autoprovisioning,Autoprovisioning User Guide has no details on the sample provisioning script.,Medium
 1383,Broadview,Broadview Documentation,Medium
 1308,L3\L3 Interfaces,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd,Medium
 1093,L3\L3 Interfaces,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd,Medium
@@ -937,4 +894,3 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 900,L3\ECMP,Load balancing though ECMP with IPv6 is not working,High
 1236,AS7512,Propagate latest xpliant changes to rel/dill,
 1366,AS7512,Update access to CPLDs registers,Medium
-1410,ACL,show access-list output not consistent for all options,Medium
