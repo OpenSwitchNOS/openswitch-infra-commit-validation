@@ -347,7 +347,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 669,OVS Infra,OVSDB error logging,High
 671,BGP,"ops.tests.bgp.test_bgp_ft_ipv6_prefixlist.Test_bgpd_ipv6.test_bgp_full failed to Config ""bgp router-id 9.0.0.2"" was not correctly configured!",High
 673,BGP,ops.tests.bgp.test_bgp_ft_routemap_ipv6_next_hop.Test_bgp_redistribute_configuration.test_configure Failing with Timeout > 300,High
-674,VRF,enhance zebra CT script to handle VRF show routes,Medium
 675,Platform,SFP+ module on some port is not recognized,Medium
 676,configuration persistence,"""copy running-config startup-config"" not working",Medium
 678,Infrastructure Build System,Openswitch: Unsupported and outdated CMake version,Medium
@@ -397,7 +396,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 757,L2 Physical Interfaces,Interface Statistics do not increase on VSI even after sending traffic,Medium
 761,basic l3,re-assigning native VLAN to interface does not take effect.  Ingress traffic is assigned to original incorrect VLAN.,Medium
 764,Link Aggregation,ops-lacpd Feature Test are all failing due to ping failures,High
-765,Link Aggregation,LAG FT located in OPS need to be converted to Modular Framework to decrease the time to run,High
 766,Link Aggregation,Secondary IP not available on L3 LAGs,Critical
 768,web ui,test test_webui_ft_l2_lag_config is failing intermitten between repos,Medium
 770,rest,"REST: Swagger UI does not display ""Package_Info"" Table",Medium
@@ -440,7 +438,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 833,VLANs,Traffic on L2 interface are dropped on AS5712 and AS6712.,Critical
 834,rest,[REST] Account resource should parse the Password Server's configuration file,Medium
 835,dhcp server,DHCP Server: show dhcp-server leases command is not showing IPV6 leases.,High
-836,Port Daemon,tests/test_portd_ct_proxy_arp.py and tests/test_portd_ft_proxy_arp.py failing in CIT.,Medium
 837,BGP,"""sh ip bgp summary"" shows garbage when neighbor is configured with wrong ip address.",Medium
 838,rest,[REST] REST API doesn't support dynamic categories for the columns,Medium
 840,switchd,switchd fails to initialize randomly,High
@@ -463,7 +460,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 872,vlan,"Interface vlan should not accept special IP addresses (loopback ,subnet broadcast and all broadcast addresses)",Medium
 874,ECMP,ECMP Feature Tests and Test plan,High
 876,acl,IPv4 ACLs Ingress on Ports,High
-877,Port Daemon,"""interface X"" displays multiple times for different configuration sub-items in ""show running-config"" output",Medium
 878,vlan,Misleading default VLAN running status,Medium
 882,MSTP,MSTP - Traffic forwarding issues seen when using multiple instances,Medium
 883,MSTP,MSTP - Does not work on LAG,Medium
@@ -694,7 +690,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1186,"rest, webui",Set SRCREV as AUTOREV for ops-restd/ops-webui repos for rel/dill branch,Medium
 1187,basic l3,Change the VRF reference in Route and Neighbor table to strong,Medium
 1188,dhcp server,DHCPSrv_Range: POST operation returns 404 response code,Medium
-1191,VRF,Sort issue for VRF display command for Physical interfaces.,Medium
 1193,CLI-infra,CLI-Infra changes for non IDL related command.,Medium
 1194,0,ops-lldpd crash on split interface,Medium
 1195,MAC Tables,MACs are not learnt on LAG interfaces,Medium
@@ -772,12 +767,12 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1277,acl,ACL logging does not work with split interfaces,High
 1278,L3,Add appropriate asserts since the test was passing even when pings fail,Medium
 1279,dhcp server,Custom validator for DHCP server optional commands,Medium
-1280,0,"Need to update ""show version"" information in CLI guide",Medium
+1280,Versioning,"Need to update ""show version"" information in CLI guide",Medium
 1281,Mirroring,"Mirroring: on dest iface removal, shutdown reported when inactive/no dest",Medium
 1282,vlan,SW throwing errors for CLI VLAN configurations,High
 1283,L3 Interfaces,Switchd crash after execute diag-dump CLIs while device handling around 6K ARP,Critical
 1284,LLDP,skip test_lldp_ft_wait_hold script to fix gate job failures,Medium
-1285,0,show running-config interface or  show running-config interface <sub-interface id> does not display the configuration details for sub-interface.,Medium
+1285,Sub-interfaces,show running-config interface or  show running-config interface <sub-interface id> does not display the configuration details for sub-interface.,Medium
 1286,VLANs,"show tech for ztp, aaa and vlan.",Medium
 1287,VLANs,Siwtchd crash while create LAG and BGP network configuration,Critical
 1288,authentication,ops.tests.aaa.test_aaa_ft_authentication fails intermittently.,High
@@ -808,7 +803,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1318,Infrastructure,open-brace character { is rendered as {'{'} in Markdown code blocks on website,Medium
 1319,vlan,Ansible: show commands do not match after an invalid configuration,High
 1320,Mirroring,Mirroring: switchd crash when dest is a lag,High
-1321,0,HPEOPS Transceiver IOP: Dropped Frame percent around 70% with the DAC JH235A,Medium
+1321,Physical Interfaces,HPEOPS Transceiver IOP: Dropped Frame percent around 70% with the DAC JH235A,Medium
 1322,rest,test_ops-restd_ft_account.py fails intermittently in CIT,High
 1323,BGP,"""Clear bgp * soft in/out"" command resets the neighbor sessions but the BGP, RIB and the routing tables do not get updated",Medium
 1324,BGP,"After several iteractions, switch isnt getting network allowed in route map entry",Medium
@@ -855,27 +850,25 @@ Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
 1404,Mirroring,Failed mirror creation is re-attempted continuously by switchd,High
 1405,Configuration Plane,Implement weak_gc reference type in ovsdb,Medium
 1406,ntp-client,Static analysis fixes for NTP,Medium
-1407,0,Static analysis issues in sysd_fru.c,Medium
-1408,0,Remove 'ip ecmp disable' CLI as ECMP enable/disable feature is not currently supported,High
-1409,0,Feature testcase failure for the password server,Medium
+1407,Platform,Static analysis issues in sysd_fru.c,Medium
+1408,ECMP,Remove 'ip ecmp disable' CLI as ECMP enable/disable feature is not currently supported,High
+1409,Security,Feature testcase failure for the password server,Medium
 1410,acl,show access-list output not consistent for all options,Medium
 1411,BGP,"BGP ""neighbor x.x.x.x shutdown"" command tears down the BGP session but is not shown in the running-config and startup-config",Medium
-1414,0,ovsdb should not be restartable in rel/dill the unit file should be changed to reboot the switch when ovsdb crashes,Critical
-1415,0,Switchd systemd unit file needs to be updated to reboot the switch not restart switchd -  Switchd in rel/dill on broadcom platforms is not hitless,Critical
-1416,0,logging with permit action is unsupported,High
+1414,OVS Infra,ovsdb should not be restartable in rel/dill the unit file should be changed to reboot the switch when ovsdb crashes,Critical
+1415,switchd,Switchd systemd unit file needs to be updated to reboot the switch not restart switchd -  Switchd in rel/dill on broadcom platforms is not hitless,Critical
+1416,acl,logging with permit action is unsupported,High
 1417,sflow,Removing CLI restrictions in sFlow,Medium
 1418,sflow,Sampled sFlow packets are not copied to CPU,High
+1420,0,Change Memory Overcommit setting in Openswitch,High
 1421,ops-intfd,Fortify issues in ops-intfd,Medium
-1423,0,MSTP: fortify high and critical issues,Medium
+1423,MSTP,MSTP: fortify high and critical issues,Medium
 1424,0,Weird state of port roles and state for OPS devices whose digest got mismatch - state machine issue,High
-1427,0,Event Logs for vlan not availlable,Medium
+1425,0,fortify issue / errors changes for ops-supportability,High
+1427,VLANs,Event Logs for vlan not availlable,Medium
 1429,Autoprovisioning,Autoprovisioning User Guide has no details on the sample provisioning script.,Medium
-1430,0,Add 7712 box graphic to Web UI,Medium
-1432,0,mirroring does not work when source is a lag,Medium
-1383,Broadview,Broadview Documentation,Medium
-1308,L3\L3 Interfaces,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd,Medium
-1093,L3\L3 Interfaces,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd,Medium
-875,L3\ECMP,Load balancing though ECMP with IPv6 is not working,High
-900,L3\ECMP,Load balancing though ECMP with IPv6 is not working,High
-1236,AS7512,Propagate latest xpliant changes to rel/dill,
-1366,AS7512,Update access to CPLDs registers,Medium
+1430,web ui,Add 7712 box graphic to Web UI,Medium
+1432,Mirroring,mirroring does not work when source is a lag,Medium
+1434,0,Address High fortify issues in [arpmgrd],Medium
+1435,0,Additonal Help string being displayed for show spanning-tree command,High
+1436,0,Name server and domain name info not updated after release/renew DHCP,Medium
