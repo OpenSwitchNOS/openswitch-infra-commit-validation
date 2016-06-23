@@ -14,14 +14,12 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1004,Mirroring,Mirroring: missed destroy of cloned smaps
 1052,Intervlan Routing,ops.tests.layer3.test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan Failing intermitten
 1061,rest,REST POST of full-configuration accepts config from different platform
-1093,basic l3,Shut down interfaces are not removed from Routing Table
 1101,Physical Interfaces,show tech has missing interface commands
 1118,rest,Notifications - Add second IDL for monitoring DB changes
 1123,ARP,System daemon restarted while system is handling around 7000 ARP
 1135,Mirroring,Mirroring: fix unhelpful PD failure status messages
 1136,Sub-interfaces,Traffic switching to L2 VLANs from subinterface.
 1154,Mirroring,Mirroring: fix mirror cli token string mismatch
-1156,0,Mirroring: remove unnecessary calloc fail logging/cleanup free call
 1175,VLANs,VLAN columns type change to UUID
 1183,Link Aggregation,LAG test cases are failing in CIT Tier 1
 1188,dhcp server,DHCPSrv_Range: POST operation returns 404 response code
@@ -37,7 +35,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1287,VLANs,Siwtchd crash while create LAG and BGP network configuration
 1293,boot,Test case test_ft_bootup.py  fails to run because hardcode interfaces
 1304,Supportability,Zebra diagnostics
-1308,L3,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd
 1315,MAC Tables,MAC table flush/age out not happening properly in DB level
 1325,BGP,Toggling of L3 ports results in network unreachable for routes that should have converged to a different router with eBGP
 1331,BGP,"Segmentation fault (core dumped) after issuing ""show ip bgp"" command"
@@ -45,10 +42,8 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1335,Traceroute,ops-ipapps: Static analysis fixes for TRACEROUTE
 1337,,Docker:  show int brief Segmentation fault (core dumped)
 1338,MSTP,MSTP: DESCRIPTION: HOP count shows 0 or 20 instead of showing the actual remaining hops to reach the downlink bridges
-1339,LLDP,lldp interface does not show neighbor info
 1348,Link Aggregation,Operations on lag interface can lead to core dump
 1360,rest,REST using GET depth=1 has major performance issues
-1363,0,ops-intfd CLI crash
 1368,Port Daemon,ops-portd in container build taking 100% cpu
 1370,SNMP Infra,OPS: ops-snmpd coredump generated while a snmpwalk script ran for the weekend
 1377,Mirroring,Mirroring: disallow source or destination interface of any type other than 'system'
@@ -76,11 +71,9 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1461,0,buffer overflow in pmd code
 1462,ops-portd,"Portd has to check the value for ""admin"" key in ""user_config"" column instead of ""admin_state"" column"
 1464,0,"L3 Subinterface (Stress) : Unable to ping all the 1024 Ipv6 subinterfaces , cpu says 100% for some process"
-1466,AAA,Zero out sensitive parameters after processing in AAA daemon
 1471,AAA,AAA document needs to be modify due to the changes of  RBAC.
 1473,vlan,REST POST commands shows successful even if the VLAN name change does not make effective.
 1479,rest,Custom Validator/DC: Able to create multiple BGP router on switch
 1480,sflow,Add a custom validator to prevent sFlow configuration on non-system interfaces
 1481,ping,test_ft_ping.py fails intermittently.
 1487,0,There is no error message when logrotate target is configured with a folder (logrotate target tftp://A.B.C.D/folder)
-1432,mirroring,
