@@ -78,3 +78,4 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1481,ping,test_ft_ping.py fails intermittently.
 1487,0,There is no error message when logrotate target is configured with a folder (logrotate target tftp://A.B.C.D/folder)
 1443,,
+1490,,
