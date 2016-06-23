@@ -1,55 +1,85 @@
-Taiga ID   ,Taiga Feature,Taiga Summary,Taiga Severity
-218,Link Aggregation,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration.",High
-330,vlan,VLAN user guide document issue,Medium
-516,basic l3,Unable  to configure IPv6 Link-Local and Global Unicast addresses,High
-558,basic l3,Point-to-Point IP address configuration makes remote unreachable,Medium
-820,Link Aggregation,LAG: show ip interface lag shows no information,Medium
-897,BGP,BGP is not advertising a route through multiple sub-interfaces,High
-901,Linux,TFTP client is not able to copy large file ( > 32MB  ) to external tftp server,Medium
-1001,switchd,Memory leak in plugins infrastructure,Medium
-1061,rest,REST POST of full-configuration accepts config from different platform,High
-1123,ARP,System daemon restarted while system is handling around 7000 ARP,Medium
-1136,Sub-interfaces,Traffic switching to L2 VLANs from subinterface.,Medium
-1175,VLANs,VLAN columns type change to UUID,Medium
-1183,Link Aggregation,LAG test cases are failing in CIT Tier 1,High
-1188,dhcp server,DHCPSrv_Range: POST operation returns 404 response code,Medium
-1195,MAC Tables,MACs are not learnt on LAG interfaces,Medium
-1201,Link Aggregation,Not possible to remove a secondary IPv4,High
-1214,MAC Tables,Flush MAC required for MSTP,Medium
-1233,Physical Interfaces,MAC address learning list mismatch between ASIC and DB/CLI,High
-1263,MAC Tables,Feature test mac learning,Medium
-1267,ECMP,Need to re use the ecmp objects based on the nexthops configured while creating or updating an ecmp route,Medium
-1270,VLANs,Interface VLAN created for non-existent VLAN,Critical
-1287,VLANs,Siwtchd crash while create LAG and BGP network configuration,Critical
-1293,boot,Test case test_ft_bootup.py  fails to run because hardcode interfaces,Medium
-1304,Supportability,Zebra diagnostics,Medium
-1315,MAC Tables,MAC table flush/age out not happening properly in DB level,Medium
-1325,BGP,Toggling of L3 ports results in network unreachable for routes that should have converged to a different router with eBGP,High
-1331,BGP,"Segmentation fault (core dumped) after issuing ""show ip bgp"" command",High
-1335,Traceroute,ops-ipapps: Static analysis fixes for TRACEROUTE,Medium
-1338,MSTP,MSTP: DESCRIPTION: HOP count shows 0 or 20 instead of showing the actual remaining hops to reach the downlink bridges,Medium
-1368,Port Daemon,ops-portd in container build taking 100% cpu,Medium
-1370,SNMP Infra,OPS: ops-snmpd coredump generated while a snmpwalk script ran for the weekend,High
-1380,CLI-infra,Zuul build is failing at 'ops-cli.test_passwd_srv_ft_update_passwd.test_change_user_password',High
-1388,CLI infra,segfault upon access created alias,Medium
-1389,Interfaces,Output from show interface not match with database info,Medium
-1402,VLANs,implementing diagnostic dump for vlan,High
-1404,Mirroring,Failed mirror creation is re-attempted continuously by switchd,High
-1414,OVS Infra,ovsdb should not be restartable in rel/dill the unit file should be changed to reboot the switch when ovsdb crashes,Critical
-1415,switchd,Switchd systemd unit file needs to be updated to reboot the switch not restart switchd -  Switchd in rel/dill on broadcom platforms is not hitless,Critical
-1417,sflow,Removing CLI restrictions in sFlow,Medium
-1418,sflow,Sampled sFlow packets are not copied to CPU,High
-1424,0,Weird state of port roles and state for OPS devices whose digest got mismatch - state machine issue,High
-1439,password server,ops-passwd-srv: does not support ovs-appctl commands for vlog,Medium
-1440,0,Basic L3: ops-zebra selecting routes in OVSDB erronously,Medium
-1444,L3 Interfaces,Unable to form adjacency using loopback interfaces and BGP,High
-1448,0,Document missing for intervlan routing FT,Medium
-1451,CLI-infra,VTYSH core dumped when issuing show interface command after add and delete MTU for multiple iteration.,Medium
-1452,0,Switchd crashes when an ACL with large number of ACEs is applied to an interface,Critical
-1456,Link Aggregation,Forfity fixes for issues,High
-1460,0,Change pmd code to support BiDi module,Medium
-1461,0,buffer overflow in pmd code,Critical
-1462,ops-portd,"Portd has to check the value for ""admin"" key in ""user_config"" column instead of ""admin_state"" column",High
-1464,0,"L3 Subinterface (Stress) : Unable to ping all the 1024 Ipv6 subinterfaces , cpu says 100% for some process",High
-1471,AAA,AAA document needs to be modify due to the changes of  RBAC.,Medium
-1473,vlan,REST POST commands shows successful even if the VLAN name change does not make effective.,Medium
+Taiga ID   ,Taiga Feature,Taiga Summary
+218,Link Aggregation,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration."
+330,vlan,VLAN user guide document issue
+516,basic l3,Unable  to configure IPv6 Link-Local and Global Unicast addresses
+546,BGP,BGP fast-external-failover command not working
+558,basic l3,Point-to-Point IP address configuration makes remote unreachable
+695,Link Aggregation,LAG interface stat shows negative value
+698,Link Aggregation,IxANVL LACP 10.2 - LAG invidual interface selection is not established
+820,Link Aggregation,LAG: show ip interface lag shows no information
+897,BGP,BGP is not advertising a route through multiple sub-interfaces
+901,Linux,TFTP client is not able to copy large file ( > 32MB  ) to external tftp server
+948,Mirroring,Container intermittent crash configuring mirror
+1001,switchd,Memory leak in plugins infrastructure
+1004,Mirroring,Mirroring: missed destroy of cloned smaps
+1052,Intervlan Routing,ops.tests.layer3.test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan Failing intermitten
+1061,rest,REST POST of full-configuration accepts config from different platform
+1093,basic l3,Shut down interfaces are not removed from Routing Table
+1101,Physical Interfaces,show tech has missing interface commands
+1118,rest,Notifications - Add second IDL for monitoring DB changes
+1123,ARP,System daemon restarted while system is handling around 7000 ARP
+1135,Mirroring,Mirroring: fix unhelpful PD failure status messages
+1136,Sub-interfaces,Traffic switching to L2 VLANs from subinterface.
+1154,Mirroring,Mirroring: fix mirror cli token string mismatch
+1156,0,Mirroring: remove unnecessary calloc fail logging/cleanup free call
+1175,VLANs,VLAN columns type change to UUID
+1183,Link Aggregation,LAG test cases are failing in CIT Tier 1
+1188,dhcp server,DHCPSrv_Range: POST operation returns 404 response code
+1195,MAC Tables,MACs are not learnt on LAG interfaces
+1201,Link Aggregation,Not possible to remove a secondary IPv4
+1214,MAC Tables,Flush MAC required for MSTP
+1233,Physical Interfaces,MAC address learning list mismatch between ASIC and DB/CLI
+1234,configuration persistence,OPS: Show startup config takes around 40 seconds with a simple config and CPU goes to 100%
+1263,MAC Tables,Feature test mac learning
+1267,ECMP,Need to re use the ecmp objects based on the nexthops configured while creating or updating an ecmp route
+1270,VLANs,Interface VLAN created for non-existent VLAN
+1281,Mirroring,"Mirroring: on dest iface removal, shutdown reported when inactive/no dest"
+1287,VLANs,Siwtchd crash while create LAG and BGP network configuration
+1293,boot,Test case test_ft_bootup.py  fails to run because hardcode interfaces
+1304,Supportability,Zebra diagnostics
+1308,L3,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd
+1315,MAC Tables,MAC table flush/age out not happening properly in DB level
+1325,BGP,Toggling of L3 ports results in network unreachable for routes that should have converged to a different router with eBGP
+1331,BGP,"Segmentation fault (core dumped) after issuing ""show ip bgp"" command"
+1333,SNMP Infra,Adding snmptrap test cases
+1335,Traceroute,ops-ipapps: Static analysis fixes for TRACEROUTE
+1337,,Docker:  show int brief Segmentation fault (core dumped)
+1338,MSTP,MSTP: DESCRIPTION: HOP count shows 0 or 20 instead of showing the actual remaining hops to reach the downlink bridges
+1339,LLDP,lldp interface does not show neighbor info
+1348,Link Aggregation,Operations on lag interface can lead to core dump
+1360,rest,REST using GET depth=1 has major performance issues
+1363,0,ops-intfd CLI crash
+1368,Port Daemon,ops-portd in container build taking 100% cpu
+1370,SNMP Infra,OPS: ops-snmpd coredump generated while a snmpwalk script ran for the weekend
+1377,Mirroring,Mirroring: disallow source or destination interface of any type other than 'system'
+1380,CLI-infra,Zuul build is failing at 'ops-cli.test_passwd_srv_ft_update_passwd.test_change_user_password'
+1388,CLI infra,segfault upon access created alias
+1389,Interfaces,Output from show interface not match with database info
+1395,Physical Interfaces,Adding support for ER & MRL modules in ops-pmd/ops-intfd
+1402,VLANs,implementing diagnostic dump for vlan
+1404,Mirroring,Failed mirror creation is re-attempted continuously by switchd
+1408,ECMP,Remove 'ip ecmp disable' CLI as ECMP enable/disable feature is not currently supported
+1414,OVS Infra,ovsdb should not be restartable in rel/dill the unit file should be changed to reboot the switch when ovsdb crashes
+1415,switchd,Switchd systemd unit file needs to be updated to reboot the switch not restart switchd -  Switchd in rel/dill on broadcom platforms is not hitless
+1417,sflow,Removing CLI restrictions in sFlow
+1418,sflow,Sampled sFlow packets are not copied to CPU
+1424,0,Weird state of port roles and state for OPS devices whose digest got mismatch - state machine issue
+1429,Autoprovisioning,Autoprovisioning User Guide has no details on the sample provisioning script.
+1439,password server,ops-passwd-srv: does not support ovs-appctl commands for vlog
+1440,0,Basic L3: ops-zebra selecting routes in OVSDB erronously
+1444,L3 Interfaces,Unable to form adjacency using loopback interfaces and BGP
+1448,0,Document missing for intervlan routing FT
+1451,CLI-infra,VTYSH core dumped when issuing show interface command after add and delete MTU for multiple iteration.
+1452,0,Switchd crashes when an ACL with large number of ACEs is applied to an interface
+1456,Link Aggregation,Forfity fixes for issues
+1460,0,Change pmd code to support BiDi module
+1461,0,buffer overflow in pmd code
+1462,ops-portd,"Portd has to check the value for ""admin"" key in ""user_config"" column instead of ""admin_state"" column"
+1464,0,"L3 Subinterface (Stress) : Unable to ping all the 1024 Ipv6 subinterfaces , cpu says 100% for some process"
+1466,AAA,Zero out sensitive parameters after processing in AAA daemon
+1471,AAA,AAA document needs to be modify due to the changes of  RBAC.
+1473,vlan,REST POST commands shows successful even if the VLAN name change does not make effective.
+1479,rest,Custom Validator/DC: Able to create multiple BGP router on switch
+1480,sflow,Add a custom validator to prevent sFlow configuration on non-system interfaces
+1481,ping,test_ft_ping.py fails intermittently.
+1487,0,There is no error message when logrotate target is configured with a folder (logrotate target tftp://A.B.C.D/folder)
