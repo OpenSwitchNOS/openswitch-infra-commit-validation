@@ -25,6 +25,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1135,Mirroring,Mirroring: fix unhelpful PD failure status messages
 1136,Sub-interfaces,Traffic switching to L2 VLANs from subinterface.
 1154,Mirroring,Mirroring: fix mirror cli token string mismatch
+1160,acl,ACL entries do not persist across reboot
 1175,VLANs,VLAN columns type change to UUID
 1183,Link Aggregation,LAG test cases are failing in CIT Tier 2
 1188,dhcp server,DHCPSrv_Range: POST operation returns 404 response code
@@ -57,6 +58,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1368,Port Daemon,ops-portd in container build taking 100% cpu
 1370,SNMP Infra,OPS: ops-snmpd coredump generated while a snmpwalk script ran for the weekend
 1377,Mirroring,Mirroring: disallow source or destination interface of any type other than 'system'
+1378,sflow,sflow: ipv6 support
 1380,CLI-infra,Zuul build is failing at 'ops-cli.test_passwd_srv_ft_update_passwd.test_change_user_password'
 1385,0,Ansible: Update user guide with Ansible role creation
 1388,CLI infra,segfault upon access created alias
@@ -104,3 +106,4 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1490,0,"Switchd crash due to log_event, while creating vlan."
 1491,0,Tier2  placeholder testcase fixes
 1492,0,Interface is down after adding back to LAG
+1497,0,ops-switchd takes a while to daemonize on docker container
