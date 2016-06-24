@@ -1,6 +1,9 @@
 Taiga ID   ,Taiga Feature,Taiga Summary
+217,basic l3,arps failing to be synced between DB and Kernel
 218,Link Aggregation,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration."
 330,vlan,VLAN user guide document issue
+343,vlan,Trunk-configured interface is not responding to arp requests on native VLAN.
+456,rest,Documentation of POST /system/vrfs/{ppid}/bgp_routers/{pid}/bgp_neighbors is wrong
 516,basic l3,Unable  to configure IPv6 Link-Local and Global Unicast addresses
 546,BGP,BGP fast-external-failover command not working
 558,basic l3,Point-to-Point IP address configuration makes remote unreachable
@@ -14,17 +17,20 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1004,Mirroring,Mirroring: missed destroy of cloned smaps
 1052,Intervlan Routing,ops.tests.layer3.test_layer3_ft_intervlan_routing.Test_vlan_ping.test_ping_vlan Failing intermitten
 1061,rest,REST POST of full-configuration accepts config from different platform
+1093,basic l3,Shut down interfaces are not removed from Routing Table
 1101,Physical Interfaces,show tech has missing interface commands
 1118,rest,Notifications - Add second IDL for monitoring DB changes
 1123,ARP,System daemon restarted while system is handling around 7000 ARP
+1126,ARP,"""ICMPv6: ndisc: ndisc_alloc_skb failed to allocate an skb, err=-11"" error dislayed on console constantly with lost connectivity"
 1135,Mirroring,Mirroring: fix unhelpful PD failure status messages
 1136,Sub-interfaces,Traffic switching to L2 VLANs from subinterface.
 1154,Mirroring,Mirroring: fix mirror cli token string mismatch
 1175,VLANs,VLAN columns type change to UUID
-1183,Link Aggregation,LAG test cases are failing in CIT Tier 1
+1183,Link Aggregation,LAG test cases are failing in CIT Tier 2
 1188,dhcp server,DHCPSrv_Range: POST operation returns 404 response code
 1195,MAC Tables,MACs are not learnt on LAG interfaces
 1201,Link Aggregation,Not possible to remove a secondary IPv4
+1202,Link Aggregation,Removing primary IPv4 before removing secondaries
 1214,MAC Tables,Flush MAC required for MSTP
 1233,Physical Interfaces,MAC address learning list mismatch between ASIC and DB/CLI
 1234,configuration persistence,OPS: Show startup config takes around 40 seconds with a simple config and CPU goes to 100%
@@ -35,6 +41,8 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1287,VLANs,Siwtchd crash while create LAG and BGP network configuration
 1293,boot,Test case test_ft_bootup.py  fails to run because hardcode interfaces
 1304,Supportability,Zebra diagnostics
+1308,L3,Basic L3: Move connected routes maintenance to ops-zebra from ops-portd
+1313,vlan,Ansible: Invalid L2 and L3 configuration on port
 1315,MAC Tables,MAC table flush/age out not happening properly in DB level
 1325,BGP,Toggling of L3 ports results in network unreachable for routes that should have converged to a different router with eBGP
 1331,BGP,"Segmentation fault (core dumped) after issuing ""show ip bgp"" command"
@@ -42,12 +50,15 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1335,Traceroute,ops-ipapps: Static analysis fixes for TRACEROUTE
 1337,,Docker:  show int brief Segmentation fault (core dumped)
 1338,MSTP,MSTP: DESCRIPTION: HOP count shows 0 or 20 instead of showing the actual remaining hops to reach the downlink bridges
+1339,LLDP,lldp interface does not show neighbor info
 1348,Link Aggregation,Operations on lag interface can lead to core dump
 1360,rest,REST using GET depth=1 has major performance issues
+1363,0,ops-intfd CLI crash
 1368,Port Daemon,ops-portd in container build taking 100% cpu
 1370,SNMP Infra,OPS: ops-snmpd coredump generated while a snmpwalk script ran for the weekend
 1377,Mirroring,Mirroring: disallow source or destination interface of any type other than 'system'
 1380,CLI-infra,Zuul build is failing at 'ops-cli.test_passwd_srv_ft_update_passwd.test_change_user_password'
+1385,0,Ansible: Update user guide with Ansible role creation
 1388,CLI infra,segfault upon access created alias
 1389,Interfaces,Output from show interface not match with database info
 1395,Physical Interfaces,Adding support for ER & MRL modules in ops-pmd/ops-intfd
@@ -58,25 +69,38 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1415,switchd,Switchd systemd unit file needs to be updated to reboot the switch not restart switchd -  Switchd in rel/dill on broadcom platforms is not hitless
 1417,sflow,Removing CLI restrictions in sFlow
 1418,sflow,Sampled sFlow packets are not copied to CPU
+1420,0,Change Memory Overcommit setting in Openswitch
 1424,0,Weird state of port roles and state for OPS devices whose digest got mismatch - state machine issue
+1427,VLANs,Event Logs for vlan not availlable
 1429,Autoprovisioning,Autoprovisioning User Guide has no details on the sample provisioning script.
+1432,Mirroring,mirroring does not work when source is a lag
+1436,0,Name server and domain name info not updated after release/renew DHCP
 1439,password server,ops-passwd-srv: does not support ovs-appctl commands for vlog
 1440,0,Basic L3: ops-zebra selecting routes in OVSDB erronously
+1443,0,Unused TCP port 2605 must be closed
 1444,L3 Interfaces,Unable to form adjacency using loopback interfaces and BGP
 1448,0,Document missing for intervlan routing FT
 1451,CLI-infra,VTYSH core dumped when issuing show interface command after add and delete MTU for multiple iteration.
 1452,0,Switchd crashes when an ACL with large number of ACEs is applied to an interface
+1453,0,"test_syslog_remote.py Fails in tier 2, because use a hardcode directory to copy the files required"
 1456,Link Aggregation,Forfity fixes for issues
 1460,0,Change pmd code to support BiDi module
 1461,0,buffer overflow in pmd code
-1462,ops-portd,"Portd has to check the value for ""admin"" key in ""user_config"" column instead of ""admin_state"" column"
 1464,0,"L3 Subinterface (Stress) : Unable to ping all the 1024 Ipv6 subinterfaces , cpu says 100% for some process"
+1466,AAA,Zero out sensitive parameters after processing in AAA daemon
+1468,0,Unused TCP port 2604 must be closed
+1470,vlan,Able to delete the DEFAULT_VLAN_1 through the REST.
 1471,AAA,AAA document needs to be modify due to the changes of  RBAC.
+1472,vlan,"Through REST interface, (duplicate) VLANs can be created with already existing VLAN Id."
 1473,vlan,REST POST commands shows successful even if the VLAN name change does not make effective.
+1478,AAA,DUT is asking for a password when netop user is enabled and the command reboot is issued from vtysh
 1479,rest,Custom Validator/DC: Able to create multiple BGP router on switch
 1480,sflow,Add a custom validator to prevent sFlow configuration on non-system interfaces
 1481,ping,test_ft_ping.py fails intermittently.
+1485,0,Rules.make: Replace @BUILD_ROOT@ into $(BUILD_ROOT) in injection file
+1486,0,"""show system clock"" support with OPS"
 1487,0,There is no error message when logrotate target is configured with a folder (logrotate target tftp://A.B.C.D/folder)
-1443,,
-1490,,
-1453,,
+1489,Link Aggregation,ops-lacpd crash while configure VLAN related configuration on DUT
+1490,0,"Switchd crash due to log_event, while creating vlan."
+1491,0,Tier2  placeholder testcase fixes
+1492,0,Interface is down after adding back to LAG
