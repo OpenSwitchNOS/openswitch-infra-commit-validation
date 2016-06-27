@@ -3,6 +3,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 218,Link Aggregation,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration."
 330,vlan,VLAN user guide document issue
 343,vlan,Trunk-configured interface is not responding to arp requests on native VLAN.
+402,LLDP,Need LLDP to be turn on by default
 456,rest,Documentation of POST /system/vrfs/{ppid}/bgp_routers/{pid}/bgp_neighbors is wrong
 516,basic l3,Unable  to configure IPv6 Link-Local and Global Unicast addresses
 546,BGP,BGP fast-external-failover command not working
@@ -60,6 +61,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1377,Mirroring,Mirroring: disallow source or destination interface of any type other than 'system'
 1378,sflow,sflow: ipv6 support
 1380,CLI-infra,Zuul build is failing at 'ops-cli.test_passwd_srv_ft_update_passwd.test_change_user_password'
+1384,Mgmt Interface,Mgmt-intf cli document changes for dill release.
 1385,0,Ansible: Update user guide with Ansible role creation
 1388,CLI infra,segfault upon access created alias
 1389,Interfaces,Output from show interface not match with database info
@@ -76,11 +78,13 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1427,VLANs,Event Logs for vlan not availlable
 1429,Autoprovisioning,Autoprovisioning User Guide has no details on the sample provisioning script.
 1432,Mirroring,mirroring does not work when source is a lag
+1434,0,Address High fortify issues in [arpmgrd]
 1436,0,Name server and domain name info not updated after release/renew DHCP
 1439,password server,ops-passwd-srv: does not support ovs-appctl commands for vlog
 1440,0,Basic L3: ops-zebra selecting routes in OVSDB erronously
 1443,0,Unused TCP port 2605 must be closed
 1444,L3 Interfaces,Unable to form adjacency using loopback interfaces and BGP
+1446,MTU,CT script for MTU in modular framework
 1448,0,Document missing for intervlan routing FT
 1451,CLI-infra,VTYSH core dumped when issuing show interface command after add and delete MTU for multiple iteration.
 1452,0,Switchd crashes when an ACL with large number of ACEs is applied to an interface
@@ -99,6 +103,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1479,rest,Custom Validator/DC: Able to create multiple BGP router on switch
 1480,sflow,Add a custom validator to prevent sFlow configuration on non-system interfaces
 1481,ping,test_ft_ping.py fails intermittently.
+1482,0,ops-switchd crash while device handling traffic when device has LAG
 1485,0,Rules.make: Replace @BUILD_ROOT@ into $(BUILD_ROOT) in injection file
 1486,0,"""show system clock"" support with OPS"
 1487,0,There is no error message when logrotate target is configured with a folder (logrotate target tftp://A.B.C.D/folder)
