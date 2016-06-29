@@ -933,3 +933,4 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1494,Autoprovisioning,OPS: IP address on interfaces are not being pushed to kernel after configured via ZTP
 1495,0,"Switchd crash due to log_event, while creating vlan."
 1496,0,Removing random option from tox.ini in ops-build
+1332,0,Enabling modular framework tests in rel/dill branch
