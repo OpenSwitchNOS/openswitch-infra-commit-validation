@@ -935,3 +935,11 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1496,0,Removing random option from tox.ini in ops-build
 1332,0,Enabling modular framework tests in rel/dill branch
 1503,0,Test failures in LAG test in CIT Tier 2 after this commit: https://review.openswitch.net/#/c/11127/
+1498,0,sflow sampling test case timeout issue and verbosity 
+1499,0,LACP state information is dirty after changing LAG from dynamic to static 
+1251,,
+1500,,
+1441,,
+1504,,
+1502,,
+1332,,
