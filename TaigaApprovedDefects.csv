@@ -1,19 +1,28 @@
 Taiga ID   ,Taiga Feature,Taiga Summary
+30,Mgmt Interface,Mgmt If - IPv6 handle DAD
+217,0,0
 218,Link Aggregation,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration."
 330,vlan,VLAN user guide document issue
 343,vlan,Trunk-configured interface is not responding to arp requests on native VLAN.
 402,LLDP,Need LLDP to be turn on by default
+433,LLDP,LLDP : Some default tlv fields ( related to port ) are not displayed in remote
 456,rest,Documentation of POST /system/vrfs/{ppid}/bgp_routers/{pid}/bgp_neighbors is wrong
+516,0,0
 546,BGP,BGP fast-external-failover command not working
 558,basic l3,Point-to-Point IP address configuration makes remote unreachable
 695,Link Aggregation,LAG interface stat shows negative value
 698,Link Aggregation,IxANVL LACP 10.2 - LAG invidual interface selection is not established
+714,BGP,BGP Hold Time is not sticking when changing via CLI command.
 820,Link Aggregation,LAG: show ip interface lag shows no information
 897,BGP,BGP is not advertising a route through multiple sub-interfaces
+901,0,0
 948,Mirroring,Container intermittent crash configuring mirror
 1001,switchd,Memory leak in plugins infrastructure
 1004,Mirroring,Mirroring: missed destroy of cloned smaps
+1052,0,0
 1061,rest,REST POST of full-configuration accepts config from different platform
+1074,SFTP/SCP,copy sftp allows a user to copy a file to any path in the rootfs
+1093,0,0
 1101,Physical Interfaces,show tech has missing interface commands
 1118,rest,Notifications - Add second IDL for monitoring DB changes
 1123,ARP,System daemon restarted while system is handling around 7000 ARP
@@ -40,22 +49,31 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1281,Mirroring,"Mirroring: on dest iface removal, shutdown reported when inactive/no dest"
 1287,VLANs,Siwtchd crash while create LAG and BGP network configuration
 1293,boot,Test case test_ft_bootup.py  fails to run because hardcode interfaces
+1294,REST,REST - OVSDB Connection Test Cases Gap
 1304,Supportability,Zebra diagnostics
+1308,0,0
 1313,vlan,Ansible: Invalid L2 and L3 configuration on port
+1314,MSTP,Randomly port state change takes beyond 2 * hello_time
 1315,MAC Tables,MAC table flush/age out not happening properly in DB level
+1319,VLANS,Ansible: show commands do not match after an invalid configuration
+1322,0,0
 1325,BGP,Toggling of L3 ports results in network unreachable for routes that should have converged to a different router with eBGP
 1331,BGP,"Segmentation fault (core dumped) after issuing ""show ip bgp"" command"
+1332,0,0
 1333,SNMP Infra,Adding snmptrap test cases
 1335,Traceroute,ops-ipapps: Static analysis fixes for TRACEROUTE
+1337,0,0
 1338,MSTP,MSTP: DESCRIPTION: HOP count shows 0 or 20 instead of showing the actual remaining hops to reach the downlink bridges
 1348,Link Aggregation,Operations on lag interface can lead to core dump
 1360,rest,REST using GET depth=1 has major performance issues
+1363,0,0
 1368,Port Daemon,ops-portd in container build taking 100% cpu
 1370,SNMP Infra,OPS: ops-snmpd coredump generated while a snmpwalk script ran for the weekend
 1377,Mirroring,Mirroring: disallow source or destination interface of any type other than 'system'
 1378,sflow,sflow: ipv6 support
 1380,CLI-infra,Zuul build is failing at 'ops-cli.test_passwd_srv_ft_update_passwd.test_change_user_password'
 1384,Mgmt Interface,Mgmt-intf cli document changes for dill release.
+1385,0,0
 1388,CLI infra,segfault upon access created alias
 1389,Interfaces,Output from show interface not match with database info
 1402,VLANs,implementing diagnostic dump for vlan
@@ -80,6 +98,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1444,L3 Interfaces,Unable to form adjacency using loopback interfaces and BGP
 1446,MTU,CT script for MTU in modular framework
 1448,0,Document missing for intervlan routing FT
+1449,CLI infra,CLI misbehave after enable page break up option
 1451,CLI-infra,VTYSH core dumped when issuing show interface command after add and delete MTU for multiple iteration.
 1452,0,Switchd crashes when an ACL with large number of ACEs is applied to an interface
 1453,0,"test_syslog_remote.py Fails in tier 2, because use a hardcode directory to copy the files required"
@@ -87,6 +106,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1460,0,Change pmd code to support BiDi module
 1461,0,buffer overflow in pmd code
 1464,0,"L3 Subinterface (Stress) : Unable to ping all the 1024 Ipv6 subinterfaces , cpu says 100% for some process"
+1466,0,0
 1468,0,Unused TCP port 2604 must be closed
 1470,vlan,Able to delete the DEFAULT_VLAN_1 through the REST.
 1471,AAA,AAA document needs to be modify due to the changes of  RBAC.
@@ -108,23 +128,16 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1498,0,sflow sampling test case timeout issue and verbosity
 1499,0,LACP state information is dirty after changing LAG from dynamic to static
 1500,0,Interface takes about a second to to become admin up in container (VSI)
+1501,0,0
 1502,0,"Basic L3: On doing ""no routing"" in L3 interface does not remove static route from OVSDB"
 1503,0,Test failures in LAG test in CIT Tier 2 after this commit: https://review.openswitch.net/#/c/11127/
 1504,0,ops-switchd coredumps at startup after configuration from ZTP
 1505,MSTP,Multiple STP core files on L2 switch
-1322,0,0
-217,0,0
-516,0,0
-901,0,0
-1052,0,0
-1093,0,0
-1308,0,0
-1337,0,0
-1363,0,0
-1385,0,0
-1466,0,0
-1332,0,0
-1525,0,0
+1512,Sflow,sFlow config persistence test case
+1513,Log Rotation,OPS: event.log is not being rotated and this causes tmpfs is full
 1515,0,0
-1501,0,0
+1519,IP Apps,Qualys Scan : Telnet on LAN - port 1943 should be blocked
+1521,Link Aggregation,LACP links fail to come up correctly after reboot or autoprovisioning
+1522,Link Aggregation,Saved Configuration Incosistent After Reboot
+1525,0,0
 1526,0,0
