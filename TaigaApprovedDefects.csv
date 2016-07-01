@@ -4,22 +4,26 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 218,Link Aggregation,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration."
 330,vlan,VLAN user guide document issue
 343,vlan,Trunk-configured interface is not responding to arp requests on native VLAN.
+378,0,0
 402,LLDP,Need LLDP to be turn on by default
 433,LLDP,LLDP : Some default tlv fields ( related to port ) are not displayed in remote
 456,rest,Documentation of POST /system/vrfs/{ppid}/bgp_routers/{pid}/bgp_neighbors is wrong
 516,0,0
 546,BGP,BGP fast-external-failover command not working
 558,basic l3,Point-to-Point IP address configuration makes remote unreachable
+578,0,0
 695,Link Aggregation,LAG interface stat shows negative value
 698,Link Aggregation,IxANVL LACP 10.2 - LAG invidual interface selection is not established
 714,BGP,BGP Hold Time is not sticking when changing via CLI command.
 820,Link Aggregation,LAG: show ip interface lag shows no information
+865,0,0
 897,BGP,BGP is not advertising a route through multiple sub-interfaces
 901,0,0
 948,Mirroring,Container intermittent crash configuring mirror
 1001,switchd,Memory leak in plugins infrastructure
 1004,Mirroring,Mirroring: missed destroy of cloned smaps
 1052,0,0
+1054,0,0
 1061,rest,REST POST of full-configuration accepts config from different platform
 1074,SFTP/SCP,copy sftp allows a user to copy a file to any path in the rootfs
 1093,0,0
@@ -38,6 +42,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1201,Link Aggregation,Not possible to remove a secondary IPv4
 1202,Link Aggregation,Removing primary IPv4 before removing secondaries
 1214,MAC Tables,Flush MAC required for MSTP
+1218,Mirroring,0
 1233,Physical Interfaces,MAC address learning list mismatch between ASIC and DB/CLI
 1234,configuration persistence,OPS: Show startup config takes around 40 seconds with a simple config and CPU goes to 100%
 1246,0,ops-classifierd test_mirror.py has topology definition issue
@@ -46,6 +51,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1266,rest,Python taking up over 50% of CPU cycles on idle switch
 1267,ECMP,Need to re use the ecmp objects based on the nexthops configured while creating or updating an ecmp route
 1270,VLANs,Interface VLAN created for non-existent VLAN
+1271,0,0
 1281,Mirroring,"Mirroring: on dest iface removal, shutdown reported when inactive/no dest"
 1287,VLANs,Siwtchd crash while create LAG and BGP network configuration
 1293,boot,Test case test_ft_bootup.py  fails to run because hardcode interfaces
@@ -90,6 +96,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1427,VLANs,Event Logs for vlan not availlable
 1429,Autoprovisioning,Autoprovisioning User Guide has no details on the sample provisioning script.
 1432,Mirroring,mirroring does not work when source is a lag
+1433,0,0
 1436,0,Name server and domain name info not updated after release/renew DHCP
 1439,password server,ops-passwd-srv: does not support ovs-appctl commands for vlog
 1440,0,Basic L3: ops-zebra selecting routes in OVSDB erronously
@@ -105,6 +112,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1456,Link Aggregation,Forfity fixes for issues
 1460,0,Change pmd code to support BiDi module
 1461,0,buffer overflow in pmd code
+1463,0,0
 1464,0,"L3 Subinterface (Stress) : Unable to ping all the 1024 Ipv6 subinterfaces , cpu says 100% for some process"
 1466,0,0
 1468,0,Unused TCP port 2604 must be closed
@@ -112,6 +120,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1471,AAA,AAA document needs to be modify due to the changes of  RBAC.
 1472,vlan,"Through REST interface, (duplicate) VLANs can be created with already existing VLAN Id."
 1473,vlan,REST POST commands shows successful even if the VLAN name change does not make effective.
+1477,Port Daemon,0
 1478,AAA,DUT is asking for a password when netop user is enabled and the command reboot is issued from vtysh
 1479,rest,Custom Validator/DC: Able to create multiple BGP router on switch
 1480,sflow,Allow sFlow configuration only on physical interfaces
@@ -136,17 +145,12 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1512,Sflow,sFlow config persistence test case
 1513,Log Rotation,OPS: event.log is not being rotated and this causes tmpfs is full
 1515,0,0
+1516,0,0
 1519,IP Apps,Qualys Scan : Telnet on LAN - port 1943 should be blocked
 1521,Link Aggregation,LACP links fail to come up correctly after reboot or autoprovisioning
 1522,Link Aggregation,Saved Configuration Incosistent After Reboot
 1525,0,0
 1526,0,0
 1527,0,0
-1463,0,0
-1516,0,0
-378,0,0
-578,0,0
-865,0,0
-1433,0,0
-1054,0,0
-1271,0,0
+1528,BGP,0
+1535,configuration persistence,0
