@@ -171,6 +171,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1513,Log Rotation,OPS: event.log is not being rotated and this causes tmpfs is full
 1515,0,0
 1516,0,0
+1518,0,0
 1519,IP Apps,Qualys Scan : Telnet on LAN - port 1943 should be blocked
 1521,Link Aggregation,LACP links fail to come up correctly after reboot or autoprovisioning
 1522,Link Aggregation,Saved Configuration Incosistent After Reboot
