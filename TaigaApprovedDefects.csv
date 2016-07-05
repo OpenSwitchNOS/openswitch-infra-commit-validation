@@ -1,10 +1,14 @@
 Taiga ID   ,Taiga Feature,Taiga Summary
 30,Mgmt Interface,Mgmt If - IPv6 handle DAD
+182,0,0
+216,0,0
 217,0,0
 218,Link Aggregation,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration."
+239,0,0
 330,vlan,VLAN user guide document issue
 343,vlan,Trunk-configured interface is not responding to arp requests on native VLAN.
 378,0,0
+395,0,0
 402,LLDP,Need LLDP to be turn on by default
 433,LLDP,LLDP : Some default tlv fields ( related to port ) are not displayed in remote
 456,rest,Documentation of POST /system/vrfs/{ppid}/bgp_routers/{pid}/bgp_neighbors is wrong
@@ -15,15 +19,24 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 695,Link Aggregation,LAG interface stat shows negative value
 698,Link Aggregation,IxANVL LACP 10.2 - LAG invidual interface selection is not established
 714,BGP,BGP Hold Time is not sticking when changing via CLI command.
+788,0,0
 820,Link Aggregation,LAG: show ip interface lag shows no information
 865,0,0
+895,0,0
 897,BGP,BGP is not advertising a route through multiple sub-interfaces
 901,0,0
+907,0,0
 948,Mirroring,Container intermittent crash configuring mirror
+993,0,0
+994,0,0
 1001,switchd,Memory leak in plugins infrastructure
 1004,Mirroring,Mirroring: missed destroy of cloned smaps
+1007,0,0
+1019,0,0
+1035,0,0
 1052,0,0
 1054,0,0
+1057,0,0
 1061,rest,REST POST of full-configuration accepts config from different platform
 1074,SFTP/SCP,copy sftp allows a user to copy a file to any path in the rootfs
 1088,0,0
@@ -47,24 +60,30 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1218,Mirroring,0
 1233,Physical Interfaces,MAC address learning list mismatch between ASIC and DB/CLI
 1234,configuration persistence,OPS: Show startup config takes around 40 seconds with a simple config and CPU goes to 100%
+1245,0,0
 1246,0,ops-classifierd test_mirror.py has topology definition issue
+1247,0,0
 1251,Modular Framework,Interfaces mac_addr on different switches of the same test are equal
 1263,MAC Tables,Feature test mac learning
 1266,rest,Python taking up over 50% of CPU cycles on idle switch
 1267,ECMP,Need to re use the ecmp objects based on the nexthops configured while creating or updating an ecmp route
 1270,VLANs,Interface VLAN created for non-existent VLAN
 1271,0,0
+1279,0,0
 1281,Mirroring,"Mirroring: on dest iface removal, shutdown reported when inactive/no dest"
 1287,VLANs,Siwtchd crash while create LAG and BGP network configuration
+1288,0,0
 1293,boot,Test case test_ft_bootup.py  fails to run because hardcode interfaces
 1294,REST,REST - OVSDB Connection Test Cases Gap
 1304,Supportability,Zebra diagnostics
 1308,0,0
+1309,0,0
 1313,vlan,Ansible: Invalid L2 and L3 configuration on port
 1314,MSTP,Randomly port state change takes beyond 2 * hello_time
 1315,MAC Tables,MAC table flush/age out not happening properly in DB level
 1319,VLANS,Ansible: show commands do not match after an invalid configuration
 1322,0,0
+1323,0,0
 1325,BGP,Toggling of L3 ports results in network unreachable for routes that should have converged to a different router with eBGP
 1331,BGP,"Segmentation fault (core dumped) after issuing ""show ip bgp"" command"
 1332,0,0
@@ -84,9 +103,13 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1385,0,0
 1388,CLI infra,segfault upon access created alias
 1389,Interfaces,Output from show interface not match with database info
+1395,0,0
 1402,VLANs,implementing diagnostic dump for vlan
 1404,Mirroring,Failed mirror creation is re-attempted continuously by switchd
+1405,0,0
 1408,ECMP,Remove 'ip ecmp disable' CLI as ECMP enable/disable feature is not currently supported
+1410,0,0
+1411,0,0
 1412,0,"Adding MSTP Design Document MD and User Guide Update ,CT Framework Upgrade"
 1414,OVS Infra,ovsdb should not be restartable in rel/dill the unit file should be changed to reboot the switch when ovsdb crashes
 1415,switchd,Switchd systemd unit file needs to be updated to reboot the switch not restart switchd -  Switchd in rel/dill on broadcom platforms is not hitless
@@ -158,6 +181,8 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1533,0,0
 1535,configuration persistence,0
 1537,0,0
+1539,0,0
+1540,0,0
 1543,0,0
 1544,0,0
 1545,0,0
@@ -166,5 +191,8 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1549,0,0
 1550,0,0
 1552,0,0
-1539,0,0
 1554,0,0
+1555,0,0
+1557,0,0
+1559,0,0
+1561,0,0
