@@ -213,9 +213,11 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1579,0,0
 1580,0,0
 1581,0,0
+1582,VLANS,0
 1583,0,0
 1584,0,0
 1585,REST,0
 1586,REST,0
 1587,REST,0
 1588,BGP,0
+1590,Authentication,Error message “diag-dump feature for AAA is not implemented“ displayed in “diag-dump ops-aaautils basic” CLI output
