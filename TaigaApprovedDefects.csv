@@ -106,6 +106,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1388,CLI infra,segfault upon access created alias
 1389,Interfaces,Output from show interface not match with database info
 1395,0,0
+1399,ARP,0
 1402,VLANs,implementing diagnostic dump for vlan
 1404,Mirroring,Failed mirror creation is re-attempted continuously by switchd
 1405,0,0
@@ -189,6 +190,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1538,configuration persistence,0
 1539,Log Rotation,0
 1540,configuration persistence,0
+1542,VLANS,0
 1543,0,0
 1544,0,0
 1545,CLI infra,0
