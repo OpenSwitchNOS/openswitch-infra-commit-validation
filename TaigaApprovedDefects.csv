@@ -241,6 +241,8 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1603,ACL,0
 1604,SFTP/SCP,0
 1607,ACL,0
+1608,Link Aggregation,0
+1610,Link Aggregation,0
 1612,QoS,0
 1613,Link Aggregation,0
 1616,BGP,0
