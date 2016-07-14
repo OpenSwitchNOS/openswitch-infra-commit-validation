@@ -140,7 +140,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1453,0,"test_syslog_remote.py Fails in tier 2, because use a hardcode directory to copy the files required"
 1454,L3,0
 1456,Link Aggregation,Forfity fixes for issues
-1459,Physical Interfaces,0
 1460,0,Change pmd code to support BiDi module
 1461,0,buffer overflow in pmd code
 1463,0,0
