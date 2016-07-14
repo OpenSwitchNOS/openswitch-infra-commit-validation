@@ -21,6 +21,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 714,BGP,BGP Hold Time is not sticking when changing via CLI command.
 788,0,0
 820,Link Aggregation,LAG: show ip interface lag shows no information
+857,Physical Interfaces,0
 875,0,0
 865,0,0
 895,0,0
