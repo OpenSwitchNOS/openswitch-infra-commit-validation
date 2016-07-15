@@ -254,4 +254,8 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1620,Power Mgmt,0
 1621,Static Routes,0
 1622,LLDP,0
+1623,MSTP,MSTP LAG config commands doesnot show up in show running-config
 1628,Physical Interfaces,0
+1629,QoS,0
+1630,Log Rotation,0
+1631,CLI infra,0
