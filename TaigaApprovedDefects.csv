@@ -260,5 +260,3 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1630,Log Rotation,0
 1631,CLI infra,0
 1632,OSPF,0
-1638,NTP Client,NTP FT for gate jobs in modular framework
-1639,Ansible,Add ansible FTs to run on virtual and physical env
