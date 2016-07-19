@@ -263,3 +263,5 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1638,NTP client,0
 1639,Ansible,0
 1640,LLDP,0
+1645,Mirroring,0
+1646,Sflow,0
