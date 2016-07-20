@@ -57,6 +57,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1175,VLANs,VLAN columns type change to UUID
 1183,Link Aggregation,LAG test cases are failing in CIT Tier 2
 1188,dhcp server,DHCPSrv_Range: POST operation returns 404 response code
+1194,LLDP,0
 1195,MAC Tables,MACs are not learnt on LAG interfaces
 1201,Link Aggregation,Not possible to remove a secondary IPv4
 1202,Link Aggregation,Removing primary IPv4 before removing secondaries
@@ -230,6 +231,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1588,BGP,0
 1589,0,0
 1590,Authentication,Error message “diag-dump feature for AAA is not implemented“ displayed in “diag-dump ops-aaautils basic” CLI output
+1591,Platform,0
 1592,Static Routes,0
 1593,CLI infra,0
 1594,CLI infra,0
@@ -269,3 +271,4 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1654,Physical Interfaces,0
 1655,switchd,0
 1658,MSTP,0
+1662,L3 Interfaces,0
