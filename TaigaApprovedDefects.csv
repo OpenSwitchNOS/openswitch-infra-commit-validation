@@ -270,8 +270,12 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1650,Event Log,0
 1654,Physical Interfaces,0
 1655,L3 Interfaces,0
+1656,BGP,0
 1658,MSTP,0
 1662,L3 Interfaces,0
 1663,L3 Interfaces,0
 1664,BGP,0
 1667,LLDP,0
+1668,MAC Tables,0
+1670,OVS Infra,0
+1675,QoS,0
