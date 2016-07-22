@@ -271,6 +271,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1654,Physical Interfaces,0
 1655,L3 Interfaces,0
 1656,BGP,0
+1657,sFlow,0
 1658,MSTP,0
 1662,L3 Interfaces,0
 1663,L3 Interfaces,0
