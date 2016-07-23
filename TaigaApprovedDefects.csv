@@ -5,6 +5,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 217,0,0
 218,Link Aggregation,"Vlan lag configuration don’t overwrite interface vlan configuration, and traffic is dropped from valid configuration."
 239,0,0
+293,Traceroute,0
 330,vlan,VLAN user guide document issue
 343,vlan,Trunk-configured interface is not responding to arp requests on native VLAN.
 378,0,0
@@ -280,6 +281,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1667,LLDP,0
 1668,MAC Tables,0
 1670,OVS Infra,0
+1674,OSTL,0
 1675,QoS,0
 1676,Physical Interfaces,0
 1677,0,0
