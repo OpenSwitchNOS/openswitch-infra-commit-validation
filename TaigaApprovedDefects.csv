@@ -1,5 +1,6 @@
 Taiga ID   ,Taiga Feature,Taiga Summary
 30,Mgmt Interface,Mgmt If - IPv6 handle DAD
+134,Physical Interfaces,0
 182,0,0
 216,0,0
 217,0,0
@@ -284,4 +285,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1674,OSTL,0
 1675,QoS,0
 1676,Physical Interfaces,0
-1677,0,0
+1677,BGP,0
+1678,MSTP,0
+1681,Supportability,0
