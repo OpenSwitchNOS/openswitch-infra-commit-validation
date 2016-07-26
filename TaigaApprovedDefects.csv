@@ -292,3 +292,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1683,CLI infra,0
 1684,sflow,0
 1685,HW-VTEP,0
+1686,QoS,0
+1687,QoS,0
+1688,MSTP,0
