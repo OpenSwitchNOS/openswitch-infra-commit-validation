@@ -269,6 +269,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1640,LLDP,0
 1645,Mirroring,0
 1646,Sflow,0
+1648,Broadview,0
 1650,Event Log,0
 1654,Physical Interfaces,0
 1655,L3 Interfaces,0
