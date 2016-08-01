@@ -17,6 +17,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1607,ACL,0
 1608,Link Aggregation,0
 1632,OSPF,0
+1639,Ansible,0
 1656,BGP,0
 1665,BGP,0
 1667,LLDP,0
