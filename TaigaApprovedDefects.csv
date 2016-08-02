@@ -1,31 +1,93 @@
 Taiga ID   ,Taiga Feature,Taiga Summary
+134,Physical Interfaces,0
 422,BGP,0
 546,BGP,BGP fast-external-failover command not working
 875,ECMP,0
 900,ECMP,0
+1093,L3 Interfaces,0
+1001,switchd,0
+1019,REST,0
+1035,Configuration Persistence,0
+1118,REST,0
+1136,Sub-Interfaces,0
+1175,VLANS,0
+1183,REST,0
+1194,LLDP,0
+1195,MAC Tables,0
+1214,MAC Tables,0
 1234,configuration persistence,OPS: Show startup config takes around 40 seconds with a simple config and CPU goes to 100%
+1247,Physical Interfaces,0
 1267,ECMP,Need to re use the ecmp objects based on the nexthops configured while creating or updating an ecmp route
+1279,DHCP Server,0
+1288,Authentication,0
+1308,L3 Interfaces,0
+1348,Link Aggregation,0
+1368,Port Daemon,0
+1399,ARP,0
+1405,OVS Infra,0
 1418,sflow,Sampled sFlow packets are not copied to CPU
+1443,BGP,0
+1446,Physical Interfaces,0
+1454,ECMP,0
+1456,Link Aggregation,0
 1460,0,Change pmd code to support BiDi module
 1464,0,"L3 Subinterface (Stress) : Unable to ping all the 1024 Ipv6 subinterfaces , cpu says 100% for some process"
+1466,Authentication,0
+1490,L3  ,0
+1512,Sflow,0
 1516,configuration persistence,0
+1519,IP Apps,0
+1522,Link Aggregation,0
 1525,0,0
-1547,0,0
+1528,BGP,0
+1540,Configuration Persistence,0
+1542,VLANS,0
+1543,Link Aggregation,0
+1547,L3 Interfaces,0
+1552,Static Routes,0
+1573,Supportability,0
 1578,Static Routes,0
-1584,0,0
+1584,Static Routes,0
+1586,REST,0
+1590,Authentication,0
 1591,Platform,0
+1592,Static Routes,0
+1593,CLI Infra,0
+1598,NTP Client,0
+1602,BGP,0
 1607,ACL,0
 1608,Link Aggregation,0
+1621,Static Routes,0
+1623,MSTP,0
+1630,Log Rotation,0
 1632,OSPF,0
+1638,NTP Client,0
 1639,Ansible,0
+1645,Mirroring,0
+1650,Event Log,0
+1655,L3 Interfaces,0
 1656,BGP,0
+1657,sflow,0
 1665,BGP,0
-1667,LLDP,0
+1667,Physical Interfaces,0
+1670,OVS Infra,0
+1675,QoS,0
 1677,BGP,0
+1678,MSTP ,0
+1683,CLI Infra,0
+1685,HW-VTEP,0
+1688,MSTP,0
 1695,Diagnostics,0
+1698,Sub-Interfaces,0
+1701,Web UI,0
+1703,Physical Interfaces,0
+1704,Sub-Interfaces,0
+1708,System Infr,0
 1711,ARP,0
 1712,CoreDump,0
+1713,BGP,0
 1714,Link Aggregation,0
 1715,L3 Interfaces,0
 1717,Infra,0
 1719,QoS,0
+1720,0,0
