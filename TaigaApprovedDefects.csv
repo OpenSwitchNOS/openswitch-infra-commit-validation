@@ -99,4 +99,6 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1720,0,0
 1721,REST,0
 1725,REST,0
-1730,VLANs,0
+1730,Intervlan,0
+1731,ARP,0
+1732,VLANs,0
