@@ -87,12 +87,14 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1703,Physical Interfaces,0
 1704,Sub-Interfaces,0
 1708,System Infr,0
+1709,Sflow,0
 1711,ARP,0
 1712,CoreDump,0
 1713,BGP,0
 1714,Link Aggregation,0
 1715,L3 Interfaces,0
 1717,Infra,0
+1718,Config Persistence,0
 1719,QoS,0
 1720,0,0
 1721,REST,0
