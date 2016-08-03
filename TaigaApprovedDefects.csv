@@ -38,6 +38,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1464,0,"L3 Subinterface (Stress) : Unable to ping all the 1024 Ipv6 subinterfaces , cpu says 100% for some process"
 1466,Authentication,0
 1490,L3  ,0
+1491,Test, 0
 1512,Sflow,0
 1516,configuration persistence,0
 1519,IP Apps,0
@@ -99,6 +100,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1720,0,0
 1721,REST,0
 1725,REST,0
+1726,MTU,0
 1730,Intervlan,0
 1731,ARP,0
 1732,VLANs,0
