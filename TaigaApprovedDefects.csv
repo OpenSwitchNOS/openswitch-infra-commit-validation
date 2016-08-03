@@ -74,6 +74,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1655,L3 Interfaces,0
 1656,BGP,0
 1657,sflow,0
+1663,Layer 3 stats,0
 1665,BGP,0
 1667,Physical Interfaces,0
 1670,OVS Infra,0
