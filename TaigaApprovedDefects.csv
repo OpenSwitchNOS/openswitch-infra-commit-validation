@@ -25,6 +25,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1279,DHCP Server,0
 1288,Authentication,0
 1308,L3 Interfaces,0
+1332,Modular Framework,0
 1348,Link Aggregation,0
 1368,Port Daemon,0
 1399,ARP,0
