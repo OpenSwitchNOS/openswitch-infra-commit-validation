@@ -86,6 +86,7 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1688,MSTP,0
 1695,Diagnostics,0
 1698,Sub-Interfaces,0
+1700,Mgmt Interface,0
 1701,Web UI,0
 1703,Physical Interfaces,0
 1704,Sub-Interfaces,0
@@ -108,3 +109,4 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1732,VLANs,0
 1733,BGP,0
 1734,sflow,0
+1736,Log Rotation,0
