@@ -4,3 +4,4 @@ Taiga ID   ,Taiga Feature,Taiga Summary
 1769,switchd,0
 1786,CLI infra,0
 1418,Sflow,revert fix
+1788,switchd,performance
